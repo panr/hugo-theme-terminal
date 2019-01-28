@@ -3,18 +3,16 @@ title = "Hello Friend"
 date = "2019-01-25"
 author = "Lorem Ipsum"
 cover = "hello.jpg"
-description = "Responsive web design business plan business model canvas vesting period disruptive paradigm shift. Investor gen-z conversion interaction design crowdfunding customer mass market buyer client business-to-business funding agile development. Niche market analytics lean startup vesting period burn rate ecosystem alpha."
+description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur ipsum dui, aliquet nec commodo at, tristique eget ante."
 +++
 
-Responsive web design business plan business model canvas vesting period disruptive paradigm shift. Investor gen-z conversion interaction design crowdfunding customer mass market buyer client business-to-business funding agile development. Niche market analytics lean startup vesting period burn rate ecosystem alpha.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur ipsum dui, aliquet nec commodo at, tristique eget ante. **Donec quis dolor nec nunc mollis interdum vel in purus**. Sed vitae leo scelerisque, sollicitudin elit sed, congue ante. In augue nisl, vestibulum commodo est a, tristique porttitor est. Proin laoreet iaculis ornare. Nullam ut neque quam.
 
-Technology mass market gamification business-to-consumer launch party stock product management crowdsource freemium hackathon rockstar. Stealth prototype validation equity incubator advisor first mover advantage marketing backing iPhone android network effects beta branding. Deployment buyer A/B testing advisor paradigm shift infrastructure bandwidth.
+> Fusce pharetra suscipit orci nec tempor. Quisque vitae sem sit amet sem mollis consequat. Sed at imperdiet lorem. Vestibulum pharetra faucibus odio, ac feugiat tellus sollicitudin at. Pellentesque varius tristique mi imperdiet dapibus. Duis orci odio, sodales lacinia venenatis sit amet, feugiat et diam.
 
-> Supply chain partner network network effects holy grail. Holy grail seed round business-to-consumer android user experience business model canvas buyer supply chain gen-z. Rockstar ramen MVP stealth launch party pivot accelerator direct mailing sales startup advisor handshake series A financing return on investment.
+Sed a leo id risus venenatis vulputate non quis nulla. Aenean nisl quam, lacinia pulvinar orci sit amet, eleifend eleifend dui. Nulla tempor ligula leo, eu vehicula quam condimentum a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla gravida tristique nunc sed semper. Morbi nec felis odio.
 
-Seed money business plan supply chain social media client twitter. Customer startup creative long tail user experience buzz channels angel investor leverage. Rockstar non-disclosure agreement partnership research & development social proof pivot stealth business plan entrepreneur assets interaction design graphical user interface seed round client.
-
-- Direct mailing user experience launch party iPad ramen startup learning curve non-disclosure agreement infrastructure entrepreneur scrum project.
-- Termsheet ramen buzz research & development channels user experience growth hacking disruptive innovator first mover advantage early adopters traction.
-  - Success holy grail venture android series A financing bootstrapping.
-  - Gen-z android ecosystem supply chain termsheet hackathon business model canvas. Twitter business-to-business funding long tail hypotheses venture branding monetization incubator user experience. Deployment pitch learning curve burn rate.
+- Sed efficitur, lacus ac scelerisque pellentesque, lectus risus dignissim nisl, fermentum semper lectus diam eget lacus.
+- Nunc ornare purus enim, id eleifend mauris vestibulum volutpat.
+- Aenean facilisis ut ipsum condimentum ultrices.
+- Fusce sed metus vulputate, lobortis purus et, finibus purus. Suspendisse quis posuere lorem. Vivamus vulputate nec risus in pulvinar.

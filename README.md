@@ -9,7 +9,6 @@
 - **5 duetone themes**, depending on your preferences (orange is default, red, blue, green, pink)
 - [**Fira Code**](https://github.com/tonsky/FiraCode) as default monospaced font. It's gorgeous!
 - **really nice duotone**, custom syntax highlighting based on [**PrismJS**](https://prismjs.com)
-- an easy way to modify the theme (**Webpack, NodeJS, PostCSS etc.**)
 - fully responsive
 
 #### Built-in shortcodes
@@ -101,7 +100,9 @@ and go to `localhost:1313` in your browser. From now on all the changes you make
 
 ## How to edit the theme
 
-If you really want to edit the theme, you need to install Node dependencies. To do this, go to the theme directory (from your Hugo root directory):
+If you have to override some of the styles, **you can do this easly** by adding `static/styles.css` in your root directory and point things you want to change.
+
+Otherwise, if you really want to edit the theme, you need to install Node dependencies. To do this, go to the theme directory (from your Hugo root directory):
 
 ```
 $ cd themes/terminal
