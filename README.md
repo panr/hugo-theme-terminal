@@ -7,8 +7,8 @@
 ## Features
 
 - **5 duetone themes**, depending on your preferences (orange is default, red, blue, green, pink)
-- monospaced font, everywhere!
-- **realy nice duotone**, custom syntax highlighting based on [**PrismJS**](https://prismjs.com)
+- [**Fira Code**](https://github.com/tonsky/FiraCode) as default monospaced font. It's gorgeous!
+- **really nice duotone**, custom syntax highlighting based on [**PrismJS**](https://prismjs.com)
 - an easy way to modify the theme (**Webpack, NodeJS, PostCSS etc.**)
 - fully responsive
 
