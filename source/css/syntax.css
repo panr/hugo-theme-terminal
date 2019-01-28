@@ -1,0 +1,53 @@
+code.language-css,
+code.language-scss,
+.token.boolean,
+.token.string,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.language-scss .token.string,
+.style .token.string,
+.token.attr-value,
+.token.keyword,
+.token.control,
+.token.directive,
+.token.statement,
+.token.regex,
+.token.atrule,
+.token.number {
+  color: var(--accent);
+}
+
+.token.tag-id,
+.token.atrule-id,
+.token.operator,
+.token.unit,
+.token.placeholder,
+.token.variable,
+.token.attr-name {
+  color: color-mod(var(--accent) a(70%));
+}
+
+.token.property,
+.token.function,
+code.language-javascript,
+code.language-html {
+  color: color-mod(var(--accent) blend(#999 90%));
+}
+
+.token.selector,
+.token.tag,
+.token.punctuation {
+  color: white;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: rgba(255, 255, 255, .3);
+}
+
+.token.namespace {
+  opacity: .7;
+}

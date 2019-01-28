@@ -1,0 +1,12 @@
+name = "terminal"
+license = "MIT"
+licenselink = "https://gitlab.com/panr/hugo-theme-terminal/blob/master/LICENSE.md"
+description = "A simple, retro theme for Hugo."
+tags = ["blog", "clean", "customizable", "dark", "highlighting", "minimal", "monotone", "multilingual", "personal", "responsive", "simple", "technical", "retro"]
+features = ["blog", "shortcode", "syntax highlighting"]
+min_version = 0.30
+
+[author]
+  name = "panr"
+  homepage = "https://radoslawkoziel.pl"
+  twitter = "https://twitter.com/panr"

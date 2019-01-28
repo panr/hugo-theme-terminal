@@ -1,0 +1,11 @@
+<header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      {{ partial "logo.html" . }}
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  {{ if len .Site.Menus }}
+    {{ partial "menu.html" . }}
+  {{ end }}
+</header>

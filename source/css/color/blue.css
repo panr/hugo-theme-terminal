@@ -1,0 +1,14 @@
+@import '../main.css';
+@import '../header.css';
+@import '../logo.css';
+@import '../pagination.css';
+@import '../post.css';
+@import '../syntax.css';
+@import '../variables.css';
+
+:root {
+  --accent: #23B0FF;
+  --background: color-mod(var(--accent) blend(#1D1E28 98%));
+  --color: white;
+  --border-color: rgba(255, 255, 255, .1);
+}

@@ -1,0 +1,15 @@
+<footer class="footer">
+  <div class="footer__inner">
+    {{ if .Site.Copyright }}
+      <div class="copyright copyright--user">{{ .Site.Copyright| safeHTML }}</div>
+    {{else}}
+      <div class="copyright">
+        <span>© {{ now.Year }} Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    {{end}}
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
