@@ -7,9 +7,6 @@ paginate = 5
   contentTypeName = "post"
   themeColor = "orange"
 
-[params.logo]
-  logoText = "Terminal"
-
 [languages]
   [languages.en]
     title = "Terminal"
@@ -20,7 +17,7 @@ paginate = 5
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
-      logoText = "terminal"
+      logoText = "Terminal"
       logoHomeLink = "/"
 
     [languages.en.menu]
