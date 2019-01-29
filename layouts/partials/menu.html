@@ -1,6 +1,6 @@
 <nav class="menu">
   <ul class="menu__inner">
-    {{ range .Site.Menus.main }}
+    {{ range $.Site.Menus.main }}
       <li><a href="{{ .URL }}">{{ .Name }}</a></li>
     {{ end }}
   </ul>

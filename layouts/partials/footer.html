@@ -1,7 +1,7 @@
 <footer class="footer">
   <div class="footer__inner">
-    {{ if .Site.Copyright }}
-      <div class="copyright copyright--user">{{ .Site.Copyright| safeHTML }}</div>
+    {{ if $.Site.Copyright }}
+      <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
     {{else}}
       <div class="copyright">
         <span>© {{ now.Year }} Powered by <a href="http://gohugo.io">Hugo</a></span>

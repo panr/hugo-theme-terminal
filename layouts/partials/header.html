@@ -5,7 +5,7 @@
     </div>
     <div class="menu-trigger">menu</div>
   </div>
-  {{ if len .Site.Menus }}
+  {{ if len $.Site.Menus }}
     {{ partial "menu.html" . }}
   {{ end }}
 </header>

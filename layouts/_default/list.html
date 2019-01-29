@@ -1,7 +1,7 @@
 {{ define "main" }}
   <div class="posts">
-    {{ $isntDefault := not (or (eq (trim .Site.Params.contentTypeName " ") "posts") (eq (trim .Site.Params.contentTypeName " ") "")) }}
-    {{ $contentTypeName := cond $isntDefault (string .Site.Params.contentTypeName) "posts" }}
+    {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
+    {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
     {{ $paginator := .Paginate (where .Data.Pages "Type" $contentTypeName) }}
 
     {{ range $paginator.Pages }}
@@ -35,7 +35,7 @@
           {{ end }}
         {{ end }}
       </div>
-      <div><a class="read-more button" href="{{.RelPermalink}}">{{ .Site.Params.ReadMore }} →</a></div>
+      <div><a class="read-more button" href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a></div>
     </div>
     {{ end }}
     {{ partial "pagination.html" . }}
