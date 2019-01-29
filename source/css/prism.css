@@ -101,7 +101,7 @@ pre[class*="language-"].line-numbers > code {
 			text-align: right;
 		}
 
-div.code-toolbar {
+.code-toolbar {
 	position: relative;
 	margin: 40px 0;
 	padding: 20px 0;
@@ -116,6 +116,14 @@ div.code-toolbar {
 	+ .highlight,
 	+ .highlight .code-toolbar {
 		border-top: 0;
+	}
+
+	pre, code {
+		border: none;
+	}
+
+	code {
+		color: inherit;
 	}
 }
 

@@ -109,19 +109,20 @@ figure {
 code {
   font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
   font-feature-settings: normal;
-  background: var(--background-secondary);
+  background: color-mod(var(--accent) a(20%));
+  color: var(--accent);
   padding: 1px 6px;
   margin: 0 2px;
-  border-radius: 5px;
   font-size: .95rem;
 }
 
 pre {
   background: transparent;
   padding: 20px;
-  border-radius: 8px;
   font-size: .95rem;
   overflow: auto;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+	border-bottom: 1px solid rgba(255, 255, 255, .1);
 
   @media (--phone) {
     white-space: pre-wrap;
@@ -133,6 +134,7 @@ pre {
     margin: 0;
     padding: 0;
     font-size: inherit;
+    border: none;
   }
 }
 

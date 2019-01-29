@@ -11,7 +11,7 @@
         <span class="post-date">
           {{ .Date.Format "2006-01-02" }}
         </span>
-        <span class="post-author">:: {{ .Params.Author }}</span>
+        {{ with .Params.Author }}<span class="post-author">:: {{ . }}</span>{{ end }}
       </div>
 
       {{ if .Params.tags }}
