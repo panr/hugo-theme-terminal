@@ -72,7 +72,7 @@ paginate = 5
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
-      logoText = "terminal"
+      logoText = "Terminal"
       logoHomeLink = "/"
 
     [languages.en.menu]
