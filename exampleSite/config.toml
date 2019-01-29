@@ -4,7 +4,7 @@ theme = "hugo-theme-terminal"
 paginate = 5
 
 [params]
-  contentTypeName = "posts"
+  contentTypeName = "post"
   themeColor = "orange"
 
 [params.logo]

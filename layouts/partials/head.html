@@ -6,18 +6,18 @@
 <link rel="canonical" href="{{ .Permalink }}" />
 
 <!-- Theme CSS -->
-<link rel="stylesheet" href="/assets/style.css">
-{{ if (ne .Site.Params.ThemeColor "orange") }}
-  <link rel="stylesheet" href="/assets/{{ .Site.Params.ThemeColor }}.css">
+<link rel="stylesheet" href="{{ "assets/style.css" | absURL }}">
+{{ if (ne $.Site.Params.ThemeColor "orange") }}
+  <link rel="stylesheet" href="{{ (printf "assets/%s.css" .Site.Params.ThemeColor) | absURL }}">
 {{ end }}
 
 <!-- Custom CSS to override theme properties (/static/style.css) -->
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="{{ "style.css" | absURL }}">
 
 <!-- Icons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
-{{ with .Site.Params.ThemeColor }}
-  <link rel="shortcut icon" href="/img/favicon/{{ . }}.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "img/apple-touch-icon-144-precomposed.png" | absURL }}">
+{{ with $.Site.Params.ThemeColor }}
+  <link rel="shortcut icon" href="{{ printf "img/favicon/%s.png" . | absURL }}">
 {{ end }}
 
 <!-- Twitter Card -->
@@ -26,7 +26,7 @@
 <meta name="twitter:description" content="{{ if .IsHome }}{{ $.Site.Params.tagline }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 <meta name="twitter:site" content="{{ .Site.BaseURL }}" />
 <meta name="twitter:creator" content="{{ .Params.Author }}" />
-<meta name="twitter:image" content="{{ with .Params.Cover }}{{ $.Site.BaseURL }}img/post/{{ . }}{{ else }}{{ $.Site.BaseURL }}img/default.jpg{{ end }}">
+<meta name="twitter:image" content="{{ with .Params.Cover }}{{ printf "img/%s" . | absURL }}{{ end }}">
 
 <!-- OG data -->
 <meta property="og:locale" content="{{ $.Site.Language.Lang }}" />
@@ -35,7 +35,7 @@
 <meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.tagline }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:site_name" content="{{ .Title }}" />
-<meta property="og:image" content="{{ with .Params.Cover }}{{ $.Site.BaseURL }}img/post/{{ . }}{{ else }}{{ $.Site.BaseURL }}img/default.jpg{{ end }}">
+<meta property="og:image" content="{{ with .Params.Cover }}{{ printf "img/%s" . | absURL }}{{ end }}">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 {{ range .Params.categories }}<meta property="article:section" content="{{ . }}" />{{ end }}
@@ -48,5 +48,5 @@
 
 <!-- JSON Feed -->
 {{ if .OutputFormats.Get "json" }}
-<link href="{{ if .OutputFormats.Get "json" }}{{ .Site.BaseURL }}feed.json{{ end }}" rel="alternate" type="application/json" title="{{ .Site.Title }}" />
+<link href="{{ if .OutputFormats.Get "json" }}{{ "feed.json" | absURL }}{{ end }}" rel="alternate" type="application/json" title="{{ .Site.Title }}" />
 {{ end }}
