@@ -1,5 +1,28 @@
 <nav class="menu">
-  <ul class="menu__inner">
+  <ul class="menu__inner menu__inner--desktop">
+    {{ if $.Site.Params.showMenuItems }}
+      {{ range first $.Site.Params.showMenuItems $.Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+      <ul class="menu__sub-inner">
+        {{ if gt (len $.Site.Menus.main) $.Site.Params.showMenuItems }}
+          <li class="menu__sub-inner-more-trigger">{{ $.Site.Params.MenuMore }} ▾</li>
+
+          <ul class="menu__sub-inner-more hidden">
+            {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}
+              <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </ul>
+    {{ else }}
+      {{ range $.Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+    {{ end }}
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
     {{ range $.Site.Menus.main }}
       <li><a href="{{ .URL }}">{{ .Name }}</a></li>
     {{ end }}

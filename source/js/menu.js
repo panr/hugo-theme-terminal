@@ -1,16 +1,53 @@
-// Mobile menu
-
-const menuTrigger = document.querySelector(".menu-trigger");
+const container = document.querySelector(".container");
 const menu = document.querySelector(".menu");
+const mobileMenuTrigger = document.querySelector(".menu-trigger");
+const desktopMenu = document.querySelector(".menu__inner--desktop");
+const desktopMenuTrigger = document.querySelector(".menu__sub-inner-more-trigger");
+const menuMore = document.querySelector(".menu__sub-inner-more");
 const mobileQuery = getComputedStyle(document.body).getPropertyValue("--phoneWidth");
 const isMobile = () => window.matchMedia(mobileQuery).matches;
 const isMobileMenu = () => {
-  menuTrigger && menuTrigger.classList.toggle("hidden", !isMobile());
+  mobileMenuTrigger && mobileMenuTrigger.classList.toggle("hidden", !isMobile());
   menu && menu.classList.toggle("hidden", isMobile());
+  menuMore && menuMore.classList.toggle("hidden", !isMobile());
 };
+
+// Common
+
+menu.addEventListener("click", e => e.stopPropagation());
+menuMore.addEventListener("click", e => e.stopPropagation());
 
 isMobileMenu();
 
-menuTrigger && menuTrigger.addEventListener("click", () => menu && menu.classList.toggle("hidden"));
+document.body.addEventListener("click", () => {
+  if (!isMobile() && !menuMore.classList.contains("hidden")) {
+    console.log("desktop");
+    menuMore.classList.add("hidden");
+  } else if (isMobile() && !menu.classList.contains("hidden")) {
+    console.log("mobile");
+    menu.classList.add("hidden");
+  }
+});
 
 window.addEventListener("resize", isMobileMenu);
+
+// Mobile menu
+
+mobileMenuTrigger &&
+  mobileMenuTrigger.addEventListener("click", e => {
+    e.stopPropagation();
+    menu && menu.classList.toggle("hidden");
+  });
+
+// Desktop menu
+
+desktopMenuTrigger &&
+  desktopMenuTrigger.addEventListener("click", e => {
+    e.stopPropagation();
+    menuMore && menuMore.classList.toggle("hidden");
+
+    if (menuMore.getBoundingClientRect().right > container.getBoundingClientRect().right) {
+      menuMore.style.left = "auto";
+      menuMore.style.right = 0;
+    }
+  });

@@ -1,1 +1,124 @@
-!function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=0)}([function(e,t,n){n(1),e.exports=n(2)},function(e,t,n){"use strict"},function(e,t,n){"use strict";var r=document.querySelector(".menu-trigger"),o=document.querySelector(".menu"),u=getComputedStyle(document.body).getPropertyValue("--phoneWidth"),i=function(){return window.matchMedia(u).matches},c=function(){r&&r.classList.toggle("hidden",!i()),o&&o.classList.toggle("hidden",i())};c(),r&&r.addEventListener("click",function(){return o&&o.classList.toggle("hidden")}),window.addEventListener("resize",c)}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./source/js/main.js":
+/*!***************************!*\
+  !*** ./source/js/main.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("// Add your script here\n\n\n//# sourceURL=webpack:///./source/js/main.js?");
+
+/***/ }),
+
+/***/ "./source/js/menu.js":
+/*!***************************!*\
+  !*** ./source/js/menu.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar container = document.querySelector(\".container\");\nvar menu = document.querySelector(\".menu\");\nvar mobileMenuTrigger = document.querySelector(\".menu-trigger\");\nvar desktopMenu = document.querySelector(\".menu__inner--desktop\");\nvar desktopMenuTrigger = document.querySelector(\".menu__sub-inner-more-trigger\");\nvar menuMore = document.querySelector(\".menu__sub-inner-more\");\nvar mobileQuery = getComputedStyle(document.body).getPropertyValue(\"--phoneWidth\");\n\nvar isMobile = function isMobile() {\n  return window.matchMedia(mobileQuery).matches;\n};\n\nvar isMobileMenu = function isMobileMenu() {\n  mobileMenuTrigger && mobileMenuTrigger.classList.toggle(\"hidden\", !isMobile());\n  menu && menu.classList.toggle(\"hidden\", isMobile());\n  menuMore && menuMore.classList.toggle(\"hidden\", !isMobile());\n}; // Common\n\n\nmenu.addEventListener(\"click\", function (e) {\n  return e.stopPropagation();\n});\nmenuMore.addEventListener(\"click\", function (e) {\n  return e.stopPropagation();\n});\nisMobileMenu();\ndocument.body.addEventListener(\"click\", function () {\n  if (!isMobile() && !menuMore.classList.contains(\"hidden\")) {\n    console.log(\"desktop\");\n    menuMore.classList.add(\"hidden\");\n  } else if (isMobile() && !menu.classList.contains(\"hidden\")) {\n    console.log(\"mobile\");\n    menu.classList.add(\"hidden\");\n  }\n});\nwindow.addEventListener(\"resize\", isMobileMenu); // Mobile menu\n\nmobileMenuTrigger && mobileMenuTrigger.addEventListener(\"click\", function (e) {\n  e.stopPropagation();\n  menu && menu.classList.toggle(\"hidden\");\n}); // Desktop menu\n\ndesktopMenuTrigger && desktopMenuTrigger.addEventListener(\"click\", function (e) {\n  e.stopPropagation();\n  menuMore && menuMore.classList.toggle(\"hidden\");\n\n  if (menuMore.getBoundingClientRect().right > container.getBoundingClientRect().right) {\n    menuMore.style.left = \"auto\";\n    menuMore.style.right = 0;\n  }\n});\n\n//# sourceURL=webpack:///./source/js/menu.js?");
+
+/***/ }),
+
+/***/ 0:
+/*!*****************************************************!*\
+  !*** multi ./source/js/main.js ./source/js/menu.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("__webpack_require__(/*! /Users/radek/Documents/Git/Moje/hugoBasicExample/themes/terminal/source/js/main.js */\"./source/js/main.js\");\nmodule.exports = __webpack_require__(/*! /Users/radek/Documents/Git/Moje/hugoBasicExample/themes/terminal/source/js/menu.js */\"./source/js/menu.js\");\n\n\n//# sourceURL=webpack:///multi_./source/js/main.js_./source/js/menu.js?");
+
+/***/ })
+
+/******/ });

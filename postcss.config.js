@@ -5,11 +5,13 @@ const postCSSPresetEnv = require("postcss-preset-env");
 const browsers = require("browserslist");
 const cssnano = require("cssnano");
 const color = require("postcss-color-mod-function");
+const mixins = require("postcss-mixins");
 
 module.exports = () => ({
   plugins: [
     url,
     imports,
+    mixins,
     nested,
     postCSSPresetEnv({
       stage: 1,

@@ -39,6 +39,7 @@
     "postcss-color-mod-function": "^3.0.3",
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.0.5",
+    "postcss-mixins": "^6.2.1",
     "postcss-nested": "^3.0.0",
     "postcss-preset-env": "^5.2.2",
     "postcss-reporter": "^5.0.0",

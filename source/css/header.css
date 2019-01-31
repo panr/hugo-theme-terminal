@@ -1,3 +1,15 @@
+@define-mixin menu {
+  position: absolute;
+  background: var(--background);
+  box-shadow: var(--shadow);
+  color: white;
+  border: 2px solid;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  z-index: 99;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -28,17 +40,14 @@
   }
 
   .menu {
+    --shadow-color: color-mod(var(--background) a(80%));
+    --shadow: 0 10px var(--shadow-color), -10px 10px var(--shadow-color), 10px 10px var(--shadow-color);
     margin: 20px 0;
 
     @media (--phone) {
-      position: absolute;
-      background: var(--background);
-      border: 2px solid;
+      @mixin menu;
       top: 50px;
       right: 0;
-      margin: 0;
-      padding: 10px;
-      z-index: 99;
     }
 
     &__inner {
@@ -47,6 +56,20 @@
       list-style: none;
       margin: 0;
       padding: 0;
+
+      &--desktop {
+        @media (--phone) {
+          display: none;
+        }
+      }
+
+      &--mobile {
+        display: none;
+
+        @media (--phone) {
+          display: block;
+        }
+      }
 
       li {
         &:not(:last-of-type) {
@@ -64,6 +87,35 @@
         li {
           margin: 0;
           padding: 5px;
+        }
+      }
+    }
+
+    &__sub-inner {
+      position: relative;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      &:not(:only-child) {
+        margin-left: 20px;
+      }
+
+      &-more {
+        @mixin menu;
+        top: 35px;
+        left: 0;
+
+        &-trigger {
+          color: var(--accent);
+          user-select: none;
+          cursor: pointer;
+        }
+
+        li {
+          margin: 0;
+          padding: 5px;
+          white-space: nowrap;
         }
       }
     }
