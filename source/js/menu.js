@@ -14,17 +14,15 @@ const isMobileMenu = () => {
 
 // Common
 
-menu.addEventListener("click", e => e.stopPropagation());
-menuMore.addEventListener("click", e => e.stopPropagation());
+menu && menu.addEventListener("click", e => e.stopPropagation());
+menuMore && menuMore.addEventListener("click", e => e.stopPropagation());
 
 isMobileMenu();
 
 document.body.addEventListener("click", () => {
   if (!isMobile() && !menuMore.classList.contains("hidden")) {
-    console.log("desktop");
     menuMore.classList.add("hidden");
   } else if (isMobile() && !menu.classList.contains("hidden")) {
-    console.log("mobile");
     menu.classList.add("hidden");
   }
 });

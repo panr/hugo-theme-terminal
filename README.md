@@ -88,6 +88,8 @@ paginate = 5
 
 to `config.toml` file in your Hugo root directory and change params fields. In case you need, here's [a YAML version](https://gist.github.com/panr/9eeea6f595c257febdadc11763e3a6d1).
 
+**NOTE:** Please keep in mind that currently `main menu` doesn't support nesting.
+
 ## How to run your site
 
 From your Hugo root directory run:
@@ -102,7 +104,7 @@ and go to `localhost:1313` in your browser. From now on all the changes you make
 
 If you have to override some of the styles, **you can do this easily** by adding `static/styles.css` in your root directory and point things you want to change.
 
-Otherwise, if you really want to edit the theme, you need to install Node dependencies. To do this, go to the theme directory (from your Hugo root directory):
+Otherwise, if you really want to edit the theme, you need to install Node dependencies. To do so, go to the theme directory (from your Hugo root directory):
 
 ```
 $ cd themes/terminal
