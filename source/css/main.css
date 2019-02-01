@@ -89,8 +89,11 @@ figure {
 
   figcaption {
     font-size: 14px;
+    padding: 5px 10px;
     margin-top: 5px;
-    opacity: .8;
+    background: var(--accent);
+    color: var(--background);
+    /* opacity: .8; */
 
     &.left {
       text-align: left;
@@ -176,6 +179,22 @@ blockquote {
     left: -25px;
     color: var(--accent);
   }
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 40px 0;
+}
+
+table, th, td {
+  border: 1px dashed var(--accent);
+  padding: 10px;
+}
+
+th {
+  color: var(--accent);
 }
 
 ul, ol {

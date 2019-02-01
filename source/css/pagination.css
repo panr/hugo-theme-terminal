@@ -11,7 +11,7 @@
       text-align: center;
       margin: 0 auto;
       padding: 5px 10px;
-      background: var(color-mod(var(--accent) blend(#1D1E28 98%)));
+      background: color-mod(var(--accent) blend(#1D1E28 98%));
       font-size: .8rem;
       text-transform: uppercase;
       text-decoration: none;
