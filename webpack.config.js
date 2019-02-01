@@ -87,7 +87,7 @@ module.exports = {
     },
     minimizer: [
       new UglifyJsPlugin({
-        sourceMap: false,
+        sourceMap: true,
       }),
     ],
   },

@@ -61,6 +61,8 @@ paginate = 5
   contentTypeName = "posts"
   # ["orange", "blue", "red", "green", "pink"]
   themeColor = "orange"
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 2
 
 [languages]
   [languages.en]
@@ -68,6 +70,7 @@ paginate = 5
     subtitle = "A simple, retro theme for Hugo"
     keywords = ""
     copyright = ""
+    menuMore = "Show more"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
 
