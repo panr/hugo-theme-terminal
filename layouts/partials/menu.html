@@ -6,8 +6,8 @@
           <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
       {{ end }}
-      <ul class="menu__sub-inner">
-        {{ if gt (len $.Site.Menus.main) $.Site.Params.showMenuItems }}
+      {{ if gt (len $.Site.Menus.main) $.Site.Params.showMenuItems }}
+        <ul class="menu__sub-inner">
           <li class="menu__sub-inner-more-trigger">{{ $.Site.Params.MenuMore }} ▾</li>
 
           <ul class="menu__sub-inner-more hidden">
@@ -17,8 +17,8 @@
               {{ end }}
             {{ end }}
           </ul>
-        {{ end }}
-      </ul>
+        </ul>
+      {{ end }}
     {{ else }}
       {{ range $.Site.Menus.main }}
         {{ if not .HasChildren }}

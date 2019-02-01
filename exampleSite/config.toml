@@ -6,6 +6,7 @@ paginate = 5
 [params]
   contentTypeName = "post"
   themeColor = "orange"
+  showMenuItems = 2
 
 [languages]
   [languages.en]
@@ -13,6 +14,7 @@ paginate = 5
     subtitle = "A simple, retro theme for Hugo"
     keywords = ""
     copyright = ""
+    menuMore = "Show more"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
 
