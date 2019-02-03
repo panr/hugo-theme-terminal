@@ -63,6 +63,8 @@ paginate = 5
   themeColor = "orange"
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
+  # center the content on the screen
+  themeWidth = "full"
 
 [languages]
   [languages.en]
