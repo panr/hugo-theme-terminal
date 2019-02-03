@@ -7,7 +7,12 @@
   {{ partial "head.html" . }}
 </head>
 <body class="">
-<div class="container">
+{{ if eq $.Site.Params.themeWidth "full" }}
+     <div class="container full">
+{{ else }}
+    <div class="container half">
+{{ end }}
+
   {{ partial "header.html" . }}
 
   <div class="content">
