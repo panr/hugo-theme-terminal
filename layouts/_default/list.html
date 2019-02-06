@@ -23,7 +23,12 @@
       {{ end }}
 
       {{ with .Params.Cover }}
-        <img src="{{ printf "img/%s" . | absURL }}" class="post-cover" />
+        {{ $imgurl := urls.Parse . }}
+        {{ if $imgurl.Scheme }}
+          <img src="{{ printf "%s" . | safeURL }}" class="post-cover" />
+        {{ else }}
+          <img src="{{ printf "img/%s" . | absURL }}" class="post-cover" />
+        {{ end }}
       {{ end }}
 
       <div class="post-content">
