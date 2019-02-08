@@ -23,7 +23,7 @@
       {{ end }}
 
       {{ with .Params.Cover }}
-        <img src="{{ printf "img/%s" . | absURL }}" class="post-cover" />
+        <img src="{{ . | absURL }}" class="post-cover" />
       {{ end }}
 
       <div class="post-content">
