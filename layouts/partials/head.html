@@ -11,8 +11,10 @@
   <link rel="stylesheet" href="{{ (printf "assets/%s.css" $.Site.Params.ThemeColor) | absURL }}">
 {{ end }}
 
+{{ if $.Site.Params.CustomCss }}
 <!-- Custom CSS to override theme properties (/static/style.css) -->
-<link rel="stylesheet" href="{{ "assets/style.css" | absURL }}">
+<link rel="stylesheet" href="{{ $.Site.Params.CustomCss | safeHTML | absURL }}">
+{{ end }}
 
 <!-- Icons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "img/apple-touch-icon-144-precomposed.png" | absURL }}">
