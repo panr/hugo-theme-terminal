@@ -64,7 +64,10 @@ paginate = 5
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
   # center the content on the screen
-  themeWidth = "full"
+  # set theme to full screen width
+  fullWidthTheme = true // default: false
+  # center theme with default width
+  centerTheme = true // default: false
 
 [languages]
   [languages.en]
