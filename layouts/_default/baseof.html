@@ -7,11 +7,9 @@
   {{ partial "head.html" . }}
 </head>
 <body class="">
-{{ if eq $.Site.Params.themeWidth "full" }}
-     <div class="container full">
-{{ else }}
-    <div class="container half">
-{{ end }}
+{{ $container := cond $.Site.Params.FullWidthTheme "container full" (cond $.Site.Params.CenterTheme "container center" "container") }}
+
+<div class="{{- $container -}}">
 
   {{ partial "header.html" . }}
 
