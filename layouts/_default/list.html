@@ -17,13 +17,13 @@
       {{ if .Params.tags }}
         <span class="post-tags">
           {{ range .Params.tags }}
-            #<a href="{{ (urlize (printf "tags/%s" . )) | absURL }}">{{ . }}</a>&nbsp;
+            #<a href="{{ (urlize (printf "tags/%s/" . )) | absURL }}">{{ . }}</a>&nbsp;
           {{ end }}
         </span>
       {{ end }}
 
       {{ with .Params.Cover }}
-        <img src="{{ printf "img/%s" . | absURL }}" class="post-cover" />
+        <img src="{{ . | absURL }}" class="post-cover" />
       {{ end }}
 
       <div class="post-content">

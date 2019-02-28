@@ -26,7 +26,7 @@
 <meta name="twitter:description" content="{{ if .IsHome }}{{ $.Site.Params.tagline }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 <meta name="twitter:site" content="{{ $.Site.BaseURL }}" />
 <meta name="twitter:creator" content="{{ .Params.Author }}" />
-<meta name="twitter:image" content="{{ with .Params.Cover }}{{ printf "img/%s" . | absURL }}{{ end }}">
+<meta name="twitter:image" content="{{ with .Params.Cover }}{{ . | absURL }}{{ end }}">
 
 <!-- OG data -->
 <meta property="og:locale" content="{{ $.Site.Language.Lang }}" />
@@ -35,7 +35,7 @@
 <meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.tagline }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:site_name" content="{{ .Title }}" />
-<meta property="og:image" content="{{ with .Params.Cover }}{{ printf "img/%s" . | absURL }}{{ end }}">
+<meta property="og:image" content="{{ with .Params.Cover }}{{ . | absURL }}{{ end }}">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 {{ range .Params.categories }}<meta property="article:section" content="{{ . }}" />{{ end }}
