@@ -231,10 +231,8 @@ ol ol {
   padding: 40px;
   max-width: 864px;
   min-height: 100vh;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 
-  @media (--phone) {
-    padding: 20px;
-  }
   &.full,
   &.center {
     border: none;
@@ -245,11 +243,10 @@ ol ol {
     max-width: 100%;
   }
 
-
-  
+  @media (--phone) {
+    padding: 20px;
+  }
 }
-
-
 
 .content {
   display: flex;
