@@ -65,9 +65,9 @@ paginate = 5
   showMenuItems = 2
   # center the content on the screen
   # set theme to full screen width
-  fullWidthTheme = true // default: false
+  fullWidthTheme = false
   # center theme with default width
-  centerTheme = true // default: false
+  centerTheme = false
 
 [languages]
   [languages.en]
