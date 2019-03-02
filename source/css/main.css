@@ -229,14 +229,27 @@ ol ol {
   display: flex;
   flex-direction: column;
   padding: 40px;
-  border-right: 1px solid rgba(255, 255, 255, .1);
   max-width: 864px;
   min-height: 100vh;
 
   @media (--phone) {
     padding: 20px;
   }
+  &.full,
+  &.center {
+    border: none;
+    margin: 0 auto;
+  }
+
+  &.full {
+    max-width: 100%;
+  }
+
+
+  
 }
+
+
 
 .content {
   display: flex;
