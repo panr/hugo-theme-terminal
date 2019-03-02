@@ -7,6 +7,8 @@ paginate = 5
   contentTypeName = "post"
   themeColor = "orange"
   showMenuItems = 2
+  fullWidthTheme = false
+  centerTheme = false
 
 [languages]
   [languages.en]
