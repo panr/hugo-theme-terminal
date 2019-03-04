@@ -51,5 +51,5 @@
 <link href="{{ if .OutputFormats.Get "json" }}{{ "feed.json" | absURL }}{{ end }}" rel="alternate" type="application/json" title="{{ $.Site.Title }}" />
 {{ end }}
 
-<!-- Custom head section-->
-{{ partial "custom_head.html" . }}
+<!-- Extended head section-->
+{{ partial "extended_head.html" . }}
