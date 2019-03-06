@@ -97,6 +97,12 @@ to `config.toml` file in your Hugo root directory and change params fields. In c
 
 **NOTE:** Please keep in mind that currently `main menu` doesn't support nesting.
 
+## Add-ons
+
+- **Comments** — for adding comments to your blog posts please take a look at `layouts/patrials/comments.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/comments.html.  
+- **Extended Head** — please take a look at `layouts/partials/extended_head.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_head.html  
+- **Extended Footer** — please take a look at `layouts/partials/extended_footer.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_footer.html
+
 ## How to run your site
 
 From your Hugo root directory run:
