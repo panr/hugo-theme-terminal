@@ -4,6 +4,20 @@
 
 ### DEMO - https://hugo-terminal.now.sh/
 
+---
+
+- [Features](#features)
+- [Built-in shortcodes](#built-in-shortcodes)
+- [Code highlighting](#code-highlighting)
+- [How to start](#how-to-start)
+- [How to configure](#how-to-configure)
+- [Add-ons](#add-ons)
+- [How to run your site](#how-to-run-your-site)
+- [How to edit the theme](#how-to-edit-the-theme)
+- [How to contribute](#how-to-contribute)
+- [Terminal theme user?](#terminal-theme-user)
+- [Licence](#licence)
+
 ## Features
 
 - **5 duetone themes**, depending on your preferences (orange is default, red, blue, green, pink)
