@@ -99,7 +99,7 @@ to `config.toml` file in your Hugo root directory and change params fields. In c
 
 ## Add-ons
 
-- **Comments** — for adding comments to your blog posts please take a look at `layouts/patrials/comments.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/comments.html.  
+- **Comments** — for adding comments to your blog posts please take a look at `layouts/partials/comments.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/comments.html.  
 - **Extended Head** — please take a look at `layouts/partials/extended_head.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_head.html  
 - **Extended Footer** — please take a look at `layouts/partials/extended_footer.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_footer.html
 
@@ -134,6 +134,10 @@ $ yarn
 ## How to contribute
 
 If you spot any bugs, please use [Issue Tracker](https://github.com/panr/hugo-theme-terminal/issues) or if you want to add a new feature directly please create a new [Pull Request](https://github.com/panr/hugo-theme-terminal/pulls).
+
+## Terminal theme user?
+
+I'd be happy to know more about you and what you are doing. If you want to share it, please make a contribution and [add your site to the list](users.md)! 🤗
 
 ## Licence
 
