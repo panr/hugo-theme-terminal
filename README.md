@@ -81,6 +81,8 @@ paginate = 5
   fullWidthTheme = false
   # center theme with default width
   centerTheme = false
+  # set a custom favicon (default is a `themeColor` square)
+  # favicon = "favicon.ico"
 
 [languages]
   [languages.en]
