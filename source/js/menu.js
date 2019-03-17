@@ -6,7 +6,7 @@ const desktopMenuTrigger = document.querySelector(".menu__sub-inner-more-trigger
 const menuMore = document.querySelector(".menu__sub-inner-more");
 const mobileQuery = getComputedStyle(document.body).getPropertyValue("--phoneWidth");
 const isMobile = () => window.matchMedia(mobileQuery).matches;
-const isMobileMenu = () => {
+const handleMenuClasses = () => {
   mobileMenuTrigger && mobileMenuTrigger.classList.toggle("hidden", !isMobile());
   menu && menu.classList.toggle("hidden", isMobile());
   menuMore && menuMore.classList.toggle("hidden", !isMobile());
@@ -17,17 +17,17 @@ const isMobileMenu = () => {
 menu && menu.addEventListener("click", e => e.stopPropagation());
 menuMore && menuMore.addEventListener("click", e => e.stopPropagation());
 
-isMobileMenu();
+handleMenuClasses();
 
 document.body.addEventListener("click", () => {
-  if (!isMobile() && !menuMore.classList.contains("hidden")) {
+  if (!isMobile() && menuMore && !menuMore.classList.contains("hidden")) {
     menuMore.classList.add("hidden");
   } else if (isMobile() && !menu.classList.contains("hidden")) {
     menu.classList.add("hidden");
   }
 });
 
-window.addEventListener("resize", isMobileMenu);
+window.addEventListener("resize", handleMenuClasses);
 
 // Mobile menu
 
