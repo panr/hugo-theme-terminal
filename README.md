@@ -147,6 +147,61 @@ $ npm i yarn
 $ yarn
 ```
 
+## How to add Search functionality
+
+If you want to add searching to your staticly generated website, you can use [hugo-search-fuse-js](https://github.com/kaushalmodi/hugo-search-fuse-js) theme component.
+
+1. You can download the theme component manually from [https://github.com/kaushalmodi/hugo-search-fuse-js.git](https://github.com/kaushalmodi/hugo-search-fuse-js.git) and copying it to `themes/hugo-search-fuse-js` in your HUGO root directory.
+
+You can also clone it directly to your Hugo themes folder:
+
+```
+$ git clone https://github.com/kaushalmodi/hugo-search-fuse-js.git themes/hugo-search-fuse-js
+```
+
+You can also add it as a git submodule:
+
+```
+$ git submodule add https://github.com/kaushalmodi/hugo-search-fuse-js.git themes/hugo-search-fuse-js
+```
+
+2. Add `hugo-search-fuse-js` as a theme in your config.toml file
+```
+theme = ["hugo-search-fuse-js", "terminal"]
+```
+*Note: Add `hugo-search-fuse-js` to the left-most element of the `theme` list.*
+
+3. Create `content/search.md` with the following basic syntax:
+
+```
++++
+title = "Search"
+layout = "search"
+outputs = ["html", "json"]
+[sitemap]
+  priority = 0.1
++++
+```
+
+4. Add the following to the `config.toml` to add search menu item
+
+```
+[[languages.en.menu.main]]
+  identifier = "search"
+  name = "Search"
+  url = "/search"
+```
+
+Change `showMenuItems = 3` if needed in config.toml
+
+5. Now, from Hugo root directory run:
+
+```
+$ hugo server --themesDir ./themes/
+```
+
+6. When you open `localhost:1313` in a browser, you will see `Search` menu item, click on it and start seaching.
+
 ## How to contribute
 
 If you spot any bugs, please use [Issue Tracker](https://github.com/panr/hugo-theme-terminal/issues) or if you want to add a new feature directly please create a new [Pull Request](https://github.com/panr/hugo-theme-terminal/pulls).
