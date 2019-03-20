@@ -4,9 +4,9 @@
     <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
   <div class="post-meta">
     {{ if .Params.Date }}
-    <span class="post-date">
-      {{ .Date.Format "2006-01-02" }} {{ if $.Site.Params.showLastUpdated }}[{{or $.Site.Params.updatedDatePrefix "Updated"}}: {{ .Lastmod.Format "2006-01-02" }}]{{ end }}
-    </span>
+      <span class="post-date">
+        {{ .Date.Format "2006-01-02" }} {{ if $.Site.Params.showLastUpdated }}[{{or $.Site.Params.updatedDatePrefix "Updated"}}: {{ .Lastmod.Format "2006-01-02" }}]{{ end }}
+      </span>
     {{ end }}
     {{ with .Params.Author }}
     <span class="post-author">::
@@ -24,7 +24,22 @@
   {{ end }}
 
   {{ with .Params.Cover }}
-  <img src="{{ . | absURL }}" class="post-cover" />
+    <img src="{{ . | absURL }}" class="post-cover" />
+  {{ end }}
+
+  {{ if .Params.Toc }}
+    <div class="table-of-contents">
+        <h2>
+          {{ if .Params.TocTitle }}
+            {{ .Params.TocTitle }}
+          {{ else if $.Site.Params.TocTitle }}
+            {{ $.Site.Params.TocTitle }}
+          {{ else }}
+            Table of Contents
+          {{ end }}
+        </h2>
+      {{ .TableOfContents }}
+    </div>
   {{ end }}
 
   <div class="post-content">
@@ -34,32 +49,9 @@
       </div>
     {{- end -}}
   </div>
-  {{ if or .NextInSection .PrevInSection }}
-  <div class="pagination">
-    <div class="pagination__title">
-      <span
-        class="pagination__title-h">{{ $.Site.Params.ReadOtherPosts }}</span>
-      <hr />
-    </div>
-    <div class="pagination__buttons">
-      {{ if .NextInSection }}
-      <span class="button previous">
-        <a href="{{ .NextInSection.Permalink }}">
-          <span class="button__icon">←</span>
-          <span class="button__text">{{ .NextInSection.Title }}</span>
-        </a>
-      </span>
-      {{ end }}
-      {{ if .PrevInSection }}
-      <span class="button next">
-        <a href="{{ .PrevInSection.Permalink }}">
-          <span class="button__text">{{ .PrevInSection.Title }}</span>
-          <span class="button__icon">→</span>
-        </a>
-      </span>
-      {{ end }}
-    </div>
-  </div>
+
+  {{ if eq .Type $.Site.Params.contentTypeName }}
+  {{ partial "posts_pagination.html" . }}
   {{ end }}
 
   {{ partial "comments.html" . }}
