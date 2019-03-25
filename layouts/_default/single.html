@@ -22,7 +22,6 @@
 
     {{ if .Params.Toc }}
     <div class="table-of-contents">
-      {{ if .Params.Toc }}
         <h1>
           {{ if .Params.TocTitle }}
             {{ .Params.TocTitle }}
@@ -32,7 +31,6 @@
             Table of Contents
           {{ end }}
         </h1>
-      {{ end }}
       {{ .TableOfContents }}
     </div>
     {{ end }}
