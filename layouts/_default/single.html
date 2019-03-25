@@ -22,6 +22,17 @@
 
     {{ if .Params.Toc }}
     <div class="table-of-contents">
+      {{ if or $.Site.Params.TocTitle .Params.Toc }}
+        <h1>
+          {{ if .Params.TocTitle }}
+            {{ .Params.TocTitle }}
+          {{ else if $.Site.Params.TocTitle }}
+            {{ $.Site.Params.TocTitle }}
+          {{ else }}
+            Table of Contents
+          {{ end }}
+        </h1>
+      {{ end }}
       {{ .TableOfContents }}
     </div>
     {{ end }}
