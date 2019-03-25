@@ -22,7 +22,7 @@
 
     {{ if .Params.Toc }}
     <div class="table-of-contents">
-      {{ if or $.Site.Params.TocTitle .Params.Toc }}
+      {{ if .Params.Toc }}
         <h1>
           {{ if .Params.TocTitle }}
             {{ .Params.TocTitle }}
