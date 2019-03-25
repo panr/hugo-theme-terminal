@@ -29,15 +29,15 @@
 
   {{ if .Params.Toc }}
     <div class="table-of-contents">
-        <h2>
-          {{ if .Params.TocTitle }}
-            {{ .Params.TocTitle }}
-          {{ else if $.Site.Params.TocTitle }}
-            {{ $.Site.Params.TocTitle }}
-          {{ else }}
-            Table of Contents
-          {{ end }}
-        </h2>
+      <h2>
+        {{ if .Params.TocTitle }}
+          {{ .Params.TocTitle }}
+        {{ else if $.Site.Params.TocTitle }}
+          {{ $.Site.Params.TocTitle }}
+        {{ else }}
+          Table of Contents
+        {{ end }}
+      </h2>
       {{ .TableOfContents }}
     </div>
   {{ end }}
