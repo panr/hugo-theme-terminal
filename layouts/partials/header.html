@@ -3,9 +3,11 @@
     <div class="header__logo">
       {{ partial "logo.html" . }}
     </div>
-    <div class="menu-trigger">menu</div>
+      {{ range $.Site.Menus.foo }}
+    <div style="display:unset" class="menu-trigger"><a href="{{ .URL }}">
+                        {{ .Pre }}
+                        <span>{{ .Name }}</span>
+                    </a></div>
+      {{ end }}
   </div>
-  {{ if len $.Site.Menus }}
-    {{ partial "menu.html" . }}
-  {{ end }}
 </header>

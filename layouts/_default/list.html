@@ -26,16 +26,16 @@
         <img src="{{ . | absURL }}" class="post-cover" />
       {{ end }}
 
-      <div class="post-content">
-        {{ with .Description }}
+      <div style="margin-bottom: 6em;"class="post-content">
+        <!--{{ with .Description }}
           {{ . | markdownify }}
         {{ else }}
           {{ if .Truncated }}
             {{ .Summary | markdownify }}
           {{ end }}
-        {{ end }}
+        {{ end }}-->
+        {{.Content}}
       </div>
-      <div><a class="read-more button" href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a></div>
     </div>
     {{ end }}
     {{ partial "pagination.html" . }}
