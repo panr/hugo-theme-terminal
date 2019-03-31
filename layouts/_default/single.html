@@ -25,12 +25,6 @@
   <img src="{{ . | absURL }}" class="post-cover" />
   {{ end }}
 
-  {{ if .Params.Toc }}
-  <div class="table-of-contents">
-    {{ .TableOfContents }}
-  </div>
-  {{ end }}
-
   <div class="post-content">
     {{ .Content }}
   </div>
