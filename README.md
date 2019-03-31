@@ -11,6 +11,7 @@
 - [Code highlighting](#code-highlighting)
 - [How to start](#how-to-start)
 - [How to configure](#how-to-configure)
+- [Post archetype](#post-archetype)
 - [Add-ons](#add-ons)
 - [How to run your site](#how-to-run-your-site)
 - [How to edit the theme](#how-to-edit-the-theme)
@@ -112,6 +113,10 @@ paginate = 5
 to `config.toml` file in your Hugo root directory and change params fields. In case you need, here's [a YAML version](https://gist.github.com/panr/9eeea6f595c257febdadc11763e3a6d1).
 
 **NOTE:** Please keep in mind that currently `main menu` doesn't support nesting.
+
+## Post archetype
+
+See the basic `post` file params supported by the theme — https://github.com/panr/hugo-theme-terminal/blob/master/archetypes/post.md
 
 ## Add-ons
 
