@@ -1,43 +1,52 @@
 {{ define "main" }}
-  <div class="posts">
-    {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
-    {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
-    {{ $paginator := .Paginate (where .Data.Pages "Type" $contentTypeName) }}
+<div class="posts">
+  {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
+  {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
+  {{ $paginator := .Paginate (where .Data.Pages "Type" $contentTypeName) }}
 
-    {{ range $paginator.Pages }}
-    <div class="post on-list">
-      <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
-      <div class="post-meta">
-        <span class="post-date">
-          {{ .Date.Format "2006-01-02" }}
-        </span>
-        {{ with .Params.Author }}<span class="post-author">:: {{ . }}</span>{{ end }}
-      </div>
-
-      {{ if .Params.tags }}
-        <span class="post-tags">
-          {{ range .Params.tags }}
-            #<a href="{{ (urlize (printf "tags/%s/" . )) | absURL }}">{{ . }}</a>&nbsp;
-          {{ end }}
-        </span>
-      {{ end }}
-
-      {{ with .Params.Cover }}
-        <img src="{{ . | absURL }}" class="post-cover" />
-      {{ end }}
-
-      <div class="post-content">
-        {{ with .Description }}
-          {{ . | markdownify }}
-        {{ else }}
-          {{ if .Truncated }}
-            {{ .Summary | markdownify }}
-          {{ end }}
-        {{ end }}
-      </div>
-      <div><a class="read-more button" href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a></div>
+  {{ range $paginator.Pages }}
+  <div class="post on-list">
+    <h1 class="post-title">
+      <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
+    <div class="post-meta">
+      <span class="post-date">
+        {{ .Date.Format "2006-01-02" }}
+      </span>
+      {{ with .Params.Author }}<span class="post-author">::
+        {{ . }}</span>{{ end }}
     </div>
+
+    {{ if .Params.tags }}
+      <span class="post-tags">
+        {{ range .Params.tags }}
+        #<a href="{{ (urlize (printf "tags/%s/" . )) | absURL }}">{{ . }}</a>&nbsp;
+        {{ end }}
+      </span>
     {{ end }}
-    {{ partial "pagination.html" . }}
+
+    {{ with .Params.Cover }}
+      <img src="{{ . | absURL }}" class="post-cover" />
+    {{ end }}
+
+    <div class="post-content">
+      {{ if .Params.showFullContent }}
+        {{ .Content | markdownify }}
+      {{ else if .Description }}
+        {{ .Description | markdownify }}
+      {{ else }}
+        {{ if .Truncated }}
+          {{ .Summary | markdownify }}
+        {{ end }}
+      {{ end }}
+    </div>
+
+    {{ if not .Params.showFullContent }}
+      <div>
+        <a class="read-more button" href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
+      </div>
+    {{ end }}
   </div>
+  {{ end }}
+  {{ partial "pagination.html" . }}
+</div>
 {{ end }}
