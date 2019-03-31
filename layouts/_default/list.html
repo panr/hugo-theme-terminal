@@ -17,33 +17,36 @@
     </div>
 
     {{ if .Params.tags }}
-      <span class="post-tags">
-        {{ range .Params.tags }}
-        #<a href="{{ (urlize (printf "tags/%s/" . )) | absURL }}">{{ . }}</a>&nbsp;
-        {{ end }}
-      </span>
+    <span class="post-tags">
+      {{ range .Params.tags }}
+      #<a href="{{ (urlize (printf "tags/%s/" . )) | absURL }}">
+        {{- . -}}
+      </a>&nbsp;
+      {{ end }}
+    </span>
     {{ end }}
 
     {{ with .Params.Cover }}
-      <img src="{{ . | absURL }}" class="post-cover" />
+    <img src="{{ . | absURL }}" class="post-cover" />
     {{ end }}
 
     <div class="post-content">
       {{ if .Params.showFullContent }}
-        {{ .Content | markdownify }}
+      {{ .Content | markdownify }}
       {{ else if .Description }}
-        {{ .Description | markdownify }}
+      {{ .Description | markdownify }}
       {{ else }}
-        {{ if .Truncated }}
-          {{ .Summary | markdownify }}
-        {{ end }}
+      {{ if .Truncated }}
+      {{ .Summary | markdownify }}
+      {{ end }}
       {{ end }}
     </div>
 
     {{ if not .Params.showFullContent }}
-      <div>
-        <a class="read-more button" href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
-      </div>
+    <div>
+      <a class="read-more button"
+        href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
+    </div>
     {{ end }}
   </div>
   {{ end }}
