@@ -26,6 +26,21 @@
         {{ end }}
       {{ end }}
     {{ end }}
+
+    {{ if $.Site.Params.showLanguageSelector }}
+    <div class="spacer"></div>
+    <div class="language-selector">
+
+      <div class="language-selector-actual">
+          <li class="list-inline-item">{{ .Language.LanguageName }} ▾</li>
+      </div>
+      <div class="language-selector-more hidden">
+        {{ range $.Site.Home.AllTranslations }}
+        <li class="list-inline-item"><a class="text-dark" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
@@ -33,6 +48,14 @@
       {{ if not .HasChildren }}
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
       {{ end }}
+    {{ end }}
+    {{ if $.Site.Params.showLanguageSelector }}
+    <hr />
+        {{ range $.Site.Home.AllTranslations }}
+          <li class="list-inline-item">
+            <a class="text-dark" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+          </li>
+        {{ end }}
     {{ end }}
   </ul>
 </nav>

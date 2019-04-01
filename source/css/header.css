@@ -121,6 +121,28 @@
       }
     }
 
+    .spacer {
+      flex-grow: 1;
+    }
+
+    .language-selector {
+      position: relative;
+
+      .language-selector-actual {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        color: var(--accent);
+        cursor: pointer;
+      }
+
+      .language-selector-more {
+        @mixin menu;
+        top: 35px;
+        right: 0;
+      }
+    }
+
     &-trigger {
       color: var(--accent);
       border: 2px solid;
