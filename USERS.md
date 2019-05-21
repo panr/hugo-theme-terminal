@@ -2,6 +2,7 @@
 - https://devmaster64.com - **devmaster64's blog** (Software developer)
 - https://mickie1.gitlab.io/blog **mickie's blog** (Engineer)
 - https://potatofrom.space - **Kevin Liu** (Software)
+- https://horochx.org/ **horochx's blog** (Software developer)
 
 <!--
 TEMPLATE:
