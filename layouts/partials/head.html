@@ -44,13 +44,13 @@
 {{ if isset .Params "date" }}<meta property="article:published_time" content="{{ time .Date }}" />{{ end }}
 
 <!-- RSS -->
-{{ if .RSSLink }}
-<link href="{{ $.Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+{{ with .OutputFormats.Get "RSS" }}
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
 {{ end }}
 
 <!-- JSON Feed -->
-{{ if .OutputFormats.Get "json" }}
-<link href="{{ if .OutputFormats.Get "json" }}{{ "feed.json" | absURL }}{{ end }}" rel="alternate" type="application/json" title="{{ $.Site.Title }}" />
+{{ with .OutputFormats.Get "json" }}
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }}" />
 {{ end }}
 
 <!-- Extended head section-->
