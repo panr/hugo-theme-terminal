@@ -12,7 +12,9 @@
 {{ end }}
 
 <!-- Custom CSS to override theme properties (/static/style.css) -->
-<link rel="stylesheet" href="{{ "style.css" | absURL }}">
+{{ if (fileExists "static/style.css") -}}
+  <link rel="stylesheet" href="{{ "style.css" | absURL }}">
+{{- end }}
 
 <!-- Icons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "img/apple-touch-icon-144-precomposed.png" | absURL }}">
