@@ -4,6 +4,7 @@
 - https://calloc.net **Vaibhav Yenamandra** (Software Engineer)
 - https://potatofrom.space - **Kevin Liu** (Software)
 - https://horochx.org/ **horochx's blog** (Software developer)
+- https://ben-on-vms.com/ **Benedikt Frenzel** (Technical Support Engineer)
 
 <!--
 TEMPLATE:
