@@ -5,6 +5,7 @@
 - https://potatofrom.space - **Kevin Liu** (Software)
 - https://horochx.org/ **horochx's blog** (Software developer)
 - https://feng.si — **Si Feng** (Software Engineer)
+- https://ben-on-vms.com/ **Benedikt Frenzel** (Technical Support Engineer)
 
 <!--
 TEMPLATE:
