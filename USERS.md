@@ -1,16 +1,16 @@
 # Meet the users of Terminal theme!
-- https://devmaster64.com - **devmaster64's blog** (Software developer)
-- https://mickie1.gitlab.io/blog **mickie's blog** (Engineer)
+- https://devmaster64.com **devmaster64** (Software Developer)
+- https://mickie1.gitlab.io/blog/ **mickie** (Engineer)
 - https://calloc.net **Vaibhav Yenamandra** (Software Engineer)
-- https://potatofrom.space - **Kevin Liu** (Software)
-- https://horochx.org/ **horochx's blog** (Software developer)
-- https://feng.si — **Si Feng** (Software Engineer)
-- https://ben-on-vms.com/ **Benedikt Frenzel** (Technical Support Engineer)
+- https://potatofrom.space **Kevin Liu** (Software)
+- https://horochx.org **horochx** (Software Developer)
+- https://feng.si **Si Feng** (Software Engineer)
+- https://ben-on-vms.com **Benedikt Frenzel** (Technical Support Engineer)
 - https://johngazzini.com **John Gazzini** (Software Engineer)
 
 <!--
 TEMPLATE:
 
-- https://radoslawkoziel.pl — **Radek Kozieł** (Software designer and developer)
+- https://radoslawkoziel.pl **Radek Kozieł** (Software Designer and Developer)
 
 -->
