@@ -7,6 +7,7 @@
 - https://feng.si **Si Feng** (Software Engineer)
 - https://ben-on-vms.com **Benedikt Frenzel** (Technical Support Engineer)
 - https://johngazzini.com **John Gazzini** (Software Engineer)
+- http://afonsosantos.x10.mx **Afonso Santos** (Student)
 
 <!--
 TEMPLATE:
