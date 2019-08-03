@@ -8,6 +8,7 @@
 - https://ben-on-vms.com **Benedikt Frenzel** (Technical Support Engineer)
 - https://johngazzini.com **John Gazzini** (Software Engineer)
 - https://geekx.tech/ **Sagar Ladla** (Student Developer & Cyber Security Specialist)
+- https://tears.io/ **Alex** (SRE)
 
 <!--
 TEMPLATE:
