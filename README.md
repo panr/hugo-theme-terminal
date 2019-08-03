@@ -116,7 +116,7 @@ to `config.toml` file in your Hugo root directory and change params fields. In c
 
 ## Post archetype
 
-See the basic `post` file params supported by the theme — https://github.com/panr/hugo-theme-terminal/blob/master/archetypes/post.md
+See the basic `post` file params supported by the theme — https://github.com/panr/hugo-theme-terminal/blob/master/archetypes/posts.md
 
 ## Add-ons
 
