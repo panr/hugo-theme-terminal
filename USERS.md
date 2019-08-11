@@ -10,6 +10,7 @@
 - https://johngazzini.com **John Gazzini** (Software Engineer)
 - https://geekx.tech/ **Sagar Ladla** (Student Developer & Cyber Security Specialist)
 - https://tears.io/ **Alex** (SRE)
+- https://ayushkarn.me/ **Ayush Karn** (Student Developer)
 
 <!--
 TEMPLATE:
