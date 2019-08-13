@@ -2,8 +2,8 @@ const mobileQuery = getComputedStyle(document.body).getPropertyValue("--phoneWid
 const isMobile = () => window.matchMedia(mobileQuery).matches;
 
 if(!isMobile()) {
-  languageSelector = document.getElementsByClassName("language-selector-actual")[0];
-  moreLanguagesContainer = document.getElementsByClassName("language-selector-more")[0];
+  languageSelector = document.querySelector(".language-selector-current");
+  moreLanguagesContainer = document.querySelector(".language-selector__more");
 
   document.body.addEventListener("click", () => {
     if (moreLanguagesContainer && !moreLanguagesContainer.classList.contains("hidden")) {

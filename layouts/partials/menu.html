@@ -29,17 +29,16 @@
 
     {{ if $.Site.Params.showLanguageSelector }}
     <div class="spacer"></div>
-    <div class="language-selector">
-
-      <div class="language-selector-actual">
-          <li class="list-inline-item">{{ .Language.LanguageName }} ▾</li>
-      </div>
-      <div class="language-selector-more hidden">
+    <ul class="language-selector">
+      <ul class="language-selector-current">
+          <li>{{ .Language.LanguageName }} ▾</li>
+      </ul>
+      <ul class="language-selector__more hidden">
         {{ range $.Site.Home.AllTranslations }}
-        <li class="list-inline-item"><a class="text-dark" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+        <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
         {{ end }}
-      </div>
-    </div>
+      </ul>
+    </ul>
     {{ end }}
   </ul>
 
