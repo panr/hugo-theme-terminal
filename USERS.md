@@ -17,3 +17,5 @@ TEMPLATE:
 - https://radoslawkoziel.pl **Radek Kozieł** (Software Designer and Developer)
 
 -->
+
+- [rinma.dev](https://rinma.dev) - **Marvin Dalheimer** (Software Developer)
