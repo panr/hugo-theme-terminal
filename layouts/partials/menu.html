@@ -51,8 +51,8 @@
     {{ if $.Site.Params.showLanguageSelector }}
     <hr />
         {{ range $.Site.Home.AllTranslations }}
-          <li class="list-inline-item">
-            <a class="text-dark" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+          <li>
+            <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
           </li>
         {{ end }}
     {{ end }}
