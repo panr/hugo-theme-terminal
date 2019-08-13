@@ -89,6 +89,7 @@ paginate = 5
 
 [languages]
   [languages.en]
+    languageName = "English"
     title = "Terminal"
     subtitle = "A simple, retro theme for Hugo"
     keywords = ""
