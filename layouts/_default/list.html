@@ -2,7 +2,7 @@
 <div class="posts">
   {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
   {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
-  {{ $paginator := .Paginate (where .Data.Pages "Type" $contentTypeName) }}
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" $contentTypeName) }}
 
   {{ range $paginator.Pages }}
   <div class="post on-list">
