@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./source/js/languageSelector.js":
+/*!***************************************!*\
+  !*** ./source/js/languageSelector.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var mobileQuery = getComputedStyle(document.body).getPropertyValue(\"--phoneWidth\");\n\nvar isMobile = function isMobile() {\n  return window.matchMedia(mobileQuery).matches;\n};\n\nif (!isMobile()) {\n  languageSelector = document.querySelector(\".language-selector-current\");\n  moreLanguagesContainer = document.querySelector(\".language-selector__more\");\n  document.body.addEventListener(\"click\", function () {\n    if (moreLanguagesContainer && !moreLanguagesContainer.classList.contains(\"hidden\")) {\n      moreLanguagesContainer.classList.add(\"hidden\");\n    }\n  });\n  languageSelector && languageSelector.addEventListener(\"click\", function (e) {\n    e.stopPropagation();\n    moreLanguagesContainer.classList.toggle(\"hidden\");\n  });\n}\n\n//# sourceURL=webpack:///./source/js/languageSelector.js?");
+
+/***/ }),
+
 /***/ "./source/js/main.js":
 /*!***************************!*\
   !*** ./source/js/main.js ***!
@@ -109,13 +120,13 @@ eval("var container = document.querySelector(\".container\");\nvar menu = docume
 /***/ }),
 
 /***/ 0:
-/*!*****************************************************!*\
-  !*** multi ./source/js/main.js ./source/js/menu.js ***!
-  \*****************************************************/
+/*!*************************************************************************************!*\
+  !*** multi ./source/js/main.js ./source/js/menu.js ./source/js/languageSelector.js ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! /Users/radek/Documents/Git/Moje/hugoBasicExample/themes/terminal/source/js/main.js */\"./source/js/main.js\");\nmodule.exports = __webpack_require__(/*! /Users/radek/Documents/Git/Moje/hugoBasicExample/themes/terminal/source/js/menu.js */\"./source/js/menu.js\");\n\n\n//# sourceURL=webpack:///multi_./source/js/main.js_./source/js/menu.js?");
+eval("__webpack_require__(/*! /Users/radek/Documents/Git/Moje/hugoBasicExample/themes/terminal/source/js/main.js */\"./source/js/main.js\");\n__webpack_require__(/*! /Users/radek/Documents/Git/Moje/hugoBasicExample/themes/terminal/source/js/menu.js */\"./source/js/menu.js\");\nmodule.exports = __webpack_require__(/*! /Users/radek/Documents/Git/Moje/hugoBasicExample/themes/terminal/source/js/languageSelector.js */\"./source/js/languageSelector.js\");\n\n\n//# sourceURL=webpack:///multi_./source/js/main.js_./source/js/menu.js_./source/js/languageSelector.js?");
 
 /***/ })
 
