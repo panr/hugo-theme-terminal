@@ -3,8 +3,8 @@
   <h1 class="post-title">404!</h1>
 
   <div class="post-content">
-    {{ i18n "404-text" }}<br>
-    <a href="{{ "/" | absURL }}">{{ i18n "404-link" }}&nbsp;→</a>
+    {{ .Site.Params.missingContentMessage }}<br>
+    <a href="{{ "/" | absURL }}">{{ .Site.Params.missingBackButtonLabel }}&nbsp;→</a>
   </div>
 
 </div>
