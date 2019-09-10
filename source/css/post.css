@@ -1,7 +1,3 @@
-.posts {
-  width: 100%;
-}
-
 .post {
   width: 100%;
   text-align: left;
@@ -92,7 +88,7 @@
     justify-content: center;
     margin-bottom: 10px;
 
-    & + h2 {
+    &+ h2 {
       margin-top: -10px;
       margin-bottom: 20px;
     }
