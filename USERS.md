@@ -11,6 +11,7 @@
 - https://geekx.tech/ **Sagar Ladla** (Student Developer & Cyber Security Specialist)
 - https://tears.io/ **Alex** (SRE)
 - https://ayushkarn.me/ **Ayush Karn** (Student Developer)
+- https://ssgram.dev **Ramaseshan Parthasarathy** (Software Developer)
 
 <!--
 TEMPLATE:
