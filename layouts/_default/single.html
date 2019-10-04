@@ -30,6 +30,11 @@
   <div class="post-content">
     {{ .Content }}
   </div>
+  {{ if $.Site.Params.showLastUpdated }}
+  <div class="post-lastmod">
+    Last Updated :: {{ .Lastmod.Format "2006-01-02" }}
+  </div>
+  {{ end }}
   {{ if or .NextInSection .PrevInSection }}
   <div class="pagination">
     <div class="pagination__title">

@@ -86,6 +86,9 @@ paginate = 5
   centerTheme = false
   # set a custom favicon (default is a `themeColor` square)
   # favicon = "favicon.ico"
+  # set post to show the last updated
+  # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
+  showLastUpdated = true
 
 [languages]
   [languages.en]
