@@ -13,6 +13,7 @@
 - https://ayushkarn.me/ **Ayush Karn** (Student Developer)
 - https://ssgram.dev **Ramaseshan Parthasarathy** (Software Developer)
 - https://zaine.me **Amine Zaine** (Cloud Engineer)
+- https://notes.dmaitre.phyip3.dur.ac.uk/computing-club/ **Ryan Moodie** (Physics PhD student)
 
 <!--
 TEMPLATE:
