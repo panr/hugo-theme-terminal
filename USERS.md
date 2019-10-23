@@ -13,6 +13,7 @@
 - https://ayushkarn.me/ **Ayush Karn** (Student Developer)
 - https://ssgram.dev **Ramaseshan Parthasarathy** (Software Developer)
 - https://zaine.me **Amine Zaine** (Cloud Engineer)
+- https://thecodecousins.com **Stanley Nguyen** (Software Engineer) & **Hoang Do** (Software & IoT Engineer)
 
 <!--
 TEMPLATE:
