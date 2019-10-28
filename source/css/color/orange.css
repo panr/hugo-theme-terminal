@@ -1,7 +1,7 @@
 @import '../style';
 
 :root {
-  --accent: #23B0FF;
+  --accent: #FFA86A;
   --background: color-mod(var(--accent) blend(#1D1E28 98%));
   --color: white;
   --border-color: rgba(255, 255, 255, .1);

@@ -1,10 +1,4 @@
-@import '../main.css';
-@import '../header.css';
-@import '../logo.css';
-@import '../pagination.css';
-@import '../post.css';
-@import '../syntax.css';
-@import '../variables.css';
+@import '../style';
 
 :root {
   --accent: #78E2A0;
