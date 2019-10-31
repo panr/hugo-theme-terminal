@@ -14,6 +14,8 @@
 - https://ssgram.dev **Ramaseshan Parthasarathy** (Software Developer)
 - https://zaine.me **Amine Zaine** (Cloud Engineer)
 - https://thecodecousins.com **Stanley Nguyen** (Software Engineer) & **Hoang Do** (Software & IoT Engineer)
+- https://rinma.dev - **Marvin Dalheimer** (Software Developer)
+- https://lunar.computer - **Lunar Computer** (DevOps Engineer)
 
 <!--
 TEMPLATE:
@@ -21,5 +23,3 @@ TEMPLATE:
 - https://radoslawkoziel.pl **Radek Kozieł** (Software Designer and Developer)
 
 -->
-
-- [rinma.dev](https://rinma.dev) - **Marvin Dalheimer** (Software Developer)
