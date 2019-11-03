@@ -15,10 +15,13 @@
 - https://zaine.me **Amine Zaine** (Cloud Engineer)
 - https://notes.dmaitre.phyip3.dur.ac.uk/computing-club/ **Ryan Moodie** (Physics PhD student)
 - https://thecodecousins.com **Stanley Nguyen** (Software Engineer) & **Hoang Do** (Software & IoT Engineer)
+<<<<<<< HEAD
 - https://naxxfish.net **Chris Roberts** (Broadcast Systems Engineer)
 - https://schacherbauer.dev **Markus Schacherbauer** (Student Developer)
 - https://rinma.dev **Marvin Dalheimer** (Software Developer)
 - https://lunar.computer **Lunar Computer** (DevOps Engineer)
+=======
+>>>>>>> parent of 2438bb4... added Chris Roberts to users
 
 <!--
 TEMPLATE:
