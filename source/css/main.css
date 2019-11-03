@@ -168,15 +168,6 @@ blockquote {
     padding-right: 0;
   }
 
-  &:before {
-    content: '”';
-    font-family: Georgia, serif;
-    font-size: 3.875rem;
-    position: absolute;
-    left: -40px;
-    top: -20px;
-  }
-
   p:first-of-type {
     margin-top: 0;
   }
