@@ -88,7 +88,7 @@ paginate = 5
   # favicon = "favicon.ico"
   # set post to show the last updated
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
-  showLastUpdated = true
+  showLastUpdated = false
 
 [languages]
   [languages.en]
