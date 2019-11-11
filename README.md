@@ -13,6 +13,7 @@
 - [How to configure](#how-to-configure)
 - [Post archetype](#post-archetype)
 - [Add-ons](#add-ons)
+- [Multiple Content Types](#multiple-content-types)
 - [How to run your site](#how-to-run-your-site)
 - [How to edit the theme](#how-to-edit-the-theme)
 - [How to contribute](#how-to-contribute)
@@ -25,6 +26,7 @@
 - [**Fira Code**](https://github.com/tonsky/FiraCode) as default monospaced font. It's gorgeous!
 - **really nice duotone**, custom syntax highlighting based on [**PrismJS**](https://prismjs.com)
 - fully responsive
+- multiple content types (eg: "personal", "work", "lifestyle" etc.). For more info please see [#Multiple Content Types](#multiple-content-types)
 
 #### Built-in shortcodes
 
@@ -72,8 +74,6 @@ theme = "terminal"
 paginate = 5
 
 [params]
-  # dir name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
   # ["orange", "blue", "red", "green", "pink"]
   themeColor = "orange"
   # if you set this to 0, only submenu trigger will be visible
@@ -126,6 +126,19 @@ See the basic `post` file params supported by the theme — https://github.com/p
 - **Comments** — for adding comments to your blog posts please take a look at `layouts/partials/comments.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/comments.html.
 - **Extended Head** — please take a look at `layouts/partials/extended_head.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_head.html
 - **Extended Footer** — please take a look at `layouts/partials/extended_footer.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_footer.html
+
+## Multiple Content Types
+
+New version of the theme allows you to create multiple types of content. You can now easily create different feeds for your posts and keep them in separate urls. For example, you can have posts related to your work on home page `'/'`, your personal stuff on `'/personal'` and lifestyle stuff in `'/lifestyle'`. To do this just create new folder inside `content`, like `content/personal` and put inside `_index.md` (it's important that any content type should have its own `_index.md` file) with:
+
+```
++++
+type = "personal"
+url = "/personal" (optional)
++++
+```
+
+And that's it. **Please remember that if you want to have any of the content type on your home page you need to add `url = "/"` inside `_index.md`**.
 
 ## How to run your site
 
