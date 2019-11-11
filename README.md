@@ -84,6 +84,8 @@ paginate = 5
   fullWidthTheme = false
   # center theme with default width
   centerTheme = false
+  # hide "Read Other Posts" below post content (text defined below in languages section)
+  # disableReadOtherPosts = true
   # set a custom favicon (default is a `themeColor` square)
   # favicon = "favicon.ico"
 
