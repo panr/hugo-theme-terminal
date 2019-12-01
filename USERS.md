@@ -1,4 +1,5 @@
 # Meet the users of Terminal theme!
+- https://security.jtang.dev **Jonathan Tang** (Student & Software Engineer)
 - https://xicode.se **magistern** (Teacher)
 - https://devmaster64.com **devmaster64** (Software Developer)
 - https://mickie1.gitlab.io/blog/ **mickie** (Engineer)
