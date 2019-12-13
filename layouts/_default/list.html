@@ -1,4 +1,9 @@
 {{ define "main" }}
+{{ with .Content }}
+  <div class="index-content">
+    {{ . | markdownify }}
+  </div>
+{{ end }}
 <div class="posts">
   {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
   {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
