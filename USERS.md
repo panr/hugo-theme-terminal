@@ -20,6 +20,7 @@
 - https://lunar.computer **Lunar Computer** (DevOps Engineer)
 - https://naxxfish.net **Chris Roberts** (Broadcast Systems Engineer)
 - https://security.jtang.dev **Jonathan Tang** (Student & Software Engineer)
+- https://andreacaravano.net **Andrea Caravano** (Student)
 
 <!--
 TEMPLATE:
