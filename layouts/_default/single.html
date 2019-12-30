@@ -38,18 +38,18 @@
       <hr />
     </div>
     <div class="pagination__buttons">
-      {{ if .NextInSection }}
+      {{ if .PrevInSection }}
       <span class="button previous">
-        <a href="{{ .NextInSection.Permalink }}">
+        <a href="{{ .PrevInSection.Permalink }}">
           <span class="button__icon">←</span>
-          <span class="button__text">{{ .NextInSection.Title }}</span>
+          <span class="button__text">{{ .PrevInSection.Title }}</span>
         </a>
       </span>
       {{ end }}
-      {{ if .PrevInSection }}
+      {{ if .NextInSection }}
       <span class="button next">
-        <a href="{{ .PrevInSection.Permalink }}">
-          <span class="button__text">{{ .PrevInSection.Title }}</span>
+        <a href="{{ .NextInSection.Permalink }}">
+          <span class="button__text">{{ .NextInSection.Title }}</span>
           <span class="button__icon">→</span>
         </a>
       </span>
