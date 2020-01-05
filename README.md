@@ -74,18 +74,28 @@ paginate = 5
 [params]
   # dir name of your blog content (default is `content/posts`)
   contentTypeName = "posts"
+
   # ["orange", "blue", "red", "green", "pink"]
   themeColor = "orange"
+
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
+
   # show selector to switch language
   showLanguageSelector = false
+
   # set theme to full screen width
   fullWidthTheme = false
+
   # center theme with default width
   centerTheme = false
+
   # set a custom favicon (default is a `themeColor` square)
   # favicon = "favicon.ico"
+
+  # set all headings to their default size (depending on browser settings)
+  # it's set to `true` by default
+  # oneHeadingSize = false
 
 [languages]
   [languages.en]
