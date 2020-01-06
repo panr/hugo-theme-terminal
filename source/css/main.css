@@ -134,7 +134,7 @@ code {
 }
 
 pre {
-  background: transparent;
+  background: transparent !important;
   padding: 20px 10px;
   margin: 40px 0;
   font-size: .95rem;
