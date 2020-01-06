@@ -65,7 +65,7 @@ $ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/termi
 
 The theme doesn't require any advanced configuration. Just copy:
 
-```
+```toml
 baseurl = "/"
 languageCode = "en-us"
 theme = "terminal"
