@@ -21,6 +21,7 @@
 - https://naxxfish.net **Chris Roberts** (Broadcast Systems Engineer)
 - https://security.jtang.dev **Jonathan Tang** (Student & Software Engineer)
 - https://andreacaravano.net **Andrea Caravano** (Student)
+- https://dawsonverboven.com/ **Dawson Verboven** (Student & Software Developer)
 
 <!--
 TEMPLATE:
