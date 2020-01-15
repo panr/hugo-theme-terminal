@@ -15,5 +15,10 @@
 <script src="{{ "assets/main.js" | absURL }}"></script>
 <script src="{{ "assets/prism.js" | absURL }}"></script>
 
+<!-- Custom script to add features (/static/script.js) -->
+{{ if (fileExists "static/script.js") -}}
+  <script src="{{ "script.js" | absURL }}"></script>
+{{- end }}
+
 <!-- Extended footer section-->
 {{ partial "extended_footer.html" . }}
