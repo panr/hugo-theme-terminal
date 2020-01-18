@@ -177,6 +177,7 @@ I'd be happy to know more about you and what you are doing. If you want to share
 ## Sponsoring
 
 If you like my work and want to support the development of the project, now you can! Just:
+
 <a href="https://www.buymeacoffee.com/panr" target="_blank"><img src="https://res.cloudinary.com/panr/image/upload/v1579374705/buymeacoffee_y6yvov.svg" alt="Buy Me A Coffee" ></a>
 
 ## License
