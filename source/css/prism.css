@@ -21,13 +21,7 @@ pre[class*="language-"] {
 	word-wrap: normal;
 	line-height: 1.5;
 
-	-moz-tab-size: 2;
-	-o-tab-size: 2;
 	tab-size: 2;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
 	hyphens: none;
 
 }
@@ -82,13 +76,8 @@ pre[class*="language-"].line-numbers > code {
 	left: -3.8em;
 	width: 3em; /* works for line-numbers below 1000 lines */
 	letter-spacing: -1px;
-	border-right: 1px solid #999;
-
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
+	border-right: 1px solid color-mod(var(--accent) blend(#999 90%) a(20%));
 	user-select: none;
-
 }
 
 .line-numbers-rows > span {
@@ -99,7 +88,7 @@ pre[class*="language-"].line-numbers > code {
 
 .line-numbers-rows > span:before {
 	content: counter(linenumber);
-	color: #999;
+	color: color-mod(var(--accent) blend(#999 90%) a(40%));
 	display: block;
 	padding-right: 0.8em;
 	text-align: right;
@@ -123,6 +112,7 @@ pre[class*="language-"].line-numbers > code {
 	}
 
 	code {
+		display: block;
 		color: inherit;
 	}
 }
@@ -160,9 +150,7 @@ div.code-toolbar > .toolbar button {
 	line-height: normal;
 	overflow: visible;
 	padding: 0;
-	-webkit-user-select: none; /* for button */
-	-moz-user-select: none;
-	-ms-user-select: none;
+	user-select: none;
 }
 
 div.code-toolbar > .toolbar a,
@@ -194,15 +182,10 @@ div.code-toolbar > .toolbar span:focus {
 	letter-spacing: -1px;
 	margin-right: 1em;
 	pointer-events: none;
-
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
 }
 
 .command-line-prompt > span:before {
-	color: #999;
 	content: ' ';
 	display: block;
 	padding-right: 0.8em;
