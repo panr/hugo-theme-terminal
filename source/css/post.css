@@ -100,9 +100,10 @@
 }
 
 .hanchor {
-  font-size: 100%;
+  color: color-mod(var(--accent) alpha(90%));
+  text-decoration: none;
+  margin-left: 10px;
   visibility: hidden;
-  color:silver;
 }
 
 h1:hover a, h2:hover a, h3:hover a, h4:hover a {
