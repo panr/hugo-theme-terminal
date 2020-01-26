@@ -6,8 +6,8 @@
     <pre
       class="
       {{ if .Get "lang" }}language-{{ .Get "lang" }} {{ end }}
-      {{ if .Get "line-numbers" }}line-numbers {{ end }}
-      {{ if .Get "command-line" }}command-line {{ end }}
+      {{ if .Get "line-numbers" }} line-numbers{{ end }}
+      {{ if .Get "command-line" }} command-line{{ end }}
       "
       {{/* line highlight plugin */}}
       {{ if .Get "line" }} data-line={{ .Get "line" }} {{ end }}
