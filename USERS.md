@@ -24,7 +24,7 @@
 - https://dawsonverboven.com/ **Dawson Verboven** (Student & Software Developer)
 - https://www.rockyourcode.com **Sophia Brandt** (tax officer and hobby coder)
 - https://qbunt.com **Jeremy Bunting** (Software Engineer)
-
+- https://smeik.org **Smeik** (Embedded Developer)
 
 <!--
 TEMPLATE:
