@@ -103,6 +103,7 @@ paginate = 5
     languageName = "English"
     title = "Terminal"
     subtitle = "A simple, retro theme for Hugo"
+    owner = ""
     keywords = ""
     copyright = ""
     menuMore = "Show more"
