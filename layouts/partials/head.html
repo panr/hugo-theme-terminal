@@ -1,10 +1,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport"
-  content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description"
-  content="{{ if .IsHome }}{{ .Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
-<meta name="keywords"
-  content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="{{ .Permalink }}" />
 
@@ -13,72 +10,55 @@
 <!-- Theme CSS -->
 <link rel="stylesheet" href="{{ "assets/style.css" | absURL }}">
 {{ if (ne $.Site.Params.ThemeColor "orange") }}
-<link rel="stylesheet"
-  href="{{ (printf "assets/%s.css" $.Site.Params.ThemeColor) | absURL }}">
+  <link rel="stylesheet" href="{{ (printf "assets/%s.css" $.Site.Params.ThemeColor) | absURL }}">
 {{ end }}
 
 <!-- Custom CSS to override theme properties (/static/style.css) -->
 {{ if (fileExists "static/style.css") -}}
-<link rel="stylesheet" href="{{ "style.css" | absURL }}">
+  <link rel="stylesheet" href="{{ "style.css" | absURL }}">
 {{- end }}
 
 <!-- Icons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "img/apple-touch-icon-144-precomposed.png" | absURL }}">
 {{ if isset $.Site.Params "favicon" }}
-<link rel="shortcut icon" href="{{ $.Site.Params.favicon | absURL }}">
+  <link rel="shortcut icon" href="{{ $.Site.Params.favicon | absURL }}">
 {{ else }}
-<link rel="shortcut icon"
-  href="{{ printf "img/favicon/%s.png" $.Site.Params.ThemeColor | absURL }}">
+  <link rel="shortcut icon" href="{{ printf "img/favicon/%s.png" $.Site.Params.ThemeColor | absURL }}">
 {{ end }}
 
 <!-- Twitter Card -->
-<meta name="twitter:card" 
-      content="summary" />
-<meta name="twitter:title" 
-      content="{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }} :: {{ $.Site.Title }} {{ end }}" />
-<meta name="twitter:description" 
-      content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
-<meta name="twitter:site" 
-      content="{{ .Permalink }}" />
-<meta name="twitter:creator" 
-      content="{{ if .IsHome }}{{ $.Site.Owner }}{{ else }}{{ .Params.Author }}{{ end }}" />
-<meta name="twitter:image" 
-      content="{{ if .IsHome }}{{ $.Site.Params.favicon | absURL }}{{else}}{{ with .Params.Cover }}{{ . | absURL }}{{ end }}">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }} :: {{ $.Site.Title }} {{ end }}" />
+<meta name="twitter:description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta name="twitter:site" content="{{ .Permalink }}" />
+<meta name="twitter:creator" content="{{ if .IsHome }}{{ $.Site.Owner }}{{ else }}{{ .Params.Author }}{{ end }}" />
+<meta name="twitter:image" content="{{ if .IsHome }}{{ $.Site.Params.favicon | absURL }}{{else}}{{ with .Params.Cover }}{{ . | absURL }}{{ end }}">
 
 <!-- OG data -->
-<meta property="og:locale" 
-      content="{{ $.Site.Language.Lang }}" />
-<meta property="og:type" 
-      content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
-<meta property="og:title" 
-      content="{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }} :: {{ $.Site.Title }}{{ end }}">
-<meta property="og:description" 
-      content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
-<meta property="og:url" 
-      content="{{ .Permalink }}" />
-<meta property="og:site_name" 
-      content="{{ .Title }}" />
-<meta property="og:image" 
-      content="{{ if .IsHome }}{{ $.Site.Params.favicon | absURL }}{{else}}{{ with .Params.Cover }}{{ . | absURL }}{{ end }}">
-<meta property="og:image:width" 
-      content="2048">
-<meta property="og:image:height" 
-      content="1024">
+<meta property="og:locale" content="{{ $.Site.Language.Lang }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:title" content="{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }} :: {{ $.Site.Title }}{{ end }}">
+<meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ .Title }}" />
+<meta property="og:image" content="{{ if .IsHome }}{{ $.Site.Params.favicon | absURL }}{{else}}{{ with .Params.Cover }}{{ . | absURL }}{{ end }}">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
 {{ range .Params.categories }}
-<meta property="article:section" content="{{ . }}" />{{ end }}
+  <meta property="article:section" content="{{ . }}" />
+{{ end }}
 {{ if isset .Params "date" }}
-<meta property="article:published_time" content="{{ time .Date }}" />{{ end }}
+  <meta property="article:published_time" content="{{ time .Date }}" />
+{{ end }}
 
 <!-- RSS -->
 {{ with .OutputFormats.Get "RSS" }}
-<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml"
-  title="{{ $.Site.Title }}" />
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
 {{ end }}
 
 <!-- JSON Feed -->
 {{ with .OutputFormats.Get "json" }}
-<link href="{{ .RelPermalink }}" rel="alternate" type="application/json"
-  title="{{ $.Site.Title }}" />
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }}" />
 {{ end }}
 
 <!-- Extended head section-->
