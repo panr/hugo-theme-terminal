@@ -3,9 +3,9 @@
   <h1 class="post-title">
     <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
   <div class="post-meta">
-      {{ if .Params.Date }}
+    {{ if .Params.Date }}
     <span class="post-date">
-      {{ .Date.Format "2006-01-02" }}
+      {{ .Date.Format "2006-01-02" }} {{ if $.Site.Params.showLastUpdated }}[{{or $.Site.Params.updatedDatePrefix "Updated"}}: {{ .Lastmod.Format "2006-01-02" }}]{{ end }}
     </span>
     {{ end }}
     {{ with .Params.Author }}
@@ -34,11 +34,6 @@
       </div>
     {{- end -}}
   </div>
-  {{ if $.Site.Params.showLastUpdated }}
-  <div class="post-lastmod">
-    Last Updated :: {{ .Lastmod.Format "2006-01-02" }}
-  </div>
-  {{ end }}
   {{ if or .NextInSection .PrevInSection }}
   <div class="pagination">
     <div class="pagination__title">
