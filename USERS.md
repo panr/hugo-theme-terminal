@@ -18,6 +18,13 @@
 - https://schacherbauer.dev **Markus Schacherbauer** (Student Developer)
 - https://rinma.dev **Marvin Dalheimer** (Software Developer)
 - https://lunar.computer **Lunar Computer** (DevOps Engineer)
+- https://naxxfish.net **Chris Roberts** (Broadcast Systems Engineer)
+- https://security.jtang.dev **Jonathan Tang** (Student & Software Engineer)
+- https://andreacaravano.net **Andrea Caravano** (Student)
+- https://dawsonverboven.com/ **Dawson Verboven** (Student & Software Developer)
+- https://www.rockyourcode.com **Sophia Brandt** (tax officer and hobby coder)
+- https://qbunt.com **Jeremy Bunting** (Software Engineer)
+- https://smeik.org **Smeik** (Embedded Developer)
 
 <!--
 TEMPLATE:

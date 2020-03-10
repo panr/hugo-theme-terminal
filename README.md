@@ -17,6 +17,7 @@
 - [How to edit the theme](#how-to-edit-the-theme)
 - [How to contribute](#how-to-contribute)
 - [Terminal theme user?](#terminal-theme-user)
+- [Sponsoring](#sponsoring)
 - [Licence](#licence)
 
 ## Features
@@ -65,7 +66,7 @@ $ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/termi
 
 The theme doesn't require any advanced configuration. Just copy:
 
-```
+```toml
 baseurl = "/"
 languageCode = "en-us"
 theme = "terminal"
@@ -74,21 +75,31 @@ paginate = 5
 [params]
   # dir name of your blog content (default is `content/posts`)
   contentTypeName = "posts"
+
   # ["orange", "blue", "red", "green", "pink"]
   themeColor = "orange"
+
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
+
   # show selector to switch language
   showLanguageSelector = false
+
   # set theme to full screen width
   fullWidthTheme = false
+
   # center theme with default width
   centerTheme = false
+
   # set a custom favicon (default is a `themeColor` square)
   # favicon = "favicon.ico"
   # set post to show the last updated
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
   showLastUpdated = false
+
+  # set all headings to their default size (depending on browser settings)
+  # it's set to `true` by default
+  # oneHeadingSize = false
 
 [languages]
   [languages.en]
@@ -166,7 +177,13 @@ If you spot any bugs, please use [Issue Tracker](https://github.com/panr/hugo-th
 
 I'd be happy to know more about you and what you are doing. If you want to share it, please make a contribution and [add your site to the list](https://github.com/panr/hugo-theme-terminal/blob/master/USERS.md)! 🤗
 
-## Licence
+## Sponsoring
+
+If you like my work and want to support the development of the project, now you can! Just:
+
+<a href="https://www.buymeacoffee.com/panr" target="_blank"><img src="https://res.cloudinary.com/panr/image/upload/v1579374705/buymeacoffee_y6yvov.svg" alt="Buy Me A Coffee" ></a>
+
+## License
 
 Copyright © 2019 Radosław Kozieł ([@panr](https://twitter.com/panr))
 

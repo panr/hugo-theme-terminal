@@ -118,3 +118,14 @@
     }
   }
 }
+
+.hanchor {
+  color: color-mod(var(--accent) alpha(90%));
+  text-decoration: none;
+  margin-left: 10px;
+  visibility: hidden;
+}
+
+h1:hover a, h2:hover a, h3:hover a, h4:hover a {
+  visibility: visible;
+}
