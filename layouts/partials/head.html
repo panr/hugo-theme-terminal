@@ -32,7 +32,7 @@
 <meta name="twitter:description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 <meta name="twitter:site" content="{{ .Permalink }}" />
 <meta name="twitter:creator" content="{{ if .IsHome }}{{ $.Site.Owner }}{{ else }}{{ .Params.Author }}{{ end }}" />
-<meta name="twitter:image" content="{{ if .IsHome }}{{ $.Site.Params.favicon | absURL }}{{else}}{{ with .Params.Cover }}{{ . | absURL }}{{ end }}">
+<meta name="twitter:image" content="{{ if .IsHome }}{{ $.Site.Params.favicon | absURL }}{{else}}{{ .Params.Cover | absURL }}{{ end }}">
 
 <!-- OG data -->
 <meta property="og:locale" content="{{ $.Site.Language.Lang }}" />
