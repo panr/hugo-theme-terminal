@@ -104,14 +104,19 @@ paginate = 5
   # it's set to `true` by default
   # oneHeadingSize = false
 
+[params.twitter]
+  # set Twitter handles for Twitter cards
+  # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
+  # do not include @
+  creator = ""
+  site = ""
+
 [languages]
   [languages.en]
     languageName = "English"
     title = "Terminal"
     subtitle = "A simple, retro theme for Hugo"
     owner = ""
-    twitterOwner = "" #Site Owner Twitter handle - do not include @
-    twitterSite = "" #Site Twitter handle - do not include @
     keywords = ""
     copyright = ""
     menuMore = "Show more"
