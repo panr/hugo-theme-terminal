@@ -28,7 +28,7 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary" />
-{{ if (isset .Params "twitterSite") | or (eq .Params.twitterSite "") }}
+{{ if (isset .Params "twitterSite") or (eq .Params.twitterSite "") }}
   <meta name="twitter:site" content="{{ $.Site.siteTwitter }}" />
 {{ end }}
 <meta name="twitter:creator" content="{{ if .IsHome }}{{ $.Site.twitterOwner }}{{ else }}{{ .Params.Author }}{{ end }}" />
