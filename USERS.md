@@ -26,6 +26,7 @@
 - https://qbunt.com **Jeremy Bunting** (Software Engineer)
 - https://smeik.org **Smeik** (Embedded Developer)
 - https://code.willstocks.co.uk **Will Stocks** (Blogger & Developer)
+- https://blog.vnandag.me **Nanda Gopal** (Student Developer)
 
 <!--
 TEMPLATE:
