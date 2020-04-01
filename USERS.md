@@ -27,6 +27,8 @@
 - https://smeik.org **Smeik** (Embedded Developer)
 - https://code.willstocks.co.uk **Will Stocks** (Blogger & Developer)
 - https://blog.vnandag.me **Nanda Gopal** (Student Developer)
+- https://bgameiro.me/ **Bernardo Gameiro** (Engineer Physicist student)
+
 
 <!--
 TEMPLATE:
