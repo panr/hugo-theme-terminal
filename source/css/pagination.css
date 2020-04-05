@@ -1,6 +1,10 @@
 .pagination {
   margin-top: 50px;
 
+  @media print {
+    display: none;
+  }
+
   &__title {
     display: flex;
     text-align: center;
