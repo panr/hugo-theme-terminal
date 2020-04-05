@@ -254,10 +254,18 @@ ol ol {
   @media (--phone) {
     padding: 20px;
   }
+
+  @media print {
+    display: initial;
+  }
 }
 
 .content {
   display: flex;
+
+  @media print {
+    display: initial;
+  }
 }
 
 hr {
