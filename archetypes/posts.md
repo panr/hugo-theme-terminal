@@ -1,11 +1,11 @@
 +++
-title = "{{ replace .Name "-" " " | title }}"
-date = "{{ .Date }}"
+title = '{{ replace .Name "-" " " | title }}'
+date = '{{ .Date }}'
 draft = true
 author = '{{ index .Site.Author "name" }}'
-cover = ""
-tags = ["", ""]
-keywords = ["", ""]
-description = ""
+cover = ''
+tags = ['', '']
+keywords = ['', '']
+description = ''
 showFullContent = false
 +++
