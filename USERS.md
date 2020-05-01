@@ -29,6 +29,7 @@
 - https://blog.vnandag.me **Nanda Gopal** (Student Developer)
 - htttps://m47r1x.github.io **Neo** (Citizen of Zion)
 - https://bgameiro.me/ **Bernardo Gameiro** (Engineer Physicist student)
+- https://return-to-libc.com/ **elraro** (Cyber Security Specialist)
 
 <!--
 TEMPLATE:
