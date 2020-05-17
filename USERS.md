@@ -28,7 +28,7 @@
 - https://code.willstocks.co.uk **Will Stocks** (Blogger & Developer)
 - https://blog.vnandag.me **Nanda Gopal** (Student Developer)
 - https://bgameiro.me/ **Bernardo Gameiro** (Engineer Physicist student)
-
+- https://return-to-libc.com/ **elraro** (Cyber Security Specialist)
 
 <!--
 TEMPLATE:
