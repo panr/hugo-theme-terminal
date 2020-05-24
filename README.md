@@ -98,6 +98,9 @@ paginate = 5
   # it's set to `true` by default
   # oneHeadingSize = false
 
+  # list recent posts in the home page; default is true
+  # listRecentInHome = false
+
 [params.twitter]
   # set Twitter handles for Twitter cards
   # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution

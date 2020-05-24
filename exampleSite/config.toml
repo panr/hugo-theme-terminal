@@ -9,6 +9,7 @@ paginate = 5
   showMenuItems = 2
   fullWidthTheme = false
   centerTheme = false
+  listRecentInHome = false
 
 [languages]
   [languages.en]

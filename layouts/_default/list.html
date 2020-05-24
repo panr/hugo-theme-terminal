@@ -4,7 +4,7 @@
   {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
 
   {{ $PageContext := . }}
-  {{ if .IsHome }}
+  {{ if and .IsHome (not (eq $.Site.Params.listRecentInHome false)) }}
     {{ $PageContext = .Site }}
   {{ end }}
   {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
