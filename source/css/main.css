@@ -257,6 +257,7 @@ ol ol {
 
 .content {
   display: flex;
+  flex-direction: column;
 
   @media print {
     display: initial;
