@@ -116,8 +116,8 @@ paginate = 5
     menuMore = "Show more"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
-    missingContentMessage = "Page not found."
-    missingBackButtonLabel = "Go Back"
+    missingContentMessage = "Page not found..."
+    missingBackButtonLabel = "Back to home page"
 
     [languages.en.params.logo]
       logoText = "Terminal"
