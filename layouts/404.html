@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="post">
+  <h1 class="post-title">404!</h1>
+
+  <div class="post-content">
+    {{ .Site.Params.missingContentMessage }}<br>
+    <a href="{{ "/" | absURL }}">{{ .Site.Params.missingBackButtonLabel }}&nbsp;→</a>
+  </div>
+
+</div>
+{{ end }}
