@@ -22,14 +22,14 @@
     {{ end }}
   </span>
   {{ end }}
-  
+
   {{ with .Params.Cover }}
     <img src="{{ . | absURL }}" class="post-cover" />
   {{ end }}
 
   {{ if .Params.Toc }}
     <div class="table-of-contents">
-        <h1>
+        <h2>
           {{ if .Params.TocTitle }}
             {{ .Params.TocTitle }}
           {{ else if $.Site.Params.TocTitle }}
@@ -37,7 +37,7 @@
           {{ else }}
             Table of Contents
           {{ end }}
-        </h1>
+        </h2>
       {{ .TableOfContents }}
     </div>
   {{ end }}
