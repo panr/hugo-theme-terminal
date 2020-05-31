@@ -14,6 +14,11 @@
   {{ end }}
   {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
 
+  {{ if len .Content }}
+  <h1>{{.Title}}</h1>
+  {{ .Content }}
+  {{ end }}
+
   {{ range $paginator.Pages }}
   <div class="post on-list">
     <h1 class="post-title">

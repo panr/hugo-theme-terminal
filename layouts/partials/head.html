@@ -9,7 +9,9 @@
 
 <!-- Theme CSS -->
 <link rel="stylesheet" href="{{ "assets/style.css" | absURL }}">
-{{ if (ne $.Site.Params.ThemeColor "orange") }}
+{{ if (isset .Params "color") }}
+  <link rel="stylesheet" href="{{ (printf "assets/%s.css" .Params.color) | absURL }}">
+{{ else if (ne $.Site.Params.ThemeColor "orange") }}
   <link rel="stylesheet" href="{{ (printf "assets/%s.css" $.Site.Params.ThemeColor) | absURL }}">
 {{ end }}
 

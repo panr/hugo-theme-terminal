@@ -66,78 +66,61 @@ $ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/termi
 
 The theme doesn't require any advanced configuration. Just copy:
 
-```toml
-baseurl = "/"
-languageCode = "en-us"
-theme = "terminal"
-paginate = 5
-
-[params]
-  # dir name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
-
-  # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "orange"
-
-  # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
-
-  # show selector to switch language
-  showLanguageSelector = false
-
-  # set theme to full screen width
-  fullWidthTheme = false
-
-  # center theme with default width
-  centerTheme = false
-
-  # set a custom favicon (default is a `themeColor` square)
-  # favicon = "favicon.ico"
-
-  # set post to show the last updated
-  # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
-  showLastUpdated = false
-  # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
-  # updatedDatePrefix = "Updated"
-
-  # set all headings to their default size (depending on browser settings)
-  # it's set to `true` by default
-  # oneHeadingSize = false
-
-[params.twitter]
-  # set Twitter handles for Twitter cards
-  # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
-  # do not include @
-  creator = ""
-  site = ""
-
-[languages]
-  [languages.en]
-    languageName = "English"
-    title = "Terminal"
-    subtitle = "A simple, retro theme for Hugo"
-    owner = ""
-    keywords = ""
-    copyright = ""
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-    missingContentMessage = "Page not found..."
-    missingBackButtonLabel = "Back to home page"
-
-    [languages.en.params.logo]
-      logoText = "Terminal"
-      logoHomeLink = "/"
-
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-      [[languages.en.menu.main]]
-        identifier = "showcase"
-        name = "Showcase"
-        url = "/showcase"
+```json
+{
+  "baseurl": "/",
+  "languageCode": "en-us",
+  "theme": "terminal",
+  "paginate": 5,
+  "params": {
+    "contentTypeName": "posts",
+    "themeColor": "orange",
+    "showMenuItems": 2,
+    "showLanguageSelector": false,
+    "fullWidthTheme": false,
+    "centerTheme": false,
+    "showLastUpdated": false,
+    "twitter": {
+      "creator": "",
+      "site": ""
+    }
+  },
+  "languages": {
+    "en": {
+      "languageName": "English",
+      "title": "Terminal",
+      "subtitle": "A simple, retro theme for Hugo",
+      "owner": "",
+      "keywords": "",
+      "copyright": "",
+      "menuMore": "Show more",
+      "readMore": "Read more",
+      "readOtherPosts": "Read other posts",
+      "missingContentMessage": "Page not found...",
+      "missingBackButtonLabel": "Back to home page",
+      "params": {
+        "logo": {
+          "logoText": "Terminal",
+          "logoHomeLink": "/"
+        }
+      },
+      "menu": {
+        "main": [
+          {
+            "identifier": "about",
+            "name": "About",
+            "url": "/about"
+          },
+          {
+            "identifier": "showcase",
+            "name": "Showcase",
+            "url": "/showcase"
+          }
+        ]
+      }
+    }
+  }
+}
 ```
 
 to `config.toml` file in your Hugo root directory and change params fields. In case you need, here's [a YAML version](https://gist.github.com/panr/9eeea6f595c257febdadc11763e3a6d1).
