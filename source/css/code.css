@@ -1,0 +1,84 @@
+.collapsable-code {
+  --border-color: color-mod(var(--accent) blend(#999 90%));
+
+  position: relative;
+  width: 100%;
+  margin: 40px 0;
+
+  input[type="checkbox"] {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  input[type="checkbox"]:checked {
+    ~ pre,
+    ~ .code-toolbar pre {
+      height: 0;
+      padding: 0;
+      border-top: none;
+    }
+
+    ~ .code-toolbar {
+      padding: 0;
+      border-top: none;
+
+      .toolbar {
+        display: none;
+      }
+    }
+
+    ~ label .collapsable-code__toggle:after {
+      content: attr(data-label-expand);
+    }
+  }
+
+  label {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    min-width: 30px;
+    min-height: 30px;
+    margin: 0;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+  }
+
+  &__title {
+    flex: 1;
+    color: var(--accent);
+    padding: 3px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__language {
+    color: var(--accent);
+    border: 1px solid var(--border-color);
+    border-bottom: none;
+    text-transform: uppercase;
+    padding: 3px 10px;
+  }
+
+  &__toggle {
+    color: var(--accent);
+    font-size: 16px;
+    padding: 3px 10px;
+
+    &:after {
+      content: attr(data-label-collapse);
+    }
+  }
+
+  pre {
+    margin-top: 0;
+
+    &::first-line {
+      line-height: 0;
+    }
+  }
+
+  .code-toolbar {
+    margin: 0;
+  }
+}
