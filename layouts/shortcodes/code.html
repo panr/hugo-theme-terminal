@@ -2,7 +2,7 @@
 
 {{ if .Get "language" }}
   <div class="collapsable-code">
-    <input id="{{ .Get "id" | default $id }}" type="checkbox" />
+    <input id="{{ .Get "id" | default $id }}" type="checkbox" {{ if ( eq ( .Get "isCollapsed" ) "true" ) -}} checked {{- end }} />
     <label for="{{ .Get "id" | default $id }}">
       <span class="collapsable-code__language">{{ .Get "language" }}</span>
       {{ if .Get "title" }}<span class="collapsable-code__title">{{ .Get "title" | markdownify }}</span>{{ end }}
