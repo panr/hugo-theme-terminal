@@ -4,21 +4,25 @@
 
 ### DEMO - https://hugo-terminal.now.sh/
 
+<a href="https://www.buymeacoffee.com/panr" target="_blank"><img src="https://res.cloudinary.com/panr/image/upload/v1579374705/buymeacoffee_y6yvov.svg" alt="Buy Me A Coffee" ></a>
+
 ---
 
-- [Features](#features)
-- [Built-in shortcodes](#built-in-shortcodes)
-- [Code highlighting](#code-highlighting)
-- [How to start](#how-to-start)
-- [How to configure](#how-to-configure)
-- [Post archetype](#post-archetype)
-- [Add-ons](#add-ons)
-- [How to run your site](#how-to-run-your-site)
-- [How to edit the theme](#how-to-edit-the-theme)
-- [How to contribute](#how-to-contribute)
-- [Terminal theme user?](#terminal-theme-user)
-- [Sponsoring](#sponsoring)
-- [Licence](#licence)
+- [Terminal](#terminal)
+    - [DEMO - https://hugo-terminal.now.sh/](#demo---httpshugo-terminalnowsh)
+  - [Features](#features)
+      - [Built-in shortcodes](#built-in-shortcodes)
+      - [Code highlighting](#code-highlighting)
+  - [How to start](#how-to-start)
+  - [How to configure](#how-to-configure)
+  - [Post archetype](#post-archetype)
+  - [Add-ons](#add-ons)
+  - [How to run your site](#how-to-run-your-site)
+  - [How to edit the theme](#how-to-edit-the-theme)
+  - [How to contribute](#how-to-contribute)
+  - [Terminal theme user?](#terminal-theme-user)
+  - [Sponsoring](#sponsoring)
+  - [License](#license)
 
 ## Features
 
@@ -31,8 +35,33 @@
 
 - **`image`** (prop required: **`src`**; props optional: **`alt`**, **`position`** (**left** is default | center | right), **`style`**)
   - eg: `{{< image src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}`
-- **`figure`** (same as `image`, plus few optional props: **`caption`**, **`captionPosition`** (left | **center** is default | right), **`captionStyle`**
+- **`figure`** (same as `image`, plus few optional props: **`caption`**, **`captionPosition`** (left | **center** is default | right), **`captionStyle`**)
   - eg: `{{< figure src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" caption="Hello Friend!" captionPosition="right" captionStyle="color: red;" >}}`
+- **`code`** (prop required: **`language`**; props optional: **`title`**, **`id`**, **`expand`** (default "△"), **`collapse`** (default "▽"), **`isCollapsed`**)
+  - eg:
+  ```go
+  {{< code language="CSS" title="Really cool snippet" id="1" expand="Show" collapse="Hide" isCollapsed="true" >}}
+  pre {
+    background: #1a1a1d;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    overflow: auto;
+
+    @media (--phone) {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    code {
+      background: none !important;
+      color: #ccc;
+      padding: 0;
+      font-size: inherit;
+    }
+  }
+  {{< /code >}}
+  ```
 
 #### Code highlighting
 
