@@ -100,7 +100,8 @@ theme = "terminal"
 paginate = 5
 
 [params]
-  # dir name of your blog content (default is `content/posts`)
+  # dir name of your main content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
 
   # ["orange", "blue", "red", "green", "pink"]
