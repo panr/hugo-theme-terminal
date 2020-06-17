@@ -23,8 +23,8 @@
   </span>
   {{ end }}
 
-  {{ with .Params.Cover }}
-    <img src="{{ . | absURL }}" class="post-cover" />
+  {{ if .Params.Cover }}
+    <img src="{{ .Params.Cover | absURL }}" class="post-cover" alt="{{ .Title | plainify | default " " }}" />
   {{ end }}
 
   {{ if .Params.Toc }}
