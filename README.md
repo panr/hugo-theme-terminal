@@ -38,7 +38,7 @@
 - **`code`** (prop required: **`language`**; props optional: **`title`**, **`id`**, **`expand`** (default "△"), **`collapse`** (default "▽"), **`isCollapsed`**)
   - eg:
   ```go
-  {{< code language="CSS" title="Really cool snippet" id="1" expand="Show" collapse="Hide" isCollapsed="true" >}}
+  {{< code language="css" title="Really cool snippet" id="1" expand="Show" collapse="Hide" isCollapsed="true" >}}
   pre {
     background: #1a1a1d;
     padding: 20px;

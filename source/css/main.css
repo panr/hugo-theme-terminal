@@ -29,7 +29,6 @@ body {
   }
 }
 
-
 .headings--one-size {
   h1,
   h2,
@@ -59,6 +58,11 @@ body {
 
 a {
   color: inherit;
+
+  /* Waiting for a better times... */
+  /* &:has(code) {
+    text-decoration-color: var(--accent);
+  } */
 }
 
 img {
@@ -123,7 +127,7 @@ figure {
   }
 }
 
-code {
+code, kbd {
   font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
   font-feature-settings: normal;
   background: color-mod(var(--accent) a(20%));
@@ -131,6 +135,12 @@ code {
   padding: 1px 6px;
   margin: 0 2px;
   font-size: .95rem;
+
+  code, kbd {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 pre {
@@ -183,12 +193,37 @@ blockquote {
     position: relative;
   }
 
-  p:before {
+  p:first-of-type:before {
     content: '>';
     display: block;
     position: absolute;
     left: -25px;
     color: var(--accent);
+  }
+
+  &.twitter-tweet {
+    position: relative;
+    background: color-mod(var(--accent) a(10%));
+    font: inherit;
+    color: inherit;
+    border: 1px solid var(--accent);
+    padding-top: 60px;
+
+    p:before {
+      content: '';
+    }
+
+    &:before {
+      content: '> From Twitter:';
+      position: absolute;
+      top: 20px;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    a {
+      color: var(--accent);
+    }
   }
 }
 
@@ -224,8 +259,31 @@ ol {
   }
 }
 
+ol {
+  list-style: none;
+  counter-reset: li;
+
+  li {
+    counter-increment: li;
+  }
+
+  li:before {
+    content: counter(li);
+    position: absolute;
+    right: calc(100% + 10px);
+    color: var(--accent);
+    display: inline-block;
+    text-align: right;
+  }
+}
+
 ol ol {
   list-style-type: lower-alpha;
+}
+
+mark {
+  background: var(--accent);
+  color: var(--background);
 }
 
 .container {

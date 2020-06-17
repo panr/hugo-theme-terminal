@@ -1,3 +1,20 @@
+.index-content {
+  margin-top: 20px;
+}
+
+.framed {
+  border: 1px solid var(--accent);
+  padding: 20px;
+
+  *:first-child {
+    margin-top: 0;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .posts {
   width: 100%;
 }
@@ -74,7 +91,7 @@
   ul {
     list-style: none;
 
-    li:before {
+    li:not(:empty):before {
       content: '-';
       position: absolute;
       left: -20px;
@@ -108,4 +125,8 @@
 
 h1:hover a, h2:hover a, h3:hover a, h4:hover a {
   visibility: visible;
+}
+
+.footnotes {
+  color: color-mod(var(--color) alpha(50%));
 }
