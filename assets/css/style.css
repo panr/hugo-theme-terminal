@@ -1,0 +1,16 @@
+@import 'variables.css';
+
+@import 'font.css';
+@import 'buttons.css';
+
+@import 'header.css';
+@import 'logo.css';
+@import 'main.css';
+@import 'post.css';
+@import 'pagination.css';
+@import 'footer.css';
+
+@import 'prism.css';
+@import 'syntax.css';
+@import 'code.css';
+@import 'terms.css';
