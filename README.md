@@ -184,9 +184,7 @@ See the basic `post` file params supported by the theme — https://github.com/p
 
 ## How to run your site
 
-The theme is using [Hugo Pipes](https://gohugo.io/hugo-pipes/) to handle Javascript and PostCSS files. This setup **requires** following npm packages: `@babel/core`, `@babel/cli` and `postcss-cli`. Before you start, you have to install them (globally or locally):
-
-From your Hugo root directory run:
+The theme is using [Hugo Pipes](https://gohugo.io/hugo-pipes/) to handle Javascript and PostCSS files. This setup **requires** following npm packages: `@babel/core`, `@babel/cli` and `postcss-cli`. Before you start, you have to install them (globally or locally). Here's how you can set it all up from your Hugo root directory by running:
 
 ```
 yarn add -D @babel/core @babel/cli postcss-cli
