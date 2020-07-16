@@ -189,8 +189,9 @@ The theme is using [Hugo Pipes](https://gohugo.io/hugo-pipes/) to handle Javascr
 From your Hugo root directory run:
 
 ```
-yarn add -D @babel/core @babel/cli @postcss-cli
+yarn add -D @babel/core @babel/cli postcss-cli
 cd themes/terminal
+git checkout v2
 yarn
 cd ../..
 ```
