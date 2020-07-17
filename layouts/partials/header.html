@@ -6,6 +6,8 @@
     <div class="menu-trigger">menu</div>
   </div>
   {{ if len $.Site.Menus }}
-    {{ partial "menu.html" . }}
+  {{ partial "menu.html" . }}
   {{ end }}
+  <!-- Extended header section-->
+  {{ partial "extended_header.html" . }}
 </header>
