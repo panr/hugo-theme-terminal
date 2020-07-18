@@ -1,3 +1,7 @@
+@keyframes hide-scroll {
+  from, to { overflow: hidden; } 
+}
+
 .collapsable-code {
   --border-color: color-mod(var(--accent) blend(#999 90%));
 
@@ -9,22 +13,24 @@
     position: absolute;
     visibility: hidden;
   }
-
+  
   input[type="checkbox"]:checked {
     ~ pre,
     ~ .code-toolbar pre {
-      height: 0;
-      padding: 0;
-      border-top: none;
+	  padding: 0;
+	  border-top: none;
     }
 
     ~ .code-toolbar {
       padding: 0;
       border-top: none;
-
+	  max-height: 0px;
+	  animation: hide-scroll 0.4s backwards;
+	  overflow-y: hidden;
       .toolbar {
         display: none;
       }
+	  
     }
 
     ~ label .collapsable-code__toggle:after {
@@ -56,7 +62,6 @@
     color: var(--accent);
     border: 1px solid var(--border-color);
     border-bottom: none;
-    text-transform: uppercase;
     padding: 3px 10px;
   }
 
@@ -79,6 +84,15 @@
   }
 
   .code-toolbar {
+	position: static;
     margin: 0;
+	max-height: 600px;
+	transition: max-height 0.4s, padding 0.4s;
+	overflow-y: auto;
+	.toolbar {
+	  position: absolute;
+	  top: 55px;
+	  right: 30px;
+	}
   }
 }
