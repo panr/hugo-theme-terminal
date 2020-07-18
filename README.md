@@ -208,6 +208,7 @@ and then run:
 $ npm install
 $ npm i yarn
 $ yarn
+$ yarn build
 ```
 
 ## How to contribute

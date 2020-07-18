@@ -53,5 +53,8 @@
     "url-loader": "^1.1.2",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "yarn": "^1.22.4"
   }
 }

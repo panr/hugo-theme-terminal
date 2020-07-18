@@ -74,6 +74,26 @@
 
   &-content {
     margin-top: 30px;
+	
+	h1 {
+		font-size: 2rem;
+		border-bottom-color: white;
+		border-bottom-width: 5px;
+		border-bottom-style: double;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		border-bottom: white solid 1px;
+	}
+
+	h3 {
+		font-size: 1.2rem;
+	}
+	
+	img {
+		margin: 0 auto;
+	}
   }
 
   &-cover {
