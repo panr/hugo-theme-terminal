@@ -184,7 +184,17 @@ See the basic `post` file params supported by the theme — https://github.com/p
 
 ## How to run your site
 
-From your Hugo root directory run:
+The theme is using [Hugo Pipes](https://gohugo.io/hugo-pipes/) to handle Javascript and PostCSS files. This setup **requires** following npm packages: `@babel/core`, `@babel/cli` and `postcss-cli`. Before you start, you have to install them (globally or locally). Here's how you can set it all up from your Hugo root directory by running:
+
+```
+yarn add -D @babel/core @babel/cli postcss-cli
+cd themes/terminal
+git checkout v2
+yarn
+cd ../..
+```
+
+Then:
 
 ```
 $ hugo server -t terminal
@@ -195,21 +205,7 @@ and go to `localhost:1313` in your browser. From now on all the changes you make
 ## How to edit the theme
 
 If you have to override some of the styles, **you can do this easily** by adding `static/style.css` in your root directory and point things you want to change.
-
-Otherwise, if you really want to edit the theme, you need to install Node dependencies. To do so, go to the theme directory (from your Hugo root directory):
-
-```
-$ cd themes/terminal
-```
-
-and then run:
-
-```
-$ npm install
-$ npm i yarn
-$ yarn
-$ yarn build
-```
+But you can also copy `assets` folder from the theme to your root directory and modify the files. This will protect your changes from the override when you update the theme.
 
 ## How to contribute
 
@@ -227,6 +223,6 @@ If you like my work and want to support the development of the project, now you 
 
 ## License
 
-Copyright © 2019 Radosław Kozieł ([@panr](https://twitter.com/panr))
+Copyright © 2019-2020 Radosław Kozieł ([@panr](https://twitter.com/panr))
 
 The theme is released under the MIT License. Check the [original theme license](https://github.com/panr/hugo-theme-terminal/blob/master/LICENSE.md) for additional licensing information.
