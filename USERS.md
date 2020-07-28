@@ -31,6 +31,7 @@
 - https://bgameiro.me/ **Bernardo Gameiro** (Engineer Physicist student)
 - https://return-to-libc.com/ **elraro** (Cyber Security Specialist)
 - https://waterloos.niflheimr.blue/ **niflheimr1011** (Aspiring Software Engineer)
+- https://wjdevschool.com/ **Wojciech Bogócki** (Making Things & Teaching / W&J Dev School)
 
 <!--
 TEMPLATE:
