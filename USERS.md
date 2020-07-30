@@ -31,6 +31,7 @@
 - https://bgameiro.me/ **Bernardo Gameiro** (Engineer Physicist student)
 - https://return-to-libc.com/ **elraro** (Cyber Security Specialist)
 - https://waterloos.niflheimr.blue/ **niflheimr1011** (Aspiring Software Engineer)
+- https://monocle.rpod.club/ **classx** (DevOps Engineer)
 
 <!--
 TEMPLATE:
