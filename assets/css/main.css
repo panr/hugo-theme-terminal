@@ -304,8 +304,13 @@ mark {
     max-width: 100%;
   }
 
+  &.wide {
+    max-width: 60%;
+  }
+
   @media (--phone) {
     padding: 20px;
+    max-width: 100% !important;
   }
 
   @media print {

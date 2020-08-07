@@ -113,8 +113,9 @@ paginate = 5
   # show selector to switch language
   showLanguageSelector = false
 
-  # set theme to full screen width
-  fullWidthTheme = false
+  # set theme width full | wide | default
+  # full screen, wide (60%), default
+  themeWidth = "default"
 
   # center theme with default width
   centerTheme = false

@@ -7,9 +7,10 @@
   {{ partial "head.html" . }}
 </head>
 <body class="{{- ( or .Params.color $.Site.Params.ThemeColor ) -}}">
-{{ $container := cond $.Site.Params.FullWidthTheme "container full" (cond $.Site.Params.CenterTheme "container center" "container") }}
+{{ $containerThemeWidth := cond (eq $.Site.Params.ThemeWidth "full") "container full" (cond (eq $.Site.Params.ThemeWidth "wide") "container wide" "container") }}
+{{ $containerThemeCenter :=  cond $.Site.Params.CenterTheme "center" "" }}
 
-<div class="{{- $container -}}{{- cond ($.Site.Params.oneHeadingSize | default true) " headings--one-size" "" }}">
+<div class="{{- $containerThemeWidth }} {{ $containerThemeCenter -}} {{- cond ($.Site.Params.oneHeadingSize | default true) " headings--one-size" "" }}">
 
   {{ partial "header.html" . }}
 
