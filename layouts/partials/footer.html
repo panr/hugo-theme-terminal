@@ -10,6 +10,8 @@
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>
   </div>
+  <!-- Inner Extended footer section-->
+{{ partial "inner_extended_footer.html" . }}
 </footer>
 
 {{ $js := resources.Get "js/main.js" | js.Build }}
