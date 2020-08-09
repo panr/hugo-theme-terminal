@@ -12,12 +12,13 @@
 - [Built-in shortcodes](#built-in-shortcodes)
 - [Code highlighting](#code-highlighting)
 - [How to start](#how-to-start)
+- [How to run your site](#how-to-run-your-site)
 - [How to configure](#how-to-configure)
 - [Post archetype](#post-archetype)
 - [Add-ons](#add-ons)
-- [How to run your site](#how-to-run-your-site)
-- [How to edit the theme](#how-to-edit-the-theme)
-- [How to contribute](#how-to-contribute)
+- [How to (safely) edit the theme](#how-to-edit)
+- [Found a bug?](#bug)
+- [New cool idea or feature](#feature)
 - [Terminal theme user?](#terminal-theme-user)
 - [Sponsoring](#sponsoring)
 - [Licence](#licence)
@@ -88,6 +89,24 @@ If you don't want to make any radical changes, it's the best option, because you
 ```
 $ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
+
+## How to run your site
+
+The theme is using [Hugo Pipes](https://gohugo.io/hugo-pipes/) to handle Javascript and PostCSS files. This setup **requires** following npm packages:
+
+```
+@babel/cli @babel/core @babel/preset-env browserslist clipboard cssnano postcss-cli postcss-import postcss-mixins postcss-nested postcss-preset-env postcss-url
+```
+
+Before you start, you have to install them (globally or locally).
+
+Then:
+
+```
+$ hugo server -t terminal
+```
+
+and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
 
 ## How to configure
 
@@ -182,34 +201,30 @@ See the basic `post` file params supported by the theme — https://github.com/p
 - **Extended Head** — please take a look at `layouts/partials/extended_head.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_head.html
 - **Extended Footer** — please take a look at `layouts/partials/extended_footer.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_footer.html
 
-## How to run your site
+## How to (safely) edit the theme <a id="how-to-edit" />
 
-The theme is using [Hugo Pipes](https://gohugo.io/hugo-pipes/) to handle Javascript and PostCSS files. This setup **requires** following npm packages: `@babel/core`, `@babel/cli` and `postcss-cli`. Before you start, you have to install them (globally or locally). Here's how you can set it all up from your Hugo root directory by running:
+To change something in the theme, you have to go to `themes/terminal` and modify the files. You can also copy them (like `assets` folder) from the theme to your root directory and modify the files there (thanks to Hugo's lookup https://gohugo.io/templates/lookup-order). This will protect your changes from overriding when you update the theme.
 
-```
-yarn add -D @babel/core @babel/cli postcss-cli
-cd themes/terminal
-git checkout v2
-yarn
-cd ../..
-```
+## Found a bug? <a id="bug" />
 
-Then:
+If you spot any bugs, please use [Issue Tracker](https://github.com/panr/hugo-theme-terminal/issues) or create a new [Pull Request](https://github.com/panr/hugo-theme-terminal/pulls) to fix the issue.
 
-```
-$ hugo server -t terminal
-```
+## New cool idea or feature? <a id="feature" />
 
-and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
+The theme is in constant development since 2019 and has got many cool features that helped many of you and made the theme better. But there were also many features that I wasn't sure about because I want to keep the theme as simple as possible.
 
-## How to edit the theme
+So, let's say you have an idea of how to extend the theme. That's cool and you're welcome to do that, just follow these steps:
 
-If you have to override some of the styles, **you can do this easily** by adding `static/style.css` in your root directory and point things you want to change.
-But you can also copy `assets` folder from the theme to your root directory and modify the files. This will protect your changes from the override when you update the theme.
+- fork the theme
+- implement the feature
+- write an instruction how to use the feature
+- give a working example of the implementation for other users
+- add info about your work to `COMMUNITY-FEATURES.md`
+- make a PR with edited `COMMUNITY-FEATURES.md`
 
-## How to contribute
+This will help keeping the theme close to its roots, and also allow anyone who wishes to improve it and match their needs, to do whatever they want.
 
-If you spot any bugs, please use [Issue Tracker](https://github.com/panr/hugo-theme-terminal/issues) or if you want to add a new feature directly please create a new [Pull Request](https://github.com/panr/hugo-theme-terminal/pulls).
+Sounds OK? Cool, let's rock! 🤘
 
 ## Terminal theme user?
 
