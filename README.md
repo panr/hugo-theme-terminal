@@ -90,6 +90,8 @@ If you don't want to make any radical changes, it's the best option, because you
 $ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
 
+⚠️ **The theme needs at least Hugo version 0.74.x**.
+
 ## How to run your site
 
 The theme is using [Hugo Pipes](https://gohugo.io/hugo-pipes/) to handle Javascript and PostCSS files. This setup **requires** following npm packages:
