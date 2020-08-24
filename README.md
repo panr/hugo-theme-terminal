@@ -92,17 +92,17 @@ $ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/termi
 
 ⚠️ **The theme needs at least Hugo version 0.74.x**.
 
+The theme is using [Hugo Pipes](https://gohugo.io/hugo-pipes/) to handle Javascript and PostCSS files. This setup **requires** following npm packages. Before you start, you have to install them (globally or locally):
+
+🚨 **THIS STEP IS VERY IMPORTANT** 🚨
+
+```
+yarn add -D @babel/cli @babel/core @babel/preset-env browserslist clipboard cssnano postcss-cli postcss-import postcss-mixins postcss-nested postcss-preset-env postcss-url
+```
+
 ## How to run your site
 
-The theme is using [Hugo Pipes](https://gohugo.io/hugo-pipes/) to handle Javascript and PostCSS files. This setup **requires** following npm packages:
-
-```
-@babel/cli @babel/core @babel/preset-env browserslist clipboard cssnano postcss-cli postcss-import postcss-mixins postcss-nested postcss-preset-env postcss-url
-```
-
-Before you start, you have to install them (globally or locally).
-
-Then:
+If you installed all needed `npm` dependencies, then you can run:
 
 ```
 $ hugo server -t terminal
