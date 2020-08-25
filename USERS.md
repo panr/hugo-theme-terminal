@@ -34,6 +34,7 @@
 - https://monocle.rpod.club/ **classx** (DevOps Engineer)
 - https://wjdevschool.com/ **Wojciech Bogócki** (Making Things & Teaching / W&J Dev School)
 - https://waterloos.niflheimr.blue/ **cindrmon** (Aspiring Software Engineer and Student)
+- https://blog.m5e.de/ **Christoph Miksche** (Software Developer)
 
 <!--
 TEMPLATE:
