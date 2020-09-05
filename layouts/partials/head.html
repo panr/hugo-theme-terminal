@@ -8,15 +8,11 @@
 {{ template "_internal/google_analytics.html" . }}
 
 <!-- Theme CSS -->
-{{ $css := resources.Get "css/style.css" }}
-{{ $opts := dict "inlineImports" true }}
-{{ $style := $css | resources.PostCSS $opts | minify }}
-<link rel="stylesheet" href="{{ $style.Permalink }}">
-
-{{ if (or (isset .Params "color") (ne $.Site.Params.ThemeColor "orange")) }}
-  {{ $colorCss := resources.Get (printf "css/color/%s.css" (or .Params.color $.Site.Params.ThemeColor)) }}
-  {{ $color := $colorCss | resources.PostCSS $opts | minify }}
-  <link rel="stylesheet" href="{{ $color.Permalink }}">
+<link rel="stylesheet" href="{{ "assets/style.css" | absURL }}">
+{{ if (isset .Params "color") }}
+  <link rel="stylesheet" href="{{ (printf "assets/%s.css" .Params.color) | absURL }}">
+{{ else if (ne $.Site.Params.ThemeColor "orange") }}
+  <link rel="stylesheet" href="{{ (printf "assets/%s.css" $.Site.Params.ThemeColor) | absURL }}">
 {{ end }}
 
 <!-- Custom CSS to override theme properties (/static/style.css) -->
