@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="{{ "assets/style.css" | absURL }}">
 {{ if (isset .Params "color") }}
   <link rel="stylesheet" href="{{ (printf "assets/%s.css" .Params.color) | absURL }}">
-{{ else if (ne $.Site.Params.ThemeColor "orange") }}
+{{ else if and (ne $.Site.Params.ThemeColor "orange") (ne $.Site.Params.ThemeColor "color" "") }}
   <link rel="stylesheet" href="{{ (printf "assets/%s.css" $.Site.Params.ThemeColor) | absURL }}">
 {{ end }}
 
@@ -21,27 +21,29 @@
 {{- end }}
 
 <!-- Icons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "img/apple-touch-icon-144-precomposed.png" | absURL }}">
+<link rel="apple-touch-icon" href="{{ "img/apple-touch-icon-192x192.png" | absURL }}">
 {{ if isset $.Site.Params "favicon" }}
   <link rel="shortcut icon" href="{{ $.Site.Params.favicon | absURL }}">
 {{ else }}
-  <link rel="shortcut icon" href="{{ printf "img/favicon/%s.png" $.Site.Params.ThemeColor | absURL }}">
+  <link rel="shortcut icon" href="{{ printf "img/favicon/%s.png" ($.Site.Params.ThemeColor | default "orange") | absURL }}">
 {{ end }}
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary" />
-{{ if (isset $.Site.Params.Twitter "site") }}
-  <meta name="twitter:site" content="{{ $.Site.Params.Twitter.site }}" />
+{{ if (isset $.Site.Params "twitter") }}
+  {{ if (isset $.Site.Params.Twitter "site") }}
+    <meta name="twitter:site" content="{{ $.Site.Params.Twitter.site }}" />
+  {{ end }}
+    <meta name="twitter:creator" content="{{ if .IsHome }}{{ $.Site.Params.Twitter.creator }}{{ else if isset .Params "authortwitter" }}{{ .Params.authorTwitter }}{{ else }}{{ .Params.Author }}{{ end }}" />
 {{ end }}
-<meta name="twitter:creator" content="{{ if .IsHome }}{{ $.Site.Params.Twitter.creator }}{{ else if isset .Params "authortwitter" }}{{ .Params.authorTwitter }}{{ else }}{{ .Params.Author }}{{ end }}" />
 
 <!-- OG data -->
 <meta property="og:locale" content="{{ $.Site.Language.Lang }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
-<meta property="og:title" content="{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }} :: {{ $.Site.Title }}{{ end }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }}{{ end }}">
 <meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else if .Description}}{{ .Description | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:site_name" content="{{ .Title }}" />
+<meta property="og:site_name" content="{{ $.Site.Title }}" />
 {{ if and (not .IsHome) (isset .Params "cover") }}
   <meta property="og:image" content="{{ .Param "cover" | absURL }}">
 {{ else }}
