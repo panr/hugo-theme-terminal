@@ -35,6 +35,7 @@
 - https://wjdevschool.com/ **Wojciech Bogócki** (Making Things & Teaching / W&J Dev School)
 - https://waterloos.niflheimr.blue/ **cindrmon** (Aspiring Software Engineer and Student)
 - https://conight.com **Conight Wang** (Software Engineer)
+- https://blog.m5e.de/ **Christoph Miksche** (Software Developer)
 
 <!--
 TEMPLATE:

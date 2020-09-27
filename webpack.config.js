@@ -1,6 +1,6 @@
 const Webpack = require("webpack");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const CleanPlugin = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
@@ -8,26 +8,22 @@ const path = require("path");
 
 const join = (...paths) => path.join(__dirname, ...paths);
 
-module.exports = {
+module.exports = (env, { mode }) => ({
   resolve: {
     extensions: [".js", ".css"],
-    modules: ["source", "node_modules"],
+    modules: ["assets", "node_modules"],
   },
   entry: {
-    "main.js": [
-      join("source", "js", "main.js"),
-      join("source", "js", "menu.js"),
-      join("source", "js", "languageSelector.js")
-    ],
-    "prism.js": join("source", "js", "prism.js"),
-    "style.css": join("source", "css", "style.css"),
-    "red.css": join("source", "css", "color", "red.css"),
-    "blue.css": join("source", "css", "color", "blue.css"),
-    "green.css": join("source", "css", "color", "green.css"),
-    "pink.css": join("source", "css", "color", "pink.css"),
+    main: [join("assets", "js", "menu.js"), join("assets", "js", "languageSelector.js")],
+    prism: join("assets", "js", "prism.js"),
+    style: join("assets", "css", "style.css"),
+    red: join("assets", "css", "color", "red.css"),
+    blue: join("assets", "css", "color", "blue.css"),
+    green: join("assets", "css", "color", "green.css"),
+    pink: join("assets", "css", "color", "pink.css"),
   },
   output: {
-    filename: "[name]",
+    filename: "[name].js",
     path: join("static/assets"),
     publicPath: "",
   },
@@ -59,28 +55,27 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: [
-            {
-              loader: "css-loader",
-              options: {
-                minimize: true,
-                modules: true,
-                importLoaders: 1,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
                 localIdentName: "[local]",
               },
+              import: true,
+              importLoaders: 1,
             },
-            {
-              loader: "postcss-loader",
-              options: {
-                config: {
-                  path: "postcss.config.js",
-                },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              config: {
+                path: "postcss.config.js",
               },
             },
-          ],
-        }),
+          },
+        ],
       },
     ],
   },
@@ -95,5 +90,21 @@ module.exports = {
       }),
     ],
   },
-  plugins: [new CleanPlugin(join("static/assets")), new ExtractTextPlugin("[name]")],
-};
+  plugins: [
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: [join("static/assets")],
+      cleanAfterEveryBuildPatterns: [
+        join("static/assets/style.js"),
+        join("static/assets/blue.js"),
+        join("static/assets/green.js"),
+        join("static/assets/red.js"),
+        join("static/assets/pink.js"),
+      ],
+      verbose: true,
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css",
+    }),
+  ],
+});
