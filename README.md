@@ -92,14 +92,6 @@ $ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/termi
 
 ⚠️ **The theme needs at least Hugo version 0.74.x**.
 
-The theme is using [Hugo Pipes](https://gohugo.io/hugo-pipes/) to handle Javascript and PostCSS files. This setup **requires** following npm packages. Before you start, you have to install them (globally or locally):
-
-🚨 **THIS STEP IS VERY IMPORTANT** 🚨
-
-```
-yarn add -D @babel/cli @babel/core @babel/preset-env browserslist clipboard cssnano postcss-cli postcss-import postcss-mixins postcss-nested postcss-preset-env postcss-url
-```
-
 ## How to run your site
 
 If you installed all needed `npm` dependencies, then you can run:
@@ -205,7 +197,37 @@ See the basic `post` file params supported by the theme — https://github.com/p
 
 ## How to (safely) edit the theme <a id="how-to-edit" />
 
-To change something in the theme, you have to go to `themes/terminal` and modify the files. You can also copy them (like `assets` folder) from the theme to your root directory and modify the files there (thanks to Hugo's lookup https://gohugo.io/templates/lookup-order). This will protect your changes from overriding when you update the theme.
+If you have to override only some of the styles, you can do this easily by adding `static/style.css` in your root directory and point things you want to change.
+
+To change something directly in the theme, you have to go to `themes/terminal` and modify the files.
+
+First, you need to install Node dependencies. To do so, go to the theme directory (from your Hugo root directory):
+
+```bash
+ $ cd themes/terminal
+```
+
+ then run:
+
+ ```bash
+ $ npm install
+ $ npm i yarn
+ $ yarn
+ ```
+
+After you modified the files you can run webpack in watch mode:
+
+```bash
+$ yarn dev
+```
+
+or rebuild theme
+
+```bash
+$ yarn build
+```
+
+To see the changes (remember to restart `hugo server`).
 
 ## Found a bug? <a id="bug" />
 

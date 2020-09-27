@@ -35,4 +35,13 @@
 - https://wjdevschool.com/ **Wojciech Bogócki** (Making Things & Teaching / W&J Dev School)
 - https://waterloos.niflheimr.blue/ **cindrmon** (Aspiring Software Engineer and Student)
 - https://dongzhi.me **Joe** (Software Developer)
+- https://isaes.com.tr/ **Isa Es** (Software Engineer)
+- https://conight.com **Conight Wang** (Software Engineer)
+- https://blog.m5e.de/ **Christoph Miksche** (Software Developer)
 
+<!--
+ TEMPLATE:
+
+ - https://radoslawkoziel.pl **Radek Kozieł** (Software Designer and Developer)
+
+ -->
