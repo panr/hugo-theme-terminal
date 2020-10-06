@@ -3,6 +3,8 @@
 <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 <meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}" />
 <meta name="robots" content="noodp" />
+<meta name="title" content="{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+
 <link rel="canonical" href="{{ .Permalink }}" />
 
 {{ template "_internal/google_analytics.html" . }}
@@ -29,12 +31,27 @@
 {{ end }}
 
 <!-- Twitter Card -->
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
 {{ if (isset $.Site.Params "twitter") }}
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta name="twitter:description" content="{{ if .IsHome }}{{ .Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+
+  {{ if and (not .IsHome) (isset .Params "cover") }}
+    <meta property="twitter:image" content="{{ .Param "cover" | absURL }}">
+  {{ else }}
+    {{ if isset $.Site.Params "favicon" }}
+      <meta property="twitter:image" content="{{ $.Site.Params.favicon | absURL }}">
+    {{ else }}
+      <meta property="twitter:image" content="{{ printf "img/favicon/%s.png" $.Site.Params.ThemeColor | absURL }}">
+    {{ end }}
+  {{ end }}
+
   {{ if (isset $.Site.Params.Twitter "site") }}
     <meta name="twitter:site" content="{{ $.Site.Params.Twitter.site }}" />
   {{ end }}
+
     <meta name="twitter:creator" content="{{ if .IsHome }}{{ $.Site.Params.Twitter.creator }}{{ else if isset .Params "authortwitter" }}{{ .Params.authorTwitter }}{{ else }}{{ .Params.Author }}{{ end }}" />
+
 {{ end }}
 
 <!-- OG data -->
