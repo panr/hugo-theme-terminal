@@ -40,6 +40,7 @@
 - https://conight.com **Conight Wang** (Software Engineer)
 - https://blog.m5e.de/ **Christoph Miksche** (Software Developer)
 - https://mpostument.com/ **Maksym Postument** (DevOps Engineer)
+- https://mathiejosh.xyz **Josh Mathie** (Electrical Engineering Technology Student/Sales and Engineering Tech)
 
 <!--
  TEMPLATE:
