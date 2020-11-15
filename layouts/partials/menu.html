@@ -27,7 +27,7 @@
       {{ end }}
     {{ end }}
 
-    {{ if $.Site.Params.showLanguageSelector }}
+    {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
     <div class="spacer"></div>
     <ul class="language-selector">
       <ul class="language-selector-current">
