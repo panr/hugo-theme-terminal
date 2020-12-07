@@ -1,11 +1,12 @@
 {
-    "title": "",
-    "date": "",
+    "title": "{{ replace .TranslationBaseName "-" " " | title }}",
+    "date": "{{ .Date }}",
     "author": "",
     "authorTwitter": "",
     "cover": "",
-    "tags": ["", ""],
-    "keywords": ["", ""],
+    "tags": [""],
+    "keywords": [""],
     "description": "",
     "showFullContent": false,
+    "draft": true
 }
