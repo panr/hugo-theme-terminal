@@ -9,24 +9,25 @@
 ---
 
 - [Terminal](#terminal)
-    - [DEMO - https://hugo-terminal.now.sh/](#demo---httpshugo-terminalnowsh)
+  - [DEMO - https://hugo-terminal.now.sh/](#demo---httpshugo-terminalnowsh)
   - [Features](#features)
       - [Built-in shortcodes](#built-in-shortcodes)
       - [Code highlighting](#code-highlighting)
   - [How to start](#how-to-start)
+  - [How to run your site](#how-to-run-your-site)
   - [How to configure](#how-to-configure)
   - [Post archetype](#post-archetype)
   - [Add-ons](#add-ons)
-  - [How to run your site](#how-to-run-your-site)
-  - [How to edit the theme](#how-to-edit-the-theme)
-  - [How to contribute](#how-to-contribute)
+  - [How to (safely) edit the theme <a id="how-to-edit" />](#how-to-safely-edit-the-theme-a-idhow-to-edit-)
+  - [Found a bug? <a id="bug" />](#found-a-bug-a-idbug-)
+  - [New cool idea or feature? <a id="feature" />](#new-cool-idea-or-feature-a-idfeature-)
   - [Terminal theme user?](#terminal-theme-user)
   - [Sponsoring](#sponsoring)
   - [License](#license)
 
 ## Features
 
-- **5 duetone themes**, depending on your preferences (orange is default, red, blue, green, pink)
+- **5 duotone themes**, depending on your preferences (orange is default, red, blue, green, pink)
 - [**Fira Code**](https://github.com/tonsky/FiraCode) as default monospaced font. It's gorgeous!
 - **really nice duotone**, custom syntax highlighting based on [**PrismJS**](https://prismjs.com)
 - fully responsive
@@ -40,7 +41,7 @@
 - **`code`** (prop required: **`language`**; props optional: **`title`**, **`id`**, **`expand`** (default "△"), **`collapse`** (default "▽"), **`isCollapsed`**)
   - eg:
   ```go
-  {{< code language="CSS" title="Really cool snippet" id="1" expand="Show" collapse="Hide" isCollapsed="true" >}}
+  {{< code language="css" title="Really cool snippet" id="1" expand="Show" collapse="Hide" isCollapsed="true" >}}
   pre {
     background: #1a1a1d;
     padding: 20px;
@@ -90,6 +91,18 @@ If you don't want to make any radical changes, it's the best option, because you
 ```
 $ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
+
+⚠️ **The theme needs at least Hugo version 0.74.x**.
+
+## How to run your site
+
+If you installed all needed `npm` dependencies, then you can run:
+
+```
+$ hugo server -t terminal
+```
+
+and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
 
 ## How to configure
 
@@ -166,37 +179,60 @@ See the basic `post` file params supported by the theme — https://github.com/p
 - **Extended Head** — please take a look at `layouts/partials/extended_head.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_head.html
 - **Extended Footer** — please take a look at `layouts/partials/extended_footer.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_footer.html
 
-## How to run your site
+## How to (safely) edit the theme <a id="how-to-edit" />
 
-From your Hugo root directory run:
+If you have to override only some of the styles, you can do this easily by adding `static/style.css` in your root directory and point things you want to change.
 
-```
-$ hugo server -t terminal
-```
+To change something directly in the theme, you have to go to `themes/terminal` and modify the files.
 
-and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
+First, you need to install Node dependencies. To do so, go to the theme directory (from your Hugo root directory):
 
-## How to edit the theme
-
-If you have to override some of the styles, **you can do this easily** by adding `static/style.css` in your root directory and point things you want to change.
-
-Otherwise, if you really want to edit the theme, you need to install Node dependencies. To do so, go to the theme directory (from your Hugo root directory):
-
-```
-$ cd themes/terminal
+```bash
+ $ cd themes/terminal
 ```
 
-and then run:
+ then run:
 
+ ```bash
+ $ npm install
+ $ npm i yarn
+ $ yarn
+ ```
+
+After you modified the files you can run webpack in watch mode:
+
+```bash
+$ yarn dev
 ```
-$ npm install
-$ npm i yarn
-$ yarn
+
+or rebuild theme
+
+```bash
+$ yarn build
 ```
 
-## How to contribute
+To see the changes (remember to restart `hugo server`).
 
-If you spot any bugs, please use [Issue Tracker](https://github.com/panr/hugo-theme-terminal/issues) or if you want to add a new feature directly please create a new [Pull Request](https://github.com/panr/hugo-theme-terminal/pulls).
+## Found a bug? <a id="bug" />
+
+If you spot any bugs, please use [Issue Tracker](https://github.com/panr/hugo-theme-terminal/issues) or create a new [Pull Request](https://github.com/panr/hugo-theme-terminal/pulls) to fix the issue.
+
+## New cool idea or feature? <a id="feature" />
+
+The theme is in constant development since 2019 and has got many cool features that helped many of you and made the theme better. But there were also many features that I wasn't sure about because I want to keep the theme as simple as possible.
+
+So, let's say you have an idea of how to extend the theme. That's cool and you're welcome to do that, just follow these steps:
+
+- fork the theme
+- implement the feature
+- write an instruction how to use the feature
+- give a working example of the implementation for other users
+- add info about your work to `COMMUNITY-FEATURES.md`
+- make a PR with edited `COMMUNITY-FEATURES.md`
+
+This will help keeping the theme close to its roots, and also allow anyone who wishes to improve it and match their needs, to do whatever they want.
+
+Sounds OK? Cool, let's rock! 🤘
 
 ## Terminal theme user?
 
@@ -210,6 +246,6 @@ If you like my work and want to support the development of the project, now you 
 
 ## License
 
-Copyright © 2019 Radosław Kozieł ([@panr](https://twitter.com/panr))
+Copyright © 2019-2020 Radosław Kozieł ([@panr](https://twitter.com/panr))
 
 The theme is released under the MIT License. Check the [original theme license](https://github.com/panr/hugo-theme-terminal/blob/master/LICENSE.md) for additional licensing information.
