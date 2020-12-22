@@ -1,5 +1,18 @@
 <a href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{else}}{{ $.Site.BaseURL }}{{ end }}">
   <div class="logo">
-    {{ with $.Site.Params.Logo.logoText }}{{ . }}{{ else }}Terminal{{ end }}
+    {{ with $.Site.Params.Logo.logoText }}
+      {{ if $.Site.Params.Logo.logoSplit}}
+        {{ $logoSplit := split . $.Site.Params.Logo.logoSplit }}
+        {{ range $logoSplit }}
+          <span>{{ . }}</span>
+          {{ if in (last 1 $logoSplit) . }}
+          {{ else }}
+            <span style="margin: 0 0.75em"> / </span>
+          {{ end }}
+        {{ end }}
+      {{ else }}
+        {{ . }}
+      {{ end }}
+    {{ end }}
   </div>
 </a>
