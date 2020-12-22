@@ -1,11 +1,19 @@
 body .gist .gist-file {
     border: 1px solid var(--border-color);
+    border-radius: 0;
+}
+
+body .gist .gist-data {
+    border-radius: 0;
+}
+
+body .gist .gist-meta {
+    border-radius: 0;
 }
 
 body .gist .highlight {
     background: var(--background);
 }
-
 
 body .gist .blob-num,
 body .gist .blob-code-inner,
