@@ -1,67 +1,96 @@
 {{ define "main" }}
-  {{ if .Content }}
-    <div class="index-content {{ if .Params.framed -}}framed{{- end -}}">
-      {{ .Content }}
-    </div>
-  {{ end }}
-  <div class="posts">
-    {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
-    {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
 
-    {{ $PageContext := . }}
-    {{ if .IsHome }}
-      {{ $PageContext = .Site }}
-    {{ end }}
-    {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
-
-    {{ range $paginator.Pages }}
-      <div class="post on-list">
-        <h1 class="post-title">
-          <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-        </h1>
-        <div class="post-meta">
-          <span class="post-date">
-            {{ .Date.Format "2006-01-02" }}
-          </span>
-          {{ with .Params.Author }}
-            <span class="post-author">:: {{ . }}</span>
-          {{ end }}
-        </div>
-
-        {{ if .Params.tags }}
-          <span class="post-tags">
-            {{ range .Params.tags }}
-            #<a href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}">
-              {{- . -}}
-            </a>&nbsp;
-            {{ end }}
-          </span>
-        {{ end }}
-
-        {{ if .Params.Cover }}
-          <img src="{{ .Params.Cover | absURL }}" class="post-cover" alt="{{ .Title | plainify | default " " }}" />
-        {{ end }}
-
-        <div class="post-content">
-          {{ if .Params.showFullContent }}
-          {{ .Content | markdownify }}
-          {{ else if .Description }}
-          {{ .Description | markdownify }}
-          {{ else }}
-          {{ if .Truncated }}
-          {{ .Summary | markdownify }}
-          {{ end }}
-          {{ end }}
-        </div>
-
-        {{ if not .Params.showFullContent }}
-        <div>
-          <a class="read-more button"
-            href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
-        </div>
-        {{ end }}
-      </div>
-    {{ end }}
-    {{ partial "pagination.html" . }}
+{{ if .Content }}
+  <div class="index-content {{ if .Params.framed -}}framed{{- end -}}">
+    {{ .Content }}
   </div>
+{{ end }}
+
+{{ if .Site.Params.singlePageSite }}
+
+  <!-- Variables for collection of posts -->
+  {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
+  {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
+
+  {{ $PageContext := . }}
+  {{ if .IsHome }}
+    {{ $PageContext = .Site }}
+  {{ end }}
+  {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
+  
+  <div class="sections">
+    {{ range .Site.Menus.main }}
+      <div id="{{ .Identifier }}" class="posts section">
+      <h1 class="section-header">{{ .Name }}</h1>
+      {{ if ne .Identifier $.Site.Params.contentTypeName }}
+        {{ if in (first 2 .URL) "#" }}
+          <div class="post">
+            {{ $section := path.Join "homepage" .Identifier }}
+            {{ with $.Site.GetPage $section }}
+              {{ partial "section.html" . }}
+            {{ end }}
+          </div>
+        {{ end }}
+      {{ else }}
+        {{ range $paginator.Pages }}
+          <div class="post on-list">
+            <h1 class="post-title">
+              <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+            </h1>
+            <div class="post-meta">
+              <span class="post-date">
+                {{ with .Params.daterange }}
+                  {{ . }}
+                {{ else }}
+                  {{ .Date.Format "01-02-2006" }}
+                {{ end }}
+              </span>
+              {{ with .Params.Author }}
+                <span class="post-author">:: {{ . }}</span>
+              {{ end }}
+            </div>
+
+            {{ if .Params.tags }}
+              <span class="post-tags">
+                {{ range .Params.tags }}
+                #<a href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}">
+                  {{- . -}}
+                </a>&nbsp;
+                {{ end }}
+              </span>
+            {{ end }}
+
+            {{ if .Params.Cover }}
+              <img src="{{ .Params.Cover | absURL }}" class="post-cover" alt="{{ .Title | plainify | default " " }}" />
+            {{ end }}
+
+            <div class="post-content">
+              {{ if .Params.showFullContent }}
+              {{ .Content | markdownify }}
+              {{ else if .Description }}
+              {{ .Description | markdownify }}
+              {{ else }}
+              {{ if .Truncated }}
+              {{ .Summary | markdownify }}
+              {{ end }}
+              {{ end }}
+            </div>
+
+            {{ if not .Params.showFullContent }}
+            <div>
+              <a class="read-more button"
+                href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
+            </div>
+            {{ end }}
+          </div>
+        {{ end }}
+        <!--{ { partial "pagination.html" $ } }--> TODO: Update pagination <!-- originally . instead of $ -->
+      {{ end }}
+      </div>
+      <hr class="section-separator">
+    {{ end }}
+  </div>
+  
+{{ end }}
+
 {{ end }}

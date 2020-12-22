@@ -1,0 +1,28 @@
+{{ if eq .Params.Layout "post" }}
+  {{ if .Params.Cover }}
+    <img src="{{ .Params.Cover | absURL }}" class="section-cover" alt="{{ .Title | plainify | default " " }}" />
+  {{ end }}
+  <div class="post-content">
+    {{- with .Content -}}
+      <div>
+        {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor">&#8983;</a> ${3}` | safeHTML }}
+      </div>
+    {{- end -}}
+  </div>
+{{ end }}
+
+
+{{ if in "2col-left 2col-right" .Params.Layout }}
+  <div class="section-2col section-{{ .Params.Layout | plainify }}">
+    <div>
+      <img src="{{ .Params.Cover | absURL }}" class="section-cover" alt="{{ .Title | plainify | default " " }}" />
+    </div>
+    <div class="section-2col-content post-content">
+      {{- with .Content -}}
+        <div>
+          {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor">&#8983;</a> ${3}` | safeHTML }}
+        </div>
+      {{- end -}}
+    </div>
+  </div>
+{{ end }}

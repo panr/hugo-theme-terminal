@@ -1,0 +1,89 @@
+.sections {
+    width: 100%;
+}
+
+.section {
+    width: 100%;
+    
+    &-header {
+        font-size: 1.8rem !important;
+        margin-top: 3em !important;
+        text-decoration: underline;
+    }
+    
+    &-separator {
+        border: 2pt solid white;
+    }
+    
+    &-cover {
+        border: 10px solid var(--accent);
+        background: transparent;
+        padding: 8px;
+        position: relative;
+        margin: auto;
+        
+        /* Vertical Align */
+        top: 50%;
+        transform: translateY(-50%);
+        
+        /* Resize */
+        display: block;
+        max-height: 80em;
+        width: auto;
+        height: auto;
+        
+        @media (--tablet) {
+            top: auto;
+            transform: none;
+            max-height: 20em;
+        }
+    }
+    
+    &-2col {
+        display: flex;
+        
+        @media (--tablet) {
+            display: block;
+        }
+    }
+    
+    &-2col-right {
+        flex-direction: row;
+    }
+        
+    &-2col-left {
+        flex-direction: row-reverse;
+    }
+    
+    &-2col-content {
+        flex: 300%;
+        margin-top: 0 !important;
+        
+    }
+    
+    &-2col-right > &-2col-content {
+        margin-left: 2em;
+        @media (--tablet) {
+            margin-left: 0;
+        }
+    }
+    
+    &-2col-left > &-2col-content {
+        margin-right: 2em;
+        @media (--tablet) {
+            margin-right: 0;
+        }
+    }
+    
+    
+}
+
+.section > .post {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Remove hr between posts for sections that are .post */
+.section > .post:not(.on-list) {
+    border-bottom: none;
+}

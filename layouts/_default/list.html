@@ -12,7 +12,11 @@
         </h1>
         <div class="post-meta">
           <span class="post-date">
-            {{ .Date.Format "2006-01-02" }}
+            {{ with .Params.daterange }}
+              {{ . }}
+            {{ else }}
+              {{ .Date.Format "01-02-2006" }}
+            {{ end }}
           </span>
           {{ with .Params.Author }}
             <span class="post-author">:: {{ . }}</span>
