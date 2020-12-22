@@ -1,3 +1,7 @@
+body .gist .gist-file {
+    border: 1px solid var(--border-color);
+}
+
 body .gist .highlight {
     background: var(--background);
 }
