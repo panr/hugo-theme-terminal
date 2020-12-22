@@ -9,6 +9,20 @@ paginate = 5
   showMenuItems = 2
   fullWidthTheme = false
   centerTheme = false
+  # singlePageSite moves pages from the main nav menu to sections on the homepage.
+  # These only menu items with a url set to "/#section-name" will be displayed.
+  # A collection is displayed for the menu identifier which matches contentTypeName.
+  # The collection items use the "post" archetypes. 
+  singlePageSite = true
+  # For singlePageSites the collection is paginated but it would not make sense to 
+  # paginate in the middle of a section, so a link to see more can be specified below.
+  singlePageCollectionSeeMoreText = "Check out my projects!"
+  singlePageCollectionSeeMoreLink = "/portfolio"
+
+[params.twitter]
+  creator = "@justinnuwin"
+  site = "@justinnuwin"
+
 
 [languages]
   [languages.en]

@@ -6,33 +6,35 @@
   </div>
 {{ end }}
 
-{{ if .Site.Params.singlePageSite }}
+<!-- Variables for collection of posts -->
+{{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
+{{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
 
-  <!-- Variables for collection of posts -->
-  {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
-  {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
+{{ $PageContext := . }}
+{{ if .IsHome }}
+  {{ $PageContext = .Site }}
+{{ end }}
+{{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
 
-  {{ $PageContext := . }}
-  {{ if .IsHome }}
-    {{ $PageContext = .Site }}
-  {{ end }}
-  {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
-  
-  <div class="sections">
-    {{ range .Site.Menus.main }}
-      {{ if in (first 2 .URL) "#" }}
-        <div id="{{ .Identifier }}" class="posts section">
-        <h1 class="section-header">{{ .Name }}</h1>
+<div class="sections">
+  {{ range .Site.Menus.main }}
+    {{ if eq (first 2 .URL) "/#" }}
+      <section id="{{ .Identifier }}" class="posts section">
+        {{ if $.Site.Params.singlePageSite }}
+          <h1 class="section-header">{{ .Name }}<a href="#{{ .Identifier }}" class="hanchor" arialabel="Anchor">⌗</a></h1>
+        {{ end }}
         {{ if ne .Identifier $.Site.Params.contentTypeName }}
-          <div class="post">
-            {{ $section := path.Join "homepage" .Identifier }}
-            {{ with $.Site.GetPage $section }}
-              {{ partial "section.html" . }}
-            {{ end }}
-          </div>
+          {{ if $.Site.Params.singlePageSite }}
+            <div class="post">
+              {{ $section := path.Join "homepage" .Identifier }}
+              {{ with $.Site.GetPage $section }}
+                {{ partial "section.html" . }}
+              {{ end }}
+            </div>
+          {{ end }}
         {{ else }}
           {{ range $paginator.Pages }}
-            <div class="post on-list">
+            <article class="post on-list">
               <h1 class="post-title">
                 <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
               </h1>
@@ -81,16 +83,29 @@
                   href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
               </div>
               {{ end }}
-            </div>
+            </article>
           {{ end }}
-          <!--{ { partial "pagination.html" $ } }--> TODO: Update pagination <!-- originally . instead of $ -->
+          {{ if $.Site.Params.singlePageSite }}
+            <div class="pagination">
+              <div class="pagination__buttons">
+                <span class="button previous">
+                  <a href="{{ $.Site.Params.singlePageCollectionSeeMoreLink }}">
+                    <span class="button__icon">→</span>
+                    <span class="button__text">{{ $.Site.Params.singlePageCollectionSeeMoreText }}</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          {{ else }}
+            {{ partial "pagination.html" $ }}  <!-- originally . instead of $ -->
+          {{ end }}
         {{ end }}
-        </div>
-      <hr class="section-separator">
+      </section>
+      {{ if $.Site.Params.singlePageSite }}
+        <hr class="section-separator">
       {{ end }}
     {{ end }}
-  </div>
+  {{ end }}
+</div>
   
-{{ end }}
-
 {{ end }}
