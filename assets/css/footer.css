@@ -32,7 +32,7 @@
       text-align: center;
     }
 
-    & > *:first-child:not(:only-child) {
+    & > *:not(:last-child):not(:only-child) {
       margin-right: 10px;
 
        @media (--tablet) {
@@ -40,6 +40,12 @@
         padding: 0;
         margin: 0;
       }
+    }
+    
+    span {
+        @media (--phone) {
+            text-align: center;
+        }
     }
 
     @media (--tablet) {
