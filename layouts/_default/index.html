@@ -33,7 +33,7 @@
             </div>
           {{ end }}
         {{ else }}
-          {{ range $paginator.Pages }}
+          {{ range $paginator.Pages.ByDate.Reverse }}
             <article class="post on-list">
               <h1 class="post-title">
                 <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
