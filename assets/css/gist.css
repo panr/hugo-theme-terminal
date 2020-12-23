@@ -22,7 +22,7 @@ body .gist .pl-stj /* storage.type.java */
 {
     color: #f8f8f2;
     border: none;
-    font-size: larger;
+    font-size: 1rem;
     font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
 }
 
@@ -60,7 +60,7 @@ body .gist .pl-c span,
 body .gist .pl-pdc /* punctuation.definition.comment */
 {
     color: hsla(0, 0%, 100%, .3);
-    font-style: italic;
+    font-size: 1rem;
 }
 
 body .gist .pl-cce /* constant.character.escape */,
