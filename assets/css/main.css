@@ -92,17 +92,26 @@ figure {
   max-width: 100%;
   margin: 25px 0;
 
-  &.left {
-    margin-right: auto;
-  }
-
   &.center {
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    float: none;
+  }
+  
+  &.left {
+    width: 50%;
+    float: left;
+    padding-right: 3em;
   }
 
   &.right {
+    width: 50%;
+    float: right;
+    padding-left: 3em;
+  }
+
+  img {
     margin-left: auto;
+    margin-right: auto;
   }
 
   figcaption {
@@ -122,7 +131,7 @@ figure {
     }
 
     &.right {
-      text-align: right;
+      text-align: left;
     }
   }
 }
