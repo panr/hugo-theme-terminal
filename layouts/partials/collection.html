@@ -1,0 +1,50 @@
+<article class="post on-list">
+  <h1 class="post-title">
+    <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+  </h1>
+  <div class="post-meta">
+    <span class="post-date">
+      {{ with .Params.daterange }}
+        {{ . }}
+      {{ else }}
+        {{ .Date.Format "01-02-2006" }}
+      {{ end }}
+    </span>
+    {{ with .Params.Author }}
+      <span class="post-author">:: {{ . }}</span>
+    {{ end }}
+  </div>
+
+  {{ if .Params.tags }}
+    <span class="post-tags">
+      {{ range .Params.tags }}
+      #<a href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}">
+        {{- . -}}
+      </a>&nbsp;
+      {{ end }}
+    </span>
+  {{ end }}
+
+  {{ if .Params.Cover }}
+    <img src="{{ .Params.Cover | absURL }}" class="post-cover" alt="{{ .Title | plainify | default " " }}" />
+  {{ end }}
+
+  <div class="post-content">
+    {{ if .Params.showFullContent }}
+    {{ .Content | markdownify }}
+    {{ else if .Description }}
+    {{ .Description | markdownify }}
+    {{ else }}
+    {{ if .Truncated }}
+    {{ .Summary | markdownify }}
+    {{ end }}
+    {{ end }}
+  </div>
+
+  {{ if not .Params.showFullContent }}
+  <div>
+    <a class="read-more button"
+      href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
+  </div>
+  {{ end }}
+</article>

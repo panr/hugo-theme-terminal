@@ -1,7 +1,7 @@
 baseurl = "https://example.com/"
 languageCode = "en-us"
 theme = "hugo-theme-terminal"
-paginate = 5
+paginate = 10
 
 [params]
   contentTypeName = "post"
@@ -10,14 +10,10 @@ paginate = 5
   fullWidthTheme = false
   centerTheme = false
   # singlePageSite moves pages from the main nav menu to sections on the homepage.
-  # These only menu items with a url set to "/#section-name" will be displayed.
-  # A collection is displayed for the menu identifier which matches contentTypeName.
-  # The collection items use the "post" archetypes. 
+  # These only menu items with a url starting with "/#" will be displayed using the
+  # front matter defined in "homepage/". A collection is displayed for other menu items.
   singlePageSite = true
-  # For singlePageSites the collection is paginated but it would not make sense to 
-  # paginate in the middle of a section, so a link to see more can be specified below.
-  singlePageCollectionSeeMoreText = "Check out my projects!"
-  singlePageCollectionSeeMoreLink = "/portfolio"
+  homepagePaginateCount = 10    # If you want the homepage to paginate a different numebr of items
 
 [params.twitter]
   creator = "@justinnuwin"
