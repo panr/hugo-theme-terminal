@@ -101,12 +101,24 @@ figure {
     width: 50%;
     float: left;
     padding-right: 3em;
+    
+    @media (--phone) {
+        width: 100%;
+        float: none;
+        padding-left: inherit;
+    }
   }
 
   &.right {
     width: 50%;
     float: right;
     padding-left: 3em;
+    
+    @media (--phone) {
+        width: 100%;
+        float: none;
+        padding-left: inherit;
+    }
   }
 
   img {
