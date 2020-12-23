@@ -22,6 +22,7 @@ body .gist .pl-stj /* storage.type.java */
 {
     color: #f8f8f2;
     border: none;
+    font-size: larger;
 }
 
 body .gist .pl-c1 /* constant */
