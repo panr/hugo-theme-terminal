@@ -51,13 +51,13 @@
     {{ end }}
   </div>
 {{ else }}
-  <div class="posts">
+  <section class="posts">
     {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
     {{ range $paginator.Pages.ByDate.Reverse }}
       {{ partial "collection.html" . }}
     {{ end }}
     {{ partial "pagination.html" . }}
-  </div>
+  </section>
 {{ end }}
   
 

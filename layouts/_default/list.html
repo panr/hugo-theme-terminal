@@ -1,13 +1,14 @@
 {{ define "main" }}
+  <h1 class="section-header">{{ .Title }}<a href="{{ .Permalink }}" class="hanchor" arialabel="Anchor">⌗</a></h1>
   {{ with .Content }}
     <div class="index-content">
       {{ . }}
     </div>
   {{ end }}
-  <div class="posts">
+  <section class="posts">
     {{ range .Pages.ByDate.Reverse }}
       {{ partial "collection.html" . }}
     {{ end }}
     {{ partial "pagination.html" . }}
-  </div>
+  </section>
 {{ end }}
