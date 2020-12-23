@@ -15,7 +15,7 @@ body .gist .highlight {
     background: var(--background);
 }
 
-body .gist .blob-num,
+body .gist .blob-num /* line numbers */,
 body .gist .blob-code-inner,
 body .gist .pl-s2 /* punctuation.section.embedded source */,
 body .gist .pl-stj /* storage.type.java */
@@ -28,7 +28,7 @@ body .gist .pl-stj /* storage.type.java */
 
 body .gist .pl-c1 /* constant */
 {
-    color: var(--accent)
+    color: rgb(163, 155, 148);
 }
 
 body .gist .pl-enti /* entity.name.type.instance */
@@ -147,8 +147,8 @@ body .gist .pl-pdb /* punctuation.definition.bold */
     font-weight: 700;
 }
 
-body .gist .pl-mi,
-body .gist .pl-pdi {
+body .gist .pl-mi /* markup.italic */,
+body .gist .pl-pdi /* punctuation.definition.italic */ {
     color: var(--accent);
     font-style: italic;
 }
