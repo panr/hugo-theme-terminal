@@ -68,7 +68,6 @@ body .gist .pl-cn /* constant.numeric */,
 body .gist .pl-coc /* constant.other.color */,
 body .gist .pl-enc /* entity.name.class */,
 body .gist .pl-ens /* entity.name.section */,
-body .gist .pl-kos /* keyword.other.special-method */,
 body .gist .pl-kou /* keyword.other.unit */,
 body .gist .pl-mh .pl-pdh /* markup.heading punctuation.definition.heading */,
 body .gist .pl-mp /* meta.property-name */,
@@ -78,7 +77,6 @@ body .gist .pl-pde /* punctuation.definition.entity */,
 body .gist .pl-pse /* punctuation.section.embedded */,
 body .gist .pl-pse .pl-s2 /* punctuation.section.embedded source */,
 body .gist .pl-mp .pl-s3,
-body .gist .pl-smi,
 body .gist .pl-stp /* support.type.property-name */,
 body .gist .pl-sv,
 body .gist .pl-v /* variable */,
@@ -91,11 +89,16 @@ body .gist .pl-vpu /* variable.parameter.url */
     color: var(--accent);
 }
 
+body .gist .pl-smi,
+body .gist .pl-s1 /* string */,
+body .gist .pl-kos /* keyword.other.special-method */ {
+    color: #f8f8f2;
+}
+
 body .gist .pl-cos /* constant.other.symbol */,
 body .gist .pl-ml /* markup.list */,
 body .gist .pl-pds /* punctuation.definition.string */,
 body .gist .pl-s /* storage */,
-body .gist .pl-s1 /* string */,
 body .gist .pl-sol /* string.other.link */
 {
     color: var(--accent);
