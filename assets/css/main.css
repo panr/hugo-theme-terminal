@@ -101,11 +101,13 @@ figure {
     width: 50%;
     float: left;
     padding-right: 3em;
+    margin-top: 0;
     
     @media (--phone) {
         width: 100%;
         float: none;
         padding-left: inherit;
+        margin-top: revert;
     }
   }
 
@@ -113,11 +115,13 @@ figure {
     width: 50%;
     float: right;
     padding-left: 3em;
+    margin-top: 0;
     
     @media (--phone) {
         width: 100%;
         float: none;
         padding-left: inherit;
+        margin-top: revert;
     }
   }
 
