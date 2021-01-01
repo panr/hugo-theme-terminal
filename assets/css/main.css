@@ -15,7 +15,7 @@ body {
   font-size: 1rem;
   line-height: 1.54;
   letter-spacing: -0.02em;
-  background-color: color-mod(var(--accent) blend(#1D1E28 98%));
+  background-color: var(--background);
   color: var(--color);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
