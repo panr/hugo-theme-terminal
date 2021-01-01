@@ -2,7 +2,5 @@ body .gist .blob-num /* line numbers */,
 body .gist .blob-code-inner
 {
     border: none;
-    /*font-size: 1rem;*/
-    /*font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;*/
 }
 
