@@ -9,5 +9,5 @@
   --tabletWidth: (max-width: 900px);
 }
 
-@custom-media --phone (width < 684px);
-@custom-media --tablet (width < 900px);
+@custom-media --phone (max-width: 684px);
+@custom-media --tablet (max-width: 900px);
