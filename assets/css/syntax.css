@@ -14,7 +14,8 @@ code.language-scss,
 .token.statement,
 .token.regex,
 .token.atrule,
-.token.number {
+.token.number,
+.token.inserted {
   color: var(--accent);
 }
 
@@ -30,6 +31,7 @@ code.language-scss,
 
 .token.property,
 .token.function,
+.token.deleted,
 code.language-javascript,
 code.language-html,
 .command-line-prompt > span:before {
