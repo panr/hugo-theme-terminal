@@ -39,3 +39,19 @@
 - https://isaes.com.tr/ **Isa Es** (Software Engineer)
 - https://conight.com **Conight Wang** (Software Engineer)
 - https://blog.m5e.de/ **Christoph Miksche** (Software Developer)
+- https://mpostument.com/ **Maksym Postument** (DevOps Engineer)
+- https://mathiejosh.xyz **Josh Mathie** (Electrical Engineering Technology Student/Sales and Engineering Tech)
+- https://yuji.ne.jp/ **YUJI** (Student & Software Developer)
+- https://blog.puvvadi.me **KD Puvvadi** (Software Dev & Cloud Orchestrator)
+- https://hidden.land/ **Louisload** (Game Developer & Musician)
+- https://linuxbase.nl **Michael Trip** (DevOps Engineer)
+- https://markopolo123.github.io **Markopolo** (DevOps Engineer)
+- https://mcwertgaming.github.io **Damon Leven** (Student & Software Developer)
+- https://sethsimmons.me **Seth Simmons** (Information Security Engineer, Cryptocurrency Writer)
+
+<!--
+ TEMPLATE:
+
+ - https://radoslawkoziel.pl **Radek Kozieł** (Software Designer and Developer)
+
+ -->

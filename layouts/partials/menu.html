@@ -27,7 +27,7 @@
       {{ end }}
     {{ end }}
 
-    {{ if $.Site.Params.showLanguageSelector }}
+    {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
     <div class="spacer"></div>
     <ul class="language-selector">
       <ul class="language-selector-current">
@@ -48,13 +48,13 @@
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
       {{ end }}
     {{ end }}
-    {{ if $.Site.Params.showLanguageSelector }}
+    {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
     <hr />
-        {{ range $.Site.Home.AllTranslations }}
-          <li>
-            <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-          </li>
-        {{ end }}
+      {{ range $.Site.Home.AllTranslations }}
+        <li>
+          <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+        </li>
+      {{ end }}
     {{ end }}
   </ul>
 </nav>
