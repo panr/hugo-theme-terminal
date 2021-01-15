@@ -7,8 +7,12 @@
       <div class="copyright">
         <span>© {{ now.Year }} Powered by <a href="http://gohugo.io">Hugo</a></span>
     {{ end }}
-    <span>::</span>
-    <span>Theme originally by <a href="https://twitter.com/panr">panr</a> and extended by <a href="https://github.com/justinnuwin/hugo-theme-terminal/">yours truly</a>.</span>
+    {{ if not $.Site.Params.singlePageSite }}
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+    {{ else }}
+        <span>::</span>
+        <span>Theme made by <a href="https://twitter.com/panr">panr</a> and single-page layout by <a href="https://justinnuwin.com">justinnuwin</a>.</span>
+    {{ end }}
       </div>
   </div>
 </footer>

@@ -20,34 +20,42 @@
 {{ if $.Site.Params.singlePageSite }}
   <div class="sections">
     {{ range .Site.Menus.main }}
-      <section id="{{ .Identifier }}" class="posts section">
-        {{ if eq (first 2 .URL) "/#" }}
-          <h1 class="section-header">{{ .Name }}<a href="#{{ .Identifier }}" class="hanchor" arialabel="Anchor">⌗</a></h1>
-          <div class="post">
-            {{ $section := path.Join "homepage" .Identifier }}
-            {{ with $.Site.GetPage $section }}
-              {{ partial "section.html" . }}
-            {{ end }}
-          </div>
-        {{ else }}
-          <h1 class="section-header">{{ .Name }}<a href="{{ .URL }}" class="hanchor" arialabel="Anchor">⌗</a></h1>
-          {{ $thisSectionsPages := where $PageContext.RegularPages "Type" .Identifier }}
-          {{ range first $.Site.Params.homepagePaginateCount $thisSectionsPages.ByDate.Reverse }}
-            {{ partial "collection.html" . }}
-          {{ end }}
-          <div class="pagination">
-            <div class="pagination__buttons">
-              <span class="button previous">
-                <a href="{{ .URL }}">
-                  <span class="button__icon">→</span>
-                  <span class="button__text">See more {{ .Name | pluralize }}</span>
-                </a>
-              </span>
+      {{ if not (in $.Site.Params.homepageNavEntriesDontRender .Identifier) }} 
+        <section id="{{ .Identifier }}" class="posts section">
+          {{ if eq (first 2 .URL) "/#" }}
+            <h1 class="section-header">{{ .Name }}<a href="#{{ .Identifier }}" class="hanchor" arialabel="Anchor">⌗</a></h1>
+            <div class="post">
+              {{ $section := path.Join "homepage" .Identifier }}
+              {{ with $.Site.GetPage $section }}
+                {{ partial "section.html" . }}
+              {{ end }}
             </div>
-          </div>
-        {{ end }}
-      </section>
-      <hr class="section-separator">
+          {{ else }}
+            <h1 class="section-header">{{ .Name }}<a href="{{ .URL }}" class="hanchor" arialabel="Anchor">⌗</a></h1>
+            {{ $thisSectionsPages := where $PageContext.RegularPages "Type" .Identifier }}
+            {{ if len $thisSectionsPages }}
+              {{ range first $.Site.Params.homepagePaginateCount $thisSectionsPages.ByDate.Reverse }}
+                {{ partial "collection.html" . }}
+              {{ end }}
+              <div class="pagination">
+                <div class="pagination__buttons">
+                  <span class="button previous">
+                    <a href="{{ .URL }}">
+                      <span class="button__icon">→</span>
+                      <span class="button__text">See more {{ .Name | pluralize }}</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            {{ else }}
+              {{ with $.Site.GetPage .URL }}
+                {{ partial "section.html" . }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </section>
+        <hr class="section-separator">
+      {{ end }}
     {{ end }}
   </div>
 {{ else }}

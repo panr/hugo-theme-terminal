@@ -145,6 +145,29 @@ paginate = 5
   # it's set to `true` by default
   # oneHeadingSize = false
 
+  # Single Page Sites have the links in their navigation menu point to sections on the
+  # main-single page. If `singlePageSite` is enabled the following will occur:
+  # - Sections will appear on the homepage corresponding to nav menu items with a url
+  #   beginning with "/#". These sections draw their content from the homepage content
+  #   type directory (content/homepage/<somesection>.md).
+  # - Nav menu items not beginning with "/#" will be also be rendered as sections on the
+  #   homepage either as paginated lists or also as sections depending on what the url is
+  #   pointing to.
+  # - Nav menu items with their identifier in the `homepageNavEntriesDontRender` list will
+  #   not be rendered on the homepage.
+  # The homepage sections will be rendered in the order of the nav menu entries.
+
+  # enable the sngle page site mode described above
+  singlePageSite = false
+
+  # for collections rendered on the hompage, you may want them to be paginated at a different
+  # (usually smaller) count compared to the actual list pages
+  homepagePaginateCount = 2
+
+  # If there is a nav menu entry you dont want rendered on the homepage, add the identifier here
+  homepageNavEntriesDontRender = ["showcase"]
+
+
 [params.twitter]
   # set Twitter handles for Twitter cards
   # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
@@ -169,6 +192,8 @@ paginate = 5
     [languages.en.params.logo]
       logoText = "Terminal"
       logoHomeLink = "/"
+      # If your logo text is long, you can have it split on a certain substring when the screen is narrow
+      # logoSplit = ""
 
     [languages.en.menu]
       [[languages.en.menu.main]]
@@ -188,6 +213,16 @@ to `config.toml` file in your Hugo root directory and change params fields. In c
 ## Post archetype
 
 See the basic `post` file params supported by the theme — https://github.com/panr/hugo-theme-terminal/blob/master/archetypes/posts.md
+
+## Section archetype
+
+Similar to the `post` archetype, but only the title and cover parameters are used.
+
+A `layout` parameter is available which supports three values:
+
+- `2col-right`: 2 column layout where the cover image is displayed on the left and the front-matter on the right
+- `2col-left`: 2 column layout where the cover image is displayed on the right and the front-matter on the left
+- `default`: The default layout matching the post layout with the cover image appearing above the front-matter in a single column
 
 ## Add-ons
 

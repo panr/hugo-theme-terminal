@@ -21,10 +21,6 @@
         position: relative;
         margin: auto;
         
-        /* Vertical Align */
-        top: 50%;
-        transform: translateY(-50%);
-        
         /* Resize */
         display: block;
         max-height: 80em;
@@ -75,6 +71,13 @@
     }
     
     
+}
+
+/* Shift section image down by half to be in the middle of the text column */
+.section-2col .section-cover {
+    /* Vertical Align */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .section > .post {

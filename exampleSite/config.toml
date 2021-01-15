@@ -9,12 +9,8 @@ paginate = 10
   showMenuItems = 2
   fullWidthTheme = false
   centerTheme = false
-
-  # singlePageSite moves pages from the main nav menu to sections on the homepage.
-  # Only menu items with a url starting with "/#" will be displayed using the
-  # front matter defined in "homepage/". The standard collection is displayed for other menu items.
-  singlePageSite = true
-  homepagePaginateCount = 10    # If you want the homepage to paginate a different numebr of items
+  singlePageSite = false
+  homepageNavEntriesDontRender = ["showcase"]   
 
 [languages]
   [languages.en]
@@ -32,9 +28,9 @@ paginate = 10
 
     [languages.en.menu]
       [[languages.en.menu.main]]
-        identifier = "homepage-info"
+        identifier = "section"
         name = "Homepage Section"
-        url = "#/section"
+        url = "/#section"
       [[languages.en.menu.main]]
         identifier = "about"
         name = "About"

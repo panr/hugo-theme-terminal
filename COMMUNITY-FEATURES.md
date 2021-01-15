@@ -19,3 +19,7 @@ eg:
 - **Portfolio** (https://github.com/Louisload/hugo-theme-terminal-portfolio)
   - Allows you to create a portfolio page (or several). Supports icons and subsections.
   - Luís Rodrigues Alves (Louisload), a game dev and musician.
+
+- **Single Page Website** (https://github.com/justinnuwin/hugo-theme-terminal)
+  - Allows the theme to natively support a single-page-website layout where the navigation menu links correspond to sections on the homepage
+  - Justin Nguyen, a software developer working on cool projects like satellites, IoT, and edge-ML
