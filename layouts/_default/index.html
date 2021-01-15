@@ -22,6 +22,7 @@
     {{ range .Site.Menus.main }}
       {{ if not (in $.Site.Params.homepageNavEntriesDontRender .Identifier) }} 
         <section id="{{ .Identifier }}" class="posts section">
+          {{ $navLinkPage := $.Site.GetPage .URL }}
           {{ if eq (first 2 .URL) "/#" }}
             <h1 class="section-header">{{ .Name }}<a href="#{{ .Identifier }}" class="hanchor" arialabel="Anchor">⌗</a></h1>
             <div class="post">
@@ -30,28 +31,43 @@
                 {{ partial "section.html" . }}
               {{ end }}
             </div>
-          {{ else }}
+          {{ else if in "section term" $navLinkPage.Kind }}
             <h1 class="section-header">{{ .Name }}<a href="{{ .URL }}" class="hanchor" arialabel="Anchor">⌗</a></h1>
-            {{ $thisSectionsPages := where $PageContext.RegularPages "Type" .Identifier }}
-            {{ if len $thisSectionsPages }}
-              {{ range first $.Site.Params.homepagePaginateCount $thisSectionsPages.ByDate.Reverse }}
-                {{ partial "collection.html" . }}
-              {{ end }}
-              <div class="pagination">
-                <div class="pagination__buttons">
-                  <span class="button previous">
-                    <a href="{{ .URL }}">
-                      <span class="button__icon">→</span>
-                      <span class="button__text">See more {{ .Name | pluralize }}</span>
-                    </a>
-                  </span>
-                </div>
-              </div>
-            {{ else }}
-              {{ with $.Site.GetPage .URL }}
-                {{ partial "section.html" . }}
-              {{ end }}
+            {{ $paginateCount := default 2 $.Site.Params.homepagePaginateCount }}
+            {{ range first $paginateCount $navLinkPage.Pages.ByDate.Reverse }}
+              {{ partial "collection.html" . }}
             {{ end }}
+            <div class="pagination">
+              <div class="pagination__buttons">
+                <span class="button previous">
+                  <a href="{{ .URL }}">
+                    <span class="button__icon">→</span>
+                    <span class="button__text">See more {{ .Name | pluralize }}</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          {{ else if eq $navLinkPage.Kind "page" }}
+            {{ partial "section.html" $navLinkPage }}
+          {{ else if eq $navLinkPage.Kind "taxonomy" }}
+            <h1 class="section-header">{{ .Name }}<a href="{{ .URL }}" class="hanchor" arialabel="Anchor">⌗</a></h1>
+            <div class="terms">
+              <ul>
+                {{ range $key, $value := $navLinkPage.Data.Terms.Alphabetical }}
+                  {{ $name := .Name }}
+                  {{ $count := .Count }}
+                  {{ with $.Site.GetPage (printf "/%s/%s" "tags" $name) }}
+                    <li>
+                      <a class="terms-title" href="{{ .Permalink }}">{{ .Name }} ({{ $count }})</a>
+                    </li>
+                  {{ end }}
+                {{ end }}
+              </ul>
+            </div>
+          {{ else if eq $navLinkPage.Kind "taxonomy" }}
+            <h1 class="section-header">{{ .Name }}<a href="{{ .URL }}" class="hanchor" arialabel="Anchor">⌗</a></h1>
+          {{ else }}
+            {{ $navLinkPage.Kind }} is not supported yet.
           {{ end }}
         </section>
         <hr class="section-separator">

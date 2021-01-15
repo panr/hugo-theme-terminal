@@ -146,22 +146,23 @@ paginate = 5
   # oneHeadingSize = false
 
   # Single Page Sites have the links in their navigation menu point to sections on the
-  # main-single page. If `singlePageSite` is enabled the following will occur:
-  # - Sections will appear on the homepage corresponding to nav menu items with a url
-  #   beginning with "/#". These sections draw their content from the homepage content
-  #   type directory (content/homepage/<somesection>.md).
+  # main-single page. If `singlePageSite` is enabled all nav manu entries will be rendered
+  # on the homepage as homepage sections unless their identifier appears in the
+  # `homepageNavEntriesDontRender` parameter, in which they will not appear on the homepage.
+  # - Nav menu items with a url beginning with "/#" are homepage only sections. These
+  #   sections draw their content from the homepage content type directory
+  #   (content/homepage/<somesection>.md).
   # - Nav menu items not beginning with "/#" will be also be rendered as sections on the
-  #   homepage either as paginated lists or also as sections depending on what the url is
-  #   pointing to.
-  # - Nav menu items with their identifier in the `homepageNavEntriesDontRender` list will
-  #   not be rendered on the homepage.
-  # The homepage sections will be rendered in the order of the nav menu entries.
+  #   homepage either as paginated lists (like posts), as regular sections, or taxonomy depending on
+  #   what the url is pointing to.
+  # The homepage sections may not render in the order that you expect. Use the `weight` menu parameter
+  # on the menu entries to make sure the homepage sections appear in the order you like.
 
   # enable the sngle page site mode described above
   singlePageSite = false
 
   # for collections rendered on the hompage, you may want them to be paginated at a different
-  # (usually smaller) count compared to the actual list pages
+  # (usually smaller) count compared to the actual list pages. Default is 2
   homepagePaginateCount = 2
 
   # If there is a nav menu entry you dont want rendered on the homepage, add the identifier here
