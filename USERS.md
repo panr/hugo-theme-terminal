@@ -31,10 +31,9 @@
 - https://bgameiro.me/ **Bernardo Gameiro** (Engineer Physicist student)
 - https://return-to-libc.com/ **elraro** (Cyber Security Specialist)
 - https://pablart.com/ **Pablo Diaz-Gutierrez** (Software Engineer, General Tinkerer)
-- https://waterloos.niflheimr.blue/ **niflheimr1011** (Aspiring Software Engineer)
+- https://waterloos.niflheimr.blue/ **cindrmon** (Student and Aspiring Software Engineer)
 - https://monocle.rpod.club/ **classx** (DevOps Engineer)
 - https://wjdevschool.com/ **Wojciech Bogócki** (Making Things & Teaching / W&J Dev School)
-- https://waterloos.niflheimr.blue/ **cindrmon** (Aspiring Software Engineer and Student)
 - https://dongzhi.me **Joe** (Software Developer)
 - https://isaes.com.tr/ **Isa Es** (Software Engineer)
 - https://conight.com **Conight Wang** (Software Engineer)
@@ -42,6 +41,12 @@
 - https://mpostument.com/ **Maksym Postument** (DevOps Engineer)
 - https://mathiejosh.xyz **Josh Mathie** (Electrical Engineering Technology Student/Sales and Engineering Tech)
 - https://yuji.ne.jp/ **YUJI** (Student & Software Developer)
+- https://blog.puvvadi.me **KD Puvvadi** (Software Dev & Cloud Orchestrator)
+- https://hidden.land/ **Louisload** (Game Developer & Musician)
+- https://linuxbase.nl **Michael Trip** (DevOps Engineer)
+- https://markopolo123.github.io **Markopolo** (DevOps Engineer)
+- https://mcwertgaming.github.io **Damon Leven** (Student & Software Developer)
+- https://sethsimmons.me **Seth Simmons** (Information Security Engineer, Cryptocurrency Writer)
 
 <!--
  TEMPLATE:

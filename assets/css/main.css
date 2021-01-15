@@ -253,7 +253,7 @@ blockquote {
 }
 
 table {
-  table-layout: fixed;
+  table-layout: auto;
   border-collapse: collapse;
   width: 100%;
   margin: 40px 0;
