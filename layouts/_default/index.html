@@ -34,7 +34,7 @@
           {{ else if in "section term" $navLinkPage.Kind }}
             <h1 class="section-header">{{ .Name }}<a href="{{ .URL }}" class="hanchor" arialabel="Anchor">⌗</a></h1>
             {{ $paginateCount := default 2 $.Site.Params.homepagePaginateCount }}
-            {{ range first $paginateCount $navLinkPage.Pages.ByDate.Reverse }}
+            {{ range first $paginateCount $navLinkPage.Pages }}
               {{ partial "collection.html" . }}
             {{ end }}
             <div class="pagination">
@@ -77,7 +77,7 @@
 {{ else }}
   <section class="posts">
     {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
-    {{ range $paginator.Pages.ByDate.Reverse }}
+    {{ range $paginator.Pages }}
       {{ partial "collection.html" . }}
     {{ end }}
     {{ partial "pagination.html" . }}
