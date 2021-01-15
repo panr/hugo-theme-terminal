@@ -215,6 +215,9 @@ to `config.toml` file in your Hugo root directory and change params fields. In c
 
 See the basic `post` file params supported by the theme — https://github.com/panr/hugo-theme-terminal/blob/master/archetypes/posts.md
 
+A `daterange` parameter was added which overrides the date that overrides the displayed date.
+This may be very helpful for resume sites.
+
 ## Section archetype
 
 Similar to the `post` archetype, but only the title and cover parameters are used.
