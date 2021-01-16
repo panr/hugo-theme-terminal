@@ -26,12 +26,6 @@
         max-height: 80em;
         width: auto;
         height: auto;
-        
-        @media (--tablet) {
-            top: auto;
-            transform: none;
-            max-height: 20em;
-        }
     }
     
     &-2col {
@@ -78,6 +72,12 @@
     /* Vertical Align */
     top: 50%;
     transform: translateY(-50%);
+        
+    @media (--tablet) {
+        top: auto;
+        transform: none;
+        max-height: 20em;
+    }
 }
 
 .section > .post {
