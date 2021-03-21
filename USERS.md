@@ -47,6 +47,7 @@
 - https://markopolo123.github.io **Markopolo** (DevOps Engineer)
 - https://mcwertgaming.github.io **Damon Leven** (Student & Software Developer)
 - https://sethsimmons.me **Seth Simmons** (Information Security Engineer, Cryptocurrency Writer)
+- https://thesprawl.city **crish** (Software and stuff)
 
 <!--
  TEMPLATE:
