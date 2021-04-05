@@ -48,6 +48,7 @@
 - https://mcwertgaming.github.io **Damon Leven** (Student & Software Developer)
 - https://sethsimmons.me **Seth Simmons** (Information Security Engineer, Cryptocurrency Writer)
 - https://thesprawl.city **crish** (Software and stuff)
+- https://blog.woosal.com/ **Vusal Ismayilov** (Computer Engineering Student)
 
 <!--
  TEMPLATE:
