@@ -187,6 +187,8 @@ paginate = 5
     menuMore = "Show more"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
+    newerPosts = "Newer posts"
+    olderPosts = "Older posts"
     missingContentMessage = "Page not found..."
     missingBackButtonLabel = "Back to home page"
 
