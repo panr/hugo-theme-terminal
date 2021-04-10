@@ -21,5 +21,5 @@ eg:
   - Luís Rodrigues Alves (Louisload), a game dev and musician.
 
 - **Single Page Website** (https://github.com/justinnuwin/hugo-theme-terminal)
-  - Native support for a single-page-website layout where the navigation menu links correspond to sections on the homepage.
+  - A layout where the homepage can render lists of pages and the navigation menu can link to sections on the homepage.
   - Justin Nguyen, software and hardware developer.
