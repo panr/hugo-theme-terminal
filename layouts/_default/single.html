@@ -21,9 +21,16 @@
   </span>
   {{ end }}
 
-  {{ if .Params.Cover }}
-    <img src="{{ .Params.Cover | absURL }}" class="post-cover" alt="{{ .Title | plainify | default " " }}" />
-  {{ end }}
+  {{- $cover := false -}}
+  {{- $autoCover := default $.Site.Params.autoCover false }}
+  {{- if $autoCover -}}
+    {{- $cover = .Resources.GetMatch "cover.*" -}}
+  {{- else if .Params.Cover -}}
+    {{- if .Resources.GetMatch .Params.Cover }}
+      {{ $cover = .Resources.GetMatch .Params.Cover }}
+    {{- end -}}
+  {{- end -}}
+  {{if $cover -}} <img src="{{ $cover.Permalink }}" class="post-cover" alt="{{ .Title | plainify | default " " }}" />{{- end }}
 
   {{ if .Params.Toc }}
     <div class="table-of-contents">
