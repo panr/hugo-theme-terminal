@@ -1,0 +1,15 @@
+{{- $cover := false -}}
+{{- $autoCover := default $.Site.Params.autoCover false }}
+{{- if $autoCover -}}
+  {{- $cover = (.Resources.GetMatch "cover.*").RelPermalink -}}
+{{- else if .Params.Cover -}}
+  {{- if .Resources.GetMatch .Params.Cover }}
+    {{- $cover = (.Resources.GetMatch .Params.Cover).RelPermalink -}}
+  {{- else -}}
+    {{- $cover = absURL .Params.Cover -}}
+  {{- end -}}
+{{- end -}}
+{{if $cover -}}
+  <!-- Cover image found -->
+  <img src="{{ $cover }}" class="post-cover" alt="{{ .Title | plainify | default " " }}" />
+{{- end }}
