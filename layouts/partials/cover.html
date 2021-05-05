@@ -11,5 +11,8 @@
 {{- end -}}
 {{if $cover -}}
   <!-- Cover image found -->
-  <img src="{{ $cover }}" class="post-cover" alt="{{ .Title | plainify | default " " }}" />
+  <img src="{{ $cover }}"
+    class="post-cover"
+    alt="{{ .Title | plainify | default " " }}"
+    title="{{ .Params.CoverCredit |plainify|default "Cover Image" }}" />
 {{- end }}
