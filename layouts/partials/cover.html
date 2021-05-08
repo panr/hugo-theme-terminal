@@ -1,12 +1,16 @@
 {{- $cover := false -}}
 {{- $autoCover := default $.Site.Params.autoCover false }}
-{{- if $autoCover -}}
-  {{- $cover = (.Resources.GetMatch "cover.*").RelPermalink -}}
-{{- else if .Params.Cover -}}
+{{- if index .Params "cover" -}}
   {{- if .Resources.GetMatch .Params.Cover }}
     {{- $cover = (.Resources.GetMatch .Params.Cover).RelPermalink -}}
   {{- else -}}
     {{- $cover = absURL .Params.Cover -}}
+  {{- end -}}
+{{- else if $.Site.Params.AutoCover -}}
+  {{- if and ( index .Params "cover" ) (not .Params.Cover) -}}
+  {{- if .Resources.GetMatch "cover.*" -}}
+    {{- $cover = (.Resources.GetMatch "cover.*").RelPermalink -}}
+  {{- end -}}
   {{- end -}}
 {{- end -}}
 {{if $cover -}}
