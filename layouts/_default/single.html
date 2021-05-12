@@ -10,7 +10,9 @@
     {{ end }}
     {{ with .Params.Author }}
     <span class="post-author">:: {{ . }}</span>
-    {{ end }}
+    {{ end }} ::
+    {{ .WordCount }} words ::
+    {{ .ReadingTime }} min read
   </div>
 
   {{ if .Params.tags }}
