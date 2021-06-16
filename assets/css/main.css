@@ -332,3 +332,7 @@ hr {
 .hidden {
   display: none;
 }
+
+sup {
+ line-height: 0; 
+}
