@@ -76,7 +76,13 @@ A custom syntax highlighting based on PrismJS. All you need to do is to wrap you
 
 ## How to start
 
+⚠️ **Note: The theme needs at least Hugo version 0.74.x**.
+
+### Manual
+
 You can download the theme manually by going to [https://github.com/panr/hugo-theme-terminal.git](https://github.com/panr/hugo-theme-terminal.git) and pasting it to `themes/terminal` in your root directory.
+
+### Git clone
 
 You can also clone it directly to your Hugo folder:
 
@@ -84,13 +90,33 @@ You can also clone it directly to your Hugo folder:
 $ git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
 
+### Git submodule
+
 If you don't want to make any radical changes, it's the best option, because you can get new updates when they are available. You can also include it as a git submodule:
 
 ```
 $ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
 
-⚠️ **The theme needs at least Hugo version 0.74.x**.
+### Hugo module
+
+You can install the theme as a Hugo module. This is a newer way of installing Hugo themes, and it is useful for deploying the site to hosting platforms that might struggle with the git clone or gitsubmodule methods.
+
+1. Comment-out or remove the variable `theme` in `config.toml`.
+2. Add these lines to `config.toml`, before any of the theme's parameters.
+```
+[module]
+  [[module.imports]]
+    path = "github.com/panr/hugo-theme-terminal"
+```
+3. Initialise this site as a Hugo module, enabling it to require the theme as part of the build.
+```
+hugo mod init mymodule
+```
+4. Build the site and install the theme.
+```
+hugo serve
+```
 
 ## How to run your site
 
