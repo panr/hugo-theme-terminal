@@ -5,7 +5,7 @@
   <div class="post-meta">
     {{ if .Params.Date }}
       <span class="post-date">
-        {{ .Date.Format "2006-01-02" }} {{ if $.Site.Params.showLastUpdated }}[{{or $.Site.Params.updatedDatePrefix "Updated"}}: {{ .Lastmod.Format "2006-01-02" }}]{{ end }} | {{ .ReadingTime }} mins
+        {{ .Date.Format "Mar 3 2017" }} {{ if $.Site.Params.showLastUpdated }}[{{or $.Site.Params.updatedDatePrefix "Updated"}}: {{ .Lastmod.Format "2006-01-02" }}]{{ end }} | reading time: {{ .ReadingTime }} minutes
       </span> 
     {{ end }}
     {{ with .Params.Author }}
