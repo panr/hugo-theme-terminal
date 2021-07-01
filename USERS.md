@@ -49,6 +49,7 @@
 - https://sethsimmons.me **Seth Simmons** (Information Security Engineer, Cryptocurrency Writer)
 - https://thesprawl.city **crish** (Software and stuff)
 - https://blog.woosal.com/ **Vusal Ismayilov** (Computer Engineering Student)
+- https://itsembedded.com/  **Norbert Kremeris** (digital logic design and verification engineer)
 
 <!--
  TEMPLATE:
