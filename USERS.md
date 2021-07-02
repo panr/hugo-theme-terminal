@@ -1,4 +1,5 @@
 # Meet the users of Terminal theme!
+- https://2200g.github.io **2200g** (Student)
 - https://xicode.se **magistern** (Teacher)
 - https://devmaster64.com **devmaster64** (Software Developer)
 - https://mickie1.gitlab.io/blog/ **mickie** (Engineer)
