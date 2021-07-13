@@ -1,4 +1,4 @@
-{{ $inner := replaceRE "^\n" "" .Inner | string }}
+{{ $inner := replaceRE "^\r?\n" "" .Inner | string }}
 {{ if len .Params | eq 0 }}
   <pre><code>{{ $inner }}</code></pre>
 {{ else }}
