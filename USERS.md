@@ -49,6 +49,7 @@
 - https://thesprawl.city **crish** (Software and stuff)
 - https://blog.woosal.com/ **Vusal Ismayilov** (Computer Engineering Student)
 - https://itsembedded.com/  **Norbert Kremeris** (digital logic design and verification engineer)
+- https://nereuxofficial.github.io **Nereuxofficial** (Software Developer & Student)
 
 <!--
  TEMPLATE:
