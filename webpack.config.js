@@ -82,6 +82,7 @@ module.exports = (env, { mode }) => ({
     minimizer: [
       new TerserPlugin({
         parallel: true,
+        extractComments: false,
       }),
     ],
   },
