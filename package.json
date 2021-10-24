@@ -50,9 +50,12 @@
     "prettier-eslint-cli": "^5.0.0",
     "ramda": "^0.27.1",
     "style-loader": "^2.0.0",
-    "uglifyjs-webpack-plugin": "^2.2.0",
+    "terser-webpack-plugin": "^5.1.1",
     "url-loader": "^4.1.0",
     "webpack": "^5.27.1",
     "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "yarn": "^1.22.10"
   }
 }
