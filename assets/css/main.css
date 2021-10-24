@@ -247,7 +247,7 @@ th {
 
 ul,
 ol {
-  margin-left: 30px;
+  margin-left: 22px;
   padding: 0;
 
   li {
@@ -275,10 +275,18 @@ ol {
     display: inline-block;
     text-align: right;
   }
-}
 
-ol ol {
-  list-style-type: lower-alpha;
+  ol {
+    margin-left: 38px;
+
+    li {
+      counter-increment: li;
+    }
+
+    li:before {
+      content: counters(li, ".") " ";
+    }
+  }
 }
 
 mark {
@@ -334,5 +342,5 @@ hr {
 }
 
 sup {
- line-height: 0; 
+ line-height: 0;
 }
