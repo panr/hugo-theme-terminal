@@ -128,7 +128,7 @@ figure {
 }
 
 code, kbd {
-  font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
+  font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace !important;
   font-feature-settings: normal;
   background: color-mod(var(--accent) a(20%));
   color: var(--accent);
@@ -147,7 +147,7 @@ pre {
   background: transparent !important;
   padding: 20px 10px;
   margin: 40px 0;
-  font-size: .95rem;
+  font-size: .95rem !important;
   overflow: auto;
   border-top: 1px solid rgba(255, 255, 255, .1);
   border-bottom: 1px solid rgba(255, 255, 255, .1);
@@ -331,4 +331,8 @@ hr {
 
 .hidden {
   display: none;
+}
+
+sup {
+ line-height: 0; 
 }

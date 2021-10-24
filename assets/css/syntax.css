@@ -15,8 +15,9 @@ code.language-scss,
 .token.regex,
 .token.atrule,
 .token.number,
-.token.inserted {
-  color: var(--accent);
+.token.inserted,
+.token.important {
+  color: var(--accent) !important;
 }
 
 .token.tag-id,
@@ -25,17 +26,25 @@ code.language-scss,
 .token.unit,
 .token.placeholder,
 .token.variable,
-.token.attr-name {
-  color: color-mod(var(--accent) a(70%));
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted,
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+  color: color-mod(var(--accent) a(70%)) !important;
 }
 
 .token.property,
 .token.function,
+.token.function-name,
 .token.deleted,
 code.language-javascript,
 code.language-html,
 .command-line-prompt > span:before {
-  color: color-mod(var(--accent) blend(#999 90%));
+  color: color-mod(var(--accent) blend(#999 90%)) !important;
 }
 
 .token.selector,
@@ -48,15 +57,21 @@ code.language-html,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: rgba(255, 255, 255, .3);
+  color: rgba(255, 255, 255, .3) !important;
 }
 
 .token.namespace {
-  opacity: .7;
+  opacity: .7 !important;
 }
 
 pre[data-line] {
   position: relative;
+}
+
+pre[class*="language-"] {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
 }
 
 .line-highlight {
@@ -98,4 +113,44 @@ pre[data-line] {
 .line-numbers .line-highlight:before,
 .line-numbers .line-highlight:after {
   content: none;
+}
+
+:root {
+	--code-margin: 40px;
+}
+
+.code-toolbar {
+	position: relative;
+	margin: var(--code-margin) 0;
+	padding: 20px;
+	border: 1px solid rgba(255, 255, 255, .1);
+
+	+ .code-toolbar,
+	+ .highlight,
+	+ .highlight .code-toolbar {
+		border-top: 0;
+		margin-top: calc(-1 * var(--code-margin));
+	}
+
+	pre, code {
+		border: none;
+	}
+
+	code {
+		display: block;
+		color: inherit;
+	}
+
+  > .toolbar {
+    button {
+      font-size: .8em !important;
+      background: hsla(0,0%,87.8%,.2) !important;
+      color: #bbb !important;
+      box-shadow: 0 2px 0 0 rgba(0,0,0,.2) !important;
+      border-radius: 0 !important;
+      margin: 6px !important;
+      padding: 10px !important;
+      user-select:none
+    }
+  }
 }
