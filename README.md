@@ -81,13 +81,13 @@ You can download the theme manually by going to [https://github.com/panr/hugo-th
 You can also clone it directly to your Hugo folder:
 
 ```
-$ git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
+git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
 
 If you don't want to make any radical changes, it's the best option, because you can get new updates when they are available. You can also include it as a git submodule:
 
 ```
-$ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/terminal
+git submodule add -f https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
 
 ⚠️ **The theme needs at least Hugo version 0.74.x**.
@@ -97,7 +97,7 @@ $ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/termi
 If you installed all needed `npm` dependencies, then you can run:
 
 ```
-$ hugo server -t terminal
+hugo server -t terminal
 ```
 
 and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
@@ -213,27 +213,27 @@ To change something directly in the theme, you have to go to `themes/terminal` a
 First, you need to install Node dependencies. To do so, go to the theme directory (from your Hugo root directory):
 
 ```bash
- $ cd themes/terminal
+ cd themes/terminal
 ```
 
  then run:
 
  ```bash
- $ npm install
- $ npm i yarn
- $ yarn
+ npm install
+ npm i yarn
+ yarn
  ```
 
 After you modified the files you can run webpack in watch mode:
 
 ```bash
-$ yarn dev
+yarn dev
 ```
 
 or rebuild theme
 
 ```bash
-$ yarn build
+yarn build
 ```
 
 To see the changes (remember to restart `hugo server`).
