@@ -145,6 +145,11 @@ paginate = 5
   # it's set to `true` by default
   # oneHeadingSize = false
 
+  # if your resource directory contains an image called `cover.(jpg|png|webp)`,
+  # then the file will be used as a cover automatically.
+  # With this option you don't have to put the `cover` param in a front-matter.
+  # autoCover = true
+
 [params.twitter]
   # set Twitter handles for Twitter cards
   # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
