@@ -4,7 +4,7 @@ theme = "hugo-theme-terminal"
 paginate = 5
 
 [params]
-  contentTypeName = "post"
+  contentTypeName = "posts"
   themeColor = "orange"
   showMenuItems = 2
   fullWidthTheme = false
