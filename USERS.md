@@ -51,6 +51,7 @@
 - https://blog.woosal.com/ **Vusal Ismayilov** (Computer Engineering Student)
 - https://itsembedded.com/  **Norbert Kremeris** (digital logic design and verification engineer)
 - https://nereuxofficial.github.io **Nereuxofficial** (Software Developer & Student)
+- https://santiago.wtf **Nicholas Santiago** (DevOps Engineer)
 
 <!--
  TEMPLATE:
