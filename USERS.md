@@ -45,13 +45,14 @@
 - https://linuxbase.nl **Michael Trip** (DevOps Engineer)
 - https://markopolo123.github.io **Markopolo** (DevOps Engineer)
 - https://openfoxblog.leven.dev/ **Damon Leven** (Student & Software Developer)
-- https://sethsimmons.me **Seth Simmons** (Information Security Engineer, Cryptocurrency Writer)
+- https://blog.sethforprivacy.com **Seth For Privacy** (Security, privacy, and cryptocurrency writer, podcaster)
 - https://thesprawl.city **crish** (Software and stuff)
 - https://justinnuwin.com **Justin Nguyen** (Software & Hardware Developer)
 - https://blog.woosal.com/ **Vusal Ismayilov** (Computer Engineering Student)
 - https://itsembedded.com/  **Norbert Kremeris** (digital logic design and verification engineer)
 - https://nereuxofficial.github.io **Nereuxofficial** (Software Developer & Student)
 - https://biplav.xyz **Biplav's Blog** (Student)
+- https://santiago.wtf **Nicholas Santiago** (DevOps Engineer)
 
 <!--
  TEMPLATE:
