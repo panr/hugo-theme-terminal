@@ -53,6 +53,7 @@
 - https://nereuxofficial.github.io **Nereuxofficial** (Software Developer & Student)
 - https://biplav.xyz **Biplav's Blog** (Student)
 - https://santiago.wtf **Nicholas Santiago** (DevOps Engineer)
+- https://2200g.github.io/ **2200g** (Blogger/Student)
 
 <!--
  TEMPLATE:
