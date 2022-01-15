@@ -47,7 +47,7 @@
   .menu {
     --shadow-color: color-mod(var(--background) a(80%));
     --shadow: 0 10px var(--shadow-color), -10px 10px var(--shadow-color), 10px 10px var(--shadow-color);
-    margin: 20px 0;
+    margin: 20px 1px;
 
     @media (--phone) {
       @mixin menu;
