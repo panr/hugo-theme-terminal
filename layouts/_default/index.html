@@ -44,13 +44,11 @@
 
         <div class="post-content">
           {{ if .Params.showFullContent }}
-          {{ .Content }}
+            {{ .Content }}
           {{ else if .Description }}
-          {{ .Description | markdownify }}
+            {{ .Description | markdownify }}
           {{ else }}
-          {{ if .Truncated }}
-          {{ .Summary }}
-          {{ end }}
+            {{ .Summary | markdownify }}
           {{ end }}
         </div>
 
