@@ -54,6 +54,8 @@
 - https://biplav.xyz **Biplav's Blog** (Student)
 - https://santiago.wtf **Nicholas Santiago** (DevOps Engineer)
 - https://2200g.github.io/ **2200g** (Blogger/Student)
+- https://cristiioan.me **Cristian Margine** (Student)
+- https://they.mint.lgbt **Joey Aliaga** (Software Developer & Student)
 
 <!--
  TEMPLATE:
