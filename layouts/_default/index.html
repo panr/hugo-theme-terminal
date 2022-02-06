@@ -27,7 +27,38 @@
             <span class="post-author">:: {{ . }}</span>
           {{ end }}
         </div>
+        {{ if .Params.tags }}
+          <span class="post-tags">
+            {{ range .Params.tags }}
+            #<a href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}">
+              {{- . -}}
+            </a>&nbsp;
+            {{ end }}
+          </span>
+        {{ end }}
 
+        {{ if .Params.Cover }}
+          <img src="{{ .Params.Cover | absURL }}" class="post-cover" alt="{{ .Title | plainify | default " " }}" />
+        {{ end }}
+
+        <div class="post-content">
+          {{ if .Params.showFullContent }}
+          {{ .Content | markdownify }}
+          {{ else if .Description }}
+          {{ .Description | markdownify }}
+          {{ else }}
+          {{ if .Truncated }}
+          {{ .Summary }}
+          {{ end }}
+          {{ end }}
+        </div>
+
+        {{ if not .Params.showFullContent }}
+        <div>
+          <a class="read-more button"
+            href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
+        </div>
+        {{ end }}
 
       </div>
     {{ end }}
