@@ -28,16 +28,10 @@
   {{ end }}
   {{ partial "cover.html" . }}
 
-  {{ if .Params.Toc }}
+  {{ if (.Params.Toc | default .Site.Params.Toc) }}
     <div class="table-of-contents">
       <h2>
-        {{ if .Params.TocTitle }}
-          {{ .Params.TocTitle }}
-        {{ else if $.Site.Params.TocTitle }}
-          {{ $.Site.Params.TocTitle }}
-        {{ else }}
-          Table of Contents
-        {{ end }}
+        {{ (.Params.TocTitle | default .Site.Params.TocTitle) | default "Table of Contents" }}
       </h2>
       {{ .TableOfContents }}
     </div>
