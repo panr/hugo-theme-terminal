@@ -1,9 +1,12 @@
 <nav class="menu">
   <ul class="menu__inner menu__inner--desktop">
+    {{ $currentPage := . }}
     {{ if or $.Site.Params.showMenuItems ( eq .Site.Params.showMenuItems 0 ) }}
       {{ range first $.Site.Params.showMenuItems $.Site.Menus.main }}
+        {{ $menu_item_url := .URL | relLangURL }}
+        {{ $page_url:= $currentPage.RelPermalink | relLangURL }}
         {{ if not .HasChildren }}
-          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          <li><a class="{{ if eq $menu_item_url $page_url }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
       {{ end }}
       {{ if gt (len $.Site.Menus.main) $.Site.Params.showMenuItems }}
@@ -21,8 +24,10 @@
       {{ end }}
     {{ else }}
       {{ range $.Site.Menus.main }}
+        {{ $menu_item_url := .URL | relLangURL }}
+        {{ $page_url:= $currentPage.RelPermalink | relLangURL }}
         {{ if not .HasChildren }}
-          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          <li><a class="{{ if eq $menu_item_url $page_url }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
       {{ end }}
     {{ end }}
@@ -35,7 +40,7 @@
       </ul>
       <ul class="language-selector__more hidden">
         {{ range $.Site.Home.AllTranslations }}
-        <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+          <li><a class="{{ if eq .Language $.Language }}active{{ end }}" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
         {{ end }}
       </ul>
     </ul>
@@ -44,15 +49,17 @@
 
   <ul class="menu__inner menu__inner--mobile">
     {{ range $.Site.Menus.main }}
+      {{ $menu_item_url := .URL | relLangURL }}
+      {{ $page_url:= $currentPage.RelPermalink | relLangURL }}
       {{ if not .HasChildren }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        <li><a class="{{ if eq $menu_item_url $page_url }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a></li>
       {{ end }}
     {{ end }}
     {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
     <hr />
       {{ range $.Site.Home.AllTranslations }}
         <li>
-          <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+          <a class="{{ if eq .Language $.Language }}active{{ end }}" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
         </li>
       {{ end }}
     {{ end }}

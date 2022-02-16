@@ -49,6 +49,11 @@
     --shadow: 0 10px var(--shadow-color), -10px 10px var(--shadow-color), 10px 10px var(--shadow-color);
     margin: 20px 1px;
 
+    a.active {
+      font-weight: bold;
+      text-decoration: none;
+    }
+
     @media (--phone) {
       @mixin menu;
       top: 50px;
