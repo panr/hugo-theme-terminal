@@ -9,6 +9,7 @@ paginate = 5
   showMenuItems = 2
   fullWidthTheme = false
   centerTheme = false
+  dateFormat = "2006-01-02"
 
 [languages]
   [languages.en]

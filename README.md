@@ -143,6 +143,9 @@ paginate = 5
   # With this option you don't have to put the `cover` param in a front-matter.
   autoCover = true
 
+  # Provide a string as a date format. By default, 2006-01-02. See https://pkg.go.dev/github.com/vigneshuvi/GoDateFormat "Constants and Placeholders" for more information.
+  dateFormat = "01-02-2006"
+
   # set post to show the last updated
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
   showLastUpdated = false
