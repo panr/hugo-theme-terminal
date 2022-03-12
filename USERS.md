@@ -1,4 +1,5 @@
 # Meet the users of Terminal theme!
+- https://blog.jontes.page **Jonte** (general tech geek)
 - https://xicode.se **magistern** (Teacher)
 - https://devmaster64.com **devmaster64** (Software Developer)
 - https://mickie1.gitlab.io/blog/ **mickie** (Engineer)
