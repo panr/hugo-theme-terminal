@@ -49,6 +49,8 @@
   {{ partial "posts_pagination.html" . }}
   {{ end }}
 
+  {{ if not (.Params.hideComments | default false) }}
   {{ partial "comments.html" . }}
+  {{ end }}
 </div>
 {{ end }}
