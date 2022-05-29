@@ -15,3 +15,7 @@
 @import 'code.css';
 @import 'terms.css';
 @import 'gist.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
