@@ -210,6 +210,19 @@ to `config.toml` file in your Hugo root directory and change params fields. In c
 
 **NOTE:** Please keep in mind that currently `main menu` doesn't support nesting.
 
+
+
+## [Add hugo contact form](https://fabform.io/a/hugo-contact-form)
+
+```
+<form action="https://fabform.io/f/{form-id}" method="post">
+ <label for="email">Your Email</label>
+ <input name="email" type="email">
+ <button type="submit">Submit</button> 
+</form>
+```
+
+
 ## Post archetype
 
 See the default `post` file params supported by the theme — https://github.com/panr/hugo-theme-terminal/blob/master/archetypes/posts.md
