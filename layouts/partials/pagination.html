@@ -1,0 +1,20 @@
+<div class="pagination">
+  <div class="pagination__buttons">
+    {{ if .Paginator.HasPrev }}
+      <span class="button previous">
+        <a href="{{ .Paginator.Prev.URL }}">
+          <span class="button__icon">←</span>
+          <span class="button__text">{{ $.Site.Params.newerPosts | default "Newer posts" }}</span>
+        </a>
+      </span>
+    {{ end }}
+    {{ if .Paginator.HasNext }}
+      <span class="button next">
+        <a href="{{ .Paginator.Next.URL }}">
+          <span class="button__text">{{ $.Site.Params.olderPosts | default "Older posts" }}</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+    {{ end }}
+  </div>
+</div>

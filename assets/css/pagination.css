@@ -1,0 +1,86 @@
+.pagination {
+  margin-top: 50px;
+
+  @media print {
+    display: none;
+  }
+
+  &__title {
+    display: flex;
+    text-align: center;
+    position: relative;
+    margin: 100px 0 20px;
+
+    &-h {
+      text-align: center;
+      margin: 0 auto;
+      padding: 5px 10px;
+      background: color-mod(var(--accent) blend(#1D1E28 98%));
+      font-size: .8rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: .1em;
+      z-index: 1;
+    }
+
+    hr {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      margin-top: 15px;
+      z-index: 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 0;
+  cursor: pointer;
+  appearance: none;
+  overflow: hidden;
+
+  + .button {
+    margin-left: 10px;
+  }
+
+  a {
+    display: flex;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &.next .button__icon {
+    margin-left: 8px;
+  }
+
+  &.previous .button__icon {
+    margin-right: 8px;
+  }
+}

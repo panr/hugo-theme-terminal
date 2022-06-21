@@ -1,0 +1,55 @@
+{{ define "main" }}
+  {{ with .Content }}
+    <div class="index-content">
+      {{ . }}
+    </div>
+  {{ end }}
+  <div class="posts">
+    {{ range .Paginator.Pages }}
+      <div class="post on-list">
+        <h1 class="post-title">
+          <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+        </h1>
+        <div class="post-meta">
+          <span class="post-date">
+            {{ .Date.Format "2006-01-02" }}
+          </span>
+          {{ with .Params.Author }}
+            <span class="post-author">:: {{ . }}</span>
+          {{ end }}
+        </div>
+
+        {{ if .Params.tags }}
+          <span class="post-tags">
+            {{ range .Params.tags }}
+            #<a href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}">
+              {{- . -}}
+            </a>&nbsp;
+            {{ end }}
+          </span>
+        {{ end }}
+
+        {{ partial "cover.html" . }}
+
+      
+        <div class="post-content">
+          {{ if .Params.showFullContent }}
+            {{ .Content }}
+          {{ else if .Description }}
+            {{ .Description | markdownify }}
+          {{ else }}
+            {{ .Summary | markdownify }}
+          {{ end }}
+        </div>
+
+        {{ if not .Params.showFullContent }}
+        <div>
+          <a class="read-more button"
+            href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
+        </div>
+        {{ end }}
+      </div>
+    {{ end }}
+    {{ partial "pagination.html" . }}
+  </div>
+{{ end }}

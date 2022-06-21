@@ -1,0 +1,25 @@
+{{ $inner := replaceRE "^\r?\n" "" .Inner | string }}
+{{ if len .Params | eq 0 }}
+  <pre><code>{{ $inner }}</code></pre>
+{{ else }}
+  {{ if .IsNamedParams }}
+    <pre class="
+      {{- if .Get "lang" }}language-{{ .Get "lang" }}{{ end }}
+      {{- if .Get "line-numbers" }} line-numbers{{ end }}
+      {{- if .Get "command-line" }} command-line{{ end }}"
+      {{- /* line highlight plugin */ -}}
+      {{- if .Get "line" }} data-line="{{ .Get "line" }}"{{ end }}
+      {{- /* line number plugin */ -}}
+      {{- if .Get "start" }} data-start="{{ .Get "start" }}"{{ end }}
+      {{- /* command-line plugin */ -}}
+      {{- if .Get "user" }} data-user="{{ .Get "user" }}"{{ end }}
+      {{- if .Get "host" }} data-host="{{ .Get "host" }}"{{ end }}
+      {{- if .Get "prompt" }} data-prompt="{{ .Get "prompt" }}"{{ end }}
+      {{- if .Get "output" }} data-output="{{ .Get "output" }}"{{ end }}
+      ><code {{ if .Get "lang" }}class="language-{{ .Get "lang" }}"{{ end }}
+      >{{ $inner }}</code></pre>
+  {{ else }}
+    <pre class="language-{{ .Get 0 }}">
+      <code class="language-{{ .Get 0 }}">{{ $inner }}</code></pre>
+  {{ end }}
+{{ end }}

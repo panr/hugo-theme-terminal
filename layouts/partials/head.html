@@ -1,0 +1,85 @@
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else if .Description}}{{ .Description | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="{{ .Permalink }}" />
+
+{{ template "_internal/google_analytics.html" . }}
+
+<!-- Local Theme Variables -->
+{{ $defaultStyles := resources.Get "css/style.css" }}
+
+{{ if (isset .Params "color") }}
+  {{ $localColorCss := resources.Get (printf "css/color/%s.css" .Params.color) }}
+  {{ $localCss := slice $defaultStyles $localColorCss | resources.Concat (printf "css/%s-local.css" .Params.color) }}
+  {{ $localColorStyles := $localCss | resources.ToCSS | resources.PostCSS }}
+  <link rel="stylesheet" href="{{ $localColorStyles.RelPermalink }}">
+{{ else }}
+  <!-- Theme Variables -->
+  {{ $colorCss := resources.Get (printf "css/color/%s.css" ($.Site.Params.ThemeColor | default "orange")) }}
+  {{ $css := slice $defaultStyles $colorCss | resources.Concat "css/base.css" }}
+  {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" true "precision" 6 "includePaths" (slice "node_modules")) }}
+  {{ $styles := $css | resources.ToCSS $options | resources.PostCSS }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+{{ end }}
+
+<!-- Custom CSS to override theme properties (/static/style.css) -->
+{{ if (fileExists "static/style.css") -}}
+  <link rel="stylesheet" href="{{ "style.css" | absURL }}">
+{{- end }}
+
+<!-- Icons -->
+{{ if isset $.Site.Params "favicon" }}
+  <link rel="shortcut icon" href="{{ $.Site.Params.favicon | absURL }}">
+{{ else }}
+  <link rel="shortcut icon" href="{{ printf "img/theme-colors/%s.png" (or .Params.color $.Site.Params.ThemeColor | default "orange") | absURL }}">
+  <link rel="apple-touch-icon" href="{{ printf "img/theme-colors/%s.png" (or .Params.color $.Site.Params.ThemeColor | default "orange") | absURL }}">
+{{ end }}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+{{ if (isset $.Site.Params "twitter") }}
+  {{ if (isset $.Site.Params.Twitter "site") }}
+    <meta name="twitter:site" content="{{ $.Site.Params.Twitter.site }}" />
+  {{ end }}
+    <meta name="twitter:creator" content="{{ if .IsHome }}{{ $.Site.Params.Twitter.creator }}{{ else if isset .Params "authortwitter" }}{{ .Params.authorTwitter }}{{ else }}{{ .Params.Author }}{{ end }}" />
+{{ end }}
+
+<!-- OG data -->
+<meta property="og:locale" content="{{ $.Site.Language.Lang }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:title" content="{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else if .Description}}{{ .Description | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ $.Site.Title }}" />
+{{ if and (not .IsHome) (isset .Params "cover") }}
+  <meta property="og:image" content="{{ .Param "cover" | absURL }}">
+{{ else }}
+  {{ if isset $.Site.Params "favicon" }}
+    <meta property="og:image" content="{{ $.Site.Params.favicon | absURL }}">
+  {{ else }}
+    <meta property="og:image" content="{{ printf "img/favicon/%s.png" $.Site.Params.ThemeColor | absURL }}">
+  {{ end }}
+{{ end }}
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+{{ range .Params.categories }}
+  <meta property="article:section" content="{{ . }}" />
+{{ end }}
+{{ if isset .Params "date" }}
+  <meta property="article:published_time" content="{{ time .Date }}" />
+{{ end }}
+
+<!-- RSS -->
+{{ with .OutputFormats.Get "RSS" }}
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+{{ end }}
+
+<!-- JSON Feed -->
+{{ with .OutputFormats.Get "json" }}
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }}" />
+{{ end }}
+
+<!-- Extended head section-->
+{{ partial "extended_head.html" . }}

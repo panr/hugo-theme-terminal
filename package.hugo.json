@@ -1,0 +1,66 @@
+{
+  "author": "Radosław Kozieł <@panr> <radoslaw.koziel@gmail.com>",
+  "browserslist": [
+    "last 2 versions",
+    ">1%",
+    "not dead"
+  ],
+  "comments": {
+    "dependencies": {
+      "yarn": "project"
+    },
+    "devDependencies": {
+      "browserslist": "project",
+      "clipboard": "project",
+      "cssnano": "project",
+      "eslint-config-airbnb": "project",
+      "eslint-config-prettier": "project",
+      "eslint-plugin-jsx-a11y": "project",
+      "husky": "project",
+      "postcss": "project",
+      "postcss-browser-reporter": "project",
+      "postcss-cli": "project",
+      "postcss-color-function": "project",
+      "postcss-color-mod-function": "project",
+      "postcss-import": "project",
+      "postcss-loader": "project",
+      "postcss-mixins": "project",
+      "postcss-nested": "project",
+      "postcss-preset-env": "project",
+      "postcss-reporter": "project",
+      "postcss-url": "project"
+    }
+  },
+  "dependencies": {
+    "yarn": "^1.22.10"
+  },
+  "devDependencies": {
+    "browserslist": "^4.16.5",
+    "clipboard": "^2.0.4",
+    "cssnano": "^5.1.12",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "husky": "^5.1.3",
+    "postcss": "^8.2.10",
+    "postcss-browser-reporter": "^0.6.0",
+    "postcss-cli": "^8.3.1",
+    "postcss-color-function": "^4.0.1",
+    "postcss-color-mod-function": "^3.0.3",
+    "postcss-custom-media": "^8.0.2",
+    "postcss-import": "^14.0.0",
+    "postcss-loader": "^5.2.0",
+    "postcss-mixins": "^7.0.3",
+    "postcss-nested": "^5.0.5",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-reporter": "^7.0.2",
+    "postcss-url": "^10.1.3"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "name": "terminal",
+  "scripts": {
+    "test": "echo 'Test'"
+  },
+  "version": "2.1.0"
+}

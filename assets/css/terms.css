@@ -1,0 +1,9 @@
+.terms {
+  h1 {
+    color: var(--accent);
+  }
+
+  h3 {
+    font-size: initial;
+  }
+}

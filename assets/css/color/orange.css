@@ -1,0 +1,13 @@
+:root {
+  --accent: #FFA86A;
+  --background: color-mod(var(--accent) blend(#1D1E28 98%));
+  --color: white;
+  --border-color: rgba(255, 255, 255, .1);
+
+  /* variables for js, must be the same as these in @custom-media queries */
+  --phoneWidth: (max-width: 684px);
+  --tabletWidth: (max-width: 900px);
+}
+
+@custom-media --phone (max-width: 684px);
+@custom-media --tablet (max-width: 900px);
