@@ -1,4 +1,4 @@
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else if .Description}}{{ .Description | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 <meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}" />
@@ -7,9 +7,8 @@
 
 {{ template "_internal/google_analytics.html" . }}
 
-<!-- Local Theme Variables -->
 {{ $defaultStyles := resources.Get "css/style.scss" }}
-
+<!-- Local Theme Variables -->
 {{ if (isset .Params "color") }}
   {{ $localColorCss := resources.Get (printf "css/color/%s.scss" .Params.color) }}
   {{ $localCss := slice $localColorCss $defaultStyles | resources.Concat (printf "css/%s-local.scss" .Params.color) }}
