@@ -3,7 +3,7 @@
 }
 
 .framed {
-  border: 1px solid var(--accent);
+  border: 1px solid $accent;
   padding: 20px;
 
   *:first-child {
@@ -25,27 +25,23 @@
   margin: 20px auto;
   padding: 20px 0;
 
-  @media (--tablet) {
-    max-width: 660px;
-  }
-
   &:not(:last-of-type) {
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid $border-color;
   }
 
   &-meta {
     font-size: 1rem;
     margin-bottom: 10px;
-    color: color-mod(var(--accent) a(70%));
+    color: opcift($accent, 70%);
   }
 
   &-title {
-    --border: 3px dotted var(--accent);
+    $border: 3px dotted $accent;
     position: relative;
-    color: var(--accent);
+    color: $accent;
     margin: 0 0 15px;
     padding-bottom: 15px;
-    border-bottom: var(--border);
+    border-bottom: $border;
 
     &:after {
       content: '';
@@ -53,7 +49,7 @@
       bottom: 2px;
       display: block;
       width: 100%;
-      border-bottom: var(--border);
+      border-bottom: $border;
     }
 
     a {
@@ -77,12 +73,12 @@
   }
 
   &-cover {
-    border: 20px solid var(--accent);
+    border: 20px solid $accent;
     background: transparent;
     margin: 40px 0;
     padding: 20px;
 
-    @media (--phone) {
+    @media ($phone) {
       padding: 10px;
       border-width: 10px;
     }
@@ -95,7 +91,7 @@
       content: '-';
       position: absolute;
       left: -20px;
-      color: var(--accent);
+      color: $accent;
     }
   }
 }
@@ -117,7 +113,7 @@
 }
 
 .hanchor {
-  color: color-mod(var(--accent) alpha(90%));
+  color: opacify($accent, .9);
   text-decoration: none;
   margin-left: 10px;
   visibility: hidden;
@@ -128,5 +124,5 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a {
 }
 
 .footnotes {
-  color: color-mod(var(--color) alpha(50%));
+  color: opacify($color, .5);
 }

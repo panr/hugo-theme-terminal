@@ -1,5 +1,5 @@
 .collapsable-code {
-  --border-color: color-mod(var(--accent) blend(#999 90%));
+  $border-color: mix($accent, #999, 90%);
 
   position: relative;
   width: 100%;
@@ -39,13 +39,13 @@
     min-width: 30px;
     min-height: 30px;
     margin: 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid $border-color;
     cursor: pointer;
   }
 
   &__title {
     flex: 1;
-    color: var(--accent);
+    color: $accent;
     padding: 3px 10px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -53,15 +53,15 @@
   }
 
   &__language {
-    color: var(--accent);
-    border: 1px solid var(--border-color);
+    color: $accent;
+    border: 1px solid $border-color;
     border-bottom: none;
     text-transform: uppercase;
     padding: 3px 10px;
   }
 
   &__toggle {
-    color: var(--accent);
+    color: $accent;
     font-size: 16px;
     padding: 3px 10px;
 

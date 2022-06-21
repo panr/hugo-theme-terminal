@@ -1,7 +1,9 @@
-@define-mixin menu {
+@mixin menu {
+  $shadow-color: opacify($background, .8);
+  $shadow: 0 10px $shadow-color, -10px 10px $shadow-color, 10px 10px $shadow-color;
   position: absolute;
-  background: var(--background);
-  box-shadow: var(--shadow);
+  background: $background;
+  box-shadow: $shadow;
   color: white;
   border: 2px solid;
   margin: 0;
@@ -31,7 +33,7 @@
 
     &:after {
       content: '';
-      background: repeating-linear-gradient(90deg, var(--accent), var(--accent) 2px, transparent 0, transparent 10px);
+      background: repeating-linear-gradient(90deg, $accent, $accent 2px, transparent 0, transparent 10px);
       display: block;
       width: 100%;
       right: 10px;
@@ -45,14 +47,16 @@
   }
 
   .menu {
-    --shadow-color: color-mod(var(--background) a(80%));
-    --shadow: 0 10px var(--shadow-color), -10px 10px var(--shadow-color), 10px 10px var(--shadow-color);
     margin: 20px 1px;
 
-    @media (--phone) {
-      @mixin menu;
+    @media ($phone) {
+      @include menu;
       top: 50px;
       right: 0;
+
+      &.hidden-on-mobile {
+        display: none;
+      }
     }
 
     &__inner {
@@ -63,7 +67,7 @@
       padding: 0;
 
       &--desktop {
-        @media (--phone) {
+        @media ($phone) {
           display: none;
         }
       }
@@ -71,7 +75,7 @@
       &--mobile {
         display: none;
 
-        @media (--phone) {
+        @media ($phone) {
           display: block;
         }
       }
@@ -84,7 +88,7 @@
         }
       }
 
-      @media (--phone) {
+      @media ($phone) {
         flex-direction: column;
         align-items: flex-start;
         padding: 0;
@@ -107,12 +111,12 @@
       }
 
       &-more {
-        @mixin menu;
+        @include menu;
         top: 35px;
         left: 0;
 
         &-trigger {
-          color: var(--accent);
+          color: $accent;
           user-select: none;
           cursor: pointer;
         }
@@ -138,26 +142,31 @@
         list-style-type: none;
         display: flex;
         flex-direction: row;
-        color: var(--accent);
+        color: $accent;
         cursor: pointer;
         margin: 0;
       }
 
       &__more {
-        @mixin menu;
+        @include menu;
         top: 35px;
         right: 0;
       }
     }
 
     &-trigger {
-      color: var(--accent);
+      display: none;
+      color: $accent;
       border: 2px solid;
       margin-left: 10px;
       height: 100%;
       padding: 3px 8px;
       position: relative;
       cursor: pointer;
+
+      @media ($phone) {
+        display: block;
+      }
     }
   }
 }

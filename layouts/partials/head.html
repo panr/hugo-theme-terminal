@@ -8,25 +8,25 @@
 {{ template "_internal/google_analytics.html" . }}
 
 <!-- Local Theme Variables -->
-{{ $defaultStyles := resources.Get "css/style.css" }}
+{{ $defaultStyles := resources.Get "css/style.scss" }}
 
 {{ if (isset .Params "color") }}
-  {{ $localColorCss := resources.Get (printf "css/color/%s.css" .Params.color) }}
-  {{ $localCss := slice $defaultStyles $localColorCss | resources.Concat (printf "css/%s-local.css" .Params.color) }}
-  {{ $localColorStyles := $localCss | resources.ToCSS | resources.PostCSS }}
+  {{ $localColorCss := resources.Get (printf "css/color/%s.scss" .Params.color) }}
+  {{ $localCss := slice $localColorCss $defaultStyles | resources.Concat (printf "css/%s-local.scss" .Params.color) }}
+  {{ $localColorStyles := $localCss | resources.ToCSS }}
   <link rel="stylesheet" href="{{ $localColorStyles.RelPermalink }}">
 {{ else }}
   <!-- Theme Variables -->
-  {{ $colorCss := resources.Get (printf "css/color/%s.css" ($.Site.Params.ThemeColor | default "orange")) }}
-  {{ $css := slice $defaultStyles $colorCss | resources.Concat "css/base.css" }}
+  {{ $colorCss := resources.Get (printf "css/color/%s.scss" ($.Site.Params.ThemeColor | default "orange")) }}
+  {{ $css := slice $colorCss $defaultStyles | resources.Concat "css/base.scss" }}
   {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" true "precision" 6 "includePaths" (slice "node_modules")) }}
-  {{ $styles := $css | resources.ToCSS $options | resources.PostCSS }}
+  {{ $styles := $css | resources.ToCSS $options }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 {{ end }}
 
-<!-- Custom CSS to override theme properties (/static/style.css) -->
-{{ if (fileExists "static/style.css") -}}
-  <link rel="stylesheet" href="{{ "style.css" | absURL }}">
+<!-- Custom CSS to override theme properties (/static/style.scss) -->
+{{ if (fileExists "static/style.scss") -}}
+  <link rel="stylesheet" href="{{ "style.scss" | absURL }}">
 {{- end }}
 
 <!-- Icons -->

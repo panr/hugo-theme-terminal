@@ -15,8 +15,8 @@ body {
   font-size: 1rem;
   line-height: 1.54;
   letter-spacing: -0.02em;
-  background-color: color-mod(var(--accent) blend(#1D1E28 98%));
-  color: var(--color);
+  background-color: $background;
+  color: $color;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-feature-settings: "liga", "tnum", "zero", "ss01", "locl";
@@ -24,7 +24,7 @@ body {
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
 
-  @media (--phone) {
+  @media ($phone) {
     font-size: 1rem;
   }
 }
@@ -61,7 +61,7 @@ a {
 
   /* Waiting for a better times... */
   /* &:has(code) {
-    text-decoration-color: var(--accent);
+    text-decoration-color: $accent;
   } */
 }
 
@@ -109,8 +109,8 @@ figure {
     font-size: 14px;
     padding: 5px 10px;
     margin-top: 5px;
-    background: var(--accent);
-    color: var(--background);
+    background: $accent;
+    color: $background;
     /* opacity: .8; */
 
     &.left {
@@ -130,8 +130,8 @@ figure {
 code, kbd {
   font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace !important;
   font-feature-settings: normal;
-  background: color-mod(var(--accent) a(20%));
-  color: var(--accent);
+  background: color-mod($accent) a(20%);
+  color: $accent;
   padding: 1px 6px;
   margin: 0 2px;
   font-size: .95rem;
@@ -157,7 +157,7 @@ pre {
     margin-top: -40px;
   }
 
-  @media (--phone) {
+  @media ($phone) {
     white-space: pre-wrap;
     word-wrap: break-word;
   }
@@ -172,12 +172,12 @@ pre {
 }
 
 blockquote {
-  border-top: 1px solid var(--accent);
-  border-bottom: 1px solid var(--accent);
+  border-top: 1px solid $accent;
+  border-bottom: 1px solid $accent;
   margin: 40px 0;
   padding: 25px;
 
-  @media (--phone) {
+  @media ($phone) {
     padding-right: 0;
   }
 
@@ -198,15 +198,15 @@ blockquote {
     display: block;
     position: absolute;
     left: -25px;
-    color: var(--accent);
+    color: $accent;
   }
 
   &.twitter-tweet {
     position: relative;
-    background: color-mod(var(--accent) a(10%));
+    background: color-mod($accent) a(10%);
     font: inherit;
     color: inherit;
-    border: 1px solid var(--accent);
+    border: 1px solid $accent;
     padding-top: 60px;
 
     p:before {
@@ -217,12 +217,12 @@ blockquote {
       content: '> From Twitter:';
       position: absolute;
       top: 20px;
-      color: var(--accent);
+      color: $accent;
       font-weight: bold;
     }
 
     a {
-      color: var(--accent);
+      color: $accent;
     }
   }
 }
@@ -237,12 +237,12 @@ table {
 table,
 th,
 td {
-  border: 1px dashed var(--accent);
+  border: 1px dashed $accent;
   padding: 10px;
 }
 
 th {
-  color: var(--accent);
+  color: $accent;
 }
 
 ul,
@@ -254,7 +254,7 @@ ol {
     position: relative;
   }
 
-  @media (--phone) {
+  @media ($phone) {
     margin-left: 20px;
   }
 }
@@ -271,7 +271,7 @@ ol {
     content: counter(li);
     position: absolute;
     right: calc(100% + 10px);
-    color: var(--accent);
+    color: $accent;
     display: inline-block;
     text-align: right;
   }
@@ -290,8 +290,8 @@ ol {
 }
 
 mark {
-  background: var(--accent);
-  color: var(--background);
+  background: $accent;
+  color: $background;
 }
 
 .container {
@@ -312,7 +312,7 @@ mark {
     max-width: 100%;
   }
 
-  @media (--phone) {
+  @media ($phone) {
     padding: 20px;
   }
 
@@ -333,7 +333,7 @@ mark {
 hr {
   width: 100%;
   border: none;
-  background: var(--border-color);
+  background: $border-color;
   height: 1px;
 }
 

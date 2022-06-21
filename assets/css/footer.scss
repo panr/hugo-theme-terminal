@@ -11,7 +11,7 @@
     width: 760px;
     max-width: 100%;
 
-    @media (--tablet) {
+    @media ($tablet) {
       flex-direction: column;
     }
   }
@@ -25,7 +25,6 @@
     flex-direction: row;
     align-items: center;
     font-size: 1rem;
-    color: var(--light-color-secondary);
 
     &--user {
       margin: auto;
@@ -35,14 +34,14 @@
     & > *:first-child:not(:only-child) {
       margin-right: 10px;
 
-       @media (--tablet) {
+       @media ($tablet) {
         border: none;
         padding: 0;
         margin: 0;
       }
     }
 
-    @media (--tablet) {
+    @media ($tablet) {
       flex-direction: column;
       margin-top: 10px;
     }

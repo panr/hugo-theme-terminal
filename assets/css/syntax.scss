@@ -17,7 +17,7 @@ code.language-scss,
 .token.number,
 .token.inserted,
 .token.important {
-  color: var(--accent) !important;
+  color: $accent !important;
 }
 
 .token.tag-id,
@@ -34,7 +34,7 @@ code.language-scss,
 .token.class-name,
 .token.constant,
 .token.symbol {
-  color: color-mod(var(--accent) a(70%)) !important;
+  color: opacify($accent, .7) !important;
 }
 
 .token.property,
@@ -44,7 +44,7 @@ code.language-scss,
 code.language-javascript,
 code.language-html,
 .command-line-prompt > span:before {
-  color: color-mod(var(--accent) blend(#999 90%)) !important;
+  color: mix($accent, #999, .9) !important;
 }
 
 .token.selector,
@@ -80,7 +80,7 @@ pre[class*="language-"] {
   right: 0;
   padding: 0;
   margin: 0;
-  background: color-mod(var(--accent) blend(#999 90%) a(8%));
+  background: opacify(mix($accent, #999, 90%), .08);
   pointer-events: none;
   line-height: inherit;
   white-space: pre;
@@ -116,9 +116,9 @@ pre[class*="language-"] {
 }
 
 .code-toolbar {
-  --code-margin: 40px;
+  $code-margin: 40px;
 	position: relative;
-	margin: var(--code-margin) 0;
+	margin: $code-margin 0;
 	padding: 20px;
 	border: 1px solid rgba(255, 255, 255, .1);
 
@@ -126,7 +126,7 @@ pre[class*="language-"] {
 	+ .highlight,
 	+ .highlight .code-toolbar {
 		border-top: 0;
-		margin-top: calc(-1 * var(--code-margin));
+		margin-top: calc(-1 * $code-margin);
 	}
 
 	pre, code {

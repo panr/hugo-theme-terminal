@@ -1,15 +1,15 @@
 input, textarea, select {
   background: transparent;
-  color: var(--accent);
-  border: 1px solid var(--accent);
+  color: $accent;
+  border: 1px solid $accent;
   border-radius: 0;
   padding: 10px;
   font: inherit;
   appearance: none;
 
   &:focus, :active {
-    border-color: var(--color);
-    outline: 1px solid var(--color);
+    border-color: $color;
+    outline: 1px solid $color;
   }
 
   &:active {
@@ -18,13 +18,13 @@ input, textarea, select {
 }
 
 select {
-  background: var(--background);
+  background: $background;
 
   option {
-    background: var(--background);
+    background: $background;
   }
 }
 
 ::placeholder {
-  color: color-mod(var(--accent) a(50%));
+  color: color-mod($accent) a(50%);
 }
