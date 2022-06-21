@@ -18,8 +18,7 @@
 
 {{ $bundle := slice $menu $languageSelector $prism | resources.Concat "bundle.js" | resources.Minify }}
 
-
-<script type="text/javascript" async src="{{ $bundle.RelPermalink }}"></script>
+<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
 
 <!-- Extended footer section-->
 {{ partial "extended_footer.html" . }}

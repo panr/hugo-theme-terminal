@@ -7,9 +7,7 @@ const menuMore = document.querySelector(".menu__sub-inner-more");
 const mobileQuery = getComputedStyle(document.body).getPropertyValue("--phoneWidth");
 const isMobile = () => window.matchMedia(mobileQuery).matches;
 const handleMenuClasses = () => {
-  mobileMenuTrigger && mobileMenuTrigger.classList.toggle("hidden", !isMobile());
-  menu && menu.classList.toggle("hidden", isMobile());
-  menuMore && menuMore.classList.toggle("hidden", !isMobile());
+  menuMore && menuMore.classList.toggle("hidden-on-mobile", !isMobile());
 };
 
 // Common
@@ -17,7 +15,7 @@ const handleMenuClasses = () => {
 menu && menu.addEventListener("click", (e) => e.stopPropagation());
 menuMore && menuMore.addEventListener("click", (e) => e.stopPropagation());
 
-handleMenuClasses();
+// handleMenuClasses();
 
 document.body.addEventListener("click", () => {
   if (!isMobile() && menuMore && !menuMore.classList.contains("hidden")) {
@@ -34,7 +32,7 @@ window.addEventListener("resize", handleMenuClasses);
 mobileMenuTrigger &&
   mobileMenuTrigger.addEventListener("click", (e) => {
     e.stopPropagation();
-    menu && menu.classList.toggle("hidden");
+    menu && menu.classList.toggle("hidden-on-mobile");
   });
 
 // Desktop menu
