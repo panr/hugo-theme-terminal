@@ -94,7 +94,7 @@ Please keep in mind that for the time of testing the theme is available as a mod
 ### Install theme locally
 
 ```
-git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
+git clone -b module https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
 
 This will clone the repository directly to the `themes/terminal` directory.
@@ -102,7 +102,7 @@ This will clone the repository directly to the `themes/terminal` directory.
 ### Install theme as a submodule
 
 ```
-git submodule add -f https://github.com/panr/hugo-theme-terminal.git themes/terminal
+git submodule add -b module -f https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
 
 This will install the repository as a sumbodule in the `themes/terminal` directory.
