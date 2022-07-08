@@ -91,6 +91,8 @@ hugo mod get github.com/panr/hugo-theme-terminal@module
 
 Please keep in mind that for the time of testing the theme is available as a module only from `module` branch. After testing period (fall, 2022), the module will be available on `master` branch by default.
 
+More about Hugo Modules in the [official documentation](https://gohugo.io/hugo-modules/).
+
 ### Install theme locally
 
 ```
