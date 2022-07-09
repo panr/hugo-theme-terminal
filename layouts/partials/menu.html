@@ -26,6 +26,9 @@
         {{ end }}
       {{ end }}
     {{ end }}
+    {{ range $.Site.Menus.beside }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+    {{ end }}
 
     {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
     <div class="spacer"></div>
@@ -47,6 +50,9 @@
       {{ if not .HasChildren }}
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
       {{ end }}
+    {{ end }}
+    {{ range $.Site.Menus.beside }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
     {{ end }}
     {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
     <hr />
