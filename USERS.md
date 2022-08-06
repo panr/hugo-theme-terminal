@@ -56,7 +56,10 @@
 - https://2200g.github.io/ **2200g** (Blogger/Student)
 - https://cristiioan.me **Cristian Margine** (Student)
 - https://they.mint.lgbt **Joey Aliaga** (Software Developer & Student)
+- https://tatewilhelm.me **Tate Wilhelm** (Student, Programmer & Tinkerer)
+- https://mikefoden.com **Mike Foden** (Software Developer)
 - https://blog.jontes.page **Jonte** (general tech geek)
+
 <!--
  TEMPLATE:
 
