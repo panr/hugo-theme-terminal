@@ -8,24 +8,25 @@
 {{ template "_internal/google_analytics.html" . }}
 
 <!-- Theme CSS -->
-<link rel="stylesheet" href="{{ "assets/style.css" | absURL }}">
 {{ if (isset .Params "color") }}
-  <link rel="stylesheet" href="{{ (printf "assets/%s.css" .Params.color) | absURL }}">
+  <link rel="stylesheet" href="{{ (printf "assets/%s.css" .Params.color) | relURL }}">
 {{ else if and (ne $.Site.Params.ThemeColor "orange") (ne $.Site.Params.ThemeColor "color" "") }}
-  <link rel="stylesheet" href="{{ (printf "assets/%s.css" $.Site.Params.ThemeColor) | absURL }}">
+  <link rel="stylesheet" href="{{ (printf "assets/%s.css" $.Site.Params.ThemeColor) | relURL }}">
+{{ else }}
+  <link rel="stylesheet" href="{{ "assets/orange.css" | relURL }}">
 {{ end }}
 
 <!-- Custom CSS to override theme properties (/static/style.css) -->
 {{ if (fileExists "static/style.css") -}}
-  <link rel="stylesheet" href="{{ "style.css" | absURL }}">
+  <link rel="stylesheet" href="{{ "style.css" | relURL }}">
 {{- end }}
 
 <!-- Icons -->
-<link rel="apple-touch-icon" href="{{ "img/apple-touch-icon-192x192.png" | absURL }}">
+<link rel="apple-touch-icon" href="{{ "img/apple-touch-icon-192x192.png" | relURL }}">
 {{ if isset $.Site.Params "favicon" }}
-  <link rel="shortcut icon" href="{{ $.Site.Params.favicon | absURL }}">
+  <link rel="shortcut icon" href="{{ $.Site.Params.favicon | relURL }}">
 {{ else }}
-  <link rel="shortcut icon" href="{{ printf "img/favicon/%s.png" ($.Site.Params.ThemeColor | default "orange") | absURL }}">
+  <link rel="shortcut icon" href="{{ printf "img/favicon/%s.png" ($.Site.Params.ThemeColor | default "orange") | relURL }}">
 {{ end }}
 
 <!-- Twitter Card -->
@@ -51,10 +52,10 @@
     <meta property="og:image" content="{{ $.Site.Params.favicon | absURL }}">
   {{ else }}
     <meta property="og:image" content="{{ printf "img/favicon/%s.png" $.Site.Params.ThemeColor | absURL }}">
+    <meta property="og:image:width" content="2048">
+    <meta property="og:image:height" content="1024">
   {{ end }}
 {{ end }}
-<meta property="og:image:width" content="2048">
-<meta property="og:image:height" content="1024">
 {{ range .Params.categories }}
   <meta property="article:section" content="{{ . }}" />
 {{ end }}

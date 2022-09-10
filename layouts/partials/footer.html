@@ -12,11 +12,11 @@
   </div>
 </footer>
 
-<script src="{{ "assets/main.js" | absURL }}"></script>
-<script src="{{ "assets/prism.js" | absURL }}"></script>
+<script defer src="{{ "assets/main.js" | relURL }}"></script>
+<script defer src="{{ "assets/prism.js" | relURL }}"></script>
 
 {{ if $.Site.Params.showLanguageSelector }}
-  <script src="{{ "assets/languageSelector.js" | absURL }}"></script>
+  <script src="{{ "assets/languageSelector.js" | relURL }}"></script>
 {{ end }}
 
 <!-- Extended footer section-->

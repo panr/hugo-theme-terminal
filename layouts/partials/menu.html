@@ -35,7 +35,7 @@
       </ul>
       <ul class="language-selector__more hidden">
         {{ range $.Site.Home.AllTranslations }}
-        <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+        <li><a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a></li>
         {{ end }}
       </ul>
     </ul>
@@ -52,7 +52,7 @@
     <hr />
       {{ range $.Site.Home.AllTranslations }}
         <li>
-          <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+          <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
         </li>
       {{ end }}
     {{ end }}
