@@ -1,0 +1,39 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Source Code Pro") url("/assets/fonts/SourceCodePro-Light.otf.woff2") format("woff2") url("/assets/fonts/SourceCodePro-Light.otf.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Code Pro") url("/assets/fonts/SourceCodePro-Regular.otf.woff2") format("woff2") url("/assets/fonts/SourceCodePro-Regular.otf.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Source Code Pro") url("/assets/fonts/SourceCodePro-Bold.otf.woff2") format("woff2") url("/assets/fonts/SourceCodePro-Bold.otf.woff") format("woff");
+  font-display: swap;
+}
+
+body {
+  font-family: 'Source Code Pro', Monaco, Consolas, Ubuntu Mono, monospace;
+}
+
+code,
+kbd {
+  font-family: 'Source Code Pro', Monaco, Consolas, Ubuntu Mono, monospace !important;
+}
+
+.post-content {
+  font-weight: 300;
+}

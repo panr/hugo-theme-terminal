@@ -11,5 +11,5 @@
     <pre {{ if .Get "language" }}class="language-{{ .Get "language" }}" {{ end }}><code>{{ .Inner | string }}</code></pre>
   </div>
 {{ else }}
-  {{ errorf "If you want to use the \"collapsable code\" shortcode, you need to pass a mandatory \"language\" param. The issue occured in %q (%q)" .Page.File .Page.Permalink }}
+  {{ errorf "If you want to use the \"collapsable code\" shortcode, you need to pass a mandatory \"language\" param. The issue occured in %q (%q)" .Page.File .Page.RelPermalink }}
 {{ end }}

@@ -42,45 +42,54 @@
       text-decoration: none;
     }
   }
-}
 
-.button {
-  position: relative;
-  display: inline-flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  border-radius: 8px;
-  padding: 0;
-  cursor: pointer;
-  appearance: none;
-  overflow: hidden;
-
-  + .button {
-    margin-left: 10px;
+  .button:hover, a.button:hover, button:hover {
+    background: none;
   }
 
-  a {
-    display: flex;
-    padding: 8px 16px;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  .button {
+    border: none;
+    color: var(--accent);
+    background: none;
+    position: relative;
+    display: inline-flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 0;
+    padding: 0;
+    cursor: pointer;
+    appearance: none;
     overflow: hidden;
-  }
 
-  &__text {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
+    +.button {
+      margin-left: 10px;
+    }
 
-  &.next .button__icon {
-    margin-left: 8px;
-  }
+    a, a:hover {
+      display: flex;
+      padding: 8px 16px;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      background: none !important;
+      border: none;
+    }
 
-  &.previous .button__icon {
-    margin-right: 8px;
+    &__text {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    &.next .button__icon {
+      margin-left: 8px;
+    }
+
+    &.previous .button__icon {
+      margin-right: 8px;
+    }
   }
 }

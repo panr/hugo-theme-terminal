@@ -23,7 +23,7 @@
 
 ## Features
 
-- **5 duotone themes**, depending on your preferences (orange is default, red, blue, green, pink)
+- **6 duotone themes**, depending on your preferences (orange is default, red, blue, green, pink, yellow, and grey)
 - [**Fira Code**](https://github.com/tonsky/FiraCode) as default monospaced font. It's gorgeous!
 - **really nice duotone**, custom syntax highlighting based on [**PrismJS**](https://prismjs.com)
 - fully responsive
@@ -121,7 +121,7 @@ paginate = 5
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
 
-  # ["orange", "blue", "red", "green", "pink"]
+  # ["orange", "blue", "red", "green", "pink", "yellow", "grey"]
   themeColor = "orange"
 
   # if you set this to 0, only submenu trigger will be visible
@@ -164,6 +164,9 @@ paginate = 5
   # set title for the table of contents
   # can be overridden in a page's front-matter
   # TocTitle = "Table of Contents" # default
+
+  # use Source Code Pro instead of Fira Code
+  # useSourceCodePro = true
 
 
 [params.twitter]

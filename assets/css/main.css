@@ -11,10 +11,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
   font-size: 1rem;
   line-height: 1.54;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   background-color: color-mod(var(--accent) blend(#1D1E28 98%));
   color: var(--color);
   text-rendering: optimizeLegibility;
@@ -128,7 +127,6 @@ figure {
 }
 
 code, kbd {
-  font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace !important;
   font-feature-settings: normal;
   background: color-mod(var(--accent) a(20%));
   color: var(--accent);
