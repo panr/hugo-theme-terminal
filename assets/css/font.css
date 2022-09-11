@@ -11,7 +11,7 @@
   font-display: swap;
   font-family: 'Fira Code';
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   src: local("Fira Code") url("/assets/fonts/FiraCode-Bold.woff2") format("woff2") url("/assets/fonts/FiraCode-Bold.woff") format("woff");
   font-display: swap;
 }
