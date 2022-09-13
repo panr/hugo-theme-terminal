@@ -1,1 +1,8 @@
 @import '../style.css';
+
+:root {
+  --accent: #FFA86A;
+  --background: color-mod(var(--accent) blend(#1D1E28 98%));
+  --color: white;
+  --border-color: rgba(255, 255, 255, .1);
+}
