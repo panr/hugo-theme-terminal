@@ -1,0 +1,10 @@
+{{- $img := .Page.Resources.GetMatch .Destination -}}
+{{- if and (not $img) .Page.File -}}
+{{- $path := path.Join .Page.File.Dir .Destination -}}
+{{- $img = resources.Get $path -}}
+{{- end -}}
+{{- with $img -}}
+<img alt="{{ $.Text }}" src="{{ $img.RelPermalink }}" width={{ $img.Width }} height={{ $img.Height }} />
+{{- else -}}
+<img alt="{{ $.Text }}" src="{{ $.Destination | safeURL }}" />
+{{- end -}}
