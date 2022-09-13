@@ -79,8 +79,17 @@
   &-cover {
     border: 20px solid var(--accent);
     background: transparent;
-    margin: 40px 0;
+    margin: 10px 0 0;
     padding: 20px;
+    display: inline-block;
+    object-fit: cover;
+
+    img {
+      min-width: 100%;
+      max-width: 100%;
+      height: auto;
+      width: auto;
+    }
 
     @media (--phone) {
       padding: 10px;
