@@ -1,4 +1,7 @@
 :root {
+  --color: white;
+  --border-color: rgba(255, 255, 255, .1);
+
   /* variables for js, must be the same as these in @custom-media queries */
   --phoneWidth: (max-width: 684px);
   --tabletWidth: (max-width: 900px);

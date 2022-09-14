@@ -16,10 +16,7 @@
   font-display: swap;
 }
 
-body {
-  font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
-}
-
+body,
 code,
 kbd {
   font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace !important;
