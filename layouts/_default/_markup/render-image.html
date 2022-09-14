@@ -4,7 +4,7 @@
 {{- $img = resources.Get $path -}}
 {{- end -}}
 {{- with $img -}}
-<img alt="{{ $.Text }}" src="{{ $img.RelPermalink }}" width={{ $img.Width }} height={{ $img.Height }} />
+<img alt="{{ $.Text }}" src="{{ $img.RelPermalink }}" width={{ $img.Width }} height={{ $img.Height }} loading="lazy" />
 {{- else -}}
-<img alt="{{ $.Text }}" src="{{ $.Destination | safeURL }}" />
+<img alt="{{ $.Text }}" src="{{ $.Destination | safeURL }}" loading="lazy" />
 {{- end -}}
