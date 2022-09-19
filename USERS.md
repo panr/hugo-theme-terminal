@@ -1,5 +1,6 @@
 # Meet the users of Terminal theme!
 - https://xicode.se **magistern** (Teacher)
+- https://catdrout.xyz **Catdrout** (Python developer)
 - https://devmaster64.com **devmaster64** (Software Developer)
 - https://mickie1.gitlab.io/blog/ **mickie** (Engineer)
 - https://calloc.net **Vaibhav Yenamandra** (Software Engineer)
