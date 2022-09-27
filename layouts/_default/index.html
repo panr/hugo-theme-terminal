@@ -15,7 +15,7 @@
     {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
 
     {{ range $paginator.Pages }}
-      <div class="post on-list">
+      <article class="post on-list">
         <h1 class="post-title">
           <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
         </h1>
@@ -58,7 +58,7 @@
             href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
         </div>
         {{ end }}
-      </div>
+      </article>
     {{ end }}
     {{ partial "pagination.html" . }}
   </div>
