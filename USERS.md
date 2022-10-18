@@ -58,6 +58,7 @@
 - https://they.mint.lgbt **Joey Aliaga** (Software Developer & Student)
 - https://tatewilhelm.me **Tate Wilhelm** (Student, Programmer & Tinkerer)
 - https://mikefoden.com **Mike Foden** (Software Developer)
+- https://nazdarthegame.com/ **Michal Skoula** (Software Developer)
 
 <!--
  TEMPLATE:
