@@ -85,9 +85,22 @@ You can download the theme manually by going to [https://github.com/panr/hugo-th
 
 ### Install theme as Hugo Module
 
-```
+```bash
+hugo mod init github.com/panr/hugo-theme-terminal@module
+hugo mod get -u
+# or
 hugo mod get github.com/panr/hugo-theme-terminal@module
 ```
+
+then in config.toml add:
+
+```toml
+[module]
+[[module.imports]]
+  path = 'github.com/panr/hugo-theme-terminal'
+```
+
+When you do that, you don't need to add `theme = "terminal"`. The theme should be "mounted" right away.
 
 Please keep in mind that for the time of testing the theme is available as a module only from `module` branch. After testing period (fall, 2022), the module will be available on `master` branch by default.
 
