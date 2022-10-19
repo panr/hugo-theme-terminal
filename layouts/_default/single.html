@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="post">
+<article class="post">
   <h1 class="post-title">
     <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
   <div class="post-meta">
@@ -52,5 +52,5 @@
   {{ if not (.Params.hideComments | default false) }}
   {{ partial "comments.html" . }}
   {{ end }}
-</div>
+</article>
 {{ end }}
