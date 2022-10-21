@@ -1,4 +1,4 @@
-+++
+```
 title = "{{ replace .TranslationBaseName "-" " " | title }}"
 date = "{{ .Date }}"
 author = ""
@@ -10,4 +10,4 @@ description = ""
 showFullContent = false
 readingTime = false
 hideComments = false
-+++
+```
