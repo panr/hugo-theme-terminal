@@ -6,16 +6,16 @@
   {{ end }}
   <div class="posts">
     {{ range .Paginator.Pages }}
-      <div class="post on-list">
+      <article class="post on-list">
         <h1 class="post-title">
           <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
         </h1>
         <div class="post-meta">
-        {{- with .Date }}
-          <span class="post-date">
-            {{ .Format "2006-01-02" }}
-          </span>
-        {{- end }}
+          {{- with .Date }}
+            <time class="post-date">
+              {{ .Format "2006-01-02" }}
+            </time>
+          {{- end }}
           {{ with .Params.Author }}
             <span class="post-author">:: {{ . }}</span>
           {{ end }}
@@ -50,7 +50,7 @@
             href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
         </div>
         {{ end }}
-      </div>
+      </article>
     {{ end }}
     {{ partial "pagination.html" . }}
   </div>
