@@ -58,6 +58,7 @@
 - https://they.mint.lgbt **Joey Aliaga** (Software Developer & Student)
 - https://tatewilhelm.me **Tate Wilhelm** (Student, Programmer & Tinkerer)
 - https://mikefoden.com **Mike Foden** (Software Developer)
+- https://bg117.xyz/projects **bg117** (Student and Hobby Programmer)
 - https://www.grumpymetalguy.com **GrumpyMetalGuy** (General Grumper and Developer)
 - https://blog.jontes.page **Jonte** (general tech geek)
 - https://nazdarthegame.com/ **Michal Skoula** (Software Developer)
