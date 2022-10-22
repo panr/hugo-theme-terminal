@@ -18,7 +18,6 @@
 - [Found a bug?](#bug)
 - [New cool idea or feature](#feature)
 - [Terminal theme user?](#terminal-theme-user)
-- [Sponsoring](#sponsoring)
 - [Licence](#licence)
 
 ## Features
@@ -86,49 +85,52 @@ You can download the theme manually by going to [https://github.com/panr/hugo-th
 ### Install theme as Hugo Module
 
 ```bash
-hugo mod init github.com/panr/hugo-theme-terminal@module
-hugo mod get -u
-# or
-hugo mod get github.com/panr/hugo-theme-terminal@module
+hugo mod init github.com/panr/hugo-theme-terminal
+hugo mod get github.com/panr/hugo-theme-terminal
 ```
 
-then in config.toml add:
+and in your config file add:
 
 ```toml
 [module]
+  # this is needed when you fetch the theme as a submodule to your repo.
+  # replacements = "github.com/panr/hugo-theme-terminal -> themes/terminal"
 [[module.imports]]
   path = 'github.com/panr/hugo-theme-terminal'
 ```
 
-When you do that, you don't need to add `theme = "terminal"`. The theme should be "mounted" right away.
+and also remove reference to the theme (since Hugo Module don't need it):
 
-Please keep in mind that for the time of testing the theme is available as a module only from `module` branch. After testing period (fall, 2022), the module will be available on `master` branch by default.
+```toml
+# REMOVE OR COMMENT THIS LINE
+theme = "terminal"
+```
 
-More about Hugo Modules in the [official documentation](https://gohugo.io/hugo-modules/).
+Keep in mind that the theme by default won't show up in the `themes` directory. This means that you are using the theme as it was on the repository at the moment you fetched it. Your local `go.sum` file keeps all the references. Read more about Hugo Modules in the [official documentation](https://gohugo.io/hugo-modules/).
 
 ### Install theme locally
 
-```
-git clone -b module https://github.com/panr/hugo-theme-terminal.git themes/terminal
+```bash
+git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
 
 This will clone the repository directly to the `themes/terminal` directory.
 
 ### Install theme as a submodule
 
-```
-git submodule add -b module -f https://github.com/panr/hugo-theme-terminal.git themes/terminal
+```bash
+git submodule add -f https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
 
 This will install the repository as a sumbodule in the `themes/terminal` directory.
 
-⚠️ **The theme needs at least Hugo version 0.100.x**.
+⚠️ **The theme needs at least Hugo version 0.90.x**.
 
 ## How to run your site
 
 If you installed all needed `npm` dependencies, then you can run:
 
-```
+```bash
 hugo server -t terminal
 ```
 
@@ -254,11 +256,11 @@ See the default `post` file params supported by the theme — https://github.com
 - **Extended Head** — please take a look at `layouts/partials/extended_head.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_head.html
 - **Extended Footer** — please take a look at `layouts/partials/extended_footer.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_footer.html
 
-## How to (safely) edit the theme <a id="how-to-edit" />
+## How to edit the theme <a id="how-to-edit" />
 
-If you have to override only some of the styles, you can do this easily by adding `static/style.css` in your root directory and point things you want to change.
+If you are using as a remote Hugo Module (you don't have the theme files in the `theme/terminal`) and you have to override only some of the styles, you can do this easily by adding `static/style.css` in your root directory and point things you want to change.
 
-To change something directly in the theme, you have to go to `themes/terminal` and modify the files.
+If you have the theme files in the theme directory, then you can directly edit anything in the theme, you just have to go to `themes/terminal` and modify the files. No compilation step needed.
 
 ## Found a bug? <a id="bug" />
 
