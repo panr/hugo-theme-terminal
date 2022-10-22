@@ -1,3 +1,3 @@
 module github.com/panr/hugo-theme-terminal
 
-go 1.16
+go 1.19
