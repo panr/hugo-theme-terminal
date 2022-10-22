@@ -85,7 +85,11 @@ You can download the theme manually by going to [https://github.com/panr/hugo-th
 ### Install theme as Hugo Module
 
 ```bash
-hugo mod init github.com/panr/hugo-theme-terminal
+# If this is the first time you're using Hugo Modules
+# in your project. You have to initiate your own module before
+# you fetch the theme module.
+#
+# hugo mod init [your website/module name]
 hugo mod get github.com/panr/hugo-theme-terminal
 ```
 
@@ -97,13 +101,6 @@ and in your config file add:
   # replacements = "github.com/panr/hugo-theme-terminal -> themes/terminal"
 [[module.imports]]
   path = 'github.com/panr/hugo-theme-terminal'
-```
-
-and also remove reference to the theme (since Hugo Module don't need it):
-
-```toml
-# REMOVE OR COMMENT THIS LINE
-theme = "terminal"
 ```
 
 Keep in mind that the theme by default won't show up in the `themes` directory. This means that you are using the theme as it was on the repository at the moment you fetched it. Your local `go.sum` file keeps all the references. Read more about Hugo Modules in the [official documentation](https://gohugo.io/hugo-modules/).
