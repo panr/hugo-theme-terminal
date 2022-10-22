@@ -1,0 +1,30 @@
+input, textarea, select {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 0;
+  padding: 10px;
+  font: inherit;
+  appearance: none;
+
+  &:focus, :active {
+    border-color: var(--color);
+    outline: 1px solid var(--color);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+select {
+  background: var(--background);
+
+  option {
+    background: var(--background);
+  }
+}
+
+::placeholder {
+  color: color-mod(var(--accent) a(50%));
+}

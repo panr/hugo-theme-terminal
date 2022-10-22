@@ -15,11 +15,18 @@ a.button {
   margin-bottom: 5px;
   text-decoration: none;
   text-align: center;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border-radius: 0;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  font: inherit;
+  font-weight: bold;
   appearance: none;
   cursor: pointer;
   outline: none;
+
+  &:hover {
+    background: color-mod(var(--accent) a(90%));
+  }
 
   /* variants */
 
@@ -34,19 +41,10 @@ a.button {
     }
   }
 
-  &.primary {
-    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
-
-    &:hover {
-      box-shadow: 0 2px 6px rgba(50, 50, 93, .21), 0 1px 3px rgba(0, 0, 0, .08);
-    }
-  }
-
   &.link {
     background: none;
     font-size: 1rem;
   }
-
 
   /* sizes */
 
@@ -64,6 +62,8 @@ a.read-more,
 a.read-more:hover,
 a.read-more:active {
   display: inline-flex;
+  border: none;
+  color: var(--accent);
   background: none;
   box-shadow: none;
   padding: 0;
