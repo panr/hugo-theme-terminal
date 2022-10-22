@@ -18,7 +18,6 @@
 - [Found a bug?](#bug)
 - [New cool idea or feature](#feature)
 - [Terminal theme user?](#terminal-theme-user)
-- [Sponsoring](#sponsoring)
 - [Licence](#licence)
 
 ## Features
@@ -277,14 +276,8 @@ Sounds OK? Cool, let's rock! 🤘
 
 I'd be happy to know more about you and what you are doing. If you want to share it, please make a contribution and [add your site to the list](https://github.com/panr/hugo-theme-terminal/blob/master/USERS.md)! 🤗
 
-## Sponsoring
-
-If you like my work and want to support the development of the project, now you can! Just:
-
-<a href="https://www.buymeacoffee.com/panr" target="_blank"><img src="https://res.cloudinary.com/panr/image/upload/v1579374705/buymeacoffee_y6yvov.svg" alt="Buy Me A Coffee" ></a>
-
 ## License
 
-Copyright © 2019-2020 Radosław Kozieł ([@panr](https://twitter.com/panr))
+Copyright © 2019-2022 Radosław Kozieł ([@panr](https://twitter.com/panr))
 
 The theme is released under the MIT License. Check the [original theme license](https://github.com/panr/hugo-theme-terminal/blob/master/LICENSE.md) for additional licensing information.
