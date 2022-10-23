@@ -1,5 +1,12 @@
 {
+  "name": "terminal",
+  "version": "3.0.0",
   "author": "Radosław Kozieł <@panr> <radoslaw.koziel@gmail.com>",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo 'Test'"
+  },
   "browserslist": [
     "last 2 versions",
     ">1%",
@@ -29,11 +36,4 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "husky": "^5.1.3"
   },
-  "license": "MIT",
-  "main": "index.js",
-  "name": "terminal",
-  "scripts": {
-    "test": "echo 'Test'"
-  },
-  "version": "2.1.0"
 }

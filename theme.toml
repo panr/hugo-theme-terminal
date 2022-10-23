@@ -5,7 +5,7 @@ description = "A simple, retro theme for Hugo."
 homepage = "https://github.com/panr/hugo-theme-terminal/"
 tags = ["blog", "clean", "customizable", "dark", "highlighting", "minimal", "monotone", "multilingual", "personal", "responsive", "simple", "technical", "retro"]
 features = ["blog", "shortcode", "syntax highlighting"]
-min_version = 0.74
+min_version = 0.90
 
 [author]
   name = "panr"

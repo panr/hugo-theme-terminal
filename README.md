@@ -121,11 +121,17 @@ git submodule add -f https://github.com/panr/hugo-theme-terminal.git themes/term
 
 This will install the repository as a sumbodule in the `themes/terminal` directory.
 
+⚠️ If you encounter any issues with:
+
+```bash
+Error: module "terminal" not found; either add it as a Hugo Module or store it in "[...your custom path]/themes".: module does not exist
+```
+
+then please try to remove `theme = "terminal"` from your config file.
+
 ⚠️ **The theme needs at least Hugo version 0.90.x**.
 
 ## How to run your site
-
-If you installed all needed `npm` dependencies, then you can run:
 
 ```bash
 hugo server -t terminal
@@ -140,6 +146,8 @@ The theme doesn't require any advanced configuration. Just copy:
 ```toml
 baseurl = "/"
 languageCode = "en-us"
+# Add it only if you keep the theme in the `themes` directory.
+# Remove it if you use the theme as a remote Hugo Module.
 theme = "terminal"
 paginate = 5
 
