@@ -4,9 +4,9 @@
     <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
   </h1>
   <div class="post-meta">
-    {{ with .Date }}
+    {{ if .Date }}
       <time class="post-date">
-        {{ .Format "2006-01-02" }} ::
+        {{ .Date.Format "2006-01-02" }} ::
         {{ if $.Site.Params.showLastUpdated }}
           [{{or $.Site.Params.updatedDatePrefix "Updated"}} :: {{ .Lastmod.Format "2006-01-02" }}]
         {{ end }}

@@ -21,13 +21,13 @@
         </h1>
 
         <div class="post-meta">
-          {{ with .Date }}
+          {{ if .Date }}
             <time class="post-date">
-              {{ .Format "2006-01-02" }}
+              {{ .Date.Format "2006-01-02" }} ::
             </time>
           {{ end }}
           {{ with .Params.Author }}
-            <span class="post-author">:: {{ . }}</span>
+            <span class="post-author">{{ . }}</span>
           {{ end }}
         </div>
 
