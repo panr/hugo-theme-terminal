@@ -33,6 +33,7 @@
 - https://waterloos.niflheimr.blue/ **cindrmon** (Student and Aspiring Software Engineer)
 - https://monocle.rpod.club/ **classx** (DevOps Engineer)
 - https://wjdevschool.com/ **Wojciech Bogócki** (Making Things & Teaching / W&J Dev School)
+- https://erisianrite.com/ **ErisianRite** (Coding, Engineering, Tools for Thought)
 - https://dongzhi.me **Joe** (Software Developer)
 - https://isaes.com.tr/ **Isa Es** (Software Engineer)
 - https://conight.com **Conight Wang** (Software Engineer)
