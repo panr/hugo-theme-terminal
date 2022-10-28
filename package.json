@@ -35,5 +35,5 @@
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "husky": "^5.1.3"
-  },
+  }
 }
