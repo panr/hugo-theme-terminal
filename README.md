@@ -14,7 +14,7 @@
 - [How to configure](#how-to-configure)
 - [Post archetype](#post-archetype)
 - [Add-ons](#add-ons)
-- [How to (safely) edit the theme](#how-to-edit)
+- [How to edit the theme](#how-to-edit)
 - [Found a bug?](#bug)
 - [New cool idea or feature](#feature)
 - [Terminal theme user?](#terminal-theme-user)
@@ -82,6 +82,8 @@ A custom syntax highlighting based on PrismJS. All you need to do is to wrap you
 
 You can download the theme manually by going to [https://github.com/panr/hugo-theme-terminal.git](https://github.com/panr/hugo-theme-terminal.git) and pasting it to `themes/terminal` in your root directory.
 
+⚠️ The theme needs at least Hugo **Extended** v0.90.x.
+
 ### Install theme as Hugo Module
 
 ```bash
@@ -128,8 +130,6 @@ Error: module "terminal" not found; either add it as a Hugo Module or store it i
 ```
 
 then please try to remove `theme = "terminal"` from your config file.
-
-⚠️ **The theme needs at least Hugo version 0.90.x**.
 
 ## How to run your site
 
