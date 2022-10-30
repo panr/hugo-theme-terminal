@@ -82,6 +82,12 @@ A custom syntax highlighting based on PrismJS. All you need to do is to wrap you
 
 You can download the theme manually by going to [https://github.com/panr/hugo-theme-terminal.git](https://github.com/panr/hugo-theme-terminal.git) and pasting it to `themes/terminal` in your root directory.
 
+You can also choose **one of the 3 possibilities** to install the theme:
+
+1. as Hugo Module
+2. as a standalone local directory
+3. as a git submodule
+
 ⚠️ The theme needs at least Hugo **Extended** v0.90.x.
 
 ### Install theme as Hugo Module
