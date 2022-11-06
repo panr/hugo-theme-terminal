@@ -47,6 +47,8 @@
   }
 
   .menu {
+    display: flex;
+    align-items: flex-start;
     margin: 20px 1px;
 
     @media ($phone) {
@@ -112,7 +114,7 @@
 
       &-more {
         @include menu;
-        top: 35px;
+        top: 0;
         left: 0;
 
         &-trigger {
@@ -130,7 +132,7 @@
     }
 
     .spacer {
-      flex-grow: 1;
+      flex-grow: 1 !important;
     }
 
     .language-selector {
@@ -144,12 +146,12 @@
         flex-direction: row;
         color: $accent;
         cursor: pointer;
-        margin: 0;
+        margin-right: 0 !important;
       }
 
       &__more {
         @include menu;
-        top: 35px;
+        top: 0;
         right: 0;
       }
     }

@@ -9,7 +9,7 @@
       {{ if gt (len $.Site.Menus.main) $.Site.Params.showMenuItems }}
         <li>
           <ul class="menu__sub-inner">
-            <li class="menu__sub-inner-more-trigger">{{ $.Site.Params.MenuMore }} ▾</li>
+            <li class="menu__sub-inner-more-trigger">{{ $.Site.Params.MenuMore }}&nbsp;▾</li>
             <li>
               <ul class="menu__sub-inner-more hidden">
                 {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}
@@ -29,15 +29,16 @@
         {{ end }}
       {{ end }}
     {{ end }}
-
+  </ul>
+  <span class="spacer"></span>
+  <ul class="menu__inner menu__inner--desktop">
     {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
-    <!-- <div class="spacer"></div> -->
     <li>
       <ul class="language-selector">
+        <li class="language-selector-current">
+          {{ .Language.LanguageName }}&nbsp;▾
+        </li>
         <li>
-          <ul class="language-selector-current">
-            <li>{{ .Language.LanguageName }} ▾</li>
-          </ul>
           <ul class="language-selector__more hidden">
             {{ range $.Site.Home.AllTranslations }}
               <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
