@@ -29,8 +29,13 @@
         {{ end }}
       {{ end }}
     {{ end }}
+  {{ if eq $.Site.Params.LanguageMenuLevel 0 }}
+  <span class="spacer"></span>
+  <li>
+  {{ else }}
   </ul>
   <span class="spacer"></span>
+  {{ end }}
   <ul class="menu__inner menu__inner--desktop">
     {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
     <li>
@@ -49,6 +54,10 @@
     </li>
     {{ end }}
   </ul>
+  {{ if eq $.Site.Params.LanguageMenuLevel 0 }}
+  </li>
+  </ul>
+  {{ end }}
 
   <ul class="menu__inner menu__inner--mobile">
     {{ range $.Site.Menus.main }}

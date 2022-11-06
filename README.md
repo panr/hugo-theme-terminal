@@ -171,6 +171,9 @@ paginate = 5
   # show selector to switch language
   showLanguageSelector = false
 
+  # show language menu at the side of the menu rather than below
+  # LanguageMenuLevel = 0
+
   # set theme to full screen width
   fullWidthTheme = false
 
