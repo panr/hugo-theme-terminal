@@ -7,17 +7,20 @@
         {{ end }}
       {{ end }}
       {{ if gt (len $.Site.Menus.main) $.Site.Params.showMenuItems }}
-        <ul class="menu__sub-inner">
-          <li class="menu__sub-inner-more-trigger">{{ $.Site.Params.MenuMore }} ▾</li>
-
-          <ul class="menu__sub-inner-more hidden">
+        <li>
+          <ul class="menu__sub-inner">
+            <li class="menu__sub-inner-more-trigger">{{ $.Site.Params.MenuMore }} ▾</li>
+            <li>
+              <ul class="menu__sub-inner-more hidden">
             {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}
               {{ if not .HasChildren }}
                 <li><a href="{{ .URL }}">{{ .Name }}</a></li>
               {{ end }}
             {{ end }}
+              </ul>
+            </li>
           </ul>
-        </ul>
+        </li>
       {{ end }}
     {{ else }}
       {{ range $.Site.Menus.main }}
@@ -28,17 +31,20 @@
     {{ end }}
 
     {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
-    <div class="spacer"></div>
-    <ul class="language-selector">
-      <ul class="language-selector-current">
-          <li>{{ .Language.LanguageName }} ▾</li>
+    <!-- <div class="spacer"></div> -->
+    <li>
+      <ul class="language-selector">
+        <li>
+          <ul class="language-selector-current">
+            <li>{{ .Language.LanguageName }} ▾</li>
+          </ul>
+          <ul class="language-selector__more hidden">
+          {{ range $.Site.Home.AllTranslations }}
+            <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+          {{ end }}
+        </ul>
       </ul>
-      <ul class="language-selector__more hidden">
-        {{ range $.Site.Home.AllTranslations }}
-        <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
-        {{ end }}
-      </ul>
-    </ul>
+    </li>
     {{ end }}
   </ul>
 
