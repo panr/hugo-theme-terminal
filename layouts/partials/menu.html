@@ -12,11 +12,11 @@
             <li class="menu__sub-inner-more-trigger">{{ $.Site.Params.MenuMore }} ▾</li>
             <li>
               <ul class="menu__sub-inner-more hidden">
-            {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}
-              {{ if not .HasChildren }}
-                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-              {{ end }}
-            {{ end }}
+                {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}
+                  {{ if not .HasChildren }}
+                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                  {{ end }}
+                {{ end }}
               </ul>
             </li>
           </ul>
@@ -39,10 +39,11 @@
             <li>{{ .Language.LanguageName }} ▾</li>
           </ul>
           <ul class="language-selector__more hidden">
-          {{ range $.Site.Home.AllTranslations }}
-            <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
-          {{ end }}
-        </ul>
+            {{ range $.Site.Home.AllTranslations }}
+              <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+            {{ end }}
+          </ul>
+        </li>
       </ul>
     </li>
     {{ end }}
@@ -55,7 +56,7 @@
       {{ end }}
     {{ end }}
     {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
-    <hr />
+      <hr />
       {{ range $.Site.Home.AllTranslations }}
         <li>
           <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
