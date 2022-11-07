@@ -18,7 +18,7 @@ rules:
     - as-needed
   semi:
     - 2
-    - never
+    - always
   class-methods-use-this: 0
   comma-dangle:
     - 2
@@ -33,7 +33,7 @@ rules:
   func-names: 0
   quotes:
     - 2
-    - single
+    - double
     - allowTemplateLiterals: true
   no-underscore-dangle: 0
   object-curly-newline: 0
