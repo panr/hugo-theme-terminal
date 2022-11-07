@@ -4,7 +4,10 @@
       {{ partial "logo.html" . }}
     </div>
     {{ if len $.Site.Menus }}
-      <div class="menu-trigger">menu</div>
+      {{ partial "mobile-menu.html" . }}
+    {{ end }}
+    {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
+      {{ partial "language-menu.html" . }}
     {{ end }}
   </div>
   {{ if len $.Site.Menus }}

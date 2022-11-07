@@ -1,49 +1,44 @@
 const container = document.querySelector(".container");
-const menu = document.querySelector(".menu");
-const mobileMenuTrigger = document.querySelector(".menu-trigger");
-const desktopMenu = document.querySelector(".menu__inner--desktop");
-const desktopMenuTrigger = document.querySelector(".menu__sub-inner-more-trigger");
-const menuMore = document.querySelector(".menu__sub-inner-more");
-const mobileQuery = getComputedStyle(document.body).getPropertyValue("--phoneWidth");
-const isMobile = () => window.matchMedia(mobileQuery).matches;
-const handleMenuClasses = () => {
-  menuMore && menuMore.classList.toggle("hidden-on-mobile", !isMobile());
-};
+const allMenus = document.querySelectorAll(".menu");
 
-// Common
-
-menu && menu.addEventListener("click", (e) => e.stopPropagation());
-menuMore && menuMore.addEventListener("click", (e) => e.stopPropagation());
-
-// handleMenuClasses();
-
+// Hide menus on body click
 document.body.addEventListener("click", () => {
-  if (!isMobile() && menuMore && !menuMore.classList.contains("hidden")) {
-    menuMore.classList.add("hidden");
-  } else if (isMobile() && !menu.classList.contains("hidden")) {
-    menu.classList.add("hidden");
-  }
-});
-
-window.addEventListener("resize", handleMenuClasses);
-
-// Mobile menu
-
-mobileMenuTrigger &&
-  mobileMenuTrigger.addEventListener("click", (e) => {
-    e.stopPropagation();
-    menu && menu.classList.toggle("hidden-on-mobile");
-  });
-
-// Desktop menu
-
-desktopMenuTrigger &&
-  desktopMenuTrigger.addEventListener("click", (e) => {
-    e.stopPropagation();
-    menuMore && menuMore.classList.toggle("hidden");
-
-    if (menuMore.getBoundingClientRect().right > container.getBoundingClientRect().right) {
-      menuMore.style.left = "auto";
-      menuMore.style.right = 0;
+  allMenus.forEach(menu => {
+    if (menu.classList.contains("open")) {
+      menu.classList.remove("open");
     }
   });
+});
+
+// Reset menus on resize
+window.addEventListener("resize", () => {
+  allMenus.forEach(menu => {
+    menu.classList.remove("open");
+  });
+});
+
+// Handle desktop menu
+allMenus.forEach(menu => {
+  const trigger = menu.querySelector(".menu__trigger");
+  const dropdown = menu.querySelector(".menu__dropdown");
+
+  trigger.addEventListener("click", e => {
+    e.stopPropagation();
+
+    if (menu.classList.contains("open")) {
+      menu.classList.remove("open");
+    } else {
+      // Close all menus...
+      allMenus.forEach(m => m.classList.remove("open"));
+      // ...before opening the current one
+      menu.classList.add("open");
+    }
+
+    if (dropdown.getBoundingClientRect().right > container.getBoundingClientRect().right) {
+      dropdown.style.left = "auto";
+      dropdown.style.right = 0;
+    }
+  });
+
+  dropdown.addEventListener("click", e => e.stopPropagation());
+});

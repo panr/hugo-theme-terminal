@@ -1,5 +1,5 @@
-<nav class="menu hidden-on-mobile">
-  <ul class="menu__inner menu__inner--desktop">
+<nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
     {{ if or $.Site.Params.showMenuItems ( eq .Site.Params.showMenuItems 0 ) }}
       {{ range first $.Site.Params.showMenuItems $.Site.Menus.main }}
         {{ if not .HasChildren }}
@@ -8,10 +8,10 @@
       {{ end }}
       {{ if gt (len $.Site.Menus.main) $.Site.Params.showMenuItems }}
         <li>
-          <ul class="menu__sub-inner">
-            <li class="menu__sub-inner-more-trigger">{{ $.Site.Params.MenuMore }}&nbsp;▾</li>
+          <ul class="menu">
+            <li class="menu__trigger">{{ $.Site.Params.MenuMore }}&nbsp;▾</li>
             <li>
-              <ul class="menu__sub-inner-more hidden">
+              <ul class="menu__dropdown">
                 {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}
                   {{ if not .HasChildren }}
                     <li><a href="{{ .URL }}">{{ .Name }}</a></li>
@@ -27,41 +27,6 @@
         {{ if not .HasChildren }}
           <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
-      {{ end }}
-    {{ end }}
-  </ul>
-  <span class="spacer"></span>
-  <ul class="menu__inner menu__inner--desktop">
-    {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
-    <li>
-      <ul class="language-selector">
-        <li class="language-selector-current">
-          {{ .Language.LanguageName }}&nbsp;▾
-        </li>
-        <li>
-          <ul class="language-selector__more hidden">
-            {{ range $.Site.Home.AllTranslations }}
-              <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
-            {{ end }}
-          </ul>
-        </li>
-      </ul>
-    </li>
-    {{ end }}
-  </ul>
-
-  <ul class="menu__inner menu__inner--mobile">
-    {{ range $.Site.Menus.main }}
-      {{ if not .HasChildren }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-      {{ end }}
-    {{ end }}
-    {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
-      <hr />
-      {{ range $.Site.Home.AllTranslations }}
-        <li>
-          <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-        </li>
       {{ end }}
     {{ end }}
   </ul>
