@@ -26,7 +26,7 @@ a.button {
   outline: none;
 
   &:hover {
-    background: opacify($accent, .9);
+    background: transparentize($accent, .1);
   }
 
   /* variants */

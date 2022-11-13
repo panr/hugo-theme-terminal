@@ -34,7 +34,7 @@ code.language-scss,
 .token.class-name,
 .token.constant,
 .token.symbol {
-  color: opacify($accent, .7) !important;
+  color: transparentize($accent, .3) !important;
 }
 
 .token.property,
@@ -80,7 +80,7 @@ pre[class*="language-"] {
   right: 0;
   padding: 0;
   margin: 0;
-  background: opacify(mix($accent, #999, 90%), .08);
+  background: transparentize(mix($accent, #999, 90%), .92);
   pointer-events: none;
   line-height: inherit;
   white-space: pre;

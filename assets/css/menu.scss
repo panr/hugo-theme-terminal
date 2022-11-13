@@ -1,7 +1,7 @@
 @mixin menu {
   display: none;
   flex-direction: column;
-  $shadow-color: opacify($background, .8);
+  $shadow-color: transparentize($background, .2);
   $shadow: 0 10px $shadow-color, -10px 10px $shadow-color, 10px 10px $shadow-color;
   position: absolute;
   background: $background;

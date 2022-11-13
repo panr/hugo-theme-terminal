@@ -130,7 +130,7 @@ figure {
 code, kbd {
   font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace !important;
   font-feature-settings: normal;
-  background: color-mod($accent) a(20%);
+  background: transparentize($accent, .8);
   color: $accent;
   padding: 1px 6px;
   margin: 0 2px;
@@ -203,7 +203,7 @@ blockquote {
 
   &.twitter-tweet {
     position: relative;
-    background: color-mod($accent) a(10%);
+    background: transparentize($accent, .9);
     font: inherit;
     color: inherit;
     border: 1px solid $accent;

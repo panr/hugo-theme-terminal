@@ -26,5 +26,5 @@ select {
 }
 
 ::placeholder {
-  color: color-mod($accent) a(50%);
+  color: transparentize($accent, .5);
 }

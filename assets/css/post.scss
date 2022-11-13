@@ -32,7 +32,7 @@
   &-meta {
     font-size: 1rem;
     margin-bottom: 10px;
-    color: opcift($accent, 70%);
+    color: transparentize($accent, .3);
   }
 
   &-title {
@@ -113,7 +113,7 @@
 }
 
 .hanchor {
-  color: opacify($accent, .9);
+  color: transparentize($accent, .1);
   text-decoration: none;
   margin-left: 10px;
   visibility: hidden;
@@ -124,5 +124,5 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a {
 }
 
 .footnotes {
-  color: opacify($color, .5);
+  color: transparentize($color, .5);
 }
