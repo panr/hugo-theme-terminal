@@ -15,9 +15,10 @@ a.button {
   margin-bottom: 5px;
   text-decoration: none;
   text-align: center;
-  border-radius: 0;
+  border-radius: 8;
   border: 1px solid $accent;
   background: $accent;
+  color: $background;
   font: inherit;
   font-weight: bold;
   appearance: none;
