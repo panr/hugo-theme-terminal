@@ -1,4 +1,5 @@
-<nav class="navigation-menu" data-pagefind-ignore>
+<aside data-pagefind-ignore>
+<nav class="navigation-menu">
   <ul class="navigation-menu__inner menu--desktop">
     {{ if or $.Site.Params.showMenuItems ( eq .Site.Params.showMenuItems 0 ) }}
       {{ range first $.Site.Params.showMenuItems $.Site.Menus.main }}
@@ -31,3 +32,4 @@
     {{ end }}
   </ul>
 </nav>
+</aside>

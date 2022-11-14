@@ -1,5 +1,6 @@
 {{ if or .NextInSection .PrevInSection }}
-<div class="pagination" data-pagefind-ignore>
+<aside data-pagefind-ignore>
+<div class="pagination">
     <div class="pagination__title">
         <span class="pagination__title-h">{{ $.Site.Params.ReadOtherPosts }}</span>
         <hr />
@@ -23,4 +24,5 @@
         {{ end }}
     </div>
 </div>
+</aside>
 {{ end }}

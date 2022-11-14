@@ -1,4 +1,5 @@
-<div class="pagination" data-pagefind-ignore>
+<aside data-pagefind-ignore>
+<div class="pagination">
   <div class="pagination__buttons">
     {{ if .Paginator.HasPrev }}
       <a href="{{ .Paginator.Prev.URL }}" class="button previous">
@@ -14,3 +15,4 @@
     {{ end }}
   </div>
 </div>
+</aside>

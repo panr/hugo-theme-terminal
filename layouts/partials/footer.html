@@ -1,4 +1,5 @@
-<footer class="footer" data-pagefind-ignore>
+<aside data-pagefind-ignore>
+<footer class="footer">
   <div class="footer__inner">
     {{ if $.Site.Copyright }}
       <div class="copyright copyright--user">
@@ -11,6 +12,7 @@
       </div>
   </div>
 </footer>
+</aside>
 
 {{ $menu := resources.Get "js/menu.js" | js.Build }}
 {{ $prism := resources.Get "js/prism.js" | js.Build }}
