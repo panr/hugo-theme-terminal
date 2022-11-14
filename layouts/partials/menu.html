@@ -1,4 +1,4 @@
-<nav class="navigation-menu">
+<nav class="navigation-menu" data-pagefind-ignore>
   <ul class="navigation-menu__inner menu--desktop">
     {{ if or $.Site.Params.showMenuItems ( eq .Site.Params.showMenuItems 0 ) }}
       {{ range first $.Site.Params.showMenuItems $.Site.Menus.main }}
