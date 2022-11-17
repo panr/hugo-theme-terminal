@@ -9,7 +9,7 @@
 
 {{ $defaultStyles := resources.Get "css/style.scss" }}
 <!-- Local Theme Variables -->
-{{ if (isset .Params "color") }}
+{{ if and (isset .Params "color") (not (eq .Params.color "")) }}
   {{ $localColorCss := resources.Get (printf "css/color/%s.scss" .Params.color) }}
   {{ $localCss := slice $localColorCss $defaultStyles | resources.Concat (printf "css/%s-local.scss" .Params.color) }}
   {{ $localColorStyles := $localCss | resources.ToCSS }}
