@@ -3,6 +3,7 @@
 ![Terminal](https://github.com/panr/hugo-theme-terminal/blob/master/images/screenshot.png?raw=true)
 
 ### DEMO - https://hugo-terminal.now.sh/
+### ⚠️ The theme needs at least Hugo **Extended** v0.90.x.
 
 ---
 
