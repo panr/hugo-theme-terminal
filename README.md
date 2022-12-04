@@ -214,6 +214,10 @@ paginate = 5
   # include @
   creator = ""
   site = ""
+  # set Twitter card type for Twitter cards
+  # see https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started#started
+  # default value is "summary"
+  card_type = "summary"
 
 [languages]
   [languages.en]
