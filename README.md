@@ -211,7 +211,7 @@ paginate = 5
 [params.twitter]
   # set Twitter handles for Twitter cards
   # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
-  # do not include @
+  # include @
   creator = ""
   site = ""
 
