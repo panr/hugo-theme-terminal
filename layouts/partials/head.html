@@ -23,9 +23,9 @@
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 {{ end }}
 
-<!-- Custom CSS to override theme properties (/static/style.scss) -->
-{{ if (fileExists "static/style.scss") -}}
-  <link rel="stylesheet" href="{{ "style.scss" | absURL }}">
+<!-- Custom CSS to override theme properties (/static/style.css) -->
+{{ if (fileExists "static/style.css") -}}
+  <link rel="stylesheet" href="{{ "style.css" | absURL }}">
 {{- end }}
 
 <!-- Icons -->
