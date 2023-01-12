@@ -65,6 +65,7 @@
 - https://www.grumpymetalguy.com **GrumpyMetalGuy** (General Grumper and Developer)
 - https://blog.jontes.page **Jonte** (general tech geek)
 - https://nazdarthegame.com/ **Michal Skoula** (Software Developer)
+- https://kakan.omg.lol/ **KAKAN** (Student & Tinkerer)
 
 <!--
  TEMPLATE:
