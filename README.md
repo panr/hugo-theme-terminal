@@ -215,6 +215,10 @@ paginate = 5
   creator = ""
   site = ""
 
+[params.mastodon]
+  # set rel-Link to your mastodon profile
+  # site = "" # full URL, e.g. https://myInstance.org/@myUsername
+  
 [languages]
   [languages.en]
     languageName = "English"

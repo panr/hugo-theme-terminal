@@ -45,6 +45,11 @@
     <meta name="twitter:creator" content="{{ if .IsHome }}{{ $.Site.Params.Twitter.creator }}{{ else if isset .Params "authortwitter" }}{{ .Params.authorTwitter }}{{ else }}{{ .Params.Author }}{{ end }}" />
 {{ end }}
 
+<!-- Mastodon rel link -->
+{{ if (isset $.Site.Params.Mastodon "site") }}
+<link rel="me" href="{{ $.Site.Params.Mastodon.site }}" />
+{{ end }}
+
 <!-- OG data -->
 <meta property="og:locale" content="{{ $.Site.Language.Lang }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
