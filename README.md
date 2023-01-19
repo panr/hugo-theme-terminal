@@ -230,8 +230,8 @@ paginate = 5
     olderPosts = "Older posts"
     missingContentMessage = "Page not found..."
     missingBackButtonLabel = "Back to home page"
-	minuteReadingTime = "min read"
-	words = "words"
+    minuteReadingTime = "min read"
+    words = "words"
 
     [languages.en.params.logo]
       logoText = "Terminal"
