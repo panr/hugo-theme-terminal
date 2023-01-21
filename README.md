@@ -207,6 +207,8 @@ paginate = 5
   # can be overridden in a page's front-matter
   # TocTitle = "Table of Contents" # default
 
+  # whether to disable FiraCode webfonts and reduce a little bit roading time
+  # noFont = flase # default
 
 [params.twitter]
   # set Twitter handles for Twitter cards
