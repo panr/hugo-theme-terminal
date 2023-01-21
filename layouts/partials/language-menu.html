@@ -2,8 +2,12 @@
   <li class="menu__trigger">{{ .Language.LanguageName }}&nbsp;▾</li>
   <li>
     <ul class="menu__dropdown">
+      {{ $currLang := .Language.Lang }}
       {{ range $.Site.Home.AllTranslations }}
-        <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+        {{ $isCurrLang := eq $currLang .Language.Lang }}
+        <li {{ if $isCurrLang }} class="menu__active" {{ end }}>
+          <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+        </li>
       {{ end }}
     </ul>
   </li>

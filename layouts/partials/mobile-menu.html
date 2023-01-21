@@ -13,8 +13,10 @@
       {{ end }}
       {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
         <hr />
+        {{ $currLang := .Language.Lang }}
         {{ range $.Site.Home.AllTranslations }}
-          <li>
+          {{ $isCurrLang := eq $currLang .Language.Lang }}
+          <li {{ if $isCurrLang }} class="menu__active" {{ end }}>
             <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
           </li>
         {{ end }}
