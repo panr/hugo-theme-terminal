@@ -146,16 +146,19 @@ h4 {
 }
 
 article[autonumbering] h2:before {
+  color: $accent;
   counter-increment: h2;
   content: counter(h2) " "
 }
 
 article[autonumbering] h3:before {
+  color: $accent;
   counter-increment: h3;
   content: counter(h2) "." counter(h3) " "
 }
 
 article[autonumbering] h4:before {
+  color: $accent;
   counter-increment: h4;
   content: counter(h2) "." counter(h3) "." counter(h4) " "
 }
@@ -165,6 +168,7 @@ article[autonumbering] .table-of-contents ul {
 }
 
 article[autonumbering] .table-of-contents li a:before {
+  color: $accent;
   content: counters(item, ".") " ";
   counter-increment: item
 }
