@@ -2,9 +2,13 @@
   <li class="menu__trigger">Menu&nbsp;▾</li>
   <li>
     <ul class="menu__dropdown">
+      {{ $currURL := .Permalink }}
       {{ range $.Site.Menus.main }}
         {{ if not .HasChildren }}
-          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ $isCurrURL := eq (absLangURL $currURL) (absLangURL .URL) }}
+          <li {{ if $isCurrURL }} class="menu__active" {{ end }}>
+            <a href="{{ .URL }}">{{ .Name }}</a>
+          </li>
         {{ end }}
       {{ end }}
       {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
