@@ -1,10 +1,10 @@
 <nav class="navigation-menu">
   <ul class="navigation-menu__inner menu--desktop">
-    {{ $currURL := .Permalink }}
+    {{ $currURL := absLangURL .Permalink | strings.TrimSuffix "/" }}
     {{ if or $.Site.Params.showMenuItems ( eq .Site.Params.showMenuItems 0 ) }}
       {{ range first $.Site.Params.showMenuItems $.Site.Menus.main }}
         {{ if not .HasChildren }}
-          {{ $isCurrURL := eq (absLangURL $currURL) (absLangURL .URL) }}
+          {{ $isCurrURL := eq $currURL (absLangURL .URL | strings.TrimSuffix "/") }}
           <li {{ if $isCurrURL }} class="navigation-menu__active" {{ end }}>
             <a href="{{ .URL }}">{{ .Name }}</a>
           </li>
@@ -18,7 +18,7 @@
               <ul class="menu__dropdown">
                 {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}
                   {{ if not .HasChildren }}
-                    {{ $isCurrURL := eq (absLangURL $currURL) (absLangURL .URL) }}
+                    {{ $isCurrURL := eq $currURL (absLangURL .URL | strings.TrimSuffix "/") }}
                     <li {{ if $isCurrURL }} class="navigation-menu__active" {{ end }}>
                       <a href="{{ .URL }}">{{ .Name }}</a>
                     </li>
@@ -32,7 +32,7 @@
     {{ else }}
       {{ range $.Site.Menus.main }}
         {{ if not .HasChildren }}
-          {{ $isCurrURL := eq (absLangURL $currURL) (absLangURL .URL) }}
+          {{ $isCurrURL := eq $currURL (absLangURL .URL | strings.TrimSuffix "/") }}
           <li {{ if $isCurrURL }} class="navigation-menu__active" {{ end }}>
             <a href="{{ .URL }}">{{ .Name }}</a>
           </li>

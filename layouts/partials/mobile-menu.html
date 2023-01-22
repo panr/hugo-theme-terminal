@@ -2,10 +2,10 @@
   <li class="menu__trigger">Menu&nbsp;▾</li>
   <li>
     <ul class="menu__dropdown">
-      {{ $currURL := .Permalink }}
+      {{ $currURL := absLangURL .Permalink | strings.TrimSuffix "/" }}
       {{ range $.Site.Menus.main }}
         {{ if not .HasChildren }}
-          {{ $isCurrURL := eq (absLangURL $currURL) (absLangURL .URL) }}
+          {{ $isCurrURL := eq $currURL (absLangURL .URL | strings.TrimSuffix "/") }}
           <li {{ if $isCurrURL }} class="menu__active" {{ end }}>
             <a href="{{ .URL }}">{{ .Name }}</a>
           </li>
