@@ -242,10 +242,16 @@ paginate = 5
         identifier = "about"
         name = "About"
         url = "/about"
+
+        # The menu items are ordered alphabetically if no weight is provided.
+        # Otherwise, the menu items are ordered by weight from lowest to highest.
+        weight = 1
+        
       [[languages.en.menu.main]]
         identifier = "showcase"
         name = "Showcase"
         url = "/showcase"
+        weight = 2
 
 [module]
   # In case you would like to make changes to the theme and keep it locally in you repository,
