@@ -1,6 +1,6 @@
 {{ define "main" }}
   {{ if .Content }}
-    <div class="index-content {{ if .Params.framed -}}framed{{- end -}}">
+    <div class="index-content {{ if $.Site.Params.framed -}}framed{{- end -}}">
       {{ .Content }}
     </div>
   {{ end }}
