@@ -12,7 +12,8 @@
     {{ if .IsHome }}
       {{ $PageContext = .Site }}
     {{ end }}
-    {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
+    {{ $pages := where $PageContext.RegularPages "Type" $contentTypeName }}
+    {{ $paginator := .Paginate ( ( $pages | symdiff (where $pages "Params.hiddenPage" "==" "true")) | symdiff (where $pages "Params.hiddenPage" "==" true) ) }}
 
     {{ range $paginator.Pages }}
       <article class="post on-list">

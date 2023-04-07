@@ -3,13 +3,16 @@
     <h1>{{ .Title }}</h1>
     <ul>
       {{ $type := .Type }}
-      {{ range $key, $value := .Data.Terms.Alphabetical }}
-      {{ $name := .Name }}
-      {{ $count := .Count }}
+      {{ range $term := .Data.Terms.Alphabetical }}
+      {{ $termPages := (.Pages | symdiff (where .Pages "Params.hiddenPage" "==" "true")) | symdiff (where .Pages "Params.hiddenPage" true) }}
+      {{ if (len $termPages | ne 0) }}
+      {{ $name := $term.Name }}
+      {{ $count := len $termPages }}
       {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
         <li>
           <a class="terms-title" href="{{ .Permalink }}">{{ .Name }} ({{ $count }})</a>
         </li>
+      {{ end }}
       {{ end }}
       {{ end }}
     </ul>

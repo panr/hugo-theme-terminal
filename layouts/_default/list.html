@@ -5,7 +5,8 @@
     </div>
   {{ end }}
   <div class="posts">
-    {{ range .Paginator.Pages }}
+    {{ $paginator := .Paginate ( (.Pages | symdiff (where .Pages "Params.hiddenPage" "==" "true")) | symdiff (where .Pages "Params.hiddenPage" true) ) }}
+    {{ range $paginator.Pages }}
       <article class="post on-list">
         <h1 class="post-title">
           <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
