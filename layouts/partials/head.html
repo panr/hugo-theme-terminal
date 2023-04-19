@@ -2,11 +2,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else if .Description}}{{ .Description | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 <meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}" />
-<meta name="robots" content="noodp" />
 {{ if .Params.noindex }}
   {{ if or (eq (.Param "noindex") true) (eq (.Param "noindex") "true") }}
     <meta name="robots" content="noindex" /> 
   {{ end }}
+{{ else }}
+  <meta name="robots" content="noodp" />
 {{ end }}
 <link rel="canonical" href="{{ .Permalink }}" />
 
