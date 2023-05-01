@@ -262,31 +262,31 @@ ol {
 ol {
   list-style: none;
   counter-reset: li;
+}
 
-  li {
-    counter-increment: li;
-  }
+ol > li {
+  counter-increment: li;
+}
 
-  li:before {
-    content: counter(li);
-    position: absolute;
-    right: calc(100% + 10px);
-    color: $accent;
-    display: inline-block;
-    text-align: right;
-  }
+ol > li:before {
+  content: counter(li);
+  position: absolute;
+  right: calc(100% + 10px);
+  color: $accent;
+  display: inline-block;
+  text-align: right;
+}
 
-  ol {
-    margin-left: 38px;
+ol > ol {
+  margin-left: 38px;
+}
 
-    li {
-      counter-increment: li;
-    }
+ol > ol > li {
+  counter-increment: li;
+}
 
-    li:before {
-      content: counters(li, ".") " ";
-    }
-  }
+ol > ol > li:before {
+  content: counters(li, ".") " ";
 }
 
 mark {
