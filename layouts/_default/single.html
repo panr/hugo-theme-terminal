@@ -12,7 +12,7 @@
         {{ end }}
       </time>
     {{ end }}
-    {{ with .Params.Author }}
+    {{ with $.Param "author" }}
       <span class="post-author">{{ . }}</span>
     {{ end }}
     {{ if and (.Param "readingTime") (eq (.Param "readingTime") true) }}
