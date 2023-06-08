@@ -41,7 +41,9 @@
           </span>
         {{ end }}
 
+        {{ if not (.Param "hideCoverInLists") }}
         {{ partial "cover.html" . }}
+        {{ end }}
 
         <div class="post-content">
           {{ if .Params.showFullContent }}

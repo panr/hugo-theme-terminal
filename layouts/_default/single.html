@@ -27,7 +27,10 @@
       {{ end }}
     </span>
   {{ end }}
+
+  {{ if not (.Param "hideCover") }}
   {{ partial "cover.html" . }}
+  {{ end }}
 
   {{ if (.Params.Toc | default .Site.Params.Toc) }}
     <div class="table-of-contents">
