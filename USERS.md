@@ -49,3 +49,17 @@
 - https://ku0hn.radio **Ben Kuhn** (Ham Radio Operator, InfoSec Engineer, Tinkerer)
 - https://www.grumpymetalguy.com **GrumpyMetalGuy** (General Grumper and Developer)
 - https://blog.jontes.page **Jonte** (general tech geek)
+- https://nazdarthegame.com/ **Michal Skoula** (Software Developer)
+- https://1mup.myorange.house **Antonio Garosi** (Street art gallery)
+- https://kitchvx.github.io **Nathan Kitching** (IT Student)
+- https://dgood.win **Dom Goodwin** (Platform Engineer)
+- https://sir-photch.xyz **Sir-Photch** (ComSci-student. German Blog)
+- https://drewmorris.info **Drew Morris** (Mathematician && Computer Scientist)
+
+<!--
+ TEMPLATE:
+
+ - https://radoslawkoziel.pl **Radek Kozieł** (Software Designer and Developer)
+
+ -->
+
