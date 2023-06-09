@@ -72,6 +72,16 @@
     margin-top: 30px;
   }
 
+  input[type="checkbox"] {
+    vertical-align: middle;
+    padding: 5px;
+    margin: 0 .2em .25em -.2em;
+  }
+
+  input[type="checkbox"]:checked {
+    background: $accent;
+  }
+
   &-cover {
     border: 20px solid $accent;
     background: transparent;
