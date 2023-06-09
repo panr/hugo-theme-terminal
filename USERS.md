@@ -67,6 +67,9 @@
 - https://nazdarthegame.com/ **Michal Skoula** (Software Developer)
 - https://1mup.myorange.house **Antonio Garosi** (Street art gallery)
 - https://kitchvx.github.io **Nathan Kitching** (IT Student)
+- https://dgood.win **Dom Goodwin** (Platform Engineer)
+- https://sir-photch.xyz **Sir-Photch** (ComSci-student. German Blog)
+- https://drewmorris.info **Drew Morris** (Mathematician && Computer Scientist)
 
 <!--
  TEMPLATE:
