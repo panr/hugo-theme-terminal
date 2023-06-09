@@ -263,28 +263,28 @@ ol {
   list-style: none;
   counter-reset: li;
 
-  li {
+  > li {
     counter-increment: li;
-  }
 
-  li:before {
-    content: counter(li);
-    position: absolute;
-    right: calc(100% + 10px);
-    color: $accent;
-    display: inline-block;
-    text-align: right;
-  }
-
-  ol {
-    margin-left: 38px;
-
-    li {
-      counter-increment: li;
+    &:before {
+      content: counter(li);
+      position: absolute;
+      right: calc(100% + 10px);
+      color: $accent;
+      display: inline-block;
+      text-align: right;
     }
 
-    li:before {
-      content: counters(li, ".") " ";
+    > ol {
+      margin-left: 38px;
+
+      > li {
+        counter-increment: li;
+
+        &:before {
+          content: counters(li, ".") " ";
+        }
+      }
     }
   }
 }
