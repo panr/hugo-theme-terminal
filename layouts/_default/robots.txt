@@ -1,0 +1,4 @@
+User-Agent: *
+{{ range ((where site.Pages "Params.hiddenPage" "==" "true") | union (where site.Pages "Params.hiddenPage" true)) -}}
+Disallow: {{ .RelPermalink }}
+{{ end }}
