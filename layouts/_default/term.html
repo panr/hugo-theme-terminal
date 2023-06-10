@@ -17,7 +17,7 @@
               {{- .Date.Format "2006-01-02" -}}
             </time>
           {{- end -}}
-          {{- with .Params.Author -}}
+          {{- with $.Param "author" -}}
             <span class="post-author">{{- . -}}</span>
           {{- end -}}
         </div>
