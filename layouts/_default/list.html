@@ -1,4 +1,7 @@
 {{ define "main" }}
+  {{ if .Kind | eq "term" -}}
+    <h1>Posts for: #{{ .Title }}</h1>
+  {{ end -}}
   {{ with .Content }}
     <div class="index-content">
       {{ . }}
