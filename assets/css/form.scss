@@ -4,6 +4,7 @@ input, textarea, select {
   border: 1px solid $accent;
   border-radius: 0;
   padding: 10px;
+  margin: 5px 0;
   font: inherit;
   appearance: none;
 
@@ -27,4 +28,16 @@ select {
 
 ::placeholder {
   color: transparentize($accent, .5);
+}
+
+input {
+  &[type="checkbox"] {
+    vertical-align: middle;
+    padding: 10px;
+    box-shadow: inset 0 0 0 3px $background;
+
+    &:checked {
+      background: $accent;
+    }
+  }
 }

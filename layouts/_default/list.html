@@ -11,14 +11,14 @@
           <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
         </h1>
         <div class="post-meta">
-          {{ if .Date }}
+          {{- if .Date -}}
             <time class="post-date">
-              {{ .Date.Format "2006-01-02" }} ::
+              {{- .Date.Format "2006-01-02" -}}
             </time>
-          {{ end }}
-          {{ with $.Param "author" }}
-            <span class="post-author">{{ . }}</span>
-          {{ end }}
+          {{- end -}}
+          {{- with $.Param "author" -}}
+            <span class="post-author">{{- . -}}</span>
+          {{- end -}}
         </div>
 
         {{ if .Params.tags }}

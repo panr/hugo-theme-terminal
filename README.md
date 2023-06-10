@@ -19,7 +19,7 @@
 - [Found a bug?](#bug)
 - [New cool idea or feature](#feature)
 - [Terminal theme user?](#terminal-theme-user)
-- [Licence](#licence)
+- [License](#license)
 
 ## Features
 

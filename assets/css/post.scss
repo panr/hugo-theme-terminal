@@ -33,6 +33,14 @@
     font-size: 1rem;
     margin-bottom: 10px;
     color: transparentize($accent, .3);
+
+    & > *:not(:first-child) {
+      &::before {
+        content: "::";
+        display: inline-block;
+        margin: 0 8px;
+      }
+    }
   }
 
   &-title {
