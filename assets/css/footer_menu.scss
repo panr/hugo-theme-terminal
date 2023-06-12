@@ -1,0 +1,9 @@
+.footer-menu {
+  margin: 0 auto!important;
+  opacity: .5;
+}
+@media (max-width: 684px) {
+  .footer-menu ul {
+    flex-direction: row;
+  }
+}

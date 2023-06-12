@@ -1,0 +1,14 @@
+<!--
+individual footer menu
+-->
+<nav class="footer-menu">
+  <ul class="navigation-menu__inner">
+    {{ if gt ($.Site.Menus.footer) 0 }}
+      {{ range $.Site.Menus.footer }}
+        {{ if not .HasChildren }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </ul>
+</nav>

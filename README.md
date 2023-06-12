@@ -256,6 +256,10 @@ paginate = 5
         identifier = "showcase"
         name = "Showcase"
         url = "/showcase"
+      [[languages.en.menu.footer]]
+        identifier = "imprint"
+        name = "Imprint"
+        url = "/imprint"
 
 [module]
   # In case you would like to make changes to the theme and keep it locally in you repository,
