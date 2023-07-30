@@ -3,7 +3,7 @@
   font-family: "Fira Code";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/FiraCode-Regular.woff") format("woff");
+  src: url("../fonts/FiraCode-Regular.woff2") format("woff2");
   font-feature-settings: "liga", "tnum", "ss01", "locl";
   font-variant-ligatures: contextual;
 }
@@ -13,7 +13,7 @@
   font-family: "Fira Code";
   font-style: normal;
   font-weight: 800;
-  src: url("../fonts/FiraCode-Bold.woff") format("woff");
+  src: url("../fonts/FiraCode-Bold.woff2") format("woff2");
   font-feature-settings: "liga", "tnum", "ss01", "locl";
   font-variant-ligatures: contextual;
 }
