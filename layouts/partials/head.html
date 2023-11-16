@@ -4,7 +4,7 @@
 <meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}" />
 {{ if .Params.noindex }}
   {{ if or (eq (.Param "noindex") true) (eq (.Param "noindex") "true") }}
-    <meta name="robots" content="noindex" />
+    <meta name="robots" content="noindex,nofollow" />
   {{ end }}
 {{ else }}
   <meta name="robots" content="noodp" />
