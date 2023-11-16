@@ -75,5 +75,8 @@
   <link href="{{ .RelPermalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }}" />
 {{ end }}
 
+<!-- Add structured data. -->
+{{ partial "structured_data.html" . }}
+
 <!-- Extended head section-->
 {{ partial "extended_head.html" . }}
