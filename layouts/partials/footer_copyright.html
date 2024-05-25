@@ -5,9 +5,16 @@
 
 
 {{ if $.Site.Params.Copyright }}
-	{{ $.Site.Params.Copyright | safeHTML }}
+	{{ $.Site.Params.Copyright | safeHTML }}<br>
 {{ else }}
-	© {{ now.Year }} {{ $.Site.Params.Author }}<br>
+	©
+
+	{{ if and ($.Site.Params.CopyrightStartYear)
+		  (lt $.Site.Params.CopyrightStartYear now.Year) }}
+		{{ $.Site.Params.CopyrightStartYear }} -
+	{{ end }}
+
+	{{ now.Year }} {{ $.Site.Params.Author }}<br>
 	Powered by <a href="https://gohugo.io">Hugo</a>
 {{ end }}
 
