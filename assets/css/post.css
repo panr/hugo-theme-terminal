@@ -1,0 +1,140 @@
+/* _post.scss */
+.index-content {
+  margin-top: 20px;
+}
+
+.framed {
+  border: 1px solid var(--accent);
+  padding: 20px;
+}
+
+.framed *:first-child {
+  margin-top: 0;
+}
+
+.framed *:last-child {
+  margin-bottom: 0;
+}
+
+.posts {
+  width: 100%;
+}
+
+.post {
+  width: 100%;
+  text-align: left;
+  padding: 40px 0;
+}
+
+.post:not(:last-of-type) {
+  border-bottom: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+}
+
+.post-meta {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: color-mix(in srgb, var(--foreground) 50%, transparent);
+}
+
+.post-meta > *:not(:first-child)::before {
+  content: "::";
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.post-title {
+  position: relative;
+  color: var(--accent);
+  margin-top: 0 !important;
+  margin-bottom: 15px !important;
+  padding-bottom: 15px;
+  border-bottom: 3px dotted var(--accent);
+}
+
+.post-title::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  display: block;
+  width: 100%;
+  border-bottom: 3px dotted var(--accent);
+}
+
+.post-title a {
+  text-decoration: none;
+}
+
+.post-tags {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.table-of-contents {
+  margin: 40px 0;
+}
+
+.post-content {
+  margin-top: 30px;
+}
+
+.post-cover {
+  margin: 40px 0;
+}
+
+.post ul {
+  list-style: none;
+}
+
+.post ul li:not(:empty)::before {
+  content: "-";
+  position: absolute;
+  left: -20px;
+  color: var(--accent);
+}
+
+.post--regulation h1 {
+  justify-content: center;
+}
+
+.post--regulation h2 {
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.post--regulation h2 + h2 {
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.hanchor {
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 10px;
+  visibility: hidden;
+}
+
+h1:hover .hanchor,
+h2:hover .hanchor,
+h3:hover .hanchor,
+h4:hover .hanchor,
+h5:hover .hanchor,
+h6:hover .hanchor {
+  visibility: visible;
+}
+
+.footnotes {
+  color: color-mix(in srgb, var(--foreground) 50%, transparent);
+}
+
+.footnotes hr {
+  background: color-mix(in srgb, var(--foreground) 50%, transparent);
+}
+
+@media (max-width: 684px) {
+  .post-cover {
+    padding: 10px;
+    border-width: 10px;
+  }
+}

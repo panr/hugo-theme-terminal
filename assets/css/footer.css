@@ -1,0 +1,47 @@
+/* _footer.scss */
+.footer {
+  padding: 40px 0;
+  flex-grow: 0;
+  opacity: 0.5;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  width: 760px;
+  max-width: 100%;
+}
+
+.footer a {
+  color: inherit;
+}
+
+.footer .copyright {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1;
+  align-items: center;
+  font-size: 1rem;
+  justify-content: center;
+}
+
+.footer .copyright--user {
+  margin: auto;
+  text-align: center;
+}
+
+.footer .copyright > *:first-child:not(:only-child) {
+  margin-right: 10px;
+}
+
+.footer .copyright span {
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .footer__inner {
+    flex-direction: column;
+  }
+}

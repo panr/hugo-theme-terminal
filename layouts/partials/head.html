@@ -4,7 +4,7 @@
 <meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}" />
 {{ if .Params.noindex }}
   {{ if or (eq (.Param "noindex") true) (eq (.Param "noindex") "true") }}
-    <meta name="robots" content="noindex" /> 
+    <meta name="robots" content="noindex" />
   {{ end }}
 {{ else }}
   <meta name="robots" content="noodp" />
@@ -13,34 +13,23 @@
 
 {{ template "_internal/google_analytics.html" . }}
 
-{{ $defaultStyles := resources.Get "css/style.scss" }}
-<!-- Local Theme Variables -->
-{{ if and (isset .Params "color") (not (eq .Params.color "")) }}
-  {{ $localColorCss := resources.Get (printf "css/color/%s.scss" .Params.color) }}
-  {{ $localCss := slice $localColorCss $defaultStyles | resources.Concat (printf "css/%s-local.scss" .Params.color) }}
-  {{ $localColorStyles := $localCss | resources.ToCSS }}
-  <link rel="stylesheet" href="{{ $localColorStyles.Permalink }}">
-{{ else }}
-  <!-- Theme Variables -->
-  {{ $colorCss := resources.Get (printf "css/color/%s.scss" ($.Site.Params.ThemeColor | default "orange")) }}
-  {{ $css := slice $colorCss $defaultStyles | resources.Concat "css/base.scss" }}
-  {{ $options := (dict "targetPath" "styles.css" "outputStyle" "compressed" "enableSourceMap" true "precision" 6 "includePaths" (slice "node_modules")) }}
-  {{ $styles := $css | resources.ToCSS $options }}
+{{ $css := resources.Match "css/*.css" }}
+{{ range $css }}
+  {{ $styles := . | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}">
 {{ end }}
-
+<!-- Custom Terminal.css styles -->
+{{ if (fileExists "static/terminal.css") -}}
+  <link rel="stylesheet" href="{{ "terminal.css" | absURL }}">
+{{- end }}
 <!-- Custom CSS to override theme properties (/static/style.css) -->
 {{ if (fileExists "static/style.css") -}}
   <link rel="stylesheet" href="{{ "style.css" | absURL }}">
 {{- end }}
 
 <!-- Icons -->
-{{ if isset $.Site.Params "favicon" }}
-  <link rel="shortcut icon" href="{{ $.Site.Params.favicon | absURL }}">
-{{ else }}
-  <link rel="shortcut icon" href="{{ printf "img/theme-colors/%s.png" (or .Params.color $.Site.Params.ThemeColor | default "orange") | absURL }}">
-  <link rel="apple-touch-icon" href="{{ printf "img/theme-colors/%s.png" (or .Params.color $.Site.Params.ThemeColor | default "orange") | absURL }}">
-{{ end }}
+<link rel="shortcut icon" href="{{ "favicon.png" | absURL }}">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary" />
@@ -65,11 +54,7 @@
   {{ end }}
   <meta property="og:image" content="{{ $pageCover | absURL }}">
 {{ else }}
-  {{ if isset $.Site.Params "favicon" }}
-    <meta property="og:image" content="{{ $.Site.Params.favicon | absURL }}">
-  {{ else }}
-    <meta property="og:image" content="{{ printf "img/favicon/%s.png" $.Site.Params.ThemeColor | absURL }}">
-  {{ end }}
+  <meta property="og:image" content="{{ "og-image.png" | absURL }}">
 {{ end }}
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">

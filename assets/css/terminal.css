@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Code:wght@700&display=swap");
+
+:root {
+  --background: #222129;
+  --foreground: #ffffff;
+  --accent: #ffa86a;
+  --radius: 0px;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family:
+    "Fira Code",
+    Monaco,
+    Consolas,
+    Ubuntu Mono,
+    monospace;
+  font-size: 1rem;
+  line-height: 1.54;
+  letter-spacing: -0.02em;
+  background-color: var(--background);
+  color: var(--foreground);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "liga", "tnum", "zero", "ss01", "locl";
+  font-variant-ligatures: contextual;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+}
+::placeholder {
+  color: color-mix(in srgb var(--foreground) 50%, black);
+}
+a {
+  color: var(--accent);
+}
+button,
+.button,
+a.button {
+  position: relative;
+  font: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  background: var(--accent);
+  color: var(--background);
+  padding: 5px 18px;
+  margin: 5px 0;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  transition: background 0.15s linear;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+button:hover,
+.button:hover,
+a.button:hover {
+  background: color-mix(in srgb, var(--accent) 85%, transparent);
+}
+button:focus-visible,
+.button:focus-visible,
+a.button:focus-visible,
+a:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 2px;
+}
+fieldset {
+  display: inline-block;
+  border: 1px dashed var(--foreground);
+}
+input,
+textarea,
+select {
+  background: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--foreground);
+  border-radius: var(--radius);
+  padding: 10px;
+  margin: 5px 0;
+  font: inherit;
+  appearance: none;
+}
+input:focus-visible,
+input:active,
+textarea:focus-visible,
+textarea:active,
+select:focus-visible,
+select:active {
+  border-color: var(--accent);
+  outline: 1px solid var(--accent);
+  outline-offset: 2px;
+}
+input:active,
+textarea:active,
+select:active {
+  box-shadow: none;
+}
+select {
+  background-image: linear-gradient(
+      45deg,
+      transparent 50%,
+      var(--foreground) 50%
+    ),
+    linear-gradient(135deg, var(--foreground) 50%, transparent 50%);
+  background-position: calc(100% - 20px), calc(100% - 1em);
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 40px;
+}
+select option {
+  background: var(--background);
+}
+input[type="checkbox"] {
+  vertical-align: middle;
+  padding: 10px;
+  box-shadow: inset 0 0 0 3px var(--background);
+}
+input[type="checkbox"]:checked {
+  background: var(--accent);
+}
+img {
+  display: block;
+  max-width: 100%;
+  border: 8px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 8px;
+  overflow: hidden;
+}
+figure figcaption {
+  background: var(--accent);
+  color: var(--background);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: -8px;
+}
+p {
+  margin-bottom: 20px;
+}
+ul,
+ol {
+  margin-left: 4ch;
+  padding: 0;
+}
+li::marker {
+  color: var(--accent);
+}
+ul li,
+ol li {
+  position: relative;
+}
+code,
+kbd {
+  font-family:
+    "Fira Code",
+    Monaco,
+    Consolas,
+    Ubuntu Mono,
+    monospace !important;
+  font-feature-settings: normal;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  color: var(--accent);
+  padding: 1px 6px;
+  margin: 0 2px;
+  font-size: 0.95rem;
+}
+kbd {
+  border-top: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  border-left: 1px solid var(--accent);
+  border-right: 1px solid var(--accent);
+  border-bottom: 4px solid var(--accent);
+  border-radius: 4px;
+}
+code code {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+pre {
+  tab-size: 4;
+  background: color-mix(in srgb, var(--accent) 5%, transparent) !important;
+  color: var(--foreground);
+  padding: 20px 10px;
+  font-size: 0.95rem !important;
+  overflow: auto;
+  border-radius: var(--radius);
+  border: 1px solid color-mix(in srgb, var(--accent) 10%, transparent);
+}
+pre code {
+  background: none !important;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  border: none;
+}
+sup {
+  line-height: 0;
+}
+abbr {
+  position: relative;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--accent);
+  cursor: help;
+}
+abbr:hover:before {
+  visibility: visible;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.25em;
+}
+mark {
+  background: color-mix(in srgb, var(--accent) 45%, transparent);
+  color: var(--foreground);
+}
+blockquote {
+  position: relative;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  margin: 0;
+  padding: 25px;
+}
+blockquote:before {
+  content: ">";
+  display: block;
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+blockquote p:first-child {
+  margin-top: 0;
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+table {
+  table-layout: auto;
+  border-collapse: collapse;
+}
+table,
+th,
+td {
+  border: 1px dashed var(--accent);
+  padding: 10px;
+}
+th {
+  border-style: solid;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  color: var(--accent);
+  text-align: left;
+}
+hr {
+  width: 100%;
+  border: none;
+  background: var(--accent);
+  height: 1px;
+}

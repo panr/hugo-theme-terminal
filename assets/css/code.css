@@ -1,0 +1,118 @@
+/* _code.scss */
+pre {
+  margin: 20px 0;
+}
+
+.code-toolbar {
+  position: relative;
+  margin: 20px 0;
+  border: 1px solid color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.code-toolbar + .code-toolbar,
+.code-toolbar + .highlight,
+.code-toolbar + .highlight .code-toolbar {
+  border-top: 0;
+  margin-top: -20px;
+}
+
+.code-toolbar pre, .code-toolbar code {
+  border: none;
+}
+
+.code-toolbar code {
+  display: block;
+  color: color-mix(in srgb, var(--accent) 50%, var(--foreground));
+}
+
+.code-toolbar > .toolbar button {
+  font-size: 0.8em !important;
+  font-weight: bold !important;
+  background:  var(--accent) !important;
+  color: var(--background) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: none !important;
+  border: 1px solid var(--background) !important;
+  margin: 6px !important;
+  padding: 10px !important;
+  user-select: none;
+}
+
+.collapsable-code {
+  position: relative;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.collapsable-code input[type=checkbox] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.collapsable-code input[type=checkbox]:checked ~ pre,
+.collapsable-code input[type=checkbox]:checked ~ .code-toolbar pre {
+  display: none;
+}
+
+.collapsable-code input[type=checkbox]:checked ~ .code-toolbar {
+  padding: 0;
+  border-top: none;
+}
+
+.collapsable-code input[type=checkbox]:checked ~ .code-toolbar .toolbar {
+  display: none;
+}
+
+.collapsable-code input[type=checkbox]:checked ~ label .collapsable-code__toggle::after {
+  content: attr(data-label-expand);
+}
+
+.collapsable-code label {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-width: 30px;
+  min-height: 30px;
+  margin: 0;
+  border-bottom: 1px solid var(--accent);
+  cursor: pointer;
+}
+
+.collapsable-code__title {
+  flex: 1;
+  color: var(--accent);
+  padding: 3px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.collapsable-code__language {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-bottom: none;
+  text-transform: uppercase;
+  padding: 3px 10px;
+}
+
+.collapsable-code__toggle {
+  color: var(--accent);
+  font-size: 16px;
+  padding: 3px 10px;
+}
+
+.collapsable-code__toggle::after {
+  content: attr(data-label-collapse);
+}
+
+.collapsable-code pre {
+  margin-top: 0;
+}
+
+.collapsable-code pre::first-line {
+  line-height: 0;
+}
+
+.collapsable-code .code-toolbar {
+  margin: 0;
+}

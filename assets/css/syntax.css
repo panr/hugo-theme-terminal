@@ -1,0 +1,116 @@
+/* _syntax.scss */
+code.language-css,
+code.language-scss,
+.token.boolean,
+.token.string,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.language-scss .token.string,
+.style .token.string,
+.token.attr-value,
+.token.keyword,
+.token.control,
+.token.directive,
+.token.statement,
+.token.regex,
+.token.atrule,
+.token.number,
+.token.inserted,
+.token.important {
+  color: var(--accent) !important;
+}
+
+.token.tag-id,
+.token.atrule-id,
+.token.operator,
+.token.unit,
+.token.placeholder,
+.token.variable,
+.token.attr-name,
+.token.namespace,
+.token.deleted,
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+  color: color-mix(in srgb, var(--accent) 70%, transparent) !important;
+}
+
+.token.property,
+.token.function,
+.token.function-name,
+.token.deleted,
+code.language-javascript,
+code.language-html,
+.command-line-prompt > span::before {
+  color: var(--accent) !important;
+}
+
+.token.selector,
+.token.tag,
+.token.punctuation {
+  color: color-mix(in srgb, var(--accent) 50%, var(--foreground)) !important;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: color-mix(in srgb, var(--foreground) 30%, transparent) !important;
+}
+
+.token.namespace {
+  opacity: 0.7 !important;
+}
+
+pre[data-line] {
+  position: relative;
+}
+
+pre[class*=language-] {
+  margin: 0;
+  overflow: auto;
+}
+
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  background: color-mix(in srgb, var(--foreground) 7%, transparent);
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+.line-highlight::before,
+.line-highlight[data-end]::after {
+  content: attr(data-start);
+  position: absolute;
+
+  /* top: .4em; */
+  left: 0.6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: color-mix(in srgb, var(--foreground) 40%, transparent);
+  color: var(--foreground);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: 0.3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px var(--foreground);
+}
+
+.line-highlight[data-end]::after {
+  content: attr(data-end);
+  top: auto;
+  bottom: 0.4em;
+}
+
+.line-numbers .line-highlight::before,
+.line-numbers .line-highlight::after {
+  content: none;
+}

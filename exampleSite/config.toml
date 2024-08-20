@@ -3,9 +3,11 @@ languageCode = "en-us"
 theme = "hugo-theme-terminal"
 paginate = 5
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [params]
   contentTypeName = "posts"
-  themeColor = "orange"
   showMenuItems = 2
   fullWidthTheme = false
   centerTheme = false

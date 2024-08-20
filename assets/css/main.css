@@ -1,0 +1,170 @@
+/* _main.scss */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code", Monaco, Consolas, "Ubuntu Mono", monospace;
+  font-size: 1rem;
+  line-height: 1.54;
+  letter-spacing: -0.02em;
+  background-color: var(--background);
+  color: var(--foreground);
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "liga", "tnum", "zero", "ss01", "locl";
+  font-variant-ligatures: contextual;
+  -webkit-overflow-scrolling: touch;
+  text-size-adjust: 100%;
+}
+
+.headings--one-size h1,
+.headings--one-size h2,
+.headings--one-size h3,
+.headings--one-size h4,
+.headings--one-size h5,
+.headings--one-size h6 {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin: 20px 0;
+}
+
+.headings--one-size ~ h1:first-child,
+.headings--one-size ~ h2:first-child,
+.headings--one-size ~ h3:first-child,
+.headings--one-size ~ h4:first-child,
+.headings--one-size ~ h5:first-child,
+.headings--one-size ~ h6:first-child {
+  margin-top: 20px;
+}
+
+img.left {
+  margin-right: auto;
+}
+
+img.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.right {
+  margin-left: auto;
+}
+
+figure.left {
+  margin-right: auto;
+}
+
+figure.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure.right {
+  margin-left: auto;
+}
+
+figure figcaption.left {
+  text-align: left;
+}
+
+figure figcaption.center {
+  text-align: center;
+}
+
+figure figcaption.right {
+  text-align: right;
+}
+
+blockquote.twitter-tweet {
+  position: relative;
+  background: var(--background);
+  font: inherit;
+  color: inherit;
+  border: 1px solid var(--accent);
+  padding-top: 60px;
+}
+
+blockquote.twitter-tweet a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+blockquote.twitter-tweet::before {
+  content: "> From X:";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  max-width: 864px;
+  min-height: 100vh;
+  border-right: 1px solid color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.container.full, .container.center {
+  border: none;
+  margin: 0 auto;
+}
+
+.container.full {
+  max-width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+.__h_video {
+  padding-bottom: 58.23% !important;
+  overflow: visible !important;
+}
+
+iframe[src*="youtube.com"] {
+  border: 8px solid var(--accent) !important;
+  padding: 8px !important;
+}
+
+@media (max-width: 684px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  ul,
+  ol {
+    margin-left: 20px;
+  }
+}
+
+@media print {
+  .container {
+    display: initial;
+  }
+
+  .content {
+    display: initial;
+  }
+}

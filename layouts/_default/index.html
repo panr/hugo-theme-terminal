@@ -47,7 +47,7 @@
           {{ if .Params.showFullContent }}
             {{ .Content }}
           {{ else if .Description }}
-            {{ .Description | markdownify }}
+            <p>{{ .Description | markdownify }}</p>
           {{ else }}
             {{ .Summary }}
           {{ end }}
@@ -55,7 +55,7 @@
 
         {{ if not .Params.showFullContent }}
           <div>
-            <a class="read-more button" href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
+            <a class="read-more button inline" href="{{ .RelPermalink }}">{{ $.Site.Params.ReadMore }}</a>
           </div>
         {{ end }}
       </article>
