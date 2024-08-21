@@ -1,4 +1,4 @@
-name = "terminal"
+name = "Terminal"
 license = "MIT"
 licenselink = "https://github.com/panr/hugo-theme-terminal/blob/master/LICENSE.md"
 description = "A simple, retro theme for Hugo."
