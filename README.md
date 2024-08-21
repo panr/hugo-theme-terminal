@@ -4,7 +4,7 @@
 
 ![Terminal](https://github.com/panr/hugo-theme-terminal/blob/master/images/terminal-theme.png?raw=true)
 
-### DEMO - https://hugo-terminal.now.sh/
+### DEMO - https://panr.github.io/hugo-theme-terminal-demo/
 
 ### ⚠️ The theme needs at least Hugo **Extended** v0.90.x.
 
