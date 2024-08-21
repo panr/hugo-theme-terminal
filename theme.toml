@@ -3,6 +3,7 @@ license = "MIT"
 licenselink = "https://github.com/panr/hugo-theme-terminal/blob/master/LICENSE.md"
 description = "A simple, retro theme for Hugo."
 homepage = "https://github.com/panr/hugo-theme-terminal/"
+demosite = "https://panr.github.io/hugo-theme-terminal-demo/"
 tags = ["blog", "clean", "customizable", "dark", "highlighting", "minimal", "monotone", "multilingual", "personal", "responsive", "simple", "technical", "retro"]
 features = ["blog", "shortcode", "syntax highlighting"]
 min_version = 0.90
