@@ -1,12 +1,10 @@
 # Terminal
 
-----
-
 ![Terminal](https://github.com/panr/hugo-theme-terminal/blob/master/images/terminal-theme.png?raw=true)
 
-### DEMO - https://panr.github.io/hugo-theme-terminal-demo/
+**DEMO - https://panr.github.io/hugo-theme-terminal-demo/**
 
-### ⚠️ The theme needs at least Hugo **Extended** v0.90.x.
+**⚠️ The theme needs at least Hugo **Extended** v0.90.x.**
 
 ---
 
@@ -110,7 +108,7 @@ and in your config file add:
 ```toml
 [module]
   # this is needed when you fetch the theme as a submodule to your repo.
-  # replacements = "github.com/panr/hugo-theme-terminal -> themes/terminal"
+  # replacements = "github.com/panr/hugo-theme-terminal/4 -> themes/terminal"
 [[module.imports]]
   path = 'github.com/panr/hugo-theme-terminal/v4'
 ```
