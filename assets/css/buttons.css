@@ -12,7 +12,6 @@ a.button {
   align-items: center;
   justify-content: center;
   padding: 8px 18px;
-  margin: 5px 0;
   text-decoration: none;
   text-align: center;
   border-radius: 8;
@@ -73,19 +72,19 @@ a.button.inline:hover {
   background: none;
 }
 
-a.button.inline:before {
+a.button.inline::before {
   content: "["
 }
 
-a.button.inline:after {
+a.button.inline::after {
   content: "]"
 }
 
-a.button.inline.prev:before {
+a.button.inline.prev::before {
   content: "← ["
 }
 
-a.button.inline.next:after {
+a.button.inline.next::after {
   content: "] →"
 }
 

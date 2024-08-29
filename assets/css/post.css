@@ -49,6 +49,7 @@
   margin-bottom: 15px !important;
   padding-bottom: 15px;
   border-bottom: 3px dotted var(--accent);
+  text-decoration: none !important;
 }
 
 .post-title::after {
@@ -109,6 +110,7 @@
 }
 
 .hanchor {
+  position: absolute;
   color: var(--accent);
   text-decoration: none;
   margin-left: 10px;
