@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Code:wght@400;700&display=swap");
 
 :root {
-  --background: #222129;
-  --foreground: #ffffff;
-  --accent: #ffa86a;
+  --background: #1a170f;
+  --foreground: #eceae5;
+  --accent: #eec35e;
   --font-size: 1rem;
   --line-height: 1.54rem;
   --radius: 0px;
@@ -28,7 +28,7 @@ body {
     "Fira Code",
     Monaco,
     Consolas,
-    Ubuntu Mono,
+     "Ubuntu Mono",
     monospace;
   font-size: 1rem;
   font-weight: 400;
