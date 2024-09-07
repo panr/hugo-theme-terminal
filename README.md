@@ -6,7 +6,6 @@
 
 ![Terminal](https://github.com/panr/hugo-theme-terminal/blob/master/images/terminal-theme.png?raw=true)
 
-
 ---
 
 ⚠️ The theme needs at least Hugo **Extended** v0.90.x.

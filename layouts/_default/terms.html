@@ -9,13 +9,13 @@
     <ul>
       {{ $type := .Type }}
       {{ range $key, $value := .Data.Terms.Alphabetical }}
-      {{ $name := .Name }}
-      {{ $count := .Count }}
-      {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
-        <li>
-          <a class="terms-title" href="{{ .Permalink }}">{{ .Name }} [{{ $count }}]</a>
-        </li>
-      {{ end }}
+        {{ $name := .Name }}
+        {{ $count := .Count }}
+        {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+          <li>
+            <a class="terms-title" href="{{ .Permalink }}">{{ .Name }} [{{ $count }}]</a>
+          </li>
+        {{ end }}
       {{ end }}
     </ul>
   </div>

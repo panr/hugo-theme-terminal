@@ -38,7 +38,7 @@
           {{ if .Params.showFullContent }}
             {{ .Content }}
           {{ else if .Description }}
-            {{ .Description | markdownify }}
+            <p>{{ .Description | markdownify }}</p>
           {{ else }}
             {{ .Summary }}
           {{ end }}
