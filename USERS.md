@@ -56,7 +56,7 @@
 - https://sir-photch.xyz **Sir-Photch** (ComSci-student. German Blog)
 - https://drewmorris.info **Drew Morris** (Mathematician && Computer Scientist)
 - https://blog.darkiiiiiice.com **MarioMang** (Software Developer)
-
+- https://www.sagbot.com **E. HADDAG** (Computer Scientist)
 <!--
  TEMPLATE:
 
