@@ -58,6 +58,7 @@
 - https://blog.darkiiiiiice.com **MarioMang** (Software Developer)
 - https://www.sagbot.com **E. HADDAG** (Computer Scientist)
 - https://adamperkowski.dev **Adam Perkowski** (A Random Developer)
+- https://imortio.github.io **Azrul** (CompSci Student)
 <!--
  TEMPLATE:
 
