@@ -19,7 +19,7 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
-}
+}  
 
 body {
   margin: 0;
@@ -38,8 +38,6 @@ body {
   color: var(--foreground);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: "liga", "tnum", "zero", "ss01", "locl";
-  font-variant-ligatures: contextual;
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
 }

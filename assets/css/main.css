@@ -1,4 +1,3 @@
-/* _main.scss */
 html {
   box-sizing: border-box;
 }
@@ -20,8 +19,6 @@ body {
   color: var(--foreground);
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: "liga", "tnum", "zero", "ss01", "locl";
-  font-variant-ligatures: contextual;
   -webkit-overflow-scrolling: touch;
   text-size-adjust: 100%;
 }
