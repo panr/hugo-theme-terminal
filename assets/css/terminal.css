@@ -1,12 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Code:wght@400;700&display=swap");
-
 :root {
   --background: #1a170f;
   --foreground: #eceae5;
   --accent: #eec35e;
   --font-size: 1rem;
   --line-height: 1.54rem;
-  --radius: 0px;
+  --radius: 0;
 }
 
 html {
@@ -14,12 +12,12 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
-}  
+}
 
 body {
   margin: 0;
@@ -36,10 +34,10 @@ body {
   letter-spacing: -0.02em;
   background-color: var(--background);
   color: var(--foreground);
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 ::placeholder {
@@ -256,7 +254,7 @@ kbd {
     "Fira Code",
     Monaco,
     Consolas,
-    Ubuntu Mono,
+    "Ubuntu Mono",
     monospace !important;
   font-feature-settings: normal;
   background: color-mix(in srgb, var(--foreground) 5%, transparent);
@@ -331,7 +329,7 @@ blockquote {
   padding: 25px;
 }
 
-blockquote:before {
+blockquote::before {
   content: ">";
   display: block;
   position: absolute;
