@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/FiraCode-Regular.woff") format("woff");
-  font-feature-settings: "liga", "tnum", "zero", "ss01", "locl";
+  font-feature-settings: "liga", "tnum", "ss01", "locl";
   font-variant-ligatures: contextual;
 }
 
@@ -14,6 +14,6 @@
   font-style: normal;
   font-weight: 800;
   src: url("../fonts/FiraCode-Bold.woff") format("woff");
-  font-feature-settings: "liga", "tnum", "zero", "ss01", "locl";
+  font-feature-settings: "liga", "tnum", "ss01", "locl";
   font-variant-ligatures: contextual;
 }
