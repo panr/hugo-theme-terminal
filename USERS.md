@@ -59,6 +59,7 @@
 - https://www.sagbot.com **E. HADDAG** (Computer Scientist)
 - https://adamperkowski.dev **Adam Perkowski** (A Random Developer)
 - https://imortio.github.io **Azrul** (CompSci Student)
+- https://ragonneau.github.io **Tom Ragonneau** (Engineer)
 <!--
  TEMPLATE:
 
