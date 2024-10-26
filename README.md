@@ -203,6 +203,14 @@ paginate = 5
   # can be overridden in a page's front-matter
   # TocTitle = "Table of Contents" # default
 
+  # set if posts should show timestamps, not just datestamps
+  # also shows timestamps for last modified, if enabled
+  showPostTime = false # default false
+
+  # set if post times should show seconds
+  # has no effect unless showPostTime is true
+  postTimeSeconds = false # default false
+
 
 [params.twitter]
   # set Twitter handles for Twitter cards
