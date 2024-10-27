@@ -203,13 +203,16 @@ paginate = 5
   # can be overridden in a page's front-matter
   # TocTitle = "Table of Contents" # default
 
-  # set if posts should show timestamps, not just datestamps
-  # also shows timestamps for last modified, if enabled
-  showPostTime = false # default false
-
-  # set if post times should show seconds
-  # has no effect unless showPostTime is true
-  postTimeSeconds = false # default false
+  # Set date/time format for posts
+  # This will impact the date/time displayed on
+  # index.html, the posts list page, and on posts themselves
+  # This value can also be configured per-post on front matter
+  # This value can be customized according to Hugo documentation:
+  # https://gohugo.io/functions/time/format/
+  # Default value (no changes needed):
+  # dateFormat = "2006-01-02"
+  # Example format, with date, time, and timezone abbreviation:
+  # dateFormat = "2006-01-02 3:04:06 PM MST"
 
 
 [params.twitter]
