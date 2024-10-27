@@ -13,14 +13,15 @@
         <div class="post-meta">
           {{- if .Date -}}
             <time class="post-date">
-              {{- if or (.Params.showPostTime) (.Site.Params.showPostTime) -}}
-                {{- if or (.Params.postTimeSeconds) (.Site.Params.postTimeSeconds) -}}
-                  {{- .Date.Format "2006-01-02" -}}&nbsp;<span class="post-time">{{- .Date | time.Format ":time_long" -}}</span>
-                {{- else -}}
-                  {{- .Date.Format "2006-01-02" -}}&nbsp;<span class="post-time">{{- .Date | time.Format "3:04 PM MST" -}}</span>
-                {{- end -}}
+              {{- $date := .Date | time -}}
+              {{- with .Params.dateFormat -}}
+                {{- $date.Format . -}}
               {{- else -}}
-                {{- .Date.Format "2006-01-02" -}}
+                {{- with .Site.Params.dateFormat -}}
+                  {{- $date.Format . -}}
+                {{- else -}}
+                  {{- $date.Format "2006-01-02" -}}
+                {{- end -}}
               {{- end -}}
             </time>
           {{- end -}}
