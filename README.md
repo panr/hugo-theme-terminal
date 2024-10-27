@@ -207,6 +207,9 @@ paginate = 5
   # This will impact the date/time displayed on
   # index.html, the posts list page, and on posts themselves
   # This value can also be configured per-post on front matter
+  # If you have any issues with the timezone rendering differently
+  # than you expected, please ensure your timezone is correctly set
+  # on your server.
   # This value can be customized according to Hugo documentation:
   # https://gohugo.io/functions/time/format/
   # Default value (no changes needed):
