@@ -62,6 +62,7 @@
 - https://carmar.is **Carmaris** (Amateur Hacker)
 - https://ragonneau.github.io **Tom Ragonneau** (Engineer)
 - https://katiethe.dev **KatieTheDev** (Amateur porgrammer and tinkerer)
+- https://stefka.eu **Jiří Štefka** (Software Developer)
 
 <!--
  TEMPLATE:
