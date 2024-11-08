@@ -61,6 +61,7 @@
 - https://imortio.github.io **Azrul** (CompSci Student)
 - https://carmar.is **Carmaris** (Amateur Hacker)
 - https://ragonneau.github.io **Tom Ragonneau** (Engineer)
+- https://katiethe.dev **KatieTheDev** (Amateur porgrammer and tinkerer)
 
 <!--
  TEMPLATE:
