@@ -6,27 +6,9 @@
   <div class="post-meta">
     {{- if .Date -}}
       <time class="post-date">
-        {{- $date := .Date | time -}}
-        {{- with .Params.dateFormat -}}
-          {{- $date | time.Format . -}}
-        {{- else -}}
-          {{- with .Site.Params.dateFormat -}}
-            {{- $date | time.Format . -}}
-          {{- else -}}
-            {{- $date | time.Format "2006-01-02" -}}
-          {{- end -}}
-        {{- end -}}
-        {{- if $.Site.Params.showLastUpdated -}}
-          {{- $lastmod := .Lastmod | time -}}
-          {{- with .Params.dateFormat -}}
-            &nbsp;[{{- $lastmod | time.Format . -}}]
-          {{- else -}}
-            {{- with .Site.Params.dateFormat -}}
-              &nbsp;[{{- $lastmod | time.Format . -}}]
-            {{- else -}}
-              &nbsp;[{{- $lastmod | time.Format "2006-01-02" -}}]
-            {{- end -}}
-          {{- end -}}
+        {{- partial "post-date" . -}}
+        {{- if .Lastmod -}}
+            &nbsp;[{{- partial "post-date" . (dict "Date" .Lastmod) -}}]
         {{- end -}}
       </time>
     {{- end -}}
