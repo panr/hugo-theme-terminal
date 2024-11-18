@@ -8,7 +8,7 @@
       <time class="post-date">
         {{- partial "post-date" . -}}
         {{- if .Lastmod -}}
-            &nbsp;[{{- partial "post-date" . (dict "Date" .Lastmod) -}}]
+          &nbsp;[{{- partial "post-lastmod" . -}}]
         {{- end -}}
       </time>
     {{- end -}}
