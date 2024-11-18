@@ -17,7 +17,7 @@
 
 {{ $bundle := slice $menu $prism | resources.Concat "bundle.js" | resources.Minify }}
 
-<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
+<script type="text/javascript" src="{{ $bundle.PermaLink }}"></script>
 
 <!-- Extended footer section-->
 {{ partial "extended_footer.html" . }}
