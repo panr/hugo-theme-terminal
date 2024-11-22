@@ -7,7 +7,7 @@
     {{- if .Date -}}
       <time class="post-date">
         {{- partial "post-date" . -}}
-        {{- if .Lastmod -}}
+        {{- if and $.Site.Params.showLastUpdated .Lastmod -}}
           &nbsp;{{- partial "post-lastmod" . -}}
         {{- end -}}
       </time>
