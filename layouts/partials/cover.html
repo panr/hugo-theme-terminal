@@ -3,14 +3,14 @@
 
 {{- if index .Params "cover" -}}
   {{- if .Resources.GetMatch .Params.Cover }}
-    {{- $cover = (.Resources.GetMatch .Params.Cover).RelPermalink -}}
+    {{- $cover = (.Resources.GetMatch .Params.Cover).PermaLink -}}
   {{- else -}}
     {{- $cover = absURL .Params.Cover -}}
   {{- end -}}
 {{- else if $.Site.Params.AutoCover -}}
   {{- if (not .Params.Cover) -}}
     {{- if .Resources.GetMatch "cover.*" -}}
-      {{- $cover = (.Resources.GetMatch "cover.*").RelPermalink -}}
+      {{- $cover = (.Resources.GetMatch "cover.*").PermaLink -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
