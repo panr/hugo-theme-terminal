@@ -17,3 +17,43 @@
   font-feature-settings: "liga", "tnum", "ss01", "locl";
   font-variant-ligatures: contextual;
 }
+
+@font-face {
+  font-display: swap;
+  font-family: "AlibabaPuHuiTi";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/AlibabaPuHuiTi-3-35-Thin.woff") format("woff");
+  font-feature-settings: "liga", "tnum", "ss01", "locl";
+  font-variant-ligatures: contextual;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "AlimamaFangYuan";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/AlimamaFangYuanTiVF-Thin.woff") format("woff");
+  font-feature-settings: "liga", "tnum", "ss01", "locl";
+  font-variant-ligatures: contextual;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "JetBrainsMono";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-feature-settings: "liga", "tnum", "ss01", "locl";
+  font-variant-ligatures: contextual;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "JetBrainsMono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/JetBrainsMono-SemiBold.woff2") format("woff2");
+  font-feature-settings: "liga", "tnum", "ss01", "locl";
+  font-variant-ligatures: contextual;
+}

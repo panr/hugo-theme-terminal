@@ -7,7 +7,9 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
+:lang(zh) {
+  font-family: "AlibabaPuHuiTi", "AlimamaFangYuan", monospace !important;
+}
 body {
   margin: 0;
   padding: 0;
