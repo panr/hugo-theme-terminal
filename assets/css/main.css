@@ -7,13 +7,10 @@ html {
 *::after {
   box-sizing: inherit;
 }
-:lang(zh) {
-  font-family: "AlibabaPuHuiTi", "AlimamaFangYuan", monospace !important;
-}
 body {
   margin: 0;
   padding: 0;
-  font-family: "Fira Code", Monaco, Consolas, "Ubuntu Mono", monospace;
+  font-family: "JetBrainsMono","AlibabaPuHuiTi", "AlimamaFangYuan", "Fira Code", Monaco, Consolas, "Ubuntu Mono", monospace;
   font-size: 1rem;
   line-height: 1.54;
   letter-spacing: -0.02em;
