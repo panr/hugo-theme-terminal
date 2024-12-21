@@ -211,10 +211,6 @@ img {
   overflow: hidden;
 }
 
-figure {
-  width: fit-content;
-}
-
 figure img,
 figure video {
   margin-bottom: 0;
