@@ -50,7 +50,7 @@
 {{ if (isset .Params "cover") }}
   {{ $pageCover := .Param "cover" }}
   {{ with (.Resources.GetMatch (.Param "cover")) }}
-    {{ $pageCover = .RelPermalink }}
+    {{ $pageCover = .PermaLink }}
   {{ end }}
   <meta property="og:image" content="{{ $pageCover | absURL }}">
 {{ else }}
@@ -67,12 +67,12 @@
 
 <!-- RSS -->
 {{ with .OutputFormats.Get "RSS" }}
-  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ .PermaLink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
 {{ end }}
 
 <!-- JSON Feed -->
 {{ with .OutputFormats.Get "json" }}
-  <link href="{{ .RelPermalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }}" />
+  <link href="{{ .PermaLink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }}" />
 {{ end }}
 
 <!-- Extended head section-->
