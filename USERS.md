@@ -1,5 +1,6 @@
 # Meet the users of Terminal theme!
 
+- https://skillissues.tech/ **Skill Issues** (Aspiring Engineer)
 - https://xicode.se **magistern** (Teacher)
 - https://devmaster64.com **devmaster64** (Software Developer)
 - https://calloc.net **Vaibhav Yenamandra** (Software Engineer)
