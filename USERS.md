@@ -67,6 +67,7 @@
 - https://blog.arkb.me **AbdulRKB** (Security Researcher & Web Dev)
 - https://harshv5094.netlify.app **Harsh Vyapari** (Developer & Linux Enthusiast)
 - https://abgeo.dev **Temuri Takalandze** (Software Engineer)
+- https://skillissues.tech **Skill Issues** (Aspiring Engineer)
 <!--
  TEMPLATE:
 
