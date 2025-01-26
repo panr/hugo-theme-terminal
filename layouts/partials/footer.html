@@ -1,14 +1,11 @@
 <footer class="footer">
   <div class="footer__inner">
-    {{ if $.Site.Copyright }}
-      <div class="copyright copyright--user">
-        <span>{{ $.Site.Copyright | safeHTML }}</span>
-    {{ else }}
-      <div class="copyright">
-        <span>© {{ now.Year }} Powered by <a href="https://gohugo.io">Hugo</a></span>
-    {{ end }}
-      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
-      </div>
+    <div class="copyright">
+      <p>
+        <!-- Main footer ("copyright") section -->
+        {{ partial "footer_copyright.html" . }}
+      </p>
+    </div>
   </div>
 </footer>
 
@@ -19,5 +16,5 @@
 
 <script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
 
-<!-- Extended footer section-->
+<!-- Extended footer section -->
 {{ partial "extended_footer.html" . }}

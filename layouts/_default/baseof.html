@@ -2,9 +2,16 @@
 <html lang="{{ $.Site.Language }}">
 <head>
   {{ block "title" . }}
-    <title>{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }} :: {{ $.Site.Title }}{{ end }}</title>
+    <title>
+      {{ if .IsHome }}
+        {{ $.Site.Params.Title }} :: {{ $.Site.Params.Subtitle }}
+      {{ else }}
+        {{ .Title }} :: {{ $.Site.Params.Title }}
+      {{ end }}
+    </title>
   {{ end }}
   {{ partial "head.html" . }}
+  {{ partial "mathjax.html" . }}
 </head>
 <body>
 {{ $container := cond ($.Site.Params.FullWidthTheme | default false) "container full" (cond ($.Site.Params.CenterTheme | default false) "container center" "container") }}

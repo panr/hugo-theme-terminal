@@ -1,10 +1,8 @@
-{{- $date := .Date -}}
-{{- with .Params.dateFormat -}}
-  {{- $date | time.Format . -}}
-{{- else -}}
-  {{- with .Site.Params.dateFormat -}}
-    {{- $date | time.Format . -}}
-  {{- else -}}
-    {{- $date | time.Format "2006-01-02" -}}
-  {{- end -}}
+<!-- Ensure delimited by hyphen to remove leading and trailing whitespace. -->
+
+{{- if $.Site.Params.createdDatePrefix -}}
+  {{- $.Site.Params.createdDatePrefix -}}
+  &nbsp;
 {{- end -}}
+
+{{- .Date.Format (or .Params.dateFormat $.Site.Params.dateFormat "2006-01-02") -}}

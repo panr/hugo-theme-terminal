@@ -4,7 +4,7 @@
 <meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}" />
 {{ if .Params.noindex }}
   {{ if or (eq (.Param "noindex") true) (eq (.Param "noindex") "true") }}
-    <meta name="robots" content="noindex" />
+    <meta name="robots" content="noindex,nofollow" />
   {{ end }}
 {{ else }}
   <meta name="robots" content="noodp" />
@@ -74,6 +74,9 @@
 {{ with .OutputFormats.Get "json" }}
   <link href="{{ .RelPermalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }}" />
 {{ end }}
+
+<!-- Add structured data. -->
+{{ partial "structured_data.html" . }}
 
 <!-- Extended head section-->
 {{ partial "extended_head.html" . }}

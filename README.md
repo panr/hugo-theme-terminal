@@ -33,6 +33,9 @@
 - **really nice duotone**, custom syntax highlighting based on [**PrismJS**](https://prismjs.com)
 - fully responsive
 - fully based on Hugo ecosystem (Pipes and Modules)
+- automatic structured data generation for SEO.
+- auto hyperlinking of raw links.
+- many overridibles / customisations.
 
 #### Built-in shortcodes
 
@@ -71,6 +74,17 @@
   }
   {{< /code >}}
   ```
+
+#### Per-page variables
+
+Almost all of the variables (relevant to the post) you see in the config can be
+overriden in the YAML front matter of your post.
+
+Some per-page variables which allow additional functionality are as follows:
+
+- `hideComments`: (bool) Hide / Disable comments on a page.
+- `hideDate`: (bool) Hide the date from a page. Useful for a non-post page.
+- `latex`: (bool) Enable inline LaTeX support using mathjax.
 
 #### Code highlighting
 
@@ -164,6 +178,9 @@ theme = "terminal"
 pagination.pagerSize = 5
 
 [params]
+  # Start year for Copyright.
+  copyrightStartYear = 2025
+
   # dir name of your main content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
@@ -189,7 +206,10 @@ pagination.pagerSize = 5
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
   showLastUpdated = false
 
-  # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
+  # Provide a string as a prefix for the creation and last update date.
+  # By default, it looks like this (no prefix creation date):
+  # 2020-xx-xx :: Updated 2020-xx-xx :: Author
+  # createdDatePrefix = ""
   # updatedDatePrefix = "Updated"
 
   # whether to show a page's estimated reading time
@@ -216,6 +236,9 @@ pagination.pagerSize = 5
   # dateFormat = "2006-01-02"
   # Example format, with date, time, and timezone abbreviation:
   # dateFormat = "2006-01-02 3:04:06 PM MST"
+
+  # Whether the site is nsfw or not. Needed for structered data generation.
+  nsfw = false
 
 
 [params.twitter]
@@ -276,9 +299,10 @@ See the default `post` file params supported by the theme — https://github.com
 
 ## Add-ons
 
-- **Comments** — for adding comments to your blog posts please take a look at `layouts/partials/comments.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/comments.html.
-- **Extended Head** — please take a look at `layouts/partials/extended_head.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_head.html
-- **Extended Footer** — please take a look at `layouts/partials/extended_footer.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_footer.html
+- **Comments** — for adding comments to your blog posts please take a look at [`layouts/partials/comments.html`](https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/comments.html).
+- **Extended Head** — please take a look at [`layouts/partials/extended_head.html`](https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_head.html).
+- **Copyright footer area** — please take a look at [`layouts/partials/footer_copyright.html`](https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_head.html).
+- **Extended Footer** — please take a look at [`layouts/partials/extended_footer.html`](https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_footer.html)
 
 ## How to edit the theme <a id="how-to-edit" />
 
@@ -314,6 +338,6 @@ I'd be happy to know more about you and what you are doing. If you want to share
 
 ## License
 
-Copyright © 2019-2024 Radosław Kozieł ([@panr](https://twitter.com/panr))
+Copyright © 2019-2025 Radosław Kozieł ([@panr](https://twitter.com/panr))
 
 The theme is released under the MIT License. Check the [original theme license](https://github.com/panr/hugo-theme-terminal/blob/master/LICENSE.md) for additional licensing information.

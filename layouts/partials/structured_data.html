@@ -1,0 +1,171 @@
+<!-- Add Structured Data for SEO. -->
+
+
+<!-- Global variables. -->
+
+{{ $sd_author := $.Site.Params.Author }}
+{{ $sd_lang_code := $.Site.Params.LanguageCode }}
+{{ $sd_owner := $.Site.Params.Owner }}
+
+{{ $sd_thumbnail_url := "" }}
+{{ if isset $.Site.Params "favicon" }}
+	{{ $sd_thumbnail_url = $.Site.Params.favicon | absURL }}
+{{ else }}
+	{{ $icon_colour := or .Params.color $.Site.Params.ThemeColor | default "orange" }}
+	{{ $sd_thumbnail_url = printf "img/theme-colors/%s.png" $icon_colour | absURL }}
+{{ end }}
+
+{{ $sd_not_nsfw := true }}
+{{ if and (isset $.Site.Params "nsfw") (eq $.Site.Params.nsfw true) }}
+	{{ $sd_not_nsfw = false }}
+{{ end }}
+
+
+<!-- ---------------------------------------------------------------------- -->
+
+
+<!-- For home page. -->
+
+{{ if .IsHome }}
+	{{ $sd_website_url := $.Site.BaseURL }}
+	{{ $sd_name := printf "%s :: %s" $.Site.Params.Title $.Site.Params.Subtitle }}
+	{{ $sd_alt_name := $.Site.Params.Title }}
+	{{ $sd_description := $.Site.Params.Subtitle }}
+	{{ $sd_keywords := $.Site.Params.Keywords }}
+
+
+	<script type="application/ld+json">
+	{
+		"@context":		"http://schema.org",
+		"@type":		"WebSite",
+
+		"url":			"{{ $sd_website_url }}",
+		"name":			"{{ $sd_name }}",
+		"alternateName":	"{{ $sd_alt_name }}",
+		"description":		"{{ $sd_description }}",
+		"keywords":		"{{ $sd_keywords }}",
+		"inLanguage":		"{{ $sd_lang_code }}",
+		"thumbnailUrl":		"{{ $sd_thumbnail_url }}",
+		"isFamilyFriendly":	"{{ $sd_not_nsfw }}",
+
+		"author" : {
+			"@type":	"Person",
+			"name":		"{{ $sd_author }}"
+		},
+		"copyrightHolder" : {
+			"@type":	"Person",
+			"name":		"{{ $sd_owner }}"
+		},
+		"maintainer" : {
+			"@type":	"Person",
+			"name":		"{{ $sd_owner }}"
+		}
+	}
+	</script>
+
+
+<!-- ---------------------------------------------------------------------- -->
+
+
+<!-- For posts. -->
+
+{{ else if .IsPage }}
+	{{ if .Params.Author }}
+		{{ $sd_author = .Params.Author }}
+	{{ end }}
+
+
+	{{ $sd_name := printf "%s :: %s" .Title $.Site.Params.Title }}
+	{{ $sd_headline := .Title }}
+	{{ $sd_section := .Section }}
+	{{ $sd_page_url := .Permalink }}
+	{{ $sd_word_count := .WordCount }}
+
+
+	{{ $sd_description := "" }}
+	{{ if .Description}}
+		{{ $sd_description = .Description | plainify }}
+	{{ else }}
+		{{ $sd_description = .Summary | plainify }}
+	{{ end }}
+
+
+	{{ $sd_image_url := "" }}
+	{{ if (isset .Params "cover") }}
+		{{ $page_cover := .Param "cover" }}
+		{{ with (.Resources.GetMatch (.Param "cover")) }}
+			{{ $page_cover = .RelPermalink }}
+		{{ end }}
+
+		{{ $sd_image_url = $page_cover | absURL }}
+	{{ else }}
+		{{ $sd_image_url = $sd_thumbnail_url }}
+	{{ end }}
+
+
+	{{ $sd_genre := "" }}
+	{{ if (isset .Params "tags") }}
+		{{ $sd_genre = delimit .Params.tags "," }}
+	{{ end }}
+
+
+	{{ $sd_keywords := "" }}
+	{{ if (isset .Params "keywords") }}
+		{{ $sd_keywords = delimit .Params.keywords "," }}
+	{{ end }}
+
+
+	{{ $sd_create_date := .Date.Format "2006-01-02T15:04:05.00Z" }}
+	{{ $sd_modify_date := .Lastmod.Format "2006-01-02T15:04:05.00Z" }}
+	{{ $sd_copyright_year := .Date.Format "2006" }}
+
+
+	<script type="application/ld+json">
+	{
+		"@context":		"http://schema.org",
+		"@type":		"BlogPosting",
+
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "{{ $sd_page_url }}"
+		},
+
+		"name": 		"{{ $sd_name }}",
+		"headline":		"{{ $sd_headline }}",
+		"articleSection": 	"{{ $sd_section }}",
+		"description":		"{{ $sd_description }}",
+		"isFamilyFriendly":	"{{ $sd_not_nsfw }}",
+		"url":			"{{ $sd_page_url }}",
+		"image":		"{{ $sd_image_url }}",
+		"wordCount":		"{{ $sd_word_count }}",
+
+		"dateCreated":		"{{ $sd_create_date }}",
+		"datePublished":	"{{ $sd_create_date }}",
+		"dateModified":		"{{ $sd_modify_date }}",
+
+		"genre":		"{{ $sd_genre }}",
+		"keywords":		"{{ $sd_keywords }}",
+
+		"author" : {
+			"@type": "Person",
+			"name": "{{ $sd_author }}"
+		},
+		"creator" : {
+			"@type": "Person",
+			"name": "{{ $sd_author }}"
+		},
+
+		"copyrightHolder" : {
+			"@type":	"Person",
+			"name":		"{{ $sd_owner }}"
+		},
+		"copyrightYear":	"{{ $sd_copyright_year }}"
+	}
+	</script>
+{{ end }}
+
+
+<!-- ---------------------------------------------------------------------- -->
+
+
+<!-- End of file. -->
