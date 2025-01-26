@@ -7,10 +7,12 @@
     {{- if .Date -}}
       <time class="post-date">
         {{- partial "post-date" . -}}
-        {{- if and $.Site.Params.showLastUpdated .Lastmod -}}
-          &nbsp;{{- partial "post-lastmod" . -}}
-        {{- end -}}
       </time>
+        {{- if and $.Site.Params.showLastUpdated .Lastmod -}}
+          <time class="post-date">
+            {{- partial "post-lastmod" . -}}
+          </time>
+        {{- end -}}
     {{- end -}}
     {{- with .Params.Author -}}
       <span class="post-author">{{ . }}</span>
