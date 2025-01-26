@@ -69,6 +69,8 @@
 - https://abgeo.dev **Temuri Takalandze** (Software Engineer)
 - https://skillissues.tech **Skill Issues** (Aspiring Engineer)
 - https://lubieniebieski.pl **Adam Nowak** (Software Engineer)
+- https://bodha.siddh.me **Siddh Raman Pant** (professional ggVGd enjoyer)
+
 <!--
  TEMPLATE:
 
