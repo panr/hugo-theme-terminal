@@ -1,6 +1,6 @@
 {{- $date := .Lastmod -}}
 {{- with .Params.dateFormat -}}
-  {{- $date | time.Format . -}}
+  [{{- or $.Site.Params.updatedDatePrefix "Updated" }} {{ $date | time.Format . -}}]
 {{- else -}}
   {{- with .Site.Params.dateFormat -}}
     [{{- or $.Site.Params.updatedDatePrefix "Updated" }} {{ $date | time.Format . -}}]
