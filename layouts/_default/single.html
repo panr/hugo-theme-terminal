@@ -4,7 +4,7 @@
     <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
   </h1>
   <div class="post-meta">
-    {{- if .Date -}}
+    {{- if and (.Date) ($.Param "hideDate" | not) -}}
       <time class="post-date">
         {{- partial "post-date" . -}}
       </time>
