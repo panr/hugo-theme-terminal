@@ -3,8 +3,8 @@
   {{- $date | time.Format . -}}
 {{- else -}}
   {{- with .Site.Params.dateFormat -}}
-    [{{- or $.Site.Params.updatedDatePrefix "Updated: " }} {{ $date | time.Format . -}}]
+    [{{- or $.Site.Params.updatedDatePrefix "Updated" }} {{ $date | time.Format . -}}]
   {{- else -}}
-    [{{- or $.Site.Params.updatedDatePrefix "Updated: " }} {{ $date | time.Format "2006-01-02" -}}]
+    [{{- or $.Site.Params.updatedDatePrefix "Updated" }} {{ $date | time.Format "2006-01-02" -}}]
   {{- end -}}
 {{- end -}}
