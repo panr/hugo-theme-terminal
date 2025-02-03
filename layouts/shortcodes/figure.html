@@ -1,4 +1,4 @@
-<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+<figure{{ with .Get "position" }} class="{{ . }}"{{ end }}>
   {{- if .Get "link" -}}
     <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
   {{- end -}}
@@ -23,7 +23,10 @@
 
   {{- if .Get "link" }}</a>{{ end -}}
   {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
-    <figcaption {{ with .Get "captionStyle" }} style="{{ . | safeCSS }}"{{end}}>
+    <figcaption 
+      class="{{ with .Get "captionPosition"}}{{ . }}{{ else -}} center {{- end }}" 
+      {{ with .Get "captionStyle" }} style="{{ . | safeCSS }}"{{end}}
+      >
       {{ with (.Get "title") -}}
         <h4>{{ . }}</h4>
       {{- end -}}
