@@ -1,3 +1,3 @@
-module github.com/panr/hugo-theme-terminal/v4
+module github.com/py354/hugo-theme-terminal/inner
 
-go 1.19
+go 1.22.0
