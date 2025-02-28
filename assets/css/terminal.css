@@ -47,7 +47,6 @@ body {
 h1,
 h2 {
   font-size: calc(var(--font-size) * 1.1);
-  text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
@@ -262,7 +261,6 @@ kbd {
     monospace !important;
   font-feature-settings: normal;
   background: color-mix(in srgb, var(--foreground) 5%, transparent);
-  color: var(--accent);
   padding: 1px 6px;
   margin: 0 2px;
   font-size: 0.95rem;

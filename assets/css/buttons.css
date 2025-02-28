@@ -100,11 +100,7 @@ a.read-more:active {
   text-decoration: none;
 }
 
-.code-toolbar {
-  margin-bottom: 20px;
-}
-
-.code-toolbar .toolbar-item a {
+.copy-button {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -115,8 +111,7 @@ a.read-more:active {
   text-align: center;
   font-size: 13px;
   font-weight: 500;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid color-mix(in srgb, var(--accent) 15%, transparent);
   appearance: none;
   cursor: pointer;
   outline: none;

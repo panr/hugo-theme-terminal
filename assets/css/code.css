@@ -1,80 +1,30 @@
-pre {
+code {
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent)
+}
+
+pre:not(.chroma),
+.highlight {
   margin: 20px 0;
 }
 
-.code-toolbar {
-  position: relative;
-  margin: 20px 0;
-  border: 1px solid color-mix(in srgb, var(--accent) 10%, transparent);
+pre.chroma {
+  color: var(--foreground);
 }
 
-.code-toolbar + .code-toolbar,
-.code-toolbar + .highlight,
-.code-toolbar + .highlight .code-toolbar {
-  border-top: 0;
-  margin-top: -20px;
-}
-
-.code-toolbar pre, .code-toolbar code {
+pre code {
+  color: var(--foreground);
   border: none;
-}
-
-.code-toolbar code {
-  display: block;
-  color: color-mix(in srgb, var(--accent) 50%, var(--foreground));
-}
-
-.code-toolbar > .toolbar button {
-  font-size: 0.8em !important;
-  font-weight: bold !important;
-  background:  var(--accent) !important;
-  color: var(--background) !important;
-  border-radius: var(--radius) !important;
-  box-shadow: none !important;
-  border: 1px solid var(--background) !important;
-  margin: 6px !important;
-  padding: 10px !important;
-  user-select: none;
 }
 
 .collapsable-code {
   position: relative;
   width: 100%;
   margin: 40px 0;
-}
 
-.collapsable-code input[type=checkbox] {
-  position: absolute;
-  visibility: hidden;
-}
-
-.collapsable-code input[type=checkbox]:checked ~ pre,
-.collapsable-code input[type=checkbox]:checked ~ .code-toolbar pre {
-  display: none;
-}
-
-.collapsable-code input[type=checkbox]:checked ~ .code-toolbar {
-  padding: 0;
-  border-top: none;
-}
-
-.collapsable-code input[type=checkbox]:checked ~ .code-toolbar .toolbar {
-  display: none;
-}
-
-.collapsable-code input[type=checkbox]:checked ~ label .collapsable-code__toggle::after {
-  content: attr(data-label-expand);
-}
-
-.collapsable-code label {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  min-width: 30px;
-  min-height: 30px;
-  margin: 0;
-  border-bottom: 1px solid var(--accent);
-  cursor: pointer;
+  .highlight {
+    margin: 0;
+  }
 }
 
 .collapsable-code__title {
@@ -94,15 +44,26 @@ pre {
   padding: 3px 10px;
 }
 
-.collapsable-code__toggle {
+.collapsable-code summary {
+  border-bottom: 1px solid var(--accent);
   color: var(--accent);
-  font-size: 16px;
-  padding: 3px 10px;
+  padding: 0 10px;
+  cursor: pointer;
 }
 
-.collapsable-code__toggle::after {
-  content: attr(data-label-collapse);
+.collapsable-code summary:hover {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
 }
+
+.collapsable-code summary::marker {
+  content: "+";
+  font-weight: bold;
+}
+
+.collapsable-code[open] summary::marker {
+  content: "-";
+}
+
 
 .collapsable-code pre {
   margin-top: 0;
@@ -112,6 +73,20 @@ pre {
   line-height: 0;
 }
 
-.collapsable-code .code-toolbar {
-  margin: 0;
+.chroma .copy-button {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: .5em;
+  z-index: 1;
+  background: color-mix(in srgb, var(--foreground) 5%, var(--background));
+}
+
+.chroma:hover .copy-button {
+  display: inline-block;
+}
+
+.chroma .copy-button:hover {
+  background: color-mix(in srgb, var(--accent) 10%, var(--background));
 }
