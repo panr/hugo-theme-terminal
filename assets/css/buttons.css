@@ -81,11 +81,11 @@ a.button.inline::after {
 }
 
 a.button.inline.prev::before {
-  content: "← ["
+  content: "< ["
 }
 
 a.button.inline.next::after {
-  content: "] →"
+  content: "] >"
 }
 
 a.read-more,
