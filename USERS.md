@@ -69,6 +69,7 @@
 - https://abgeo.dev **Temuri Takalandze** (Software Engineer)
 - https://skillissues.tech **Skill Issues** (Aspiring Engineer)
 - https://lubieniebieski.pl **Adam Nowak** (Software Engineer)
+- https://kusinski.dev **Piotr Kusinski** (DevOps Engineer)
 <!--
  TEMPLATE:
 
