@@ -241,19 +241,12 @@ figure figcaption {
   font-size: 1rem;
   font-weight: normal;
   margin-top: -8px;
+  padding: 0 8px;
   border-radius: 0 0 var(--radius) var(--radius);
 }
 
-figure figcaption.left {
-  text-align: left;
-}
-
-figure figcaption.center {
-  text-align: center;
-}
-
-figure figcaption.right {
-  text-align: right;
+figure figcaption p:first-child {
+  margin-top: 0;
 }
 
 ul,
