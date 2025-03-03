@@ -1,15 +1,15 @@
 {{ $id := delimit (shuffle (seq 1 9)) "" }}
 {{ $open := .Get "open" }}
 {{ $lang := .Get "language" }}
+{{ $opts := .Get "opts" }}
 
 {{- if $lang -}}
-  <details class="collapsable-code" title="Click to interact" {{ if eq $open "true" -}} open {{- end }}>
-    <summary>
-      <span class="collapsable-code__language">{{ $lang }}</span>
+  <details class="collapsable-code" {{ if eq $open "true" -}} open {{- end }}>
+    <summary title="Click to interact">
       {{- if .Get "title" }}<span class="collapsable-code__title">{{ .Get "title" | markdownify }}</span>{{ end -}}
     </summary>
     {{ $trInner := trim .Inner "\n" }}
-    {{- transform.Highlight $trInner ($lang) -}}
+    {{- transform.Highlight $trInner $lang $opts -}}
   </details>
 {{ else }}
   {{ errorf "If you want to use the \"collapsable code\" shortcode, you need to pass a mandatory \"language\" param. The issue occured in %q (%q)" .Page.File .Page.Permalink }}

@@ -1,14 +1,15 @@
-code {
-  color: var(--accent);
-  border: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent)
+:root {
+  --code-border: color-mix(in srgb, var(--foreground) 10%, transparent);
 }
 
-pre:not(.chroma),
-.highlight {
+pre:not(.chroma) {
   margin: 20px 0;
+  padding: 10px;
 }
 
 pre.chroma {
+  margin: 0;
+  padding: 10px 0;
   color: var(--foreground);
 }
 
@@ -17,10 +18,45 @@ pre code {
   border: none;
 }
 
+code {
+  color: var(--accent);
+}
+
+.highlight {
+  position: relative;
+  padding-top: 30px;
+  margin: 20px 0;
+  border: 1px solid var(--code-border);
+}
+
+.highlight pre {
+  border: none;
+}
+
+.chroma code[data-lang]:before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  border-bottom: 1px solid var(--code-border);
+  color: var(--comment);
+  text-transform:uppercase;
+  font-size: .8em;
+  padding: 0 10px;
+  line-height: 1;
+}
+
 .collapsable-code {
   position: relative;
   width: 100%;
-  margin: 40px 0;
+  margin: 20px 0;
+  border: 1px solid var(--accent);
 
   .highlight {
     margin: 0;
@@ -28,9 +64,12 @@ pre code {
 }
 
 .collapsable-code__title {
+  display: inline-flex;
+  align-items: center;
   flex: 1;
   color: var(--accent);
   padding: 3px 10px;
+  font-size: .9em;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -45,7 +84,6 @@ pre code {
 }
 
 .collapsable-code summary {
-  border-bottom: 1px solid var(--accent);
   color: var(--accent);
   padding: 0 10px;
   cursor: pointer;
@@ -56,12 +94,12 @@ pre code {
 }
 
 .collapsable-code summary::marker {
-  content: "+";
+  /* content: "+"; */
   font-weight: bold;
 }
 
 .collapsable-code[open] summary::marker {
-  content: "-";
+  /* content: "-"; */
 }
 
 

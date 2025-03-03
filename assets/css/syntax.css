@@ -5,20 +5,19 @@
 }
 
 /* Background */ .bg { }
-/* PreWrapper */ pre.chroma { position: relative; padding:15px 0; }
-/* Custom:CodeInfo */ .chroma code[data-lang]:before { content: attr(data-lang);position:absolute;top:0;right:0;color:var(--comment);text-transform:uppercase;font-size:.8em;padding:.5em;line-height:1;}
+/* PreWrapper */ .chroma { overflow:auto; }
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err {  }
 /* CodeLine */ .chroma .cl {  }
 /* LineLink */ .chroma .lnlinks { outline:none;text-decoration:none;color:inherit }
-/* Custom */ .chroma .lntd:first-child { width:auto;vertical-align:top;padding:0;margin:0;border:0; }
 /* LineTableTD */ .chroma .lntd { width:100%;vertical-align:top;padding:0;margin:0;border:0; }
+/* LineTableTDNumbers */ .chroma .lntd:first-child { width: auto; }
 /* Custom */ .chroma .lntd code { display:grid; }
-/* LineTable */ .chroma .lntable { border-spacing:0;padding:0;margin:0;border:0; }
+/* LineTable */ .chroma .lntable { width:100%;border-spacing:0;padding:0;margin:0;border:0; }
 /* LineHighlight */ .chroma .hl { background-color:color-mix(in srgb, var(--foreground) 5%, transparent) !important}
-/* LineNumbersTable */ .chroma .lnt { color:var(--comment);white-space:pre;-webkit-user-select:none;user-select:none;padding:0 15px; }
+/* LineNumbersTable */ .chroma .lnt { color:var(--comment);white-space:pre;-webkit-user-select:none;user-select:none;padding:0 10px; }
 /* LineNumbers */ .chroma .ln { color:var(--comment);white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.8em;padding:0 0.4em 0 0; }
-/* Line */ .chroma .line { display:flex;padding:0 15px; }
+/* Line */ .chroma .line { display:flex;padding:0 10px; }
 /* Keyword */ .chroma .k { color:var(--second-tone) }
 /* KeywordConstant */ .chroma .kc { color:var(--second-tone) }
 /* KeywordDeclaration */ .chroma .kd { color:var(--second-tone) }
