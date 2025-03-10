@@ -1,5 +1,5 @@
 .index-content {
-  margin-top: 20px;
+  margin: 25px 0;
 }
 
 .framed {
@@ -22,7 +22,7 @@
 .post {
   width: 100%;
   text-align: left;
-  padding: 40px 0;
+  padding: 30px 0;
 }
 
 .post:not(:last-of-type) {
@@ -32,7 +32,7 @@
 .post-meta {
   font-size: 1rem;
   margin-bottom: 10px;
-  color: color-mix(in srgb, var(--foreground) 50%, transparent);
+  color: color-mix(in srgb, var(--foreground) 65%, transparent);
 }
 
 .post-meta > *:not(:first-child)::before {
@@ -76,11 +76,11 @@
 }
 
 .post-content {
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .post-cover {
-  margin: 40px 0;
+  margin: 25px 0;
 }
 
 .post ul {

@@ -63,10 +63,6 @@
   justify-content: center;
   flex: 1;
   padding: 8px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .button__text {
@@ -81,12 +77,6 @@
 
 .prev .button__icon {
   margin-right: 8px;
-}
-
-@media (max-width: 684px) {
-  .button {
-    flex: 1;
-  }
 }
 
 @media print {

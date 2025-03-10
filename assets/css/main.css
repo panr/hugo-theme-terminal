@@ -66,7 +66,7 @@ img,
 figure,
 video,
 table {
-  margin: calc(var(--line-height) * 1.2) 0;
+  margin: 25px 0;
 }
 
 a {
@@ -163,10 +163,10 @@ select:active {
 
 select {
   background-image: linear-gradient(
-      45deg,
-      transparent 50%,
-      var(--foreground) 50%
-    ),
+    45deg,
+    transparent 50%,
+    var(--foreground) 50%
+  ),
     linear-gradient(135deg, var(--foreground) 50%, transparent 50%);
   background-position: calc(100% - 20px), calc(100% - 1em);
   background-size:
@@ -416,8 +416,6 @@ hr {
   margin-top: 20px;
 }
 
-
-
 blockquote.twitter-tweet {
   position: relative;
   background: var(--background);
@@ -469,8 +467,31 @@ blockquote.twitter-tweet::before {
 }
 
 .__h_video {
-  padding-bottom: 58.23% !important;
+  position: relative;
   overflow: visible !important;
+  height: auto !important;
+  padding-bottom: 0 !important;
+}
+
+.__h_video a {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.__h_video a img {
+  width: 100%;
+}
+
+.__h_video a .play {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 60px;
+  height: 60px;
 }
 
 iframe[src*="youtube.com"] {
