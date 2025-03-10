@@ -13,7 +13,7 @@
 </footer>
 
 {{ $menu := resources.Get "js/menu.js" | js.Build }}
-{{ $cp := resources.Get "js/copy-to-clipboard.js" | js.Build }}
+{{ $cp := resources.Get "js/code.js" | js.Build }}
 
 {{ $bundle := slice $menu $cp | resources.Concat "bundle.js" | resources.Minify }}
 

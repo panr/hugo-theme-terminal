@@ -30,7 +30,7 @@
 }
 
 .post-meta {
-  font-size: 1rem;
+  font-size: inherit;
   margin-bottom: 10px;
   color: color-mix(in srgb, var(--foreground) 65%, transparent);
 }
@@ -67,7 +67,7 @@
 .post-tags {
   display: block;
   margin-bottom: 20px;
-  font-size: 1rem;
+  font-size: inherit;
   color: var(--accent);
 }
 

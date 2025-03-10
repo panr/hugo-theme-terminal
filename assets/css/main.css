@@ -238,7 +238,7 @@ figure figcaption {
   background: var(--accent);
   color: var(--background);
   text-align: center;
-  font-size: 1rem;
+  font-size: var(--font-size);
   font-weight: normal;
   margin-top: -8px;
   padding: 0 8px;
@@ -284,7 +284,7 @@ kbd {
   border: 1px solid var(--code-border);
   padding: 1px 6px;
   margin: 0 2px;
-  font-size: 0.95rem;
+  font-size: calc(var(--font-size) * 0.95);
 }
 
 kbd {
@@ -306,7 +306,7 @@ pre {
   background: color-mix(in srgb, var(--foreground) 5%, transparent) !important;
   color: var(--foreground);
   padding: 20px 10px;
-  font-size: 0.95rem !important;
+  font-size: calc(var(--font-size) * 0.95) !important;
   overflow: auto;
   border-radius: var(--radius);
   border: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
@@ -316,7 +316,6 @@ pre code {
   background: none !important;
   margin: 0;
   padding: 0;
-  font-size: inherit;
   border: none;
 }
 
@@ -500,17 +499,12 @@ iframe[src*="youtube.com"] {
 }
 
 @media (max-width: 684px) {
-  body {
-    font-size: 1rem;
+  :root {
+    --font-size: 0.95rem;
   }
 
   .container {
     padding: 20px;
-  }
-
-  ul,
-  ol {
-    margin-left: 20px;
   }
 }
 

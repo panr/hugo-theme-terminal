@@ -24,7 +24,6 @@ code {
 
 .highlight {
   position: relative;
-  padding-top: 30px;
   margin: 20px 0;
   border: 1px solid var(--code-border);
 }
@@ -33,23 +32,46 @@ code {
   border: none;
 }
 
-.chroma code[data-lang]:before {
-  content: attr(data-lang);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: auto;
-  height: 30px;
+.code-title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background: color-mix(in srgb, var(--foreground) 5%, transparent);
   border-bottom: 1px solid var(--code-border);
   color: var(--comment);
   text-transform:uppercase;
-  font-size: .8em;
-  padding: 0 10px;
+  font-size: calc(var(--font-size) * 0.8);
+  padding: 6px 10px;
   line-height: 1;
+}
+
+.copy-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 8px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid color-mix(in srgb, var(--accent) 15%, transparent);
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.code-title .copy-button {
+  z-index: 1;
+  background: color-mix(in srgb, var(--foreground) 5%, var(--background));
+}
+
+.code-title:hover .copy-button {
+  display: inline-block;
+}
+
+.code-title .copy-button:hover {
+  background: color-mix(in srgb, var(--accent) 10%, var(--background));
 }
 
 .collapsable-code {
@@ -69,7 +91,7 @@ code {
   flex: 1;
   color: var(--accent);
   padding: 3px 10px;
-  font-size: .9em;
+  font-size: calc(var(--font-size) * 0.9);
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -93,38 +115,10 @@ code {
   background: color-mix(in srgb, var(--accent) 10%, transparent);
 }
 
-.collapsable-code summary::marker {
-  /* content: "+"; */
-  font-weight: bold;
-}
-
-.collapsable-code[open] summary::marker {
-  /* content: "-"; */
-}
-
-
 .collapsable-code pre {
   margin-top: 0;
 }
 
 .collapsable-code pre::first-line {
   line-height: 0;
-}
-
-.chroma .copy-button {
-  display: none;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin: .5em;
-  z-index: 1;
-  background: color-mix(in srgb, var(--foreground) 5%, var(--background));
-}
-
-.chroma:hover .copy-button {
-  display: inline-block;
-}
-
-.chroma .copy-button:hover {
-  background: color-mix(in srgb, var(--accent) 10%, var(--background));
 }
