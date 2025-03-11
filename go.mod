@@ -1,3 +1,3 @@
-module github.com/panr/hugo-theme-terminal/v4
+module github.com/ronanlv/hugo-theme-terminal/v4
 
 go 1.19
