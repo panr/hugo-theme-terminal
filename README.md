@@ -159,6 +159,10 @@ languageCode = "en-us"
 theme = "terminal"
 pagination.pagerSize = 5
 
+# Required for Chroma and the custom syntax highlighting.
+[markup.highlight]
+  noClasses = false
+
 [params]
   # dir name of your main content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
