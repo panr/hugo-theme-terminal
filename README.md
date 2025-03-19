@@ -129,7 +129,7 @@ This will clone the repository directly to the `themes/terminal` directory.
 git submodule add -f https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
 
-This will install the repository as a sumbodule in the `themes/terminal` directory.
+This will install the repository as a submodule in the `themes/terminal` directory.
 
 ⚠️ If you encounter any issues with:
 
