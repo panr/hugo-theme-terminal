@@ -23,6 +23,7 @@
 - [How to edit the theme](#how-to-edit)
 - [Found a bug?](#bug)
 - [New cool idea or feature](#feature)
+- [Support](#support)
 - [License](#license)
 
 ## Features
@@ -307,8 +308,12 @@ This will help keeping the theme close to its roots, and also allow anyone who w
 
 Sounds OK? Cool, let's rock! 🤘
 
+## Support
+
+If you like what I'm doing and want to support my work. You can do it [here](https://ko-fi.com/pan_r). Thank you! ♥️
+
 ## License
 
-Copyright © 2019-2025 Radosław Kozieł ([@panr](https://radoslawkoziel.pl/))
+Copyright © 2019-2025 Radek Kozieł ([@panr](https://rkoziel.com/))
 
 The theme is released under the MIT License. Check the [original theme license](https://github.com/panr/hugo-theme-terminal/blob/master/LICENSE.md) for additional licensing information.
