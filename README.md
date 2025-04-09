@@ -245,6 +245,7 @@ pagination.pagerSize = 5
       missingBackButtonLabel = "Back to home page"
       minuteReadingTime = "min read"
       words = "words"
+      posts_for = "Posts for"  # used e.g. with tags (hugo 'taxonomies' in general)
 
       [languages.en.params.logo]
         logoText = "Terminal"
