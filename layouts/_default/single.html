@@ -15,7 +15,7 @@
     {{- with .Params.Author -}}
       <span class="post-author">{{ . }}</span>
     {{- end -}}
-    {{- if and (.Param "readingTime") (eq (.Param "readingTime") true) -}}{{ $customReadingTime := div (float .WordCount) .Site.Params.readingSpeed }}{{ $customReadingTime = math.Ceil $customReadingTime }}<!--
+    {{- if and (.Param "readingTime") (eq (.Param "readingTime") true) -}}{{ $customReadingTime := div (float .WordCount) (.Site.Params.readingSpeed | default 212) }}{{ $customReadingTime = math.Ceil $customReadingTime }}<!--
       (browsers insert spaces (here) sometimes)
       --><span class="post-reading-time">{{ $customReadingTime }} {{ if eq $customReadingTime 1.0 }}{{ $.Site.Params.minute | default "minute" }}{{ else }}{{ $.Site.Params.minutes | default "minutes" }}{{ end }} {{ $.Site.Params.to_read | default "to read" }} ({{ .WordCount }} {{ if eq .WordCount 1 }}{{ $.Site.Params.word | default "word" }}{{ else }}{{ $.Site.Params.words | default "words" }}{{ end }})</span>
     {{- end -}}
