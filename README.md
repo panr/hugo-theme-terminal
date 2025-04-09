@@ -178,7 +178,7 @@ pagination.pagerSize = 5
   # the language selector always links...
   # - true: the translated content equivalent (e.g. /en/posts/some-post directly → /de/posts/some-post), 
   # - false: just to the translated root (e.g. /en/posts/some-post → /de)
-  changeLanguageOfCurrentPage = true  # (default: false)
+  #changeLanguageOfCurrentPage = true  # (default: false)
 
   # set theme to full screen width
   fullWidthTheme = false
