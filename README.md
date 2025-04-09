@@ -232,6 +232,7 @@ pagination.pagerSize = 5
     title = "Terminal"
 
     [languages.en.params]
+      readingSpeed = 108  # in words per minute
       subtitle = "A simple, retro theme for Hugo"
       owner = ""
       keywords = ""
