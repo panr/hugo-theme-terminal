@@ -1,10 +1,30 @@
 <ul class="menu menu--desktop menu--language-selector">
-  <li class="menu__trigger">{{ .Language.LanguageName }}&nbsp;▾</li>
+  <li class="menu__trigger">{{ .Language.LanguageCode }}&nbsp;▾</li>
   <li>
     <ul class="menu__dropdown">
+      {{ $current_page_url_without_language_prefix := strings.TrimPrefix (print "/" $.Language.LanguageCode "/") $.Page.RelPermalink }}
       {{ range $.Site.Home.AllTranslations }}
-        <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+        {{ if not ($.Site.Params.changeLanguageOfCurrentPage | default false) }}
+          <li>
+            {{ if eq $.Language.LanguageCode .Language.LanguageCode }}<b>{{ end }}
+            <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+            {{ if eq $.Language.LanguageCode .Language.LanguageCode }}</b>{{ end }}
+          </li>
+        {{ else if .GetPage $current_page_url_without_language_prefix }}
+          <li>
+            {{ if eq $.Language.LanguageCode .Language.LanguageCode }}<b>{{ end }}
+            <a href="{{ .RelPermalink }}{{ $current_page_url_without_language_prefix }}">{{ .Language.LanguageName }}</a>
+            {{ if eq $.Language.LanguageCode .Language.LanguageCode }}</b>{{ end }}
+          </li>
+        {{ else }}
+          <li>
+            {{ if eq $.Language.LanguageCode .Language.LanguageCode }}<b>{{ end }}
+            <a href="{{ .RelPermalink }}">({{ .Language.LanguageName }})</a>
+            {{ if eq $.Language.LanguageCode .Language.LanguageCode }}</b>{{ end }}
+          </li>
+        {{ end }}
       {{ end }}
     </ul>
   </li>
 </ul>
+
