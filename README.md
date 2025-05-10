@@ -232,6 +232,7 @@ pagination.pagerSize = 5
     title = "Terminal"
 
     [languages.en.params]
+      # readingSpeed = 212  # in words per minute, default is 212
       subtitle = "A simple, retro theme for Hugo"
       owner = ""
       keywords = ""
@@ -243,8 +244,11 @@ pagination.pagerSize = 5
       olderPosts = "Older posts"
       missingContentMessage = "Page not found..."
       missingBackButtonLabel = "Back to home page"
-      minuteReadingTime = "min read"
       words = "words"
+      word = "word"
+      minute = "minute"
+      minutes = "minutes"
+      to_read = "to read"
 
       [languages.en.params.logo]
         logoText = "Terminal"
