@@ -6,7 +6,7 @@
   {{ end }}
   {{ partial "head.html" . }}
 </head>
-<body>
+<body style="color: {{- cond (.Page.Params.textColor | default false) .Page.Params.textColor "var(--accent)" -}}; background: {{- cond (.Page.Params.background | default false) .Page.Params.background "var(--background)" -}}">
 {{ $container := cond ($.Site.Params.FullWidthTheme | default false) "container full" (cond ($.Site.Params.CenterTheme | default false) "container center" "container") }}
 
 <div class="{{- $container -}}{{- cond ($.Site.Params.oneHeadingSize | default false) " headings--one-size" "" }}">
