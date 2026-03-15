@@ -23,3 +23,12 @@ eg:
 - **Single Page Website** (https://github.com/justinnuwin/hugo-theme-terminal)
   - A layout where the homepage can render lists of pages and the navigation menu can link to sections on the homepage.
   - Justin Nguyen, software and hardware developer.
+
+- **Support for beautiful *KaTeX* formulae** ([amtoine/hugo-theme-terminal-katex](https://github.com/amtoine/hugo-theme-terminal-katex))
+  - SHORT DESCRIPTION
+  - Antoine Stevan ([@amtoine](https://github.com/amtoine)), software engineer into open source
+
+- **Configurable timestamping for posts** ([KatieTheDev/hugo-theme-terminal](https://github.com/KatieTheDev/hugo-theme-terminal))
+  - Allows for configuring timestamping, not just datestamping
+  - Works with last modification dates as well
+  - KatieTheDev ([@KatieTheDev](https://github.com/KatieTheDev))

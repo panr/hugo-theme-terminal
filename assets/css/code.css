@@ -1,0 +1,127 @@
+:root {
+  --code-border: color-mix(in srgb, var(--foreground) 10%, transparent);
+}
+
+pre:not(.chroma) {
+  padding: 10px;
+}
+
+pre.chroma {
+  margin: 0;
+  padding: 10px 0;
+  color: var(--foreground);
+}
+
+pre code {
+  color: var(--foreground);
+  border: none;
+}
+
+code {
+  color: var(--accent);
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.highlight {
+  position: relative;
+  margin: 20px 0;
+  border: 1px solid var(--code-border);
+}
+
+.highlight pre {
+  border: none;
+}
+
+.code-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  border-bottom: 1px solid var(--code-border);
+  color: var(--comment);
+  text-transform:uppercase;
+  font-size: calc(var(--font-size) * 0.8);
+  padding: 6px 10px;
+  line-height: 1;
+}
+
+.copy-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 8px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid color-mix(in srgb, var(--accent) 15%, transparent);
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.code-title .copy-button {
+  z-index: 1;
+  background: color-mix(in srgb, var(--foreground) 5%, var(--background));
+}
+
+.code-title:hover .copy-button {
+  display: inline-block;
+}
+
+.code-title .copy-button:hover {
+  background: color-mix(in srgb, var(--accent) 10%, var(--background));
+}
+
+.collapsable-code {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid var(--accent);
+
+  .highlight {
+    margin: 0;
+  }
+}
+
+.collapsable-code__title {
+  display: inline-flex;
+  align-items: center;
+  flex: 1;
+  color: var(--accent);
+  padding: 3px 10px;
+  font-size: calc(var(--font-size) * 0.9);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.collapsable-code__language {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-bottom: none;
+  text-transform: uppercase;
+  padding: 3px 10px;
+}
+
+.collapsable-code summary {
+  color: var(--accent);
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.collapsable-code summary:hover {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.collapsable-code pre {
+  margin-top: 0;
+}
+
+.collapsable-code pre::first-line {
+  line-height: 0;
+}

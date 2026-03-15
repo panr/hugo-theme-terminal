@@ -1,0 +1,18 @@
+.terms h3 {
+  font-size: initial;
+}
+
+.terms ul {
+  list-style: none;
+}
+
+.terms ul li a {
+  color: var(--accent);
+}
+
+.terms ul li:not(:empty)::before {
+  content: "-";
+  position: absolute;
+  left: -20px;
+  color: var(--accent);
+}

@@ -1,0 +1,148 @@
+.navigation-menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 20px 1px;
+}
+
+.navigation-menu__inner {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-menu__inner > li {
+  flex: 0 0 auto;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.navigation-menu__inner > li:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.navigation-menu .spacer {
+  flex-grow: 1 !important;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__trigger {
+  margin-right: 0 !important;
+  color: var(--accent);
+  user-select: none;
+  cursor: pointer;
+}
+
+.menu__dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background: var(--background);
+  box-shadow: 0 10px var(--background), -10px 10px var(--background), 10px 10px var(--background);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  margin: 0;
+  padding: 10px;
+  top: 10px;
+  left: 0;
+  list-style: none;
+  z-index: 99;
+}
+
+.open .menu__dropdown {
+  display: flex;
+}
+
+.menu__dropdown > li {
+  flex: 0 0 auto;
+}
+
+.menu__dropdown > li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.menu__dropdown > li a {
+  display: flex;
+  padding: 5px;
+}
+
+.menu--mobile .menu__trigger {
+  color: var(--accent);
+  border: 2px solid;
+  margin-left: 10px;
+  height: 100%;
+  padding: 3px 8px;
+  margin-bottom: 0 !important;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+
+.menu--mobile li {
+  flex: 0 0 auto;
+}
+
+.menu--mobile li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.menu--language-selector .menu__trigger {
+  color: var(--accent);
+  border: 2px solid;
+  margin-left: 5px;
+  height: 100%;
+  padding: 3px 8px;
+  margin-bottom: 0 !important;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu--language-selector .menu__dropdown {
+  left: auto;
+  right: 0;
+}
+
+@media (max-width: 684px) {
+  .navigation-menu {
+    margin: 0;
+  }
+
+  .navigation-menu__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .navigation-menu__inner li {
+    margin: 0;
+    padding: 5px;
+  }
+
+  .menu--desktop {
+    display: none;
+  }
+
+  .menu--mobile .menu__trigger {
+    display: block;
+  }
+
+  .menu--mobile .menu__dropdown {
+    left: auto;
+    right: 0;
+  }
+
+  .menu--language-selector .menu__trigger {
+    display: none;
+  }
+}

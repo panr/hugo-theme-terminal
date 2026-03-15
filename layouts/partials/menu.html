@@ -6,21 +6,21 @@
         {{ if not .HasChildren }}
           {{ $isCurrURL := eq $currURL (absLangURL .URL | strings.TrimSuffix "/") }}
           <li {{ if $isCurrURL }} class="navigation-menu__active" {{ end }}>
-            <a href="{{ .URL }}">{{ .Name }}</a>
+            <a href="{{ .URL }}" {{ if .Params.NewTab -}} target="_blank" {{- end }}>{{ .Name }}</a>
           </li>
         {{ end }}
       {{ end }}
       {{ if gt (len $.Site.Menus.main) $.Site.Params.showMenuItems }}
         <li>
           <ul class="menu">
-            <li class="menu__trigger">{{ $.Site.Params.MenuMore }}&nbsp;▾</li>
+            <li class="menu__trigger">{{ $.Site.Params.menuMore }}&nbsp;▾</li>
             <li>
               <ul class="menu__dropdown">
                 {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}
                   {{ if not .HasChildren }}
                     {{ $isCurrURL := eq $currURL (absLangURL .URL | strings.TrimSuffix "/") }}
                     <li {{ if $isCurrURL }} class="navigation-menu__active" {{ end }}>
-                      <a href="{{ .URL }}">{{ .Name }}</a>
+                      <a href="{{ .URL }}" {{ if .Params.NewTab -}} target="_blank" {{- end }}>{{ .Name }}</a>
                     </li>
                   {{ end }}
                 {{ end }}
@@ -34,7 +34,7 @@
         {{ if not .HasChildren }}
           {{ $isCurrURL := eq $currURL (absLangURL .URL | strings.TrimSuffix "/") }}
           <li {{ if $isCurrURL }} class="navigation-menu__active" {{ end }}>
-            <a href="{{ .URL }}">{{ .Name }}</a>
+            <a href="{{ .URL }}" {{ if .Params.NewTab -}} target="_blank" {{- end }}>{{ .Name }}</a>
           </li>
         {{ end }}
       {{ end }}

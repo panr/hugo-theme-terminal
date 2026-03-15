@@ -88,6 +88,6 @@ typings/
 .dynamodb/
 
 # End of https://www.gitignore.io/api/node
-
 public
+resources
 .hugo_build.lock

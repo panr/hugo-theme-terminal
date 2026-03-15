@@ -4,7 +4,9 @@
     "stylelint-config-prettier-scss"
   ],
   "rules": {
-    "max-empty-lines": 1 
+    "max-empty-lines": 1,
+    "color-function-notation": null,
+    "no-descending-specificity": null,
+    "selector-class-pattern": null
   }
 }
-

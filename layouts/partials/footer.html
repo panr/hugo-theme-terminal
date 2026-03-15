@@ -5,7 +5,7 @@
         <span>{{ $.Site.Copyright | safeHTML }}</span>
     {{ else }}
       <div class="copyright">
-        <span>© {{ now.Year }} Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© {{ now.Year }} Powered by <a href="https://gohugo.io">Hugo</a></span>
     {{ end }}
       <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
       </div>
@@ -14,8 +14,8 @@
 
 {{ $menu := resources.Get "js/menu.js" | js.Build }}
 {{ $copy := resources.Get "js/copy.js" | js.Build }}
-
-{{ $bundle := slice $menu $copy | resources.Concat "bundle.js" | resources.Minify }}
+{{ $cp := resources.Get "js/code.js" | js.Build }}
+{{ $bundle := slice $menu $copy $cp | resources.Concat "bundle.js" | resources.Minify }}
 
 <script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
 

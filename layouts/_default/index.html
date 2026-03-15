@@ -16,19 +16,19 @@
 
     {{ range $paginator.Pages }}
       <article class="post on-list">
-        <h1 class="post-title">
+        <h2 class="post-title">
           <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-        </h1>
+        </h2>
 
         <div class="post-meta">
-          {{ if .Date }}
+          {{- if .Date -}}
             <time class="post-date">
-              {{ .Date.Format "2006-01-02" }} ::
+              {{- partial "post-date" . -}}
             </time>
-          {{ end }}
-          {{ with .Params.Author }}
+          {{- end -}}
+          {{- with .Params.Author -}}
             <span class="post-author">{{ . }}</span>
-          {{ end }}
+          {{- end -}}
         </div>
 
         {{ if .Params.tags }}
@@ -47,7 +47,7 @@
           {{ if .Params.showFullContent }}
             {{ .Content }}
           {{ else if .Description }}
-            {{ .Description | markdownify }}
+            <p>{{ .Description | markdownify }}</p>
           {{ else }}
             {{ .Summary }}
           {{ end }}
@@ -55,7 +55,7 @@
 
         {{ if not .Params.showFullContent }}
           <div>
-            <a class="read-more button" href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
+            <a class="read-more button inline" href="{{ .RelPermalink }}">[{{ $.Site.Params.ReadMore }}]</a>
           </div>
         {{ end }}
       </article>
