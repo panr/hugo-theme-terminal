@@ -11,11 +11,11 @@ jobs:
     steps:
       # CHEKCOUT REPOSITORY
       - name: Git checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       # SETUP HUGO
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '${{ env.HUGO_VERSION }}'
           extended: true
