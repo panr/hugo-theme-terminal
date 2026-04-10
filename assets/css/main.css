@@ -368,14 +368,22 @@ blockquote p:last-child {
 }
 
 table {
+  border: 8px solid var(--accent); /* fork added */
+  width: 100%; /* fork added */
   table-layout: auto;
   border-collapse: collapse;
 }
 
+/* fork added */
+th,
+td {
+  border: 6px solid var(--accent);
+}
+/* ========== */
+
 table,
 th,
 td {
-  border: 2px solid var(--foreground);
   padding: 10px;
 }
 
@@ -517,3 +525,4 @@ iframe[src*="youtube.com"] {
     display: initial;
   }
 }
+
