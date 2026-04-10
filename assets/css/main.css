@@ -368,18 +368,17 @@ blockquote p:last-child {
 }
 
 table {
-  border: 8px solid var(--accent); /* fork added */
-  width: 100%; /* fork added */
+  border: 8px solid var(--accent);
+  width: 100%;
   table-layout: auto;
   border-collapse: collapse;
+  text-align: left;
 }
 
-/* fork added */
 th,
 td {
-  border: 6px solid var(--accent);
+  border: 5px solid var(--accent);
 }
-/* ========== */
 
 table,
 th,
