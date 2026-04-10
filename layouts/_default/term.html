@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <h1>Posts for: #{{ .Title }}</h1>
+  <h1>{{ $.Site.Params.posts_for | default "Posts for" }}: <b style="opacity: 0.5;">#{{ .Name }}</b></h1>
   {{ with .Content }}
     <div class="index-content">
       {{ . }}
