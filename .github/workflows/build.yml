@@ -1,0 +1,31 @@
+name: Build
+
+on: push
+
+env:
+  HUGO_VERSION: 0.152.2
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      # CHEKCOUT REPOSITORY
+      - name: Git checkout
+        uses: actions/checkout@v6
+
+      # SETUP HUGO
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '${{ env.HUGO_VERSION }}'
+          extended: true
+      
+      # DEPENDENCIES
+      - name: Install npm dependencies
+        run: npm ci
+
+      # BUILD
+      - name: Build Site
+        env:
+          TZ: 'Europe/Warsaw'
+        run: hugo --minify
