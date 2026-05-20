@@ -11,12 +11,16 @@
 
 <div class="{{- $container -}}{{- cond ($.Site.Params.oneHeadingSize | default false) " headings--one-size" "" }}">
 
+  <header>
   {{ partial "header.html" . }}
+  </header>
 
+  <main>
   <div class="content">
     {{ block "main" . }}
     {{ end }}
   </div>
+  </main>
 
   {{ block "footer" . }}
     {{ partial "footer.html" . }}
