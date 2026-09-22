@@ -58,6 +58,7 @@
   left: 0;
   list-style: none;
   z-index: 99;
+  width: 250%;
 }
 
 .open .menu__dropdown {
