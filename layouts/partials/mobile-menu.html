@@ -1,3 +1,4 @@
+{{ $currentpage := .Page }}
 <ul class="menu menu--mobile">
   <li class="menu__trigger">Menu&nbsp;▾</li>
   <li>
@@ -10,10 +11,19 @@
       {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
         <hr />
         {{ range $.Site.Home.AllTranslations }}
-          <li>
-            <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-          </li>
+        {{ if ne .Lang $currentpage.Language.Lang }}
+        {{ if eq .Lang $.Site.Params.DefaultContentLanguage }}
+        <li><a href="{{ strings.Substr $currentpage.RelPermalink 3 }}">{{ .Language.LanguageName }}</a></li>
+        {{ else }}
+          {{ if eq $currentpage.Language.Lang $.Site.Params.DefaultContentLanguage }}
+          <li><a href="/{{ .Lang }}{{ $currentpage.RelPermalink }}">{{ .Language.LanguageName }}</a></li>
+          {{ else }}
+          <li><a href="/{{ .Lang }}{{ substr $currentpage.RelPermalink 3 }}">{{ .Language.LanguageName }}</a></li>
+          {{ end }}
         {{ end }}
+        {{ end }}
+        {{ end }}
+
       {{ end }}
     </ul>
   </li>
