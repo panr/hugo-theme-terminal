@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <h1>Posts for: #{{ .Title }}</h1>
+  <h1>{{ i18n "postsFor" }} #{{ .Title }}</h1>
   {{ with .Content }}
     <div class="index-content">
       {{ . }}
