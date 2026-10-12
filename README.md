@@ -245,6 +245,7 @@ pagination.pagerSize = 5
       missingBackButtonLabel = "Back to home page"
       minuteReadingTime = "min read"
       words = "words"
+      menuTitle = "Menu"
 
       [languages.en.params.logo]
         logoText = "Terminal"
